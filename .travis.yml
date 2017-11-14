@@ -13,7 +13,7 @@ script:
   - echo "build fti portal styles and styleguide based on patternlab ..."
   - npm run build
 
-#deploy:
+deploy:
 #  - provider: npm
 #    skip_cleanup: true
 #    email: $NPM_EMAIL
@@ -22,18 +22,18 @@ script:
 #    on:
 #      node: "8"
 #      tags: true
-#      repo: tourstream/fti-group-bootstrap
-#  - provider: gcs
-#    skip_cleanup: true
-#    access_key_id: $GCS_ACCESS_KEY_ID
-#    secret_access_key: $GCS_ACCESS_SECRET
-#    bucket: $GCS_BUCKET
-#    acl: public-read
-#    local-dir: dist-master
-#    on:
-#      node: "8"
-#      branch: master
-#      repo: tourstream/fti-group-bootstrap
+#      repo: tourstream/fti-portal-styleguide
+  - provider: gcs
+    skip_cleanup: true
+    access_key_id: $GCS_ACCESS_KEY_ID
+    secret_access_key: $GCS_ACCESS_SECRET
+    bucket: $GCS_BUCKET
+    acl: public-read
+    local-dir: dist-master
+    on:
+      node: "8"
+      branch: master
+      repo: tourstream/fti-portal-styleguide
 #  - provider: gcs
 #    skip_cleanup: true
 #    access_key_id: $GCS_ACCESS_KEY_ID
@@ -44,4 +44,4 @@ script:
 #    on:
 #      node: "8"
 #      tags: true
-#      repo: tourstream/fti-group-bootstrap
+#      repo: tourstream/fti-portal-styleguide
