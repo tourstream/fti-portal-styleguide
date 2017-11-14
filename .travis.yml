@@ -14,15 +14,15 @@ script:
   - npm run build
 
 deploy:
-#  - provider: npm
-#    skip_cleanup: true
-#    email: $NPM_EMAIL
-#    api_key:
-#      secure: L0sidZt/EJXyvkdgvvEWefE+B4YUZ3Opr4csU+iHN7c/N7pAd3XHvuK+DJQwzabTZdpSXTJXglcWjn6jvm69tbe7iz7VkyWLjTpeEd+i5CGP1EndYNN+3WH888r3RM1mShQsn2sJJ77uoFllME3ED72GcfLq/zDvATUWlYFeyshmGPryTxIWkEqK86uItYAUxMTAZNOATrBAQ5jIqkupe+j1iAUlCYx91IAz+OExRmYOOWv5oFvPRa09lDWunW+ACyZuxCipjqo7o9SQjW3NPqBKvcSmMJHnLmjZdV2djZ0KVkgfXZeIag28kDxIk3XI/FpYPxZ6QP7CThTqwzzDPHcNQLsW4vwy6s+0SRsSKsOS7RmLiVGjqm9IxRDbaEFiCR0kkuPS+DwYGhWCCzoovXmZnbg7U/fCTrBvukYjmb07IC2dY37Bfj2+JwdSnDs3gM79JnA71pbqvL6w/5lMbkN+0sKhfttBtbW+OVilzgAJphRLdG/XbRw6CDfNLsRkvhLjB6f18wqLW0ih7wDZ3MzDBIYcYPzIlUWl1JLjlcKpV9BpJqz5uOlf7yB5x+CbwBilK9I071c3RfVbjskzDqlnuiHLUuc7HIbVMV2RgB1biiuyDxOIF4dHbgiUaErqHM/LwJElraGQ6Y4Krfd4T6iGhekbKAVcupYLGeVEjWY=
-#    on:
-#      node: "8"
-#      tags: true
-#      repo: tourstream/fti-portal-styleguide
+  - provider: npm
+    skip_cleanup: true
+    email: $NPM_EMAIL
+    api_key:
+      secure: KMKP9WuPZDFgaDXrFu1Gkt/aQt5ydLB20dDruOdXPXD/mgcL+99CkCbCaR9cNTtP/90TvoqTltWW28iE4VBJGn8Z9I/RDzvtMti04IrKr0dbrHXDu/b0vNr0fXmIqqJAaRJhHw6nmQwpltOgnBdauxzEDdXS448cCuQpWKhcnh0OJ7UhZZnDQYGWY2TBdr7RfxB75eF93oBeiZLV9Fgd3uetall4X8vVVHvpFwOC0TFQdykrvgdnAs6Zaj22icu4+UsJWA3k7LSnJ0S6spK8W7BkzglZTCx8nbqPfcNqoBToXR33S52a4Hbd0KyyLZNeZDkEYYJeS4X5TSPJFT8r3TzsuZIOE1PIpogV+HkjNZjUeAIsk7Frd3niFCTXxjwf2U2qi/j0C8haEimC8Gl6J34MHyyNZ6uLfZFF/qVVG4Fs5bUjkkSh3dNSGvEB/xrIkcZ4rr50ZU1v7MYSS1uOOb7PLgobTbJxYCfFZ1ppvY6lSH/F3d0PxKhfqYRjEEhzOFWmrqaGeEC8wowwhAyrpdxwFtbj+TpLQhG2SW9JvzRWOwXOzo5aC1Wwvhn0KSk4/a0PXFhFmPzu3AWWABhjWBrS5IK//R1R/kOMU7QtYtWMmJdj3Q+IUrWI2DeAQgRLtxfnaWOeEfJYFQ2xfd0Ydch4RCojjfcPm3kKcYe3ET0=
+    on:
+      node: "8"
+      tags: true
+      repo: tourstream/fti-portal-styleguide
   - provider: gcs
     skip_cleanup: true
     access_key_id: $GCS_ACCESS_KEY_ID
@@ -34,14 +34,14 @@ deploy:
       node: "8"
       branch: master
       repo: tourstream/fti-portal-styleguide
-#  - provider: gcs
-#    skip_cleanup: true
-#    access_key_id: $GCS_ACCESS_KEY_ID
-#    secret_access_key: $GCS_ACCESS_SECRET
-#    bucket: $GCS_BUCKET
-#    acl: public-read
-#    local-dir: dist-version
-#    on:
-#      node: "8"
-#      tags: true
-#      repo: tourstream/fti-portal-styleguide
+  - provider: gcs
+    skip_cleanup: true
+    access_key_id: $GCS_ACCESS_KEY_ID
+    secret_access_key: $GCS_ACCESS_SECRET
+    bucket: $GCS_BUCKET
+    acl: public-read
+    local-dir: dist-version
+    on:
+      node: "8"
+      tags: true
+      repo: tourstream/fti-portal-styleguide
