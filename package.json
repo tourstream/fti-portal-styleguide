@@ -60,6 +60,7 @@
     "lint:css": "stylelint source/scss/**/*.scss",
     "lint:js": "eslint source/",
     "postbuild": "node prepare-gcs.js",
+    "postversion": "git push && git push --tags",
     "test": "grunt patternlab:build"
   }
 }
