@@ -1,7 +1,3 @@
-# fti-portal-styleguide
-Styleguide based on Pattern Lab grunt for FTI portal
-
-
 [![npm version][npm-version-image]][npm-version-url]
 [![npm downloads][npm-downloads-image]][npm-downloads-url]
 [![Build Status][travis-image]][travis-url]
@@ -9,13 +5,23 @@ Styleguide based on Pattern Lab grunt for FTI portal
 
 ***
 
-# FTI Portal Styleguide bootstrap
+# FTI Portal Styleguide
 
 > Styleguide based on Pattern Lab grunt for FTI portal
 
 ## Usage
 
 There are different ways to use this package ...
+
+
+### link the source - CDN at Google Cloud Storage (GCS)
+
+You can put the following snippet into the head of your HTML document ...
+
+```sh
+<link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/latest/css/style.min.css">
+```
+
 
 ### npm package
 
@@ -32,17 +38,6 @@ $ yarn add @tourstream/fti-portal-styleguide
 ```
 
 After this step you can use the sources as you like. They can be found in `./node_modules/@tourstream/fti-portal-styleguide/source`
-
-
-### link the source - CDN at Google Cloud Storage (GCS)
-
-You can put the following snippet into the head of your HTML document ...
-
-
-```sh
-<link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/latest/css/style.min.css">
-```
-
 
 
 ***
