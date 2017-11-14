@@ -1,0 +1,12 @@
+src/
+dist-*/
+pattern_exports/
+public/
+source/css/style.css
+.editorconfig
+.idea
+.gitignore
+.npmignore
+.travis.yml
+package-lock.json
+yarn.lock
