@@ -1,6 +1,7 @@
 [![npm version][npm-version-image]][npm-version-url]
 [![npm downloads][npm-downloads-image]][npm-downloads-url]
 [![Build Status][travis-image]][travis-url]
+[![Demo][demo-image]][demo-url]
 [![License][license-image]][license-url]
 
 ***
@@ -8,6 +9,8 @@
 # FTI Portal Styleguide
 
 > Styleguide based on Pattern Lab grunt for FTI portal
+
+This [demo page][demo-url] will show all implementated parts of the latest version of this package.
 
 ## Usage
 
@@ -49,6 +52,9 @@ After this step you can use the sources as you like. They can be found in `./nod
 
 [travis-image]: https://img.shields.io/travis/tourstream/fti-portal-styleguide.svg?style=flat-square
 [travis-url]: https://travis-ci.org/tourstream/fti-portal-styleguide
+
+[demo-image]: https://img.shields.io/badge/Demo-latest-%230099cc.svg?style=flat-square
+[demo-url]: https://assets.gcloud.fti-group.com/fti-portal-styleguide/latest/index.html
 
 [license-image]: https://img.shields.io/github/license/tourstream/fti-portal-styleguide.svg?style=flat-square
 [license-url]: https://github.com/tourstream/fti-portal-styleguide/blob/master/LICENSE
