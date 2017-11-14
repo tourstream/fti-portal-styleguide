@@ -19,7 +19,7 @@ There are different ways to use this package ...
 You can put the following snippet into the head of your HTML document ...
 
 ```sh
-<link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/latest/css/style.min.css">
+<link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/latest/css/style.css">
 ```
 
 

@@ -59,6 +59,7 @@
     "lint": "npm-run-all lint:*",
     "lint:css": "stylelint source/scss/**/*.scss",
     "lint:js": "eslint source/",
+    "postbuild": "node prepare-gcs.js",
     "test": "grunt patternlab:build"
   }
 }
