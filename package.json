@@ -1,0 +1,64 @@
+{
+  "name": "@tourstream/fti-portal-styleguide",
+  "version": "0.0.0",
+  "description": "Styleguide based on Pattern Lab grunt for FTI portal",
+  "license": "MIT",
+  "author": "FTI",
+  "contributors": [
+    {
+      "name": "Enrico Hoffmann",
+      "email": "enrico.hoffmann@fti.de"
+    },
+    {
+      "name": "Oliver Böge aka padawan",
+      "email": "oliver.boege@fti.de"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tourstream/fti-portal-styleguide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tourstream/fti-portal-styleguide/issues"
+  },
+  "homepage": "https://github.com/tourstream/fti-portal-styleguide#readme",
+  "engines": {
+    "node": ">= 8.6.0",
+    "npm": ">= 3.0.0",
+    "yarn": ">= 1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tourstream/fti-group-bootstrap": "^0.3.0",
+    "bootstrap": "^4.0.0-beta.2",
+    "bs-html-injector": "^3.0.0",
+    "eslint": "^4.0.0",
+    "grunt": "~1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-stylelint": "^0.9.0",
+    "minimist": "^1.2.0",
+    "npm-run-all": "^4.1.2",
+    "patternlab-node": "^2.9.3",
+    "styleguidekit-assets-default": "^3.5.2",
+    "styleguidekit-mustache-default": "^3.1.0",
+    "stylelint": "^8.2.0",
+    "stylelint-config-sass-guidelines": "^3.1.0"
+  },
+  "scripts": {
+    "build": "grunt patternlab:build",
+    "watch": "grunt patternlab:watch",
+    "serve": "grunt patternlab:serve",
+    "patterns": "grunt patternlab:patternsonly",
+    "lint": "npm-run-all lint:*",
+    "lint:css": "stylelint source/scss/**/*.scss",
+    "lint:js": "eslint source/",
+    "test": "grunt patternlab:build"
+  }
+}

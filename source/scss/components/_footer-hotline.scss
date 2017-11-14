@@ -1,0 +1,51 @@
+.footer-hotline {
+  background-color: $secondary;  // $secondary -> dark gray
+  color: $white;
+  padding-top: 1rem;
+
+  > div > div > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 100%;
+  }
+}
+
+/*
+ * changes styles for the breakpoint after 960px
+ */
+@include media-breakpoint-up(lg) {
+  .footer-hotline {
+    > div > div > div {
+      &:nth-child(1) {
+        flex: 0 0 41.6666666667%;
+        max-width: 41.6666666667%;
+      }
+
+      &:nth-child(2) {
+        flex: 0 0 58.3333333333%;
+        max-width: 58.3333333333%;
+      }
+    }
+  }
+}
+
+/*
+ * changes styles for the breakpoint after 1280px
+ */
+@include media-breakpoint-up(xl) {
+  .footer-hotline {
+    > div > div > div {
+      &:nth-child(1) {
+        text-align: right;
+      }
+
+      &:nth-child(2) {
+        text-align: left;
+      }
+    }
+  }
+}
