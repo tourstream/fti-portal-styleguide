@@ -1,3 +1,16 @@
+html {
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+}
+
+body {
+  font-size: $paragraph-font-size;
+  font-weight: $font-weight-normal;
+  line-height: $paragraph-line-height;
+}
+
+
 /**
  * the following styles changes the styles for
  * the ones which are set in bootstrap
@@ -53,13 +66,16 @@ h6,
 }
 
 p {
-  font-size: $paragraph-font-size;
-  font-weight: $font-weight-normal;
-  line-height: $paragraph-line-height;
   margin-bottom: $paragraph-margin-bottom;
 }
 
 @include media-breakpoint-up(md) {
+  body {
+    font-size: $paragraph-font-size-md;
+    font-weight: $font-weight-normal;
+    line-height: $paragraph-line-height-md;
+  }
+
   h1,
   .h1 {
     font-size: $h1-font-size-md;
@@ -109,9 +125,6 @@ p {
   }
 
   p {
-    font-size: $paragraph-font-size-md;
-    font-weight: $font-weight-normal;
-    line-height: $paragraph-line-height-md;
     margin-bottom: $paragraph-margin-bottom-md;
   }
 }
