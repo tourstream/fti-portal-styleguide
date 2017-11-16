@@ -1,4 +1,6 @@
 footer {
+  font-size: 12px;  // ToDo this line is shitty stuff
+  line-height: 14px;  // ToDo this line is shitty stuff
   text-align: center;
 }
 
@@ -7,4 +9,8 @@ footer {
 .footer-menu,
 .footer-copyright {
   margin-bottom: 1rem;
+}
+
+.footer-hotline {
+  padding-top: .75rem;
 }
