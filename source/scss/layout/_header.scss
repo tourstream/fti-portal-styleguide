@@ -1,4 +1,4 @@
-header {
+body > header {
   background-color: $white;
 
   //> div > div > div {
@@ -25,7 +25,7 @@ header {
 //}
 
 // d-flexinger-version
-header {
+body > header {
   display: flex;
   margin: 0 auto;
   width: 100%;
@@ -41,39 +41,39 @@ header {
     }
   }
 }
-
-/*
- * changes styles for the breakpoint after 480px
- */
-@include media-breakpoint-up(sm) {
-  header {
-    max-width: map-get($container-max-widths, sm);
-  }
-}
-
-/*
- * changes styles for the breakpoint after 768px
- */
-@include media-breakpoint-up(md) {
-  header {
-    max-width: map-get($container-max-widths, md);
-  }
-}
-
-/*
- * changes styles for the breakpoint after 960px
- */
-@include media-breakpoint-up(lg) {
-  header {
-    max-width: map-get($container-max-widths, lg);
-  }
-}
-
-/*
- * changes styles for the breakpoint after 1280px
- */
-@include media-breakpoint-up(xl) {
-  header {
-    max-width: map-get($container-max-widths, xl);
-  }
-}
+//
+///*
+// * changes styles for the breakpoint after 480px
+// */
+//@include media-breakpoint-up(sm) {
+//  body > header {
+//    max-width: map-get($container-max-widths, sm);
+//  }
+//}
+//
+///*
+// * changes styles for the breakpoint after 768px
+// */
+//@include media-breakpoint-up(md) {
+//  body > header {
+//    max-width: map-get($container-max-widths, md);
+//  }
+//}
+//
+///*
+// * changes styles for the breakpoint after 960px
+// */
+//@include media-breakpoint-up(lg) {
+//  body > header {
+//    max-width: map-get($container-max-widths, lg);
+//  }
+//}
+//
+///*
+// * changes styles for the breakpoint after 1280px
+// */
+//@include media-breakpoint-up(xl) {
+//  body > header {
+//    max-width: map-get($container-max-widths, xl);
+//  }
+//}
