@@ -1,28 +1,6 @@
 body > header {
   background-color: $white;
-
-  //> div > div > div {
-  //  &:nth-child(1) {
-  //    text-align: left;
-  //  }
-  //
-  //  &:nth-child(2) {
-  //    text-align: right;
-  //  }
-  //}
 }
-
-//.header-logo {
-//}
-//
-//.header-hotline {
-//}
-//
-//.header-bookmark {
-//}
-//
-//.header-menu {
-//}
 
 // d-flexinger-version
 body > header {
@@ -41,39 +19,3 @@ body > header {
     }
   }
 }
-//
-///*
-// * changes styles for the breakpoint after 480px
-// */
-//@include media-breakpoint-up(sm) {
-//  body > header {
-//    max-width: map-get($container-max-widths, sm);
-//  }
-//}
-//
-///*
-// * changes styles for the breakpoint after 768px
-// */
-//@include media-breakpoint-up(md) {
-//  body > header {
-//    max-width: map-get($container-max-widths, md);
-//  }
-//}
-//
-///*
-// * changes styles for the breakpoint after 960px
-// */
-//@include media-breakpoint-up(lg) {
-//  body > header {
-//    max-width: map-get($container-max-widths, lg);
-//  }
-//}
-//
-///*
-// * changes styles for the breakpoint after 1280px
-// */
-//@include media-breakpoint-up(xl) {
-//  body > header {
-//    max-width: map-get($container-max-widths, xl);
-//  }
-//}
