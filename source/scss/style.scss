@@ -19,6 +19,10 @@
  */
 @import "abstracts/variables";
 /**
+ * own mixins
+ */
+@import "abstracts/mixins";
+/**
  * base settings on top of bootstrap
  */
 @import "base/typography";
@@ -32,6 +36,12 @@
 @import "layout/header";
 @import "components/header-logo";
 @import "components/header-menu";
+/*
+ * Following imports are related to the content section and his components
+ */
+@import "components/person_span";
+@import "components/currency-paragraph";
+@import "components/offer-teaser";
 /**
  * Following imports are related to the footer and his components
  */

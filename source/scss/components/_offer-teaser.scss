@@ -1,0 +1,43 @@
+/**
+.card-title {
+  @include multi-line-ellipsis($h3-line-height, $lineCount: 1, $bgColor: white);
+}*/
+.card-title {
+  @include multi-line-fade($h3-line-height, $lineCount: 1, $bgColor: white);
+}
+/**
+.card-subtitle {
+  @include multi-line-ellipsis($h6-line-height, $lineCount: 1, $bgColor: white);
+}
+*/
+.card-subtitle {
+  font-size: $font-size-sm;
+  @include multi-line-fade($h3-line-height, $lineCount: 1, $bgColor: white);
+}
+
+/**
+.card-content {
+  @include multi-line-ellipsis($paragraph-line-height, $lineCount: 2, $bgColor: white);
+}
+*/
+.card-content {
+  font-size: $font-size-sm;
+  @include multi-line-fade($paragraph-line-height, $lineCount: 2, $bgColor: white);
+
+
+}
+
+
+@include media-breakpoint-up(md) {
+  .card-title {
+    @include multi-line-fade($h3-line-height-md, $lineCount: 1, $bgColor: white);
+  }
+
+  .card-subtitle {
+    @include multi-line-fade($h6-line-height-md-md, $lineCount: 1, $bgColor: white);
+  }
+
+  .card-content {
+    @include multi-line-fade($paragraph-line-height-md, $lineCount: 2, $bgColor: white);
+  }
+}
