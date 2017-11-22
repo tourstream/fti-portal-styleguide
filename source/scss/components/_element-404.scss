@@ -1,0 +1,93 @@
+.element-404 {
+  line-height: 1.0625rem;
+
+  > div {
+    background: url("../../images/404xs.png") center center no-repeat;
+    padding: 1.2rem 0 1.8rem;
+  }
+
+  h2 {
+    font-size: 3.0625rem;
+    line-height: 1;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1.625rem;
+    line-height: 2rem;
+  }
+
+  p {
+    margin-bottom: .875rem;
+  }
+}
+
+@include media-breakpoint-up("sm") {
+  .element-404 {
+    > div {
+      padding: 4.75rem 0;
+    }
+
+    h2 {
+      line-height: 3.5rem;
+    }
+
+    p {
+      margin-bottom: 1.125rem;
+    }
+  }
+}
+
+@include media-breakpoint-up("md") {
+  .element-404 {
+    line-height: 1.25rem;
+
+    > div {
+      padding: 1.8rem 0;
+    }
+
+    h2 {
+      font-size: 6.25rem;
+      line-height: 1;
+    }
+
+    h3 {
+      font-size: 2rem;
+      line-height: 2.4375rem;
+    }
+  }
+}
+
+@include media-breakpoint-up("lg") {
+  .element-404 {
+    > div {
+      padding: 2.9rem 0 3.75rem;
+    }
+
+    p {
+      margin-bottom: 1.75rem;
+    }
+  }
+}
+
+@include media-breakpoint-up("xl") {
+  .element-404 {
+    > div {
+      padding: 6.25rem 0 9.75rem;
+    }
+
+    p {
+      margin-bottom: 1.75rem;
+    }
+  }
+}
+
+@each $breakpoint, $size in $grid-breakpoints {
+  @if $breakpoint != "xs" {
+    @include media-breakpoint-up($breakpoint) {
+      .element-404 > div {
+        background-image: url("../../images/404#{$breakpoint}.png");
+      }
+    }
+  }
+}
