@@ -8,6 +8,14 @@
     "order/properties-alphabetical-order": true,
     "selector-class-pattern": null,
     "string-quotes": "double",
-    "selector-max-compound-selectors": 4
+    "selector-max-compound-selectors": 4,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": [
+          "class"
+        ]
+      }
+    ]
   }
 }
