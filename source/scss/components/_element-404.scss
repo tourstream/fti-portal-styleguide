@@ -1,9 +1,18 @@
 .element-404 {
+  height: 225px;
   line-height: 1.0625rem;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
 
   > div {
-    background: url("../../images/404xs.png") center center no-repeat;
+    left: 0;
     padding: 1.2rem 0 1.8rem;
+    position: absolute;
+    top: 0;
   }
 
   h2 {
@@ -19,11 +28,14 @@
 
   p {
     margin-bottom: .875rem;
+    padding: 0 1rem;
   }
 }
 
 @include media-breakpoint-up("sm") {
   .element-404 {
+    height: auto;
+
     > div {
       padding: 4.75rem 0;
     }
@@ -78,16 +90,6 @@
 
     p {
       margin-bottom: 1.75rem;
-    }
-  }
-}
-
-@each $breakpoint, $size in $grid-breakpoints {
-  @if $breakpoint != "xs" {
-    @include media-breakpoint-up($breakpoint) {
-      .element-404 > div {
-        background-image: url("../../images/404#{$breakpoint}.png");
-      }
     }
   }
 }
