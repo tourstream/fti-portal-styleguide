@@ -1,0 +1,41 @@
+.c-teaser {
+  background-clip: border-box;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  word-wrap: break-word;
+
+  > .teaser-image img {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    width: 100%;
+  }
+
+  > .m-teaser-content {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+
+    > p {
+      font-size: .8rem;
+    }
+  }
+
+  > .teaser-title {
+    margin-bottom: .75rem;
+  }
+}
+
+.teaser-subtitle > h6 {
+  font-size: .8rem;
+}
+
+.m-teaser-pricebutton {
+  > p {
+    font-size: .8rem;
+  }
+
+}
