@@ -1,41 +1,72 @@
-.c-teaser {
-  background-clip: border-box;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, .125);
-  border-radius: .25rem;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  position: relative;
-  word-wrap: break-word;
+//.teaser {
+//  background-clip: border-box;
+//  background-color: #ffffff;
+//  border: 1px solid rgba(0, 0, 0, .125);
+//  border-radius: .25rem;
+//  display: flex;
+//  flex-direction: column;
+//  min-width: 0;
+//  position: relative;
+//  word-wrap: break-word;
+//
+//  > .teaser-images img {
+//    border-top-left-radius: calc(.25rem - 1px);
+//    border-top-right-radius: calc(.25rem - 1px);
+//    width: 100%;
+//  }
+//
+//  > .teaser-body {
+//    flex: 1 1 auto;
+//    padding: 1.25rem;
+//
+//    > p {
+//      font-size: .8rem;
+//    }
+//  }
+//
+//  > .teaser-title {
+//    margin-bottom: .75rem;
+//  }
+//}
+//
+//.teaser-subtitle > h6 {
+//  font-size: .8rem;
+//}
+//
+//.m-teaser-pricebutton {
+//  > p {
+//    font-size: .8rem;
+//  }
+//
+//}
 
-  > .teaser-image img {
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px);
-    width: 100%;
-  }
+/* enrico */
+/* teaser - global definitions */
+.teaser {
+  background-color: $white;
+  box-shadow: 0 0 ($grid-gutter-width / 2) 0 $gray-300;
 
-  > .m-teaser-content {
-    flex: 1 1 auto;
-    padding: 1.25rem;
-
-    > p {
-      font-size: .8rem;
+  > .teaser-images {
+    img:first-child {
+      width: 100%;
     }
   }
 
-  > .teaser-title {
-    margin-bottom: .75rem;
+  > .teaser-body {
+    padding: 1.25rem;
+
+    > .teaser-cta {
+      text-align: right;
+    }
   }
 }
 
-.teaser-subtitle > h6 {
-  font-size: .8rem;
-}
+/* teaser - SIZE */
+//.teaser-25{}
+//.teaser-50{}
+//.teaser-75{}
+//.teaser-100{}
 
-.m-teaser-pricebutton {
-  > p {
-    font-size: .8rem;
-  }
-
-}
+/* teaser - KIND */
+//.teaser-offer{}
+//.teaser-content{}
