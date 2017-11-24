@@ -1,7 +1,7 @@
 <div class="teaser-body">
-  {{> atoms-godTag(tag: "h3", attr1: "class", attr1Value: "teaser-title", tagContent: "Sri Lanka")}}
+  <h3 class="teaser-headline">{{ teaserHeadline }}</h3>
   {{> molecules-teaser-subtitle}}
-  {{> atoms-godTag(tag: "p", attr1: "class", attr1Value: "teaser-describtion", tagContent: "Eurus igni aequalis? Tollere umentia. Sectamque mentisque frigida nabataeaque cepit effervescere hanc agitabilis ita fluminaque.")}}
+  <p class="teaser-describtion">{{ teaserDescription }}</p>
   <div class="teaser-cta">
     {{> molecules-button-price}}
   </div>

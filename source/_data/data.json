@@ -74,5 +74,22 @@
   ],
   "url": "#",
   "htmlText": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, unde, dolore? Ex fugit, necessitatibus tempore neque ullam nostrum ducimus alias beatae voluptatibus iusto, perspiciatis tenetur consectetur reprehenderit, harum quae rerum!</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corrupti fuga, quas quisquam perspiciatis. Consequatur, atque ducimus dolores natus officia qui rerum consectetur repellat ullam accusantium laboriosam, reprehenderit nemo deleniti</p>",
-  "footerLegal": "© 2017 - FTI Touristik GmbH. Alle Rechte vorbehalten. (used atom: paragraph)"
+  "footerLegal": "© 2017 - FTI Touristik GmbH. Alle Rechte vorbehalten. (used atom: paragraph)",
+  "teaserHeadline": "Unser Reisetipp der Woche: El Gouna",
+  "teaserSubheadline": "Unser Reisetipp der Woche: El Gouna",
+  "teaserDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er dolore magna aliquyam erat",
+  "teaserList": [
+    {
+      "teaserHeadline": "teaserHeadline",
+      "teaserDescription": "teaserDescription"
+    },
+    {
+      "teaserHeadline": "teaserHeadline",
+      "teaserDescription": "teaserDescription"
+    },
+    {
+      "teaserHeadline": "teaserHeadline",
+      "teaserDescription": "teaserDescription"
+    }
+  ]
 }
