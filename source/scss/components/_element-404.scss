@@ -1,9 +1,17 @@
 .element-404 {
   line-height: 1.0625rem;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
 
   > div {
-    background: url("../../images/404xs.png") center center no-repeat;
-    padding: 1.2rem 0 1.8rem;
+    left: 50%;
+    position: absolute;
+    top: 52.5%;
+    transform: translate(-50%, -50%);
   }
 
   h2 {
@@ -19,22 +27,7 @@
 
   p {
     margin-bottom: .875rem;
-  }
-}
-
-@include media-breakpoint-up("sm") {
-  .element-404 {
-    > div {
-      padding: 4.75rem 0;
-    }
-
-    h2 {
-      line-height: 3.5rem;
-    }
-
-    p {
-      margin-bottom: 1.125rem;
-    }
+    padding: 0 1rem;
   }
 }
 
@@ -43,7 +36,8 @@
     line-height: 1.25rem;
 
     > div {
-      padding: 1.8rem 0;
+      left: 41.5%;
+      top: 50%;
     }
 
     h2 {
@@ -61,11 +55,16 @@
 @include media-breakpoint-up("lg") {
   .element-404 {
     > div {
-      padding: 2.9rem 0 3.75rem;
+      left: 37.5%;
+      top: 48.5%;
+    }
+
+    h3 {
+      line-height: 1.5rem;
     }
 
     p {
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.875rem;
     }
   }
 }
@@ -73,21 +72,11 @@
 @include media-breakpoint-up("xl") {
   .element-404 {
     > div {
-      padding: 6.25rem 0 9.75rem;
+      top: 45%;
     }
 
-    p {
-      margin-bottom: 1.75rem;
-    }
-  }
-}
-
-@each $breakpoint, $size in $grid-breakpoints {
-  @if $breakpoint != "xs" {
-    @include media-breakpoint-up($breakpoint) {
-      .element-404 > div {
-        background-image: url("../../images/404#{$breakpoint}.png");
-      }
+    h3 {
+      line-height: 2.35rem;
     }
   }
 }
