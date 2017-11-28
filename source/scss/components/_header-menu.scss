@@ -20,3 +20,10 @@
     }
   }
 }
+
+@include media-breakpoint-up("md") {
+  .header-menu .navbar-nav .nav-link {
+    padding-bottom: .82rem;
+    padding-top: .82rem;
+  }
+}
