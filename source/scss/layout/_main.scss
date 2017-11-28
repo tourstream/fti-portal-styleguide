@@ -11,6 +11,10 @@ main {
     background-color: $white;
     box-shadow: 0 0 1rem $gray-300;
     padding: 1rem;
+
+    &:empty {
+      display: none;
+    }
   }
 }
 
