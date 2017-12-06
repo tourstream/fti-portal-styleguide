@@ -46,6 +46,8 @@
     "minimist": "^1.2.0",
     "npm-run-all": "^4.1.2",
     "patternlab-node": "^2.9.3",
+    "postcss": "^6.0.14",
+    "postcss-sass": "^0.2.0",
     "styleguidekit-assets-default": "^3.5.2",
     "styleguidekit-mustache-default": "^3.1.0",
     "stylelint": "^8.2.0",
