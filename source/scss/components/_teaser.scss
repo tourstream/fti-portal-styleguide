@@ -1,84 +1,34 @@
-//.teaser {
-//  background-clip: border-box;
-//  background-color: #ffffff;
-//  border: 1px solid rgba(0, 0, 0, .125);
-//  border-radius: .25rem;
-//  display: flex;
-//  flex-direction: column;
-//  min-width: 0;
-//  position: relative;
-//  word-wrap: break-word;
-//
-//  > .teaser-images img {
-//    border-top-left-radius: calc(.25rem - 1px);
-//    border-top-right-radius: calc(.25rem - 1px);
-//    width: 100%;
-//  }
-//
-//  > .teaser-body {
-//    flex: 1 1 auto;
-//    padding: 1.25rem;
-//
-//    > p {
-//      font-size: .8rem;
-//    }
-//  }
-//
-//  > .teaser-title {
-//    margin-bottom: .75rem;
-//  }
-//}
-//
-//.teaser-subtitle > h6 {
-//  font-size: .8rem;
-//}
-//
-//.m-teaser-pricebutton {
-//  > p {
-//    font-size: .8rem;
-//  }
-//
-//}
-
-/* enrico */
 /* teaser - global definitions */
 .teaser {
   margin-bottom: $grid-gutter-width;
   padding-left: $grid-gutter-width / 2;
   padding-right: $grid-gutter-width / 2;
   width: 100%;
+}
 
-  .teaser-box {
-    background-color: $white;
-    box-shadow: 0 0 ($grid-gutter-width / 2) 0 $gray-300;
-    height: 100%;
-  }
+.teaser-box {
+  background-color: $white;
+  box-shadow: 0 0 ($grid-gutter-width / 2) 0 $gray-300;
+  height: 100%;
+}
 
-  .teaser-images {
-    img:first-child {
-      //object-fit: cover;
-      width: 100%;
-    }
-  }
+.teaser-body {
+  padding: 10px 15px; // [EH] sry for the pixels ... but the drafts
 
-  .teaser-body {
-    padding: 1.25rem;
-
-    > .teaser-cta {
-      text-align: right;
-    }
+  > .teaser-cta {
+    text-align: right;
   }
 }
 
+.teaser-headline {
+  @include multi-line-cut($h3-line-height, 2);
+}
+
+.teaser-describtion {
+  @include multi-line-cut($paragraph-line-height, 3);
+}
 /* teaser - KIND */
-//.teaser-offer{}
-.teaser-content {
-  > .teaser-body {
-    > .teaser-headline {
-      max-height: $h3-line-height * 2;
-    }
-  }
-}
+
 
 /* teaser-list - yes, the wrapper */
 .teaser-list {
@@ -90,6 +40,18 @@
 
 /* teaser - SIZE */
 @include media-breakpoint-up("md") {
+  .teaser-body {
+    padding: 15px 20px;
+  }
+
+  .teaser-headline {
+    @include multi-line-cut($h3-line-height-md, 2);
+  }
+
+  .teaser-describtion {
+    @include multi-line-cut($paragraph-line-height-md, 3);
+  }
+
   .teaser-25 {
     flex: 0 0 25%;
     max-width: 25%;

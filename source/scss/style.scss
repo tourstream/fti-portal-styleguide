@@ -13,7 +13,7 @@
 // the basic styles of fti-group-bootstrap will be linked in HEAD
 @import "../../node_modules/@tourstream/fti-group-bootstrap/scss/bootstrap-helper";
 // ouwn playground before implement this into fti-group-bootstrap
-@import "bootstrap/bootstrap";
+//@import "bootstrap/bootstrap";
 /**
  *  own variables we need to set for our needs
  */
@@ -40,6 +40,7 @@
  * Following imports are related to the content section and his components
  */
 @import "components/teaser";
+@import "components/btngrd";
 /**
  * Following imports are related to the footer and his components
  */

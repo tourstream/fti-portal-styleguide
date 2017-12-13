@@ -42,3 +42,10 @@
     width: 15%;
   }
 }
+
+@mixin multi-line-cut($lineHeight, $lineCount) {
+  line-height: $lineHeight;        /* fallback */
+  max-height: $lineHeight * $lineCount;       /* fallback */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

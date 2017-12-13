@@ -80,16 +80,45 @@
   "teaserDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er dolore magna aliquyam erat",
   "teaserList": [
     {
-      "teaserHeadline": "teaserHeadline",
-      "teaserDescription": "teaserDescription"
+      "teaserHeadline": "Le petit offer teaser",
+      "teaserDescription": "short description",
+      "btngrdValue": "zu den Angeboten",
+      "btngrdPrefix": "",
+      "btngrdSuffix": "",
+      "btngrdBefore": "",
+      "btngrdAfter": ""
+    },
+    {
+      "teaserHeadline": "looooogn teaser headling with a lot of letters taht no one needs to recognize what this offer is about ",
+      "teaserSubheadline": "Unser Reisetipp der Woche: El Gouna",
+      "teaserDescription": "oh yes, this is a loooooong description ... believe me ... oh yes, this is a loooooong description ... believe me ... oh yes, this is a loooooong description ... believe me ... oh yes, this is a loooooong description ... believe me ... ",
+      "btngrdValue": "zu den Angeboten",
+      "btngrdPrefix": "Rabatt-Schlacht",
+      "btngrdSuffix": "",
+      "btngrdBefore": "heute Spar-Tag mit mehr als 200% Rabatt auf alles *",
+      "btngrdAfter": "* Rabatt auf alles, außer Teewurst"
     },
     {
       "teaserHeadline": "teaserHeadline",
-      "teaserDescription": "teaserDescription"
-    },
-    {
-      "teaserHeadline": "teaserHeadline",
-      "teaserDescription": "teaserDescription"
+      "teaserDescription": "teaserDescription",
+      "btngrdValue": "zu den Angeboten",
+      "btngrdPrefix": "",
+      "btngrdSuffix": "",
+      "btngrdBefore": "",
+      "btngrdAfter": ""
     }
-  ]
+  ],
+  "btngrdValue": "6.666 €",
+  "btngrdPrefix": "p.P. ab",
+  "btngrdSuffix": "",
+  "btngrdBefore": "9.999 $",
+  "btngrdAfter": "",
+  "imgSrc": "../../images/sample-4-3-1280-960.png",
+  "imgSrcResp": {
+    "xs": "../../images/sample-3-2-480-320.png",
+    "sm": "../../images/sample-3-2-768-512.png",
+    "md": "../../images/sample-21-9-960-412.png",
+    "lg": "../../images/sample-21-9-1280-549.png",
+    "fallback": "../../images/teaser-img-1240×421.jpg"
+  }
 }

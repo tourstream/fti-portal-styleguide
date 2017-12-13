@@ -1,0 +1,7 @@
+<picture>
+    <source srcset="{{ imgSrcResp.lg }}" media="(min-width: 60em)">
+    <source srcset="{{ imgSrcResp.md }}" media="(min-width: 48em)">
+    <source srcset="{{ imgSrcResp.sm }}" media="(min-width: 30em)">
+    <source srcset="{{ imgSrcResp.xs }}">
+    <img class="img-fluid" src="{{ imgSrcResp.fallback }}" alt="alternative text of the fallback image" />
+</picture>
