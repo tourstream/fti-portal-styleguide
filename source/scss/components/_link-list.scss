@@ -1,0 +1,30 @@
+.link-list-25 {
+
+  margin-bottom: $grid-gutter-width;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
+  width: 100%;
+
+  .link-list-body {
+    padding: 10px 15px; // [EH] sry for the pixels ... but the drafts
+  }
+
+  ul li a {
+    font-size: 12px;
+  }
+}
+
+@include media-breakpoint-up("md") {
+  .link-list-25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* link-list - yes, the wrapper */
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: ($grid-gutter-width / 2 * -1);
+  margin-right: ($grid-gutter-width / 2 * -1);
+}
