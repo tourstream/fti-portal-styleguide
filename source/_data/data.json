@@ -113,13 +113,13 @@
   "btngrdSuffix": "",
   "btngrdBefore": "9.999 $",
   "btngrdAfter": "",
-  "imgSrc": "../../images/sample-4-3-1280-960.png",
+  "imgSrc": "../../images/sample-21-9-1280-549.png",
   "imgSrcResp": {
     "xs": "../../images/sample-3-2-480-320.png",
     "sm": "../../images/sample-3-2-768-512.png",
     "md": "../../images/sample-21-9-960-412.png",
     "lg": "../../images/sample-21-9-1280-549.png",
-    "fallback": "../../images/teaser-img-1240×421.jpg"
+    "fallback": "../../images/sample-21-9-1280-549.png"
   },
   "btnLnkClass": "btn-primary",
   "btnLnkContent": "Zu den Angeboten"

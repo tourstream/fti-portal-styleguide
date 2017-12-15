@@ -1,3 +1,4 @@
 ---
 title: star
+state: inprogress
 ---
