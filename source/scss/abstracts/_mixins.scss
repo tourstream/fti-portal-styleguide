@@ -44,6 +44,14 @@
 }
 
 @mixin multi-line-cut($lineHeight, $lineCount) {
+  /* stylelint-disable property-no-vendor-prefix */
+  /* stylelint-disable value-no-vendor-prefix */
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: $lineCount;
+  /* stylelint-enable */
   line-height: $lineHeight;        /* fallback */
   max-height: $lineHeight * $lineCount;       /* fallback */
   overflow: hidden;

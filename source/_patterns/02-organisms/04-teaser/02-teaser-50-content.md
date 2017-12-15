@@ -1,3 +1,3 @@
 ---
-title: Teaser 50 content
+title: Content Teaser 50
 ---

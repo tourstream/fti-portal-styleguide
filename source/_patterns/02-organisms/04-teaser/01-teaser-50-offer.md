@@ -1,3 +1,3 @@
 ---
-title: Teaser 50 offer
+title: Offer Teaser 50
 ---

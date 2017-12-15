@@ -28,6 +28,16 @@
   @include multi-line-cut($paragraph-line-height, 3);
 }
 /* teaser - KIND */
+.teaser-content {
+  .teaser-body {
+    > .teaser-cta {
+      text-align: center;
+    }
+  }
+}
+//.teaser-offer {
+//
+//}
 
 
 /* teaser-list - yes, the wrapper */

@@ -75,9 +75,9 @@
   "url": "#",
   "htmlText": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, unde, dolore? Ex fugit, necessitatibus tempore neque ullam nostrum ducimus alias beatae voluptatibus iusto, perspiciatis tenetur consectetur reprehenderit, harum quae rerum!</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corrupti fuga, quas quisquam perspiciatis. Consequatur, atque ducimus dolores natus officia qui rerum consectetur repellat ullam accusantium laboriosam, reprehenderit nemo deleniti</p>",
   "footerLegal": "© 2017 - FTI Touristik GmbH. Alle Rechte vorbehalten. (used atom: paragraph)",
-  "teaserHeadline": "Unser Reisetipp der Woche: El Gouna",
+  "teaserHeadline": "Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna",
   "teaserSubheadline": "Unser Reisetipp der Woche: El Gouna",
-  "teaserDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er dolore magna aliquyam erat",
+  "teaserDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er dolore magna aliquyam erat",
   "teaserList": [
     {
       "teaserHeadline": "Le petit offer teaser",
@@ -120,5 +120,7 @@
     "md": "../../images/sample-21-9-960-412.png",
     "lg": "../../images/sample-21-9-1280-549.png",
     "fallback": "../../images/teaser-img-1240×421.jpg"
-  }
+  },
+  "btnLnkClass": "btn-primary",
+  "btnLnkContent": "Zu den Angeboten"
 }
