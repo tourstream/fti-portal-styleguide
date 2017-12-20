@@ -4,3 +4,4 @@ node_modules/
 pattern_exports/
 public/
 source/css/style.css
+*.lock
