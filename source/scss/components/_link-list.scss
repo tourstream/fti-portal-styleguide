@@ -19,6 +19,15 @@
 
 .link-list-body {
   padding: 10px; // [EH] sry for the pixels ... but the drafts
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    color: #0099cc;
+  }
 }
 
 @include media-breakpoint-up("md") {
