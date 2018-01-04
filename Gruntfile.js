@@ -16,6 +16,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-stylelint');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -78,7 +79,7 @@ module.exports = function (grunt) {
       options: {
         // sourceMap: false,
         // sourceComments: false,
-        outputStyle: 'compressed',
+        // outputStyle: 'compressed',
         includePaths: ['node_modules/bootstrap/scss']
       },
       production: {
@@ -94,6 +95,17 @@ module.exports = function (grunt) {
       our_single_file: {
         src: path.resolve(paths().source.css + 'style.css'),
         dest: path.resolve(paths().source.css + 'style.css')
+      }
+    },
+    cssmin: {
+      options: {
+        mergeIntoShorthands: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: {
+          './source/css/style.min.css': [path.resolve(paths().source.css + 'style.css')]
+        }
       }
     },
     /******************************************************
@@ -186,7 +198,7 @@ module.exports = function (grunt) {
   ******************************************************/
 
   grunt.registerTask('default', ['patternlab', 'css', 'copy:main']);
-  grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer']);
+  grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer', 'cssmin']);
   grunt.registerTask('patternlab:build', ['default']);
   grunt.registerTask('patternlab:watch', ['default', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['default', 'browserSync', 'watch:all']);
