@@ -17,6 +17,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-compress');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -108,6 +109,19 @@ module.exports = function (grunt) {
         }
       }
     },
+    compress: {
+      main: {
+        options: {
+          mode: 'gzip'
+        },
+        files: [{
+          expand: true,
+          src: ['./source/css/style.min.css'],
+          dest: './',
+          ext: '.min.css.gz'
+        }]
+      }
+    },
     /******************************************************
      * COPY TASKS
     ******************************************************/
@@ -118,6 +132,7 @@ module.exports = function (grunt) {
           { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js.map', dest: path.resolve(paths().public.js) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css', dest: path.resolve(paths().public.css) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css.map', dest: path.resolve(paths().public.css) },
+          { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css.gz', dest: path.resolve(paths().public.css) },
           { expand: true, cwd: path.resolve(paths().source.images), src: '**/*', dest: path.resolve(paths().public.images) },
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '**/*', dest: path.resolve(paths().public.fonts) },
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
@@ -198,7 +213,7 @@ module.exports = function (grunt) {
   ******************************************************/
 
   grunt.registerTask('default', ['patternlab', 'css', 'copy:main']);
-  grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer', 'cssmin', 'compress']);
   grunt.registerTask('patternlab:build', ['default']);
   grunt.registerTask('patternlab:watch', ['default', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['default', 'browserSync', 'watch:all']);

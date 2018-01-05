@@ -25,6 +25,7 @@ deploy:
       repo: tourstream/fti-portal-styleguide
   - provider: gcs
     skip_cleanup: true
+    detect_encoding: true
     access_key_id: $GCS_ACCESS_KEY_ID
     secret_access_key: $GCS_ACCESS_SECRET
     bucket: $GCS_BUCKET
@@ -36,6 +37,7 @@ deploy:
       repo: tourstream/fti-portal-styleguide
   - provider: gcs
     skip_cleanup: true
+    detect_encoding: true
     access_key_id: $GCS_ACCESS_KEY_ID
     secret_access_key: $GCS_ACCESS_SECRET
     bucket: $GCS_BUCKET

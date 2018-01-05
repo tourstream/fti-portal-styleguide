@@ -3,5 +3,5 @@ dist-*/
 node_modules/
 pattern_exports/
 public/
-source/css/style*.css
+source/css/style*.*
 *.lock
