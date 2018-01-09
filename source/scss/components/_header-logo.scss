@@ -1,5 +1,6 @@
 .c-logo-link {
   img {
+    max-height: 50px;
     max-width: 50px;
   }
 }
@@ -7,6 +8,7 @@
 @include media-breakpoint-up(md) {
   .c-logo-link {
     img {
+      max-height: 80px;
       max-width: 80px;
     }
   }
