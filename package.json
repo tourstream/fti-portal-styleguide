@@ -31,9 +31,7 @@
     "access": "public"
   },
   "dependencies": {
-    "express": "^4.16.2"
-  },
-  "devDependencies": {
+    "express": "^4.16.2",
     "@tourstream/fti-group-bootstrap": "^0.8.0",
     "bootstrap": "^4.0.0-beta.3",
     "bs-html-injector": "^3.0.0",
@@ -59,6 +57,7 @@
     "stylelint-order": "^0.7.0",
     "stylelint-scss": "^2.1.0"
   },
+  "devDependencies": {},
   "scripts": {
     "build": "grunt patternlab:build",
     "watch": "grunt patternlab:watch",
