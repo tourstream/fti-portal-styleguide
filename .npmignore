@@ -10,7 +10,9 @@ source/
 .npmrc
 .stylelintrc.json
 .travis.yml
+app.json
 Gruntfile.js
+heroku.js
 package-lock.json
 patternlab-config.json
 prepare-gcs.js
