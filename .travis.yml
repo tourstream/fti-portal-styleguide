@@ -11,7 +11,7 @@ cache:
 
 script:
   - echo "build fti portal styles and styleguide based on patternlab ..."
-  - npm run build
+#  - npm run build
 
 deploy:
   - provider: npm
