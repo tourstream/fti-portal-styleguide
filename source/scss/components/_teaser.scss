@@ -1,3 +1,13 @@
+/* teaser - helper class */
+// ToDo remove or rename this class ... will be used later outside of teasers
+/* teaser-list - yes, the wrapper */
+.teaser-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: ($grid-gutter-width / 2 * -1);
+  margin-right: ($grid-gutter-width / 2 * -1);
+}
+
 /* teaser - global definitions */
 .teaser {
   margin-bottom: $grid-gutter-width;
@@ -40,13 +50,7 @@
 //}
 
 
-/* teaser-list - yes, the wrapper */
-.teaser-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: ($grid-gutter-width / 2 * -1);
-  margin-right: ($grid-gutter-width / 2 * -1);
-}
+
 
 /* teaser - SIZE */
 @include media-breakpoint-up("md") {
