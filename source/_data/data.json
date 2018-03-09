@@ -122,5 +122,10 @@
     "fallback": "../../images/sample-21-9-1280-549.png"
   },
   "btnLnkClass": "btn-primary",
-  "btnLnkContent": "Zu den Angeboten"
+  "btnLnkContent": "Zu den Angeboten",
+  "paragraphSingle": {
+    "short": "<p>Lorem <i class='fg-calendar'></i> ipsum dolor sit amet, consectetur <i class='fg-questionmark-circle'></i> adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue.</p>",
+    "medium": "<p>Lorem <i class='fg-calendar'></i> ipsum dolor sit amet, consectetur <i class='fg-questionmark-circle'></i> adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue. Morbi non magna eget nunc tempor pretium. Maecenas congue condimentum orci at eleifend. Maecenas id pretium nisl, aliquam faucibus elit. Ut tempor vitae tortor a pharetra. Aliquam porta dignissim arcu non commodo. Nunc erat leo, auctor vel placerat vel, ornare in lacus. Phasellus quis nibh iaculis, ultrices dolor sed, mollis sapien.</p>",
+    "long": "<p>Lorem <i class='fg-calendar'></i> ipsum dolor sit amet, consectetur <i class='fg-questionmark-circle'></i> adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue. Morbi non magna eget nunc tempor pretium. Maecenas congue condimentum orci at eleifend. Maecenas id pretium nisl, aliquam faucibus elit. Ut tempor vitae tortor a pharetra. Aliquam porta dignissim arcu non commodo. Nunc erat leo, auctor vel placerat vel, ornare in lacus. Phasellus quis nibh iaculis, ultrices dolor sed, mollis sapien. Donec vel pulvinar est. Ut mattis vehicula justo. Integer ultrices iaculis lorem, at euismod erat. Vestibulum ultrices, nisl in accumsan vulputate, metus massa dignissim mauris, eu commodo metus felis nec tortor. Aenean sollicitudin sed mauris sed tincidunt. Ut gravida arcu non ultrices laoreet.</p>"
+  }
 }
