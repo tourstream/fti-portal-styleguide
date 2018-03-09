@@ -4,13 +4,15 @@
 [![Demo][demo-image]][demo-url]
 [![License][license-image]][license-url]
 
+[![Heroku production][heroku-production-image]][heroku-production-url]
+[![Heroku staging][heroku-staging-image]][heroku-staging-url]
 ***
 
 # FTI Portal Styleguide
 
 > Styleguide based on Pattern Lab grunt for FTI portal
 
-This [demo page][demo-url] will show all implementated parts of the latest version of this package.
+This [demo page][demo-url] will show all implementated parts of the latest version (master branch) of this package.
 
 ## Usage
 
@@ -43,6 +45,18 @@ $ yarn add @tourstream/fti-portal-styleguide
 After this step you can use the sources as you like. They can be found in `./node_modules/@tourstream/fti-portal-styleguide/source`
 
 
+## Demo pages
+
+We use multiple systems for different states of the code.
+
+So, if you would like to see the result of an unmerged pull request just use the following pattern ...
+
+heroku pattern: `https://fti-portal-styleguide-st-pr-[PULL_REQUEST_NUMBER].herokuapp.com/`
+
+figure out the number of open pull request at github ... example #22 ...
+
+ `https://fti-portal-styleguide-st-pr-22.herokuapp.com/` ... that's it
+
 ***
 
 [npm-version-image]: https://img.shields.io/npm/v/%40tourstream%2Ffti-portal-styleguide.svg?style=flat-square
@@ -58,3 +72,8 @@ After this step you can use the sources as you like. They can be found in `./nod
 
 [license-image]: https://img.shields.io/github/license/tourstream/fti-portal-styleguide.svg?style=flat-square
 [license-url]: https://github.com/tourstream/fti-portal-styleguide/blob/master/LICENSE
+
+[heroku-production-image]: https://img.shields.io/badge/Heroku-production-79589F.svg?style=flat-square
+[heroku-production-url]: https://fti-portal-styleguide.herokuapp.com/
+[heroku-staging-image]: https://img.shields.io/badge/Heroku-staging-79589F.svg?style=flat-square
+[heroku-staging-url]: https://fti-portal-styleguide-staging.herokuapp.com/
