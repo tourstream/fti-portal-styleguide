@@ -1,4 +1,4 @@
 ---
 title: Text Image Element
-state: inprogress
+state: complete
 ---
