@@ -1,0 +1,52 @@
+{{> organisms-header }}
+{{> organisms-page-headline }}
+
+<main role="main" class="container">
+
+  <p>On this page you will see different versions of teasers ... </p>
+
+  <h2>Teaser content</h2>
+
+  <h3>Teaser content 25</h3>
+  <div class="teaser-list">
+    {{# teaserContent25List }}
+      {{> organisms-content-teaser-25 }}
+    {{/ teaserContent25List }}
+  </div>
+
+  <h3>Teaser content 50</h3>
+  <div class="teaser-list">
+    {{# teaserContent50List }}
+      {{> organisms-content-teaser-50 }}
+    {{/ teaserContent50List }}
+  </div>
+
+
+  <h2>Teaser offer</h2>
+
+  <h3>Teaser offer 25</h3>
+
+  <div class="teaser-list">
+    {{# teaserOffer25List }}
+      {{> organisms-offer-teaser-25 }}
+    {{/ teaserOffer25List }}
+
+    {{^ teaserOffer25List }}
+      <p>... soming soon ...</p>
+    {{/ teaserOffer25List }}
+  </div>
+
+  <h3>Teaser offer 50</h3>
+  <div class="teaser-list">
+    {{# teaserOffer50List }}
+      {{> organisms-offer-teaser-50 }}
+    {{/ teaserOffer50List }}
+
+    {{^ teaserOffer50List }}
+      <p>... soming soon ...</p>
+    {{/ teaserOffer50List }}
+  </div>
+
+</main>
+{{> organisms-footer }}
+

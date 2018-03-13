@@ -1,6 +1,50 @@
-/* teaser - helper class */
-// ToDo remove or rename this class ... will be used later outside of teasers
-/* teaser-list - yes, the wrapper */
+//
+// +-- teaser (optional variant classes) -----------------------------------+
+// | e.g. teaser-content | teaser-offer ... teaser-25 | teaser-50           |
+// |                                                                        |
+// | +-- teaser-box ------------------------------------------------------+ |
+// | |                                                                    | |
+// | |  +-- teaser-images ---------------------------------------------+  | |
+// | |  |                                                              |  | |
+// | |  +--------------------------------------------------------------+  | |
+// | |                                                                    | |
+// | |  +-- teaser-body -----------------------------------------------+  | |
+// | |  |                                                              |  | |
+// | |  | +-- teaser-headline --------------------------------------+  |  | |
+// | |  | |                                                         |  |  | |
+// | |  | +---------------------------------------------------------+  |  | |
+// | |  |                                                              |  | |
+// | |  | +-- teaser-subtitle (optional) ---------------------------+  |  | |
+// | |  | |                                                         |  |  | |
+// | |  | +---------------------------------------------------------+  |  | |
+// | |  |                                                              |  | |
+// | |  | +-- teaser-description -----------------------------------+  |  | |
+// | |  | |                                                         |  |  | |
+// | |  | +---------------------------------------------------------+  |  | |
+// | |  |                                                              |  | |
+// | |  | +-- teaser-cta -------------------------------------------+  |  | |
+// | |  | |                                                         |  |  | |
+// | |  | +---------------------------------------------------------+  |  | |
+// | |  +--------------------------------------------------------------+  | |
+// | |                                                                    | |
+// | +--------------------------------------------------------------------+ |
+// +------------------------------------------------------------------------+
+//
+
+/*====================================================================================================================*/
+/* teaser - mixins */
+@mixin set-font-values-and-cut($fontSize, $lineHeight, $marginButton, $lineCount) {
+  @include multi-line-cut($lineHeight, $lineCount);
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  margin-bottom: $marginButton;
+}
+
+/*====================================================================================================================*/
+/* teaser - global definitions */
+
+/* teaser - special class - yes, the wrapper */
+// ToDo this class should be renamed for more general usage
 .teaser-list {
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +52,8 @@
   margin-right: ($grid-gutter-width / 2 * -1);
 }
 
-/* teaser - global definitions */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* teaser - basic structure */
 .teaser {
   margin-bottom: $grid-gutter-width;
   padding-left: $grid-gutter-width / 2;
@@ -19,53 +64,72 @@
 .teaser-box {
   background-color: $white;
   box-shadow: 0 0 ($grid-gutter-width / 2) 0 $gray-300;
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
-.teaser-body {
-  padding: 10px 15px; // [EH] sry for the pixels ... but the drafts
+.teaser-images {
+  flex: 0 0;
+  width: 100%;
+}
 
-  > .teaser-cta {
-    text-align: right;
+.teaser-body {
+  display: flex;
+  flex: 1 0;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.teaser-cta {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* teaser - basic elements */
+.teaser-images {
+  picture {
+    source,
+    img {
+      width: 100%;
+    }
   }
+}
+
+.teaser-headline,
+.teaser-description,
+.teaser-subtitle {
+  flex: 0 0 auto;
 }
 
 .teaser-headline {
   @include multi-line-cut($h3-line-height, 2);
 }
 
-.teaser-describtion {
-  @include multi-line-cut($paragraph-line-height, 3);
+.teaser-description {
+  @include multi-line-cut($paragraph-line-height, 4);
 }
-/* teaser - KIND */
-.teaser-content {
-  .teaser-body {
-    > .teaser-cta {
-      text-align: center;
-    }
+
+.teaser-cta {
+  a {
+    align-self: flex-end;
   }
 }
-//.teaser-offer {
-//
-//}
 
+/*====================================================================================================================*/
+/* teaser - media queries */
+@include media-breakpoint-up("sm") {
+  /* outer sizing */
+  .teaser-25 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
 
-
-
-/* teaser - SIZE */
 @include media-breakpoint-up("md") {
-  .teaser-body {
-    padding: 15px 20px;
-  }
-
-  .teaser-headline {
-    @include multi-line-cut($h3-line-height-md, 2);
-  }
-
-  .teaser-describtion {
-    @include multi-line-cut($paragraph-line-height-md, 3);
-  }
-
+  /* outer sizing */
   .teaser-25 {
     flex: 0 0 25%;
     max-width: 25%;
@@ -81,7 +145,41 @@
     max-width: 75%;
   }
 
-  //.teaser-100{}
+  /* basic structure */
+  .teaser-body {
+    padding: 15px 10px;
+  }
 
+  /* basic elements */
+
+  /* specials by teaser-size */
+  .teaser-25 {
+    .teaser-headline {
+      @include set-font-values-and-cut ($h3-font-size, $h3-line-height, $h3-margin-bottom, 2);
+    }
+
+    .teaser-description {
+      @include set-font-values-and-cut ($paragraph-font-size, $paragraph-line-height, $paragraph-margin-bottom, 4);
+    }
+  }
 }
 
+@include media-breakpoint-up("lg") {
+  /* specials by teaser-size */
+  .teaser-25 {
+    .teaser-headline {
+      @include set-font-values-and-cut ($h3-font-size-md, $h3-line-height-md, $h3-margin-bottom-md, 2);
+    }
+
+    .teaser-description {
+      @include set-font-values-and-cut ($paragraph-font-size-md, $paragraph-line-height-md, $paragraph-margin-bottom-md, 4);
+    }
+  }
+}
+
+@include media-breakpoint-up("xl") {
+  /* basic structure */
+  .teaser-body {
+    padding: 15px;
+  }
+}
