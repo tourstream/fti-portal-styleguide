@@ -1,0 +1,9 @@
+{
+  "imgSrcResp": {
+    "xs": "../../images/gray_5x4_500x400.png",
+    "sm": "../../images/gray_5x4_500x400.png",
+    "md": "../../images/gray_5x4_500x400.png",
+    "lg": "../../images/gray_5x4_500x400.png",
+    "fallback": "../../images/gray_5x4_500x400.png"
+  }
+}

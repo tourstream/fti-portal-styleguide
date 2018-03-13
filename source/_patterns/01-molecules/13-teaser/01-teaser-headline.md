@@ -1,4 +1,4 @@
 ---
-title: Teaser Images
+title: Teaser Headline
 state: complete
 ---
