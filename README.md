@@ -56,6 +56,13 @@ heroku pattern: `https://fti-portal-styleguide-st-pr-[PULL_REQUEST_NUMBER].herok
 figure out the number of open pull request at github ... example #22 ...
 
  `https://fti-portal-styleguide-st-pr-22.herokuapp.com/` ... that's it
+ 
+## Pattern States
+
+1. ![#FF4136](https://placehold.it/15/ff4136/000000?text=+) `inprogress:` Element is in in progress on the developer side.
+2. ![#ffcc00](https://placehold.it/15/ffccoo/000000?text=+) `inreview:` Element is in review on the developer side.
+3. ![#cc33ff](https://placehold.it/15/cc33ff/000000?text=+) `usable:` Element is complete and usable, but element on Invision is not set as complete.
+4. ![#2ECC40](https://placehold.it/15/2ecc40/000000?text=+) `complete:` Element is set as complete in styleguide and in Invision.
 
 ***
 
