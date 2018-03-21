@@ -11,6 +11,10 @@
   padding: 0 0.5em;
 }
 
+.usable::before {
+  color: #CC33FF !important;
+}
+
 /*.demo-animate {*/
   /*background: #ddd;*/
   /*padding: 1em;*/

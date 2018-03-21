@@ -1,5 +1,5 @@
 ---
 title: Paragraphs
-state: complete
+state: usable
 ---
 standard paragraph and paragraph including heading classes

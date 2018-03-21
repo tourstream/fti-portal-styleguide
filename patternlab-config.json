@@ -55,7 +55,7 @@
   },
   "ishMinimum": "240",
   "ishMaximum": "2600",
-  "patternStateCascade": ["inprogress", "inreview", "complete"],
+  "patternStateCascade": ["inprogress", "inreview", "usable", "complete"],
   "patternExportPatternPartials": ["molecules-primary-nav", "organisms-header", "organisms-footer"],
   "patternExportDirectory": "./pattern_exports/",
   "baseurl" : "",
@@ -66,5 +66,24 @@
     "rawTemplate": "",
     "markupOnly": ".markup-only"
   },
-  "browsers": ["last 2 versions", "ie 8", "ie 9"]
+  "browsers": ["last 2 versions", "ie 8", "ie 9"],
+  "plugins": {
+    "plugin-node-uiextension": {
+      "enabled": true,
+      "initialized": false,
+      "options": {
+        "stylesheets": [
+          "../../../css/pattern-scaffolding.css"
+        ],
+        "navLinks": {
+          "before": [],
+          "after": []
+        },
+        "gearLinks": {
+          "before": [],
+          "beforeSearch": []
+        }
+      }
+    }
+  }
 }
