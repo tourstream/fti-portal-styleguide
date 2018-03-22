@@ -110,11 +110,15 @@
 
 .teaser-description {
   @include multi-line-cut($paragraph-line-height, 4);
+  margin-bottom: 1rem;
 }
 
 .teaser-cta {
   a {
     align-self: flex-end;
+    hyphens: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -151,6 +155,13 @@
   }
 
   /* basic elements */
+  .teaser-headline {
+    @include multi-line-cut($h3-line-height-md, 2);
+  }
+
+  .teaser-description {
+    @include multi-line-cut($paragraph-line-height-md, 4);
+  }
 
   /* specials by teaser-size */
   .teaser-25 {
@@ -159,7 +170,7 @@
     }
 
     .teaser-description {
-      @include set-font-values-and-cut ($paragraph-font-size, $paragraph-line-height, $paragraph-margin-bottom, 4);
+      @include set-font-values-and-cut ($paragraph-font-size, $paragraph-line-height, 1rem, 4);
     }
   }
 }
@@ -172,7 +183,7 @@
     }
 
     .teaser-description {
-      @include set-font-values-and-cut ($paragraph-font-size-md, $paragraph-line-height-md, $paragraph-margin-bottom-md, 4);
+      @include set-font-values-and-cut ($paragraph-font-size-md, $paragraph-line-height-md, 1rem, 4);
     }
   }
 }
