@@ -70,13 +70,13 @@
 }
 
 .teaser-images {
-  flex: 0 0;
+  flex: 0 0 auto;
   width: 100%;
 }
 
 .teaser-body {
   display: flex;
-  flex: 1 0;
+  flex: 1 0 auto;
   flex-direction: column;
   padding: 15px;
 }
