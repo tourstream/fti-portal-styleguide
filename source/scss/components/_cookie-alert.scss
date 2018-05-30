@@ -1,0 +1,25 @@
+.cookie-alert {
+  background: rgba(255, 153, 51, .2);
+  border-radius: 0;
+  display: none;
+  font-size: $small-font-size;
+  margin: 0;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  &.show {
+    display: block;
+  }
+
+  .accept-cookies {
+    margin-left: 10px;
+    vertical-align: baseline;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
