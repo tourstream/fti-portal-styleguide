@@ -10,7 +10,7 @@ cache:
      - ./node_modules
 
 script:
-  - echo "build fti portal styles and styleguide based on patternlab ..."
+  - echo build fti portal styles and styleguide based on patternlab ...
   - npm run build
 
 deploy:
