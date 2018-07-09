@@ -1,7 +1,7 @@
 /* link-list - yes, the wrapper */
 .link-list {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -10,7 +10,7 @@
   margin-bottom: $grid-gutter-width;
   padding-left: $grid-gutter-width / 2;
   padding-right: $grid-gutter-width / 2;
-  
+
   ul li a {
     font-size: .75rem;
   }
