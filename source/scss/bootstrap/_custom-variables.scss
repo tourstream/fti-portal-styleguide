@@ -1,0 +1,36 @@
+@import "../abstracts/functions";
+/*
+This file is for overwriting Bootstrap variables that are flagged with !default values.
+Please, have a look at node-modules/bootstrap/_variables for reference.
+*/
+
+// Variables
+//
+// Copy settings from this file into the provided `_variables.scss` to override
+// the Bootstrap defaults without modifying key, versioned files.
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// FTI Colors
+
+$fti-gray-001:  #666666;
+$fti-gray-004:  #f4f4f4;
+
+$fti-orange:    #ff9933;
+$fti-red:       #c01d1d;
+$fti-yellow:    #ffc700;
+$fti-green:     #96c948;
+$fti-cyan:      #0099cc;
+
+// Bootstrap Color System
+
+// Greys
+$gray-600:      #868e96;
+
+// Color set
+$red:     $fti-red;
+$orange:  $fti-orange;
+$yellow:  $fti-yellow;
+$green:   $fti-green;
+$cyan:    $fti-cyan;
