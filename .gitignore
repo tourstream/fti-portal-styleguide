@@ -5,3 +5,4 @@ pattern_exports/
 public/
 source/css/style*.*
 *.lock
+.idea/
