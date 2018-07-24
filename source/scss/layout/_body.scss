@@ -2,5 +2,7 @@
  * All this styles are additionally to the body styles from bootstrap
  */
 body {
-  min-width: 320px; // hui
+  background-color: $body-bg;
+  color: $gray-600;
+  min-width: 320px;
 }

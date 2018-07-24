@@ -137,7 +137,7 @@ module.exports = function (grunt) {
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '**/*', dest: path.resolve(paths().public.fonts) },
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
           { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) },
-          // slightly inefficient to do this again - I am not a grunt glob master. someone fix
+          // TODO slightly inefficient to do this again - I am not a grunt glob master. someone fix
           { expand: true, flatten: true, cwd: path.resolve(paths().source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(paths().public.styleguide, 'css') }
         ]
       }

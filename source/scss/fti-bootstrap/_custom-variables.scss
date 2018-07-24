@@ -1,0 +1,142 @@
+/**
+    CUSTOM VARIABLES
+
+    Bootstrap variables can be re-defined and customized:
+    Copy the variable you want to re-define and set the value without "!default".
+    We are doing it here to have an overview of the variables and definitons we are using for the portals.
+
+    NAMING RULES
+    Variables should follow the `$component-state-property-size` formula for
+    consistent naming. Example: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+    We have the chance to make this repository a template for all portals:
+    By deklaring a variable with !default, you can set a default color, that a specific portal can change in their own repository.
+*/
+
+/*
+    TABLE OF CONTENT
+
+    Colors
+    Light/Dark contrast
+
+    Body
+    Links
+    Components (padding, border-radius and more)
+
+    Typography
+
+    Grid breakpoints
+    Grid containers
+*/
+
+// COLORS
+
+$gray-100: #f4f4f4;
+$gray-600: #666666;
+
+$red: #c01d1d;
+$orange: #ff9933; //fti-orange
+$yellow: #ffc700;
+$green: #96c948;
+$cyan: #0099cc;
+$white: #ffffff;
+
+$primary: $orange;
+
+// LIGHT/DARK CONTRAST
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 200;
+
+// BODY
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-color: $gray-100;
+
+// LINKS
+
+$link-color: theme-color("primary") !default;
+$link-hover-color: $link-color;
+
+// COMPONENTS
+// Define common padding and border radius sizes and more.
+
+$border-radius: .125rem;
+$border-radius-lg: .125rem;
+$border-radius-sm: .125rem;
+
+// TYPOGRAPHY
+
+$font-family-sans-serif: "Helvetica Neue", helvetica, arial, sans-serif;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically '16px'
+
+$h1-font-size: $font-size-base * 1.62;
+$h2-font-size: $font-size-base * 1.25;
+$h3-font-size: $font-size-base * 1.12;
+$h4-font-size: $font-size-base * 1;
+$h5-font-size: $font-size-base * 1;
+$h6-font-size: $font-size-base * .93;
+$paragraph-font-size: $font-size-base * .93;
+
+$h1-line-height: $font-size-base * 1.93;
+$h2-line-height: $font-size-base * 1.5;
+$h3-line-height: $font-size-base * 1.37;
+$h4-line-height: $font-size-base * 1.25;
+$h5-line-height: $font-size-base * 1.87;
+$h6-line-height: $font-size-base * 1.25;
+$paragraph-line-height: $font-size-base * 1.25;
+
+$h1-margin-bottom: $font-size-base * 1.25;
+$h2-margin-bottom: $font-size-base * .93;
+$h3-margin-bottom: $font-size-base * .62;
+$h4-margin-bottom: $font-size-base * .62;
+$h5-margin-bottom: $font-size-base * .62;
+$h6-margin-bottom: $font-size-base * 0;
+$paragraph-margin-bottom: $font-size-base * .62;
+
+/* sizes: md -> xl */
+$h1-font-size-md: $font-size-base * 2;
+$h2-font-size-md: $font-size-base * 1.6;
+$h3-font-size-md: $font-size-base * 1.25;
+$h4-font-size-md: $font-size-base * 1.12;
+$h5-font-size-md: $font-size-base * 1.12;
+$h6-font-size-md: $font-size-base * 1.06;
+$paragraph-font-size-md: $font-size-base * 1.06;
+
+$h1-line-height-md: $font-size-base * 2.37;
+$h2-line-height-md: $font-size-base * 1.93;
+$h3-line-height-md: $font-size-base * 1.5;
+$h4-line-height-md: $font-size-base * 1.37;
+$h5-line-height-md: $font-size-base * 1.56;
+$h6-line-height-md: $font-size-base * 1.56;
+$paragraph-line-height-md: $font-size-base * 1.56;
+
+$h1-margin-bottom-md: $font-size-base * 1.87;
+$h2-margin-bottom-md: $font-size-base * 1.56;
+$h3-margin-bottom-md: $font-size-base * .93;
+$h4-margin-bottom-md: $font-size-base * .93;
+$h5-margin-bottom-md: $font-size-base * .62;
+$h6-margin-bottom-md: $font-size-base * 0;
+$paragraph-margin-bottom-md: $font-size-base * .62;
+
+
+// GRID BREAKPOINTS
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 960px,
+  xl: 1280px
+);
+
+// GRID CONTAINERS
+
+$container-max-widths: (
+  sm: 451px + 30px,
+  md: 722px + 30px,
+  lg: 902px + 30px,
+  xl: 1203px + 30px
+);
