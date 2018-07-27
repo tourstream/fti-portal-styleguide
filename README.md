@@ -10,13 +10,15 @@
 
 # FTI Portal Styleguide
 
-> Styleguide based on Pattern Lab grunt for FTI portal
+> Styleguide based on Pattern Lab for FTI portal, to view the FTI styles. It creates CSS files which are implemented in our portals.
 
 This [demo page][demo-url] will show all implementated parts of the latest version (master branch) of this package.
 
+It creates CSS files, style.css, which will be implemented into the FTI portal via NPM dependencies.
+
 ## Usage
 
-There are different ways to use this package ...
+There are different ways to use this package:
 
 
 ### link the source - CDN at Google Cloud Storage (GCS)
@@ -43,19 +45,6 @@ $ yarn add @tourstream/fti-portal-styleguide
 ```
 
 After this step you can use the sources as you like. They can be found in `./node_modules/@tourstream/fti-portal-styleguide/source`
-
-
-## Demo pages
-
-We use multiple systems for different states of the code.
-
-So, if you would like to see the result of an unmerged pull request just use the following pattern ...
-
-heroku pattern: `https://fti-portal-styleguide-st-pr-[PULL_REQUEST_NUMBER].herokuapp.com/`
-
-figure out the number of open pull request at github ... example #22 ...
-
- `https://fti-portal-styleguide-st-pr-22.herokuapp.com/` ... that's it
  
 ## Pattern States
 
