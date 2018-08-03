@@ -10,25 +10,35 @@
 
 # FTI Portal Styleguide
 
-> Styleguide based on Pattern Lab for FTI portal, to view the FTI styles. It creates CSS files which are implemented in our portals.
+> Styleguide based on Pattern Lab for FTI portal and Quicksearch
 
 This [demo page][demo-url] will show all implementated parts of the latest version (master branch) of this package.
 
-It creates CSS files, style.css, which will be implemented into the FTI portal via NPM dependencies.
+It creates CSS files, style.css, which will be implemented into our portals via NPM dependencies.
+
+## Dependents
+
+If you have a project that relies on this styleguide, please add it here.
+- FTI Portal
+- Quicksearch
 
 ## Usage
 
 There are different ways to use this package:
 
 
-### link the source - CDN at Google Cloud Storage (GCS)
+### Link the source - CDN at Google Cloud Storage (GCS)
 
-You can put the following snippet into the head of your HTML document ...
+You can put the following snippet into the head of your HTML document
 
+Use "latest" for testing purposes.
 ```sh
 <link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/latest/css/style.css">
 ```
-
+Use the version (Semver) for production, to have more control.
+```sh
+<link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/<VERSION>/css/style.css">
+```
 
 ### npm package
 
@@ -46,12 +56,44 @@ $ yarn add @tourstream/fti-portal-styleguide
 
 After this step you can use the sources as you like. They can be found in `./node_modules/@tourstream/fti-portal-styleguide/source`
  
+## Development
+
+[Pattern Lab](https://patternlab.io/) is based on [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/). Start with atoms and work your way up to templates and pages.
+The SCSS files are component based.
+Use mixins to avoid dublicated code and keep the styles on the components for high readability.
+Component's own mixins come at the top of each component's file.
+Use "dev-" as prefix for your templates name, that are not used in portals.
+We code [mobile-first](https://zellwk.com/blog/how-to-write-mobile-first-css/).
+
+Use `npm run serve` to run Pattern Lab locally. It will also watch.
+Use `npm run build` to build and render Pattern Lab and CSS files. You can find the files styles.css and styles.min.css  at `./dist-master/fti-portal-styleguide/latest/css`.
+Take that to test the styles inside your portal locally by replacing the old styles.
+
+Use `npm run lint` to test your code styling.
+
+### Changelog
+[Changelog](https://github.com/tourstream/fti-portal-styleguide/blob/master/CHANGELOG.md)
+
+### Deployment
+1. Create a pull request
+2. After successful review, merge your branch to master
+3. On master run `npm version <major|minor|patch`. It requires ssh connection to Github. It will deploy to NPM and GCS using our Travis configuration.
+
+### Usage on your portal
+Setup a build with Semver versioning to have control over your styles.
+
+### Styling Pattern Lab
+Use `./source/css/pattern-scaffolding.css` to customize Pattern Lab.
+
 ## Pattern States
 
 1. ![#FF4136](https://placehold.it/15/ff4136/000000?text=+) `inprogress:` Element is in in progress on the developer side.
 2. ![#ffcc00](https://placehold.it/15/ffccoo/000000?text=+) `inreview:` Element is in review on the developer side.
 3. ![#cc33ff](https://placehold.it/15/cc33ff/000000?text=+) `usable:` Element is complete and usable, but element on Invision is not set as complete.
 4. ![#2ECC40](https://placehold.it/15/2ecc40/000000?text=+) `complete:` Element is set as complete in styleguide and in Invision.
+
+## About the Structure
+Visit [Confluence](https://confluence.fti-group.com/display/PORTALS/Styleguide?src=contextnavpagetreemode) to read more about the technical details of the styleguide.
 
 ***
 

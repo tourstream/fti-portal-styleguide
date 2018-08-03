@@ -1,8 +1,10 @@
-/* ================================================================================================================== */
-/* text+image - mixins */
+// TEXT-IMAGE.SCSS
 
-/* ================================================================================================================== */
-/* text+image - general setting */
+// TODO font-size and padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+
+// text+image - mixins
+
+// text+image - general setting
 .ce-textpic,
 .ce-gallery,
 .ce-row {
@@ -40,16 +42,16 @@ figure {
   margin: 0 0 1rem;
 }
 
-/* ================================================================================================================== */
-/* text+image - media queries */
-//
-// xs: 0 (320) -> next BP -1 px ... and xs is default because of mobile first
-// sm: 480 -> next BP -1 px
-// md: 768 -> next BP -1 px
-// lg: 960 -> next BP -1 px
-// xl: 1280 -> no end
 
-// @include media-breakpoint-up(sm) {}
+/* 
+  text+image - media queries
+
+  xs: 0 (320) -> next BP -1 px ... and xs is default because of mobile first
+  sm: 480 -> next BP -1 px
+  md: 768 -> next BP -1 px
+  lg: 960 -> next BP -1 px
+  xl: 1280 -> no end
+*/
 
 @include media-breakpoint-up(md) {
   .ce-left {
@@ -84,7 +86,3 @@ figure {
     margin: 0;
   }
 }
-
-//@include media-breakpoint-up("lg") {}
-
-// @include media-breakpoint-up(xl) {}

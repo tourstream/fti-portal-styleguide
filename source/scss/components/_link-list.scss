@@ -1,4 +1,6 @@
-/* link-list - yes, the wrapper */
+// LINK-LIST.SCSS
+
+// link-list - yes, the wrapper
 .link-list {
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +19,7 @@
 }
 
 .link-list-body {
-  padding: 10px; // [EH] sry for the pixels ... but the drafts
+  padding: 10px; // TODO Check with your designer, what you can do, to change unit to rem
 
   ul {
     list-style: none;

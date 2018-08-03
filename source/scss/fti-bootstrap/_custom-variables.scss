@@ -1,4 +1,4 @@
-/**
+/*
     CUSTOM VARIABLES
 
     Bootstrap variables can be re-defined and customized:
@@ -12,6 +12,8 @@
     We have the chance to make this repository a template for all portals:
     By deklaring a variable with !default, you can set a default color, that a specific portal can change in their own repository.
 */
+
+// TODO split by theme and put it into own files
 
 /*
     TABLE OF CONTENT
@@ -42,6 +44,16 @@ $cyan: #0099cc;
 $white: #ffffff;
 
 $primary: $orange;
+$primary-20: lighten($primary, 20%);
+$primary-40: lighten($primary, 40%);
+$primary-60: lighten($primary, 60%);
+$primary-80: lighten($primary, 80%);
+
+$secondary: $gray-100;
+$secondary-20: lighten($secondary, 20%);
+$secondary-40: lighten($secondary, 40%);
+$secondary-60: lighten($secondary, 60%);
+$secondary-80: lighten($secondary, 80%);
 
 // LIGHT/DARK CONTRAST
 
@@ -56,7 +68,7 @@ $body-color: $gray-100;
 
 // LINKS
 
-$link-color: theme-color("primary") !default;
+$link-color: $orange;
 $link-hover-color: $link-color;
 
 // COMPONENTS
@@ -70,7 +82,7 @@ $border-radius-sm: .125rem;
 
 $font-family-sans-serif: "Helvetica Neue", helvetica, arial, sans-serif;
 
-$font-size-base: 1rem !default; // Assumes the browser default, typically '16px'
+$font-size-base: 1rem; // Assumes the browser default, typically '16px'
 
 $h1-font-size: $font-size-base * 1.62;
 $h2-font-size: $font-size-base * 1.25;
@@ -96,7 +108,7 @@ $h5-margin-bottom: $font-size-base * .62;
 $h6-margin-bottom: $font-size-base * 0;
 $paragraph-margin-bottom: $font-size-base * .62;
 
-/* sizes: md -> xl */
+/// sizes: md -> xl
 $h1-font-size-md: $font-size-base * 2;
 $h2-font-size-md: $font-size-base * 1.6;
 $h3-font-size-md: $font-size-base * 1.25;

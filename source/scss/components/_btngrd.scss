@@ -21,6 +21,9 @@
 // +-----------------------------------------------------------------------+
 //
 
+// BTNGRD.SCSS
+
+// TODO font-size and padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 .btngrd {
   font-size: 1rem;
 
@@ -55,14 +58,5 @@
 .btngrd-r {
   padding-left: .5rem;
 }
-
-// variantion of
-//.btngrd-price {
-//  text-align: right;
-//
-//  .btngrd-body {
-//    justify-content: flex-end;
-//  }
-//}
 
 

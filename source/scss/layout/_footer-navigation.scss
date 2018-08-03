@@ -1,0 +1,17 @@
+// FOOTER-NAVIGATION.SCSS
+
+// TODO font-size and padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+
+.footer-menu {
+  .nav-item {
+    border-right: 1px solid $link-color;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  .nav-link {
+    padding: 0 1rem;
+  }
+}

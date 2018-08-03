@@ -1,54 +1,60 @@
-/**
- * Following import contains the basic setup for the whole page.
- * Keep in mind that we try to use as much as possible bootstrap here.
- * All following imports are our own custom styles.
- * Including (needed classes only)
- *   - imports bootstrap classes
- *   - imports colors
- *   - import font variables
- *   - imports breakpoints
- *   - imports helper
+// STYLE.SCSS
+// All imports are managed here.
+
+/*
+    Following import contains the basic setup for the FTI Styleguide.
+    Keep in mind that are using atomic design principles here.
+    We are importing Bootstrap, with custom imports
+    Additionally, we are importing our own component based structure here.
+    Node-sass uses an include-path to pick files from original bootstrap folder, which we haven't created and customized.
+    Including (needed classes only)
+    Bootstrap imports
  */
 
-// The basic styles of fti-group-bootstrap will be linked in HEAD
-@import "fti-bootstrap/bootstrap-helper";
-/**
- * own mixins
- */
+// Bootstrap imports
+
+// Bootstrap custom variables
+@import "fti-bootstrap/custom-variables";
+
+// Customized mixins:
 @import "abstracts/mixins";
-/**
- * base settings on top of bootstrap
- */
-@import "base/typography";
-/**
- * Following imports are related to the body
- */
+
+// Customized Bootstrap import:
+// It includes custom utility imports:
+@import "fti-bootstrap/bootstrap";
+
+// Typography:
+@import "typography/typography";
+
+
+// Components
+
+// Body:
 @import "layout/body";
-/*
- * Following imports are related to the header and his components
- */
+// Header and its components:
 @import "layout/header";
 @import "components/header-logo";
 @import "components/header-menu";
-/*
- * Following imports are related to the content section and his components
- */
+
+// Content section and its components:
 @import "components/teaser";
 @import "components/btngrd";
 @import "components/link-list";
 @import "components/text-image";
-/**
- * Following imports are related to the footer and his components
- */
+
+// Footer and its components:
 @import "layout/footer";
-@import "components/footer-copyright";
 @import "components/footer-hotline";
-@import "layout/navigation";
-/* page-header */
+@import "layout/footer-navigation";
+
+// Page header:
 @import "components/page-headline";
-/* element 404 */
+
+// Element 404:
 @import "components/element-404";
-/* main */
+
+// Main:
 @import "layout/main";
-/* cookie alert */
+
+// Cookie alert:
 @import "components/cookie-alert";
