@@ -1,19 +1,16 @@
+// CUSTOM BOOTSTRAP IMPORTS
 /*!
- * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
+ * Bootstrap v4 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
 /*
- * Customized version for FTI Group projects
- * IMPORTANT: node-sass uses an include-path to pick "missing" files from original bootstrap folder.
+ * Customized Bootstrap import for FTI Group projects
  */
 
-// Custom
-// @import "custom-variables";
-
-// Bootstrap required
+// Bootstrap required - minimal setup
 @import "functions";
 @import "variables";
 @import "mixins";

@@ -1,8 +1,10 @@
+// HEADER.SCSS
+
+// TODO font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 body > header {
   background-color: $white;
 }
 
-// d-flexinger-version
 body > header {
   display: flex;
   margin: 0 auto;
