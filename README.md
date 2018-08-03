@@ -62,11 +62,22 @@ After this step you can use the sources as you like. They can be found in `./nod
 The SCSS files are component based.
 Use mixins to avoid dublicated code and keep the styles on the components for high readability.
 Component's own mixins come at the top of each component's file.
+Use "dev-" as prefix for your templates name, that are not used in portals.
 We code [mobile-first](https://zellwk.com/blog/how-to-write-mobile-first-css/).
 
-Use `npm run serve` to run Pattern Lab locally.
+Use `npm run serve` to run Pattern Lab locally. It will also watch.
 Use `npm run build` to build and render Pattern Lab and CSS files. You can find the files styles.css and styles.min.css  at `./dist-master/fti-portal-styleguide/latest/css`.
 Take that to test the styles inside your portal locally by replacing the old styles.
+
+Use `npm run lint` to test your code styling.
+
+### Changelog
+[Changelog](https://github.com/tourstream/fti-portal-styleguide/blob/master/CHANGELOG.md)
+
+### Deployment
+1. Create a pull request
+2. After successful review, merge your branch to master
+3. On master run `npm version <major|minor|patch`. It requires ssh connection to Github. It will deploy to NPM and GCS using our Travis configuration.
 
 ### Usage on your portal
 Setup a build with Semver versioning to have control over your styles.
