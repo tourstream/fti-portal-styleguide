@@ -18,7 +18,7 @@ deploy:
     skip_cleanup: true
     email: $NPM_EMAIL
     api_key:
-      secure: $NPM_TOURSTREAM-EU_TOKEN
+      secure: $NPM_TOURSTREAM_EU_TOKEN
     on:
       node: "8"
       tags: true
