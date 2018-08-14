@@ -1,7 +1,7 @@
 // COOKIE-ALERT.SCSS
 
 .cookie-alert {
-  background: $white;
+  background: transparentize($gray-100, .2);
   border-radius: 0;
   bottom: 0;
   display: none;
@@ -9,7 +9,7 @@
   padding: 40px 5px;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 1100;
 
   &.show {
     display: block;

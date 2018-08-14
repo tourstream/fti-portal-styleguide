@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.15.2
+- Changes cookie message background and increases z-index.
+
 ## 0.15.0
 
 - FTI customized Bootstrap imports are now fully integrated. You can remove fti-bootstrap from your project.
