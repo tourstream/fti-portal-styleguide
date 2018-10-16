@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.15.4
+- Changes the font- and background color of the Header Menu element.
+
 ## 0.15.2
 - Changes cookie message background and increases z-index.
 
