@@ -31,13 +31,13 @@ There are different ways to use this package:
 
 You can put the following snippet into the head of your HTML document
 
-Use "latest" for testing purposes.
-```sh
-<link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/latest/css/style.css">
-```
 Use the version (Semver) for production, to have more control.
 ```sh
 <link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/<VERSION>/css/style.css">
+```
+Use "latest" for internal test purposes.
+```sh
+<link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/latest/css/style.css">
 ```
 
 ### npm package
@@ -75,9 +75,15 @@ Use `npm run lint` to test your code styling.
 [Changelog](https://github.com/tourstream/fti-portal-styleguide/blob/master/CHANGELOG.md)
 
 ### Deployment
-1. Create a pull request
-2. After successful review, merge your branch to master
-3. On master run `npm version <major|minor|patch`. It requires ssh connection to Github. It will deploy to NPM and GCS using our Travis configuration.
+
+#### Staging
+For feature branch deployment use Bamboo (Plan: FTI Styleguide / Styleguide).
+A branch is available on Bamboo after the branch is created on Github.
+`https://assets.gcloud.fti-group.com/fti-portal-styleguide/staging/<BRANCH-NAME>/index.html`
+
+#### Production
+After merge to master on master run `npm version <major|minor|patch`.
+It requires ssh connection to Github. It will deploy to NPM and GCS using our Travis configuration.
 
 ### Usage on your portal
 Setup a build with Semver versioning to have control over your styles.

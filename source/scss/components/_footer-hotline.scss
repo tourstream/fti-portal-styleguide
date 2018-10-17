@@ -2,8 +2,8 @@
 
 // TODO font-size and padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 .footer-hotline {
-  background-color: $secondary;  // $secondary -> dark gray
-  color: $white;
+  background-color: $gray-100;
+  color: $gray-600;
 
   > div > div > div {
     flex: 0 0 100%;
