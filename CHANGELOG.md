@@ -2,8 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.15.4
+## 0.15.5
 - Changes the font- and background color of the Header Menu element.
+
+## 0.15.4
+- Changed the font color and the background color of the footer hotline element.
+- Updated README.md to inform about feature branch deployment
+- Changed order of link for latest and version
 
 ## 0.15.2
 - Changes cookie message background and increases z-index.
