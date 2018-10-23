@@ -2,16 +2,19 @@
 
 // TODO padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 .header-menu {
+  background-color: $gray-100;
+  color: $gray-600;
   padding: 0 1rem;
 
   a {
     text-decoration: none;
   }
 
+  // TODO make this component-based and do not use bootstrap-classes
   &.navbar-dark .navbar-nav .nav-link:focus,
   &.navbar-dark .navbar-nav .nav-link:hover,
   &.navbar-dark .navbar-nav .nav-link {
-    color: $white;
+    color: $gray-600;
   }
 
   &.navbar-dark .navbar-toggler {
@@ -24,7 +27,7 @@
   }
 }
 
-@include media-breakpoint-up("md") {
+@include media-breakpoint-up(md) {
   .header-menu .navbar-nav .nav-link {
     padding-bottom: .82rem;
     padding-top: .82rem;
