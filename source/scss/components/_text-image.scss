@@ -62,7 +62,7 @@ figure {
     &.ce-intext .ce-gallery {
       margin-bottom: 1rem;
       margin-right: 1rem;
-      width: calc(50% - .5rem);
+      max-width: calc(50% - .5rem);
     }
   }
 
@@ -74,7 +74,7 @@ figure {
     &.ce-intext .ce-gallery {
       margin-bottom: 1rem;
       margin-left: 1rem;
-      width: calc(50% - .5rem);
+      max-width: calc(50% - .5rem);
     }
   }
 
