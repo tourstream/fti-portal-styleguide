@@ -2,8 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.15.7
+## 0.15.6
 - Changes the 50%-width of images in the Text-Image-Teaser to max-width
+
+## 0.15.5
+- Changes the font- and background color of the Header Menu element.
 
 ## 0.15.4
 - Changed the font color and the background color of the footer hotline element.
