@@ -1,0 +1,44 @@
+$tab-shadow: 0 3px 10px 0 transparentize($black, .9);
+$tab-background-color: transparentize($gray-100, .25);
+
+.tab-menu {
+  background-color: $tab-background-color;
+  display: inline-block;
+
+  .nav-tabs {
+    border: 0;
+
+    .nav-link {
+      border: inherit;
+      border-radius: 0;
+      color: $gray-600;
+
+      &:hover,
+      &.active {
+        background-color: $white;
+        border: inherit;
+        box-shadow: $tab-shadow;
+      }
+    }
+
+    .nav-item {
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      min-width: 125px;
+    }
+  }
+}
+
+.tab-content {
+  background-color: $white;
+  box-shadow: $tab-shadow;
+
+  .tab-pane {
+    position: relative;
+
+    &.active {
+      background-color: $white;
+    }
+  }
+}

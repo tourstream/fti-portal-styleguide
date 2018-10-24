@@ -75,14 +75,13 @@ Use `npm run lint` to test your code styling.
 [Changelog](https://github.com/tourstream/fti-portal-styleguide/blob/master/CHANGELOG.md)
 
 ### Deployment
-
 #### Staging
 For feature branch deployment use Bamboo (Plan: FTI Styleguide / Styleguide).
 A branch is available on Bamboo after the branch is created on Github.
 `https://assets.gcloud.fti-group.com/fti-portal-styleguide/staging/<BRANCH-NAME>/index.html`
 
 #### Production
-After merge to master on master run `npm version <major|minor|patch`.
+After merge to master on master run `npm version <major|minor|patch>`.
 It requires ssh connection to Github. It will deploy to NPM and GCS using our Travis configuration.
 
 ### Usage on your portal
