@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.15.7
+- Renames Versace template to Standard Template
+- Removes unused templates
+
 ## 0.15.6
 - Changes the 50%-width of images in the Text-Image-Teaser to max-width
 
