@@ -1,4 +1,4 @@
 ---
-title: Menu
+title: Tabs
 state: inreview
 ---
