@@ -2,11 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.15.8
-- aligns Teaser-Buttons on the right side
+## 0.16.0
 - Creates dropdown and tab-menu as components
 - Adds an example of tab-menu component into patternlab
 - Adds an example of dropdown component into patternlab
+
+## 0.15.8
+- aligns Teaser-Buttons on the right side
 
 ## 0.15.7
 - Renames Versace template to Standard Template
