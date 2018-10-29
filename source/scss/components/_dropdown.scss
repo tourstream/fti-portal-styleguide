@@ -1,6 +1,24 @@
 .dropdown {
   padding: 0;
 
+  >button.btn-light {
+    align-items: center;
+    border: .5px solid $gray-100;
+    border-radius: 0;
+    text-align: start;
+
+    &,
+    &:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      background-color: $white;
+    }
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
   .dropdown-menu {
     border: 0;
     border-radius: 0;
