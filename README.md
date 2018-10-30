@@ -43,7 +43,7 @@ Use "latest" for internal test purposes.
 ### npm package
 
 If you want to use the npm package just install with [npm](https://www.npmjs.com/)
-                                                
+
 ```sh
 $ npm install @tourstream/fti-portal-styleguide --save
 ```
@@ -55,7 +55,7 @@ $ yarn add @tourstream/fti-portal-styleguide
 ```
 
 After this step you can use the sources as you like. They can be found in `./node_modules/@tourstream/fti-portal-styleguide/source`
- 
+
 ## Development
 
 [Pattern Lab](https://patternlab.io/) is based on [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/). Start with atoms and work your way up to templates and pages.

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.17.0
+- Creates icons as components
+- Removes dropdown arrow
+- Adds an example of arrow-down and location icons
+
 ## 0.16.0
 - Creates dropdown and tab-menu as components
 - Adds an example of tab-menu component into patternlab
