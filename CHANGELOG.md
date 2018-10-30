@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## 0.17.0
 - Creates icons as components
-- Changes dropdown style
+- Removes dropdown arrow
 - Adds an example of arrow-down and location icons
 
 ## 0.16.0
