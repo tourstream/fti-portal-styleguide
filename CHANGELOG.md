@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.17.1
+- Changes gray-800 and text-muted
+- Fixes dropdown-toggle line-height
+
 ## 0.17.0
 - Creates icons as components
 - Removes dropdown arrow
