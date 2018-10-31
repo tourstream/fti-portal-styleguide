@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.17.1
+- FTI logo files have been updated
+
 ## 0.17.0
 - Creates icons as components
 - Removes dropdown arrow
