@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.17.2
+- FTI logo files have been updated
+
 ## 0.17.1
 - Changes gray-800 and text-muted
 - Fixes dropdown-toggle line-height
