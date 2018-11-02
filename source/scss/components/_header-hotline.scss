@@ -1,0 +1,40 @@
+// HEADER-HOTLINE.SCSS
+
+.header-hotline {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+
+  // TODO don't know the font variant. it seems to be condensed on Invision
+  //:first-child {
+  //  font-family: "Helvetica Neue Condensed Medium";
+  //}
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    font-size: .75rem;
+    font-weight: 500;
+    margin-left: 5px;
+
+    .header-hotline-number {
+      font-weight: 600;
+    }
+  }
+
+  > div > span {
+    display: flex;
+    line-height: 1rem;
+    text-align: right;
+  }
+
+  //:before {
+  //
+  //}
+}
+
+@include media-breakpoint-up(lg) {
+  .header-hotline {
+    margin-left: 20px;
+  }
+}
