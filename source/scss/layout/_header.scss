@@ -11,13 +11,31 @@ body > header {
   width: 100%;
 
   > div {
-    &:nth-child(1) {
-      text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    // header-menu-mobile header-hotline
+    // It counts objects that have display:none
+    > :nth-child(1) {
+      flex-basis: calc(50% - 26px);
+      flex-grow: 1;
     }
 
-    &:nth-child(2) {
-      margin-left: auto;
-      text-align: right;
+    > :nth-child(4) {
+      flex-basis: calc(50% - 26px);
+      flex-grow: 1;
     }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body > header > div > :nth-child(3) {
+    flex-grow: 1;
+  }
+
+  body > header > div > :nth-child(4) {
+    flex-basis: auto;
+    flex-grow: 0;
   }
 }
