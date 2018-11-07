@@ -3,14 +3,19 @@
 .header-hotline {
   align-items: center;
   display: flex;
+  font-size: .93rem; // The icon-size is bound to the font-size
   justify-content: flex-end;
 
-  // TODO don't know the font variant. it seems to be condensed on Invision
-  //:first-child {
-  //  font-family: "Helvetica Neue Condensed Medium";
-  //}
+  // some CSS that gives the content the approximately the size it should have
+  > i::before {
+    display: block;
+    height: 17px;
+    transform: scale(1.2);
+    width: 16px;
+  }
 
-  > div {
+  // It's a p-tag, because the Typo3 Fluid contentElement creates a p-Tag.
+  > p {
     display: flex;
     flex-direction: column;
     font-size: .75rem;
@@ -22,19 +27,31 @@
     }
   }
 
-  > div > span {
-    display: flex;
-    line-height: 1rem;
-    text-align: right;
+  // p-tag related CSS, to correct the styles
+  > p {
+    margin-bottom: 0;
   }
 
-  //:before {
-  //
-  //}
+  // It's a p-tag, because the Typo3 Fluid contentElement creates a p-Tag.
+  > p > span {
+    display: flex;
+    line-height: 1rem;
+
+    a {
+      color: $gray-600;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
   .header-hotline {
     margin-left: 20px;
+
+    // some CSS that gives the icon content the approximate the size it should have
+    > i::before {
+      height: 17px;
+      transform: scale(1);
+      width: 17px;
+    }
   }
 }

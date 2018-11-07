@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.18.0
+- Changed header behavior
+  - Navigation is cleaned up and uses flexbox
+  - Header is cleanup and uses flexbox
+  - Navigation is renamed to header-menu-desktop
+  - Mobile Navigation is added and it's called header-menu-mobile, a menu can be added there
+  - Phone icons has been updated and an info icon has been added
+
 ## 0.17.2
 - FTI logo files have been updated
 
