@@ -7,11 +7,8 @@
   justify-content: flex-end;
 
   // some CSS that gives the content the approximately the size it should have
-  > i::before {
-    display: block;
-    height: 17px;
-    transform: scale(1.2);
-    width: 16px;
+  > i {
+    font-size: 19px;
   }
 
   // It's a p-tag, because the Typo3 Fluid contentElement creates a p-Tag.
@@ -48,10 +45,8 @@
     margin-left: 20px;
 
     // some CSS that gives the icon content the approximate the size it should have
-    > i::before {
-      height: 17px;
-      transform: scale(1);
-      width: 17px;
+    > i {
+      font-size: 17px;
     }
   }
 }
