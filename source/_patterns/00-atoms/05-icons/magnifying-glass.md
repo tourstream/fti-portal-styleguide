@@ -1,4 +1,4 @@
 ---
-title: Stars
+title: Magnifying Glas
 state: inreview
 ---
