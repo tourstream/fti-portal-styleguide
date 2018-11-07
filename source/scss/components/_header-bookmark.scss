@@ -18,8 +18,8 @@
       align-items: center;
       display: flex;
       flex-direction: column;
-      font-size: .6875rem;
-      line-height: calc(.6875rem + 7px); // font-size + distance between icon and text
+      font-size: $font-size-header-bookmark;
+      line-height: calc(#{$font-size-header-bookmark} + 7px); // font-size + distance between icon and text
 
       // It's a p-tag, because the Typo3 Fluid contentElement creates a p-Tag.
       // p-tag related CSS, to correct the styles

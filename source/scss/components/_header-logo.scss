@@ -7,19 +7,19 @@
 
 .c-logo-link {
   img {
-    height: 60px;
-    width: 60px;
+    height: $logo-width-mobile;
+    width: $logo-width-mobile;
   }
 }
 
 @include media-breakpoint-up(lg) {
   .c-logo-link {
-    height: 50px;
+    height: 80px;
     position: relative;
     z-index: 2;
 
     img {
-      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .1);
+      box-shadow: $box-down-shadow;
       height: 100px;
       width: 100px;
     }
