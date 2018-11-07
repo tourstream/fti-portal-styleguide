@@ -55,7 +55,7 @@
   },
   "ishMinimum": "240",
   "ishMaximum": "2600",
-  "patternStateCascade": ["inprogress", "inreview", "usable", "complete"],
+  "patternStateCascade": ["deprecated", "inprogress", "inreview", "usable", "complete"],
   "patternExportPatternPartials": ["molecules-primary-nav", "organisms-header", "organisms-footer"],
   "patternExportDirectory": "./pattern_exports/",
   "baseurl" : "",
