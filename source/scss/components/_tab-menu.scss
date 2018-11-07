@@ -1,6 +1,3 @@
-$tab-shadow: 0 3px 10px 0 transparentize($black, .9);
-$tab-background-color: transparentize($gray-100, .25);
-
 .tab-menu {
   background-color: $tab-background-color;
   display: inline-block;
@@ -17,7 +14,7 @@ $tab-background-color: transparentize($gray-100, .25);
       &.active {
         background-color: $white;
         border: inherit;
-        box-shadow: $tab-shadow;
+        box-shadow: $box-down-shadow;
       }
     }
 
@@ -32,7 +29,7 @@ $tab-background-color: transparentize($gray-100, .25);
 
 .tab-content {
   background-color: $white;
-  box-shadow: $tab-shadow;
+  box-shadow: $box-down-shadow;
 
   .tab-pane {
     position: relative;

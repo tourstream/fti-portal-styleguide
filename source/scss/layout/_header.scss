@@ -3,9 +3,6 @@
 // TODO font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 body > header {
   background-color: $white;
-}
-
-body > header {
   display: flex;
   margin: 0 auto;
   width: 100%;
@@ -17,13 +14,9 @@ body > header {
 
     // header-menu-mobile header-hotline
     // It counts objects that have display:none
-    > :nth-child(1) {
-      flex-basis: calc(50% - 26px);
-      flex-grow: 1;
-    }
-
+    > :nth-child(1),
     > :nth-child(4) {
-      flex-basis: calc(50% - 26px);
+      flex-basis: calc(50% - #{$logo-width-mobile} / 2);
       flex-grow: 1;
     }
   }
