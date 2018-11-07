@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
   - Mobile Navigation is added and it's called header-menu-mobile, a menu can be added there
   - Phone icons has been updated and an info icon has been added
 - A new state is added for styles and designs that shouldn't be used: "deprecated"
+- Icons have been added to atoms
 
 ## 0.17.1
 - Changes gray-800 and text-muted

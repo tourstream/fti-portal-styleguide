@@ -1,4 +1,4 @@
 ---
-title: Location
+title: Calendar
 state: inreview
 ---

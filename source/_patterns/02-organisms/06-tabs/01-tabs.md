@@ -1,4 +1,4 @@
 ---
 title: Tabs
-state: inreview
+state: complete
 ---

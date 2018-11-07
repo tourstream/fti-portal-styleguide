@@ -1,4 +1,4 @@
 ---
-title: Stars
+title: Checkmark
 state: inreview
 ---
