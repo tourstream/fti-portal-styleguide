@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.18.0
+## 0.18.1
 - Changed header behavior
   - Navigation is cleaned up and uses flexbox
   - Header is cleanup and uses flexbox
