@@ -1,0 +1,35 @@
+// HEADER-BOOKMARK.SCSS
+
+.header-bookmark {
+  display: none;
+}
+
+@include media-breakpoint-up(lg) {
+  .header-bookmark {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      color: $gray-600;
+    }
+
+    > div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-size: $font-size-header-bookmark;
+      line-height: calc(#{$font-size-header-bookmark} + 7px); // font-size + distance between icon and text
+
+      // It's a p-tag, because the Typo3 Fluid contentElement creates a p-Tag.
+      // p-tag related CSS, to correct the styles
+      > p {
+        margin-bottom: 0;
+      }
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+}

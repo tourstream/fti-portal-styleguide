@@ -15,6 +15,10 @@
   color: #CC33FF !important;
 }
 
+.deprecated::before {
+  color: #ff0000 !important;
+}
+
 /*.demo-animate {*/
   /*background: #ddd;*/
   /*padding: 1em;*/

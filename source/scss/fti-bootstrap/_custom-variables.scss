@@ -24,6 +24,9 @@
     Body
     Header
     Links
+    Text
+    Tab
+    Box-Shadow
     Components (padding, border-radius and more)
 
     Typography
@@ -44,6 +47,7 @@ $yellow: #ffc700;
 $green: #96c948;
 $cyan: #0099cc;
 $white: #ffffff;
+$black: #000000;
 
 $primary: $orange;
 $primary-20: lighten($primary, 20%);
@@ -81,6 +85,14 @@ $link-hover-color: $link-color;
 
 $text-muted: #b3b3b3;
 
+// TAB
+$tab-background-color: transparentize($gray-100, .25);
+
+// BOX-SHADOW
+$box-down-shadow: 0 3px 10px 0 transparentize($black, .9);
+$box-shadow: 0 0 1rem 0 transparentize($black, .9);
+$dropdown-shadow: 0 4px 5px 2px transparentize($black, .9);
+
 // COMPONENTS
 // Define common padding and border radius sizes and more.
 
@@ -93,6 +105,7 @@ $border-radius-sm: .125rem;
 $font-family-sans-serif: "Helvetica Neue", helvetica, arial, sans-serif;
 
 $font-size-base: 1rem; // Assumes the browser default, typically '16px'
+$font-size-header-bookmark: .6875rem;
 
 $h1-font-size: $font-size-base * 1.62;
 $h2-font-size: $font-size-base * 1.25;
@@ -162,3 +175,6 @@ $container-max-widths: (
   lg: 902px + 30px,
   xl: 1203px + 30px
 );
+
+// LOGO
+$logo-width-mobile: 60px;

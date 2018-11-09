@@ -1,17 +1,27 @@
 // HEADER-LOGO.SCSS
 
+.fti-logo {
+  display: flex;
+  text-align: center;
+}
+
 .c-logo-link {
   img {
-    max-height: 50px;
-    max-width: 50px;
+    height: $logo-width-mobile;
+    width: $logo-width-mobile;
   }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   .c-logo-link {
+    height: 80px;
+    position: relative;
+    z-index: 2;
+
     img {
-      max-height: 80px;
-      max-width: 80px;
+      box-shadow: $box-down-shadow;
+      height: 100px;
+      width: 100px;
     }
   }
 }

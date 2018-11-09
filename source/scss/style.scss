@@ -26,15 +26,16 @@
 // Typography:
 @import "typography/typography";
 
-
 // Components
 
 // Body:
 @import "layout/body";
 // Header and its components:
 @import "layout/header";
+@import "components/header-bookmark";
 @import "components/header-logo";
 @import "components/header-menu";
+@import "components/header-hotline";
 
 // Content section and its components:
 @import "components/teaser";

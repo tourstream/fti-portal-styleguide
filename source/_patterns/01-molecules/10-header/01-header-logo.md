@@ -1,4 +1,4 @@
 ---
 title: Header logo
-state: inreview
+state: complete
 ---

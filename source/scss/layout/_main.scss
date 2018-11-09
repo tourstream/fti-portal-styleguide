@@ -12,7 +12,7 @@ main {
 
   .box-white {
     background-color: $white;
-    box-shadow: 0 0 1rem $gray-300;
+    box-shadow: $box-shadow;
     padding: 1rem;
 
     &:empty {
