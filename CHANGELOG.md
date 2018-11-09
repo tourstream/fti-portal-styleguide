@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.19.0
+- Adds material-input classes
+- Changes gray-300
+
 ## 0.18.1
 - Changed header behavior
   - Navigation is cleaned up and uses flexbox
