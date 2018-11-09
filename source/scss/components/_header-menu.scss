@@ -6,8 +6,9 @@
   display: none;
 }
 
-.header-menu-mobile {
+.header-menu-mobile-toggle {
   align-items: center;
+  cursor: pointer;
   display: flex;
   font-size: 12px;
 
@@ -19,7 +20,33 @@
   }
 }
 
+.menu-close,
+.header-mobile-menu,
+.backdrop {
+  display: none;
+}
+
+.menu-open {
+  &:target {
+    display: none;
+  }
+
+  &:target ~ a,
+  &:target ~ .header-mobile-menu {
+    display: block;
+  }
+
+  &:target ~ .backdrop {
+    background: #000000;
+    background: rgba(0, 0, 0, .85);
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 @include media-breakpoint-up(lg) {
+  .header-menu-mobile-toggle,
   .header-menu-mobile {
     display: none;
   }
