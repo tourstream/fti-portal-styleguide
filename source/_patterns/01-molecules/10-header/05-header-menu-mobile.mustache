@@ -1,3 +1,38 @@
-<nav class="header-menu-mobile">
-    {{> atoms-bars }}</i>Menü
-</nav>
+<div>
+  <a href="#p1"
+     id="p1"
+     class="menu-open">
+    {{> atoms-bars }}
+    <span class="sr-only">Menü</span>
+  </a>
+
+  <a href="#nowhere"
+     id="main-menu-close"
+     class="menu-close">
+    {{> atoms-times }}
+    <span class="sr-only">Menü</span>
+  </a>
+
+  <nav id="header-mobile-menu" class="header-mobile-menu">
+    <ul class="header-menu-container">
+      <li class="header-menu-item active">
+        <a class="header-menu-item-link" href="#">Last minute</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Vakantie boeken</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Hotel Boeken</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Vakantiebestemmingen</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Familievakantie</a>
+      </li>
+    </ul>
+  </nav>
+
+  <a href="#nowhere"
+     class="backdrop"></a>
+</div>
