@@ -2,13 +2,13 @@
   bottom: 150px;
   margin-bottom: -100px;
   position: relative;
-  @media(max-width: 1279px) {
-    bottom: 250px;
-    margin-bottom: -200px;
-  }
-  @media (max-width: 767px) {
+  @include media-breakpoint-down("md") {
     bottom: 100px;
     margin-bottom: -90px;
+  }
+  @include media-breakpoint-between("md", "lg") {
+    bottom: 250px;
+    margin-bottom: -200px;
   }
 }
 
@@ -18,21 +18,22 @@
   margin-left: 0;
   max-width: 750px;
   position: absolute;
-  @media(max-width: 1279px) {
+  @include media-breakpoint-between("md", "xl") {
     font-size: 2.3em;
     max-width: 500px;
   }
-  @media (max-width: 767px) {
+  @include media-breakpoint-down("md") {
     font-size: 1.8em;
     max-width: 310px;
   }
 }
 
 .qs-background {
+  max-width: inherit;
   overflow: hidden;
   text-align: center;
-  @media(max-width: 1279px) {
-    max-width: inherit;
+  @include media-breakpoint-up("xl") {
+    max-width: 100%;
   }
 
   picture,
@@ -41,11 +42,11 @@
     min-height: 100%;
     object-fit: cover;
     width: 1350px;
-    @media(max-width: 1279px) {
-      height: 420px;
-    }
-    @media (max-width: 767px) {
+    @include media-breakpoint-down("md") {
       height: 215px;
+    }
+    @include media-breakpoint-between("md", "xl") {
+      height: 420px;
     }
   }
 
