@@ -1,0 +1,52 @@
+.qs-with-background {
+  bottom: 150px;
+  margin-bottom: -100px;
+  position: relative;
+  @media(max-width: 1279px) {
+    bottom: 250px;
+    margin-bottom: -200px;
+  }
+  @media (max-width: 767px) {
+    bottom: 100px;
+    margin-bottom: -90px;
+  }
+}
+
+.qs-h1 {
+  font-size: 3em;
+  line-height: 1.2em;
+  margin-left: 0;
+  max-width: 750px;
+  position: absolute;
+  @media(max-width: 1279px) {
+    font-size: 2.3em;
+    max-width: 500px;
+  }
+  @media (max-width: 767px) {
+    font-size: 1.8em;
+    max-width: 310px;
+  }
+}
+
+.qs-background {
+  overflow: hidden;
+  text-align: center;
+  @media(max-width: 1279px) {
+    max-width: inherit;
+  }
+
+  picture,
+  img {
+    height: 440px;
+    min-height: 100%;
+    object-fit: cover;
+    width: 1350px;
+    @media(max-width: 1279px) {
+      height: 420px;
+    }
+    @media (max-width: 767px) {
+      height: 215px;
+    }
+  }
+
+}
