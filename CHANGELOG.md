@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.19.1
+- Adds background image for quicksearch
+
 ## 0.19.0
 - Adds material-input classes
 - Changes gray-300
