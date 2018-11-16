@@ -34,6 +34,7 @@
   input:checked ~ .checkmark {
     background-color: $primary;
     border-color: $primary;
+
     &::after {
       display: block;
     }
