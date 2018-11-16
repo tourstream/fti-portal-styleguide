@@ -1,0 +1,60 @@
+
+/* Create a custom checkbox */
+.checkmark {
+  border: solid 1px $secondary;
+  border-radius: 2px;
+  height: 18px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  width: 18px;
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+  }
+}
+
+.label-container {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0;
+  padding-left: 35px;
+  position: relative;
+  user-select: none;
+
+  input {
+    cursor: pointer;
+    font-size: 22px;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+  }
+
+
+  /* When the checkbox is checked, add a background */
+  input:checked ~ .checkmark {
+    background-color: $primary;
+    border-color: $primary;
+    /* Show the checkmark when checked */
+    &::after {
+      display: block;
+    }
+  }
+  /* Style the checkmark/indicator */
+  .checkmark {
+    &::after {
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      height: 12px;
+      left: 5px;
+      top: 0;
+      transform: rotate(45deg);
+      width: 6px;
+    }
+  }
+}
