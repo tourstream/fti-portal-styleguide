@@ -1,5 +1,3 @@
-
-/* Create a custom checkbox */
 .checkmark {
   border: solid 1px $secondary;
   border-radius: 2px;
@@ -8,8 +6,6 @@
   position: absolute;
   top: 2px;
   width: 18px;
-
-  /* Create the checkmark/indicator (hidden when not checked) */
 
   &::after {
     content: "";
@@ -35,17 +31,14 @@
     width: 0;
   }
 
-
-  /* When the checkbox is checked, add a background */
   input:checked ~ .checkmark {
     background-color: $primary;
     border-color: $primary;
-    /* Show the checkmark when checked */
     &::after {
       display: block;
     }
   }
-  /* Style the checkmark/indicator */
+
   .checkmark {
     &::after {
       border: solid #ffffff;
