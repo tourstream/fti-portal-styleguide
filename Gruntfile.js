@@ -138,6 +138,7 @@ module.exports = function (grunt) {
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
           { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) },
           // TODO slightly inefficient to do this again - I am not a grunt glob master. someone fix
+          // Todo It has no effect on the styleguide watcher
           { expand: true, flatten: true, cwd: path.resolve(paths().source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(paths().public.styleguide, 'css') }
         ]
       }
