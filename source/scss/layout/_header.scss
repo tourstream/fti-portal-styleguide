@@ -3,9 +3,13 @@
 // TODO font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 body > header {
   background-color: $white;
-  display: flex;
+  border: 1px solid #007bff;
+  display: block;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
   width: 100%;
+  z-index: 3;
 
   > div {
     display: flex;
@@ -22,7 +26,20 @@ body > header {
   }
 }
 
+//.not-scrollable-container {
+//  display: block;
+//  height: $logo-width-mobile;
+//}
+
 @include media-breakpoint-up(lg) {
+  body > header {
+    position: static;
+  }
+
+  //.not-scrollable-container {
+  //  display: none;
+  //}
+
   body > header > div > :nth-child(3) {
     flex-grow: 1;
   }
