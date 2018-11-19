@@ -56,7 +56,6 @@
 
 .header-mobile-navigation {
   background-color: $white;
-  height: calc(100vh - #{$logo-width-mobile});
   left: 0;
   min-width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
   overflow: scroll;
