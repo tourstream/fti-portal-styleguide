@@ -8,6 +8,6 @@ body {
 // build for html and body element, when mobile header menu is opened
 .no-scroll {
   height: 100%;
-  overflow: hidden; // for Safari
+  overflow: hidden;
   position: relative;
 }
