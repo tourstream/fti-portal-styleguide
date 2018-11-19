@@ -1,20 +1,54 @@
-<div>
+<div class="header-mobile-menu">
   <a href="#p1"
      id="p1"
      class="menu-open">
-    {{> atoms-bars }}
-    <span class="sr-only">Menü</span>
+    <div onClick="saveScrollPosition();">
+      {{> atoms-bars }}
+      <span>Menü</span>
+    </div>
   </a>
 
-  <a href="#nowhere"
-     id="main-menu-close"
+  <a href="#closemenu"
      class="menu-close">
-    {{> atoms-times }}
-    <span class="sr-only">Menü</span>
+    <div onClick="returnToScrollposition();">
+      {{> atoms-times }}
+      <span>Menü</span>
+    </div>
   </a>
 
-  <nav id="header-mobile-menu" class="header-mobile-menu">
+  <nav class="header-mobile-navigation">
     <ul class="header-menu-container">
+      <li class="header-menu-item active">
+        <a class="header-menu-item-link" href="#">Last minute</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Vakantie boeken</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Hotel Boeken</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Vakantiebestemmingen</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Familievakantie</a>
+      </li>
+      <li>Booooja</li>
+      <li class="header-menu-item active">
+        <a class="header-menu-item-link" href="#">Last minute</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Vakantie boeken</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Hotel Boeken</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Vakantiebestemmingen</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">Familievakantie</a>
+      </li>
       <li class="header-menu-item active">
         <a class="header-menu-item-link" href="#">Last minute</a>
       </li>
@@ -33,6 +67,8 @@
     </ul>
   </nav>
 
-  <a href="#nowhere"
-     class="backdrop"></a>
+  <a href="#closemenu"
+     class="backdrop">
+    <div onClick="returnToScrollposition();"></div>
+  </a>
 </div>

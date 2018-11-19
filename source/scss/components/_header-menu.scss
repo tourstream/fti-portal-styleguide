@@ -6,22 +6,82 @@
   display: none;
 }
 
-.header-menu-mobile-toggle {
+.header-mobile-menu {
   align-items: center;
-  cursor: pointer;
   display: flex;
-  font-size: 12px;
 
-  > i {
-    font-size: 1rem;
-    height: 19px;
-    margin-right: 5px;
-    width: 21px;
+  .menu-open {
+    display: flex;
+  }
+
+  > a {
+    align-items: center;
+    color: $gray-600;
+    cursor: pointer;
+    font-size: 12px; //Todo change to rem
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    > div > i {
+      font-size: 1rem;
+      height: 19px;
+      margin-right: 5px;
+      width: 21px;
+    }
+  }
+
+  .backdrop {
+    background: #000000;
+    background: rgba(0, 0, 0, .85);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: $logo-width-mobile;
+    width: 100%;
+    z-index: 1;
+
+    div {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
+// Todo move to molecule
+.header-mobile-navigation {
+  background-color: $white;
+  left: 0;
+  min-width: 335px;
+  position: absolute;
+  top: 60px;
+  width: 90%;
+  z-index: 3;
+
+  .header-menu-container {
+    .header-menu-item {
+      list-style: none;
+
+      .header-menu-item-link {
+        color: $gray-600;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+//// todo
+//.header-menu-mobile-toggle {
+//  align-items: center;
+//  cursor: pointer;
+//  display: flex;
+//  font-size: 12px;
+//
+//}
+
 .menu-close,
-.header-mobile-menu,
+.header-mobile-navigation,
 .backdrop {
   display: none;
 }
@@ -31,23 +91,18 @@
     display: none;
   }
 
-  &:target ~ a,
-  &:target ~ .header-mobile-menu {
-    display: block;
+  &:target ~ a {
+    display: flex;
   }
 
+  &:target ~ .header-mobile-navigation,
   &:target ~ .backdrop {
-    background: #000000;
-    background: rgba(0, 0, 0, .85);
     display: block;
-    height: 100%;
-    width: 100%;
   }
 }
 
 @include media-breakpoint-up(lg) {
-  .header-menu-mobile-toggle,
-  .header-menu-mobile {
+  .header-mobile-menu {
     display: none;
   }
 
