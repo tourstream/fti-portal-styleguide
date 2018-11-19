@@ -1,74 +1,11 @@
 <div class="header-mobile-menu">
-  <a href="#p1"
-     id="p1"
-     class="menu-open">
-    <div onClick="saveScrollPosition();">
-      {{> atoms-bars }}
-      <span>Menü</span>
-    </div>
-  </a>
+  {{> molecules-header-menu-mobile-open }}
 
-  <a href="#closemenu"
-     class="menu-close">
-    <div onClick="returnToScrollposition();">
-      {{> atoms-times }}
-      <span>Menü</span>
-    </div>
-  </a>
+  {{> molecules-header-menu-mobile-close }}
 
-  <nav class="header-mobile-navigation">
-    <ul class="header-menu-container">
-      <li class="header-menu-item active">
-        <a class="header-menu-item-link" href="#">Last minute</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Vakantie boeken</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Hotel Boeken</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Vakantiebestemmingen</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Familievakantie</a>
-      </li>
-      <li>Booooja</li>
-      <li class="header-menu-item active">
-        <a class="header-menu-item-link" href="#">Last minute</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Vakantie boeken</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Hotel Boeken</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Vakantiebestemmingen</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Familievakantie</a>
-      </li>
-      <li class="header-menu-item active">
-        <a class="header-menu-item-link" href="#">Last minute</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Vakantie boeken</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Hotel Boeken</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Vakantiebestemmingen</a>
-      </li>
-      <li class="header-menu-item">
-        <a class="header-menu-item-link" href="#">Familievakantie</a>
-      </li>
-    </ul>
-  </nav>
+  {{> molecules-header-menu-mobile-dropdown }}
 
-  <a href="#closemenu"
-     class="backdrop">
-    <div onClick="returnToScrollposition();"></div>
-  </a>
+  {{> molecules-header-menu-mobile-backdrop }}
 </div>
+
+
