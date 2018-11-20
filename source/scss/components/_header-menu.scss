@@ -6,13 +6,17 @@
   display: none;
 }
 
+// Will be overwritten with onClick behavior by adding and removing classes
+.menu-open,
+.menu-close,
+.header-mobile-navigation,
+.backdrop {
+  display: none;
+}
+
 .header-mobile-menu {
   align-items: center;
   display: flex;
-
-  .menu-open {
-    display: flex;
-  }
 
   > a {
     align-items: center;
@@ -49,17 +53,16 @@
   }
 }
 
-// Todo move to molecule
 .header-mobile-navigation {
   background-color: $white;
   height: calc(100vh - #{$logo-width-mobile});
   left: 0;
-  min-width: 335px;
+  min-width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
   overflow: scroll;
   position: fixed;
   top: 60px;
-  width: 335px;
-  z-index: 3000;
+  width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
+  z-index: 1150;
 
   .header-menu-container {
     padding-left: .9375rem;
@@ -84,27 +87,6 @@
 
   .header-menu-item-link {
     align-items: center;
-  }
-}
-
-.menu-close,
-.header-mobile-navigation,
-.backdrop {
-  display: none;
-}
-
-.menu-open {
-  &:target {
-    display: none;
-  }
-
-  &:target ~ a {
-    display: flex;
-  }
-
-  &:target ~ .header-mobile-navigation,
-  &:target ~ .backdrop {
-    display: block;
   }
 }
 
