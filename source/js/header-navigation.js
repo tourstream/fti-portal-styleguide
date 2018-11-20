@@ -1,3 +1,4 @@
+
 var navigationElements = [];
 var openMenuClasses;
 (() => {
@@ -9,14 +10,14 @@ var openMenuClasses;
     document.querySelector(".backdrop").classList
   );
 })();
-function openNavigation () {
+function openNavigation () { // eslint-disable-line no-unused-vars
   openMenuClasses.remove("display-block");
   navigationElements.forEach(function (element) {
     element.add("display-block");
   });
 }
 
-function closeNavigation() {
+function closeNavigation() { // eslint-disable-line no-unused-vars
   openMenuClasses.add("display-block");
   navigationElements.forEach(function (element) {
     element.remove("display-block");
