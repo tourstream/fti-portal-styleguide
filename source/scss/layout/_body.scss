@@ -3,11 +3,3 @@
 body {
   min-width: 320px;
 }
-
-// when adding this class, is prevents elements to be scrolled
-// build for html and body element, when mobile header menu is opened
-.no-scroll {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
