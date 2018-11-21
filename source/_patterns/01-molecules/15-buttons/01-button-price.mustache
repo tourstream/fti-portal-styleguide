@@ -2,7 +2,9 @@
   <div class="btngrd-header">{{ btngrdBefore }}</div>
   <div class="btngrd-body">
     <div class="btngrd-l">{{ btngrdPrefix }}</div>
-    <div class="btngrd-m"><a href="#" class="btn btn-primary">{{ btngrdValue }}</a></div>
+    <div class="btngrd-m">
+      {{> atoms-button-primary (content: "6.666") }}
+    </div>
     <div class="btngrd-r">{{ btngrdSuffix }}</div>
   </div>
   <div class="btngrd-footer">{{ btngrdAfter }}</div>
