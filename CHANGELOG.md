@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.20.1
+- fixes overlapping navigation with quick search
+
 ## 0.20.0
 - Adds mobile first level navigation
 - z-indexes are now collected at custom values
