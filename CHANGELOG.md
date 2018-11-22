@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.20.0
+- Adds mobile first level navigation
+- z-indexes are now collected at custom values
+
 ## 0.19.0
 - Adds material-input classes
 - Changes gray-300
