@@ -1,0 +1,7 @@
+.on_top {
+  z-index: $quicksearch-z-index-mobile;
+
+  @include media-breakpoint-up(md) {
+    z-index: $quicksearch-z-index-desktop;
+  }
+}
