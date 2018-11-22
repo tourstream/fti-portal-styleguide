@@ -56,6 +56,61 @@
 
 .header-mobile-navigation {
   background-color: $white;
+  height: calc(100vh - #{$logo-width-mobile});
+  left: 0;
+  min-width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
+  overflow: scroll;
+  position: fixed;
+  top: 60px;
+  width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
+  z-index: $header-z-index;
+
+  .header-menu-container {
+    padding-left: .9375rem;
+
+    li {
+      list-style: none;
+
+      .header-menu-item-link {
+        color: $gray-600;
+        font-size: 1rem;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.header-menu-item {
+  display: flex;
+  flex-direction: column;
+  height: 44px;
+  justify-content: center;
+
+  .header-menu-item-link {
+    align-items: center;
+  }
+}
+
+  .backdrop {
+    background: #000000;
+    background: $tab-background-color;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: $logo-width-mobile;
+    width: 100%;
+    z-index: $backdrop-z-index;
+
+    div {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.header-mobile-navigation {
+  background-color: $white;
+  height: calc(100vh - #{$logo-width-mobile});
   left: 0;
   min-width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
   overflow: scroll;
