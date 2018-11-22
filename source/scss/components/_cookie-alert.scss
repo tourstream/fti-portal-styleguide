@@ -9,7 +9,7 @@
   padding: 40px 5px;
   position: fixed;
   width: 100%;
-  z-index: 1100;
+  z-index: $cookie-alert-z-index;
 
   &.show {
     display: block;
