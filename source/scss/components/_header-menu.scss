@@ -44,7 +44,7 @@
     position: fixed;
     top: $logo-width-mobile;
     width: 100%;
-    z-index: 1;
+    z-index: $backdrop-z-index;
 
     div {
       height: 100%;
@@ -62,7 +62,7 @@
   position: fixed;
   top: 60px;
   width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
-  z-index: 1150;
+  z-index: $header-z-index;
 
   .header-menu-container {
     padding-left: .9375rem;
