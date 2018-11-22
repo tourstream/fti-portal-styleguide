@@ -77,6 +77,12 @@
   "plainText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, unde, dolore? Ex fugit, necessitatibus tempore neque ullam nostrum ducimus alias beatae voluptatibus iusto, perspiciatis tenetur consectetur reprehenderit, harum quae rerum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corrupti fuga, quas quisquam perspiciatis. Consequatur, atque ducimus dolores natus officia qui rerum consectetur repellat ullam accusantium laboriosam, reprehenderit nemo deleniti",
   "htmlText": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, unde, dolore? Ex fugit, necessitatibus tempore neque ullam nostrum ducimus alias beatae voluptatibus iusto, perspiciatis tenetur consectetur reprehenderit, harum quae rerum!</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corrupti fuga, quas quisquam perspiciatis. Consequatur, atque ducimus dolores natus officia qui rerum consectetur repellat ullam accusantium laboriosam, reprehenderit nemo deleniti</p>",
   "footerLegal": "© 2017 - FTI Touristik GmbH. Alle Rechte vorbehalten. (used atom: paragraph)",
+  "footerMenu": [
+    {"footerMenuItem": "Kontakt"},
+    {"footerMenuItem": "Unternehmen"},
+    {"footerMenuItem": "Impressum"},
+    {"footerMenuItem": "AGBs"}
+  ],
   "teaserHeadline": "Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna",
   "teaserSubheadline": "Unser Reisetipp der Woche: El Gouna",
   "teaserDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er dolore magna aliquyam erat",
@@ -136,5 +142,22 @@
     "short": "<p>Lorem <i class='fg-calendar'></i> ipsum dolor sit amet, consectetur <i class='fg-questionmark-circle'></i> adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue.</p>",
     "medium": "<p>Lorem <i class='fg-calendar'></i> ipsum dolor sit amet, consectetur <i class='fg-questionmark-circle'></i> adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue. Morbi non magna eget nunc tempor pretium. Maecenas congue condimentum orci at eleifend. Maecenas id pretium nisl, aliquam faucibus elit. Ut tempor vitae tortor a pharetra. Aliquam porta dignissim arcu non commodo. Nunc erat leo, auctor vel placerat vel, ornare in lacus. Phasellus quis nibh iaculis, ultrices dolor sed, mollis sapien.</p>",
     "long": "<p>Lorem <i class='fg-calendar'></i> ipsum dolor sit amet, consectetur <i class='fg-questionmark-circle'></i> adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue. Morbi non magna eget nunc tempor pretium. Maecenas congue condimentum orci at eleifend. Maecenas id pretium nisl, aliquam faucibus elit.</p><p>Ut tempor vitae tortor a pharetra. Aliquam porta dignissim arcu non commodo. Nunc erat leo, auctor vel placerat vel, ornare in lacus. Phasellus quis nibh iaculis, ultrices dolor sed, mollis sapien. Donec vel pulvinar est. Ut mattis vehicula justo. Integer ultrices iaculis lorem, at euismod erat. Vestibulum ultrices, nisl in accumsan vulputate, metus massa dignissim mauris, eu commodo metus felis nec tortor. Aenean sollicitudin sed mauris sed tincidunt. Ut gravida arcu non ultrices laoreet.</p>"
-  }
+  },
+  "headerMenu": [
+    {
+      "headerMenuItem": "Last minute"
+    },
+    {
+      "headerMenuItem": "Vakantie boeken"
+    },
+    {
+      "headerMenuItem": "Hotel Boeken"
+    },
+    {
+      "headerMenuItem": "Vakantiebestemmingen"
+    },
+    {
+      "headerMenuItem": "Familievakantie"
+    }
+  ]
 }

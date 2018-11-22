@@ -6,21 +6,135 @@
   display: none;
 }
 
-.header-menu-mobile {
-  align-items: center;
-  display: flex;
-  font-size: 12px;
+// Will be overwritten with onClick behavior by adding and removing classes
+.menu-open,
+.menu-close,
+.header-mobile-navigation,
+.backdrop {
+  display: none;
+}
 
-  > i {
-    font-size: 1rem;
-    height: 19px;
-    margin-right: 5px;
-    width: 21px;
+.header-mobile-menu {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+
+  > a {
+    align-items: center;
+    color: $gray-600;
+    cursor: pointer;
+    font-size: .75rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    > div > i {
+      font-size: 1rem;
+      height: 1.1875rem;
+      margin-right: 5px;
+      width: 21px;
+    }
+  }
+
+  .backdrop {
+    background: #000000;
+    background: $tab-background-color;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: $logo-width-mobile;
+    width: 100%;
+    z-index: $backdrop-z-index;
+
+    div {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.header-mobile-navigation {
+  background-color: $white;
+  height: calc(100vh - #{$logo-width-mobile});
+  left: 0;
+  min-width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
+  overflow: scroll;
+  position: fixed;
+  top: 60px;
+  width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
+  z-index: $header-z-index;
+
+  .header-menu-container {
+    padding-left: .9375rem;
+
+    li {
+      list-style: none;
+
+      .header-menu-item-link {
+        color: $gray-600;
+        font-size: 1rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .backdrop {
+    background: #000000;
+    background: $tab-background-color;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: $logo-width-mobile;
+    width: 100%;
+    z-index: $backdrop-z-index;
+
+    div {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.header-mobile-navigation {
+  background-color: $white;
+  height: calc(100vh - #{$logo-width-mobile});
+  left: 0;
+  min-width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
+  overflow: scroll;
+  position: fixed;
+  top: 60px;
+  width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
+  z-index: $header-z-index;
+
+  .header-menu-container {
+    padding-left: .9375rem;
+
+    li {
+      list-style: none;
+
+      .header-menu-item-link {
+        color: $gray-600;
+        font-size: 1rem;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.header-menu-item {
+  display: flex;
+  flex-direction: column;
+  height: 44px;
+  justify-content: center;
+
+  .header-menu-item-link {
+    align-items: center;
   }
 }
 
 @include media-breakpoint-up(lg) {
-  .header-menu-mobile {
+  .header-mobile-menu {
     display: none;
   }
 

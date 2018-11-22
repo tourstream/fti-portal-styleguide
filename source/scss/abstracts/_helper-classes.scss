@@ -1,0 +1,12 @@
+// when adding this class, is prevents elements to be scrolled
+// build for html and body element, when mobile header menu is opened
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+// use this class to display elements, by adding this class via javascript.
+.display-block {
+  display: block !important;
+}
