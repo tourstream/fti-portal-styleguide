@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.21.0
+- Adds close button component
+- Adds tag component
+
 ## 0.20.1
 - fixes overlapping navigation with quick search
 
