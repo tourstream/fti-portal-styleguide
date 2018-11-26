@@ -21,17 +21,17 @@
 }
 
 .qs-h1 {
-  font-size: 3em;
+  font-size: $h1-font-size-qs;
   line-height: 1.2em;
   margin-left: 0;
   max-width: 750px;
   position: absolute;
   @include media-breakpoint-between("md", "xl") {
-    font-size: 2.3em;
+    font-size: $h1-font-size-md-qs;
     max-width: 500px;
   }
   @include media-breakpoint-down("md") {
-    font-size: 1.8em;
+    font-size: $h1-font-size-sm-qs;
     max-width: 310px;
   }
 }
