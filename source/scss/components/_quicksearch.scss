@@ -1,3 +1,11 @@
+.on_top {
+  z-index: $quicksearch-z-index-mobile;
+
+  @include media-breakpoint-up(md) {
+    z-index: $quicksearch-z-index-desktop;
+  }
+}
+
 .qs-with-background {
   bottom: 150px;
   margin-bottom: -100px;
@@ -51,3 +59,4 @@
   }
 
 }
+

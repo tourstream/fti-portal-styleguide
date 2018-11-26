@@ -3,14 +3,21 @@
 // TODO font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 body > header {
   background-color: $white;
-  display: flex;
+  display: block;
   margin: 0 auto;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: $header-z-index;
 
   > div {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    > .header-hotline {
+      justify-content: flex-end;
+    }
 
     // header-menu-mobile header-hotline
     // It counts objects that have display:none
@@ -22,7 +29,20 @@ body > header {
   }
 }
 
+.fixed-header {
+  display: block;
+  height: $logo-width-mobile;
+}
+
 @include media-breakpoint-up(lg) {
+  body > header {
+    position: static;
+  }
+
+  .fixed-header {
+    display: none;
+  }
+
   body > header > div > :nth-child(3) {
     flex-grow: 1;
   }
