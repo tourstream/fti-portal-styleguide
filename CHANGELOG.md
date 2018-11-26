@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.22.1
+- fixes backgground image size for iOS 10
+
 ## 0.22.0
 - Adds background image for quicksearch
 

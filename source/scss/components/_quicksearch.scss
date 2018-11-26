@@ -47,7 +47,6 @@
   picture,
   img {
     height: 440px;
-    min-height: 100%;
     object-fit: cover;
     width: 1350px;
     @include media-breakpoint-down("md") {
