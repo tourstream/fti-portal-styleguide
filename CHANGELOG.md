@@ -2,10 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.21.1
-- makes the whole teaser clickable
-
 ## 0.21.0
+- makes the whole teaser clickable
 - Adds close button component
 - Adds tag component
 
