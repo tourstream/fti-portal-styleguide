@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.22.0
+- Adds background image for quicksearch
+
 ## 0.21.0
 - makes the whole teaser clickable
 - Adds close button component

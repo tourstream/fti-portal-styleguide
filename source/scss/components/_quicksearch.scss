@@ -5,3 +5,58 @@
     z-index: $quicksearch-z-index-desktop;
   }
 }
+
+.qs-with-background {
+  bottom: 150px;
+  margin-bottom: -100px;
+  position: relative;
+  @include media-breakpoint-down("md") {
+    bottom: 100px;
+    margin-bottom: -90px;
+  }
+  @include media-breakpoint-between("md", "lg") {
+    bottom: 250px;
+    margin-bottom: -200px;
+  }
+}
+
+.qs-h1 {
+  font-size: $h1-font-size-qs;
+  line-height: 1.2em;
+  margin-left: 0;
+  max-width: 750px;
+  position: absolute;
+  @include media-breakpoint-between("md", "xl") {
+    font-size: $h1-font-size-md-qs;
+    max-width: 500px;
+  }
+  @include media-breakpoint-down("md") {
+    font-size: $h1-font-size-sm-qs;
+    max-width: 310px;
+  }
+}
+
+.qs-background {
+  max-width: inherit;
+  overflow: hidden;
+  text-align: center;
+  @include media-breakpoint-up("xl") {
+    max-width: 100%;
+  }
+
+  picture,
+  img {
+    height: 440px;
+    min-height: 100%;
+    object-fit: cover;
+    width: 1350px;
+    @include media-breakpoint-down("md") {
+      height: 215px;
+    }
+    @include media-breakpoint-between("md", "xl") {
+      height: 420px;
+    }
+  }
+
+}
+
