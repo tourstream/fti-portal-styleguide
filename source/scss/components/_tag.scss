@@ -1,9 +1,11 @@
 .tag {
-  background: $gray-100;
+  background-color: $gray-100;
   border: 1px solid $gray-600;
   color: inherit;
+  cursor: pointer;
+  display: inline-block;
   font-size: .95rem;
-  padding: 10px;
+  padding: 6px 10px 7px;
 
   .close-button {
     margin-left: 18px;
