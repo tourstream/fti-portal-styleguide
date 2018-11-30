@@ -9,14 +9,17 @@
 .qs-with-background {
   bottom: 150px;
   margin-bottom: -100px;
+  min-height: 100px;
   position: relative;
   @include media-breakpoint-down("md") {
     bottom: 100px;
     margin-bottom: -90px;
+    min-height: 90px;
   }
   @include media-breakpoint-between("md", "lg") {
     bottom: 250px;
     margin-bottom: -200px;
+    min-height: 200px;
   }
 }
 
@@ -46,9 +49,14 @@
 
   picture,
   img {
+    /**
+    * fix object-fit for IE 11
+    * works with js (https://github.com/bfred-it/object-fit-images)
+    */
+    font-family: "object-fit: cover;";
     height: 440px;
     object-fit: cover;
-    width: 1350px;
+    width: 100%;
     @include media-breakpoint-down("md") {
       height: 215px;
     }
