@@ -148,10 +148,10 @@ module.exports = function (grunt) {
     /******************************************************
      * GENERATE THE BUNDLE WITH BROWSERIFY
      ******************************************************/
+
     browserify: {
-      client: {
-        src: ['source/js/*.js'],
-        dest: 'source/js/bundle.js',
+      dist: {
+        files: { 'public/js/bundle.js' : ['source/js/main.js']},
       }
     },
     /******************************************************
@@ -171,6 +171,10 @@ module.exports = function (grunt) {
           path.resolve(paths().source.root + '/*.ico')
         ],
         tasks: ['default', 'bsReload:css']
+      },
+      browserify: {
+        files: [path.resolve(paths().source.js + '/*.js')],
+        task: ['browserify']
       }
     },
     browserSync: {
@@ -224,10 +228,10 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'css', 'browserify','copy:main']);
+  grunt.registerTask('default', ['patternlab', 'css','copy:main']);
   grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer', 'cssmin', 'compress']);
-  grunt.registerTask('patternlab:build', ['default']);
-  grunt.registerTask('patternlab:watch', ['default', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['default', 'browserSync', 'watch:all']);
+  grunt.registerTask('patternlab:build', ['default', 'browserify']);
+  grunt.registerTask('patternlab:watch', ['default', 'watch:all', 'watch:browserify']);
+  grunt.registerTask('patternlab:serve', ['default', 'browserSync', 'watch:all', 'watch:browserify']);
 
 };
