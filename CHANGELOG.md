@@ -2,8 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.22.1
-- Deletes some spaces when using parameters to avoid Errors when running the styleguide 
+## 0.22.2
+- Deletes some spaces when using parameters to avoid Errors when running the styleguide
+- 0.22.1 skipped because of problems between npm and git. 0.22.1 can't be used anymore. 
 
 ## 0.22.0
 - Adds background image for quicksearch
