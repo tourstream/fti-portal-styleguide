@@ -18,6 +18,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-compress');
+  grunt.loadNpmTasks('grunt-browserify');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -143,6 +144,16 @@ module.exports = function (grunt) {
         ]
       }
     },
+
+    /******************************************************
+     * GENERATE THE BUNDLE WITH BROWSERIFY
+     ******************************************************/
+    browserify: {
+      client: {
+        src: ['source/js/*.js'],
+        dest: 'source/js/bundle.js',
+      }
+    },
     /******************************************************
      * SERVER AND WATCH TASKS
     ******************************************************/
@@ -213,7 +224,7 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'css', 'copy:main']);
+  grunt.registerTask('default', ['patternlab', 'css', 'browserify','copy:main']);
   grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer', 'cssmin', 'compress']);
   grunt.registerTask('patternlab:build', ['default']);
   grunt.registerTask('patternlab:watch', ['default', 'watch:all']);

@@ -2,4 +2,9 @@
 
 body {
   min-width: 320px;
+  overflow-y: scroll;
+}
+
+.unscrollable {
+  overflow-y: hidden;
 }
