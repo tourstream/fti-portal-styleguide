@@ -14,6 +14,17 @@
   display: none;
 }
 
+.backdrop {
+  background: #000000;
+  background: $tab-background-color;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: $logo-width-mobile;
+  width: 100%;
+  z-index: $backdrop-z-index;
+}
+
 .header-mobile-menu {
   align-items: center;
   cursor: pointer;
@@ -36,22 +47,6 @@
       width: 21px;
     }
   }
-
-  .backdrop {
-    background: #000000;
-    background: $tab-background-color;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: $logo-width-mobile;
-    width: 100%;
-    z-index: $backdrop-z-index;
-
-    div {
-      height: 100%;
-      width: 100%;
-    }
-  }
 }
 
 .header-mobile-navigation {
@@ -65,71 +60,52 @@
   width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
   z-index: $header-z-index;
 
-  .header-menu-container {
-    padding-left: .9375rem;
+  hr {
+    margin: 0 12px;
+  }
 
-    li {
-      list-style: none;
+  .header-menu-container {
+    margin-bottom: 12px;
+    padding-left: 0;
+
+    .header-menu-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       .header-menu-item-link {
+        align-items: center;
         color: $gray-600;
         font-size: 1rem;
+        padding-left: .9375rem;
         text-decoration: none;
       }
     }
-  }
-
-  .backdrop {
-    background: #000000;
-    background: $tab-background-color;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: $logo-width-mobile;
-    width: 100%;
-    z-index: $backdrop-z-index;
-
-    div {
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
-
-.header-mobile-navigation {
-  background-color: $white;
-  height: calc(100vh - #{$logo-width-mobile});
-  left: 0;
-  min-width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
-  overflow: scroll;
-  position: fixed;
-  top: 60px;
-  width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
-  z-index: $header-z-index;
-
-  .header-menu-container {
-    padding-left: .9375rem;
 
     li {
       list-style: none;
 
-      .header-menu-item-link {
+      a {
+        align-items: center;
         color: $gray-600;
+        display: flex;
         font-size: 1rem;
+        height: 44px;
         text-decoration: none;
+      }
+
+      a:hover {
+        background-color: $gray-100;
       }
     }
   }
 }
 
-.header-menu-item {
-  display: flex;
-  flex-direction: column;
-  height: 44px;
-  justify-content: center;
+.header-sub-menu-container {
+  padding-left: 0;
 
-  .header-menu-item-link {
-    align-items: center;
+  .header-sub-menu-item-link {
+    padding-left: 2.5rem;
   }
 }
 
@@ -158,6 +134,7 @@
       margin: 0;
 
       .header-menu-item {
+        height: auto;
         margin: .82rem .41rem;
 
         .header-menu-item-link {

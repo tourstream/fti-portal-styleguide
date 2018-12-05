@@ -145,16 +145,36 @@
   },
   "headerMenu": [
     {
-      "headerMenuItem": "Last minute"
+      "headerMenuItem": "Pauschal & Last Minute",
+      "headerMenuSecondLevelItems": [
+        {"item": "Pauschal & Last minute"},
+        {"item": "Pauschalreisen"},
+        {"item": "Last Minute"},
+        {"item": "Frühbucher"},
+        {"item": "All inclusive"},
+        {"item": "Reiseschnäppchen"},
+      ]
     },
     {
-      "headerMenuItem": "Vakantie boeken"
+      "headerMenuItem": "Zonvakanties",
+      "headerMenuSecondLevelItems": []
+    },
+    {
+      "headerMenuItem": "Vakantie boeken",
+      "headerMenuSecondLevelItems": [
+        {"item": ""}
+      ]
     },
     {
       "headerMenuItem": "Hotel Boeken"
     },
     {
-      "headerMenuItem": "Vakantiebestemmingen"
+      "headerMenuItem": "Vakantiebestemmingen",
+      "headerMenuSecondLevelItems": [
+        {"item": 1},
+        {"item": 2},
+        {"item": 3}
+      ]
     },
     {
       "headerMenuItem": "Familievakantie"

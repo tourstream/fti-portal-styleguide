@@ -2,10 +2,24 @@
   <ul class="header-menu-container">
     {{# headerMenu }}
     <li class="header-menu-item active">
-      <a class="header-menu-item-link" href="#">{{ headerMenuItem }}</a>
+      <a class="header-menu-item-link" href="#">
+        <span>{{ headerMenuItem }}</span>
+      </a>
+      {{#headerMenuSecondLevelItems }}
+        <ul class="header-sub-menu-container">
+          {{#item}}
+            <li class="header-sub-menu-item">
+              <a href="#" class="header-sub-menu-item-link">
+                <span>{{ item }}</span>
+              </a>
+            </li>
+          {{/item}}
+        </ul>
+      {{/headerMenuSecondLevelItems}}
     </li>
     {{/ headerMenu }}
   </ul>
+  <hr>
   <ul class="header-menu-container">
     {{# footerMenu }}
       <li class="header-menu-item active">
@@ -13,6 +27,7 @@
       </li>
     {{/ footerMenu }}
   </ul>
+  <hr>
   <ul class="header-menu-container">
     <li class="header-menu-item active">
       {{> molecules-header-hotline }}
