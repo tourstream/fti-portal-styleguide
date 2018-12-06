@@ -228,10 +228,10 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'css','copy:main']);
+  grunt.registerTask('default', ['patternlab', 'css', 'browserify', 'copy:main']);
   grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer', 'cssmin', 'compress']);
   grunt.registerTask('patternlab:build', ['default', 'browserify']);
   grunt.registerTask('patternlab:watch', ['default', 'watch:all', 'watch:browserify']);
-  grunt.registerTask('patternlab:serve', ['default', 'browserSync', 'watch:all', 'watch:browserify']);
+  grunt.registerTask('patternlab:serve', ['default', 'browserSync', 'watch:all']);
 
 };
