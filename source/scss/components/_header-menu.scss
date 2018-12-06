@@ -65,20 +65,17 @@
   }
 
   .header-menu-container {
-    margin-bottom: 12px;
+    margin-bottom: 0;
     padding-left: 0;
 
     .header-menu-item {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      flex-wrap: nowrap;
 
       .header-menu-item-link {
-        align-items: center;
-        color: $gray-600;
-        font-size: 1rem;
-        padding-left: .9375rem;
-        text-decoration: none;
+        justify-content: space-between;
+        padding: 0 .9375rem;
       }
     }
 
@@ -102,11 +99,16 @@
 }
 
 .header-sub-menu-container {
+  display: none;
   padding-left: 0;
 
   .header-sub-menu-item-link {
-    padding-left: 2.5rem;
+    padding-left: 1.875rem;
   }
+}
+
+.header-menu-item-link.active {
+  background-color: $gray-100;
 }
 
 @include media-breakpoint-up(lg) {

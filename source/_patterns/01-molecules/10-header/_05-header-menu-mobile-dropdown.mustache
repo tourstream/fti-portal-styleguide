@@ -1,22 +1,33 @@
 <nav class="header-mobile-navigation">
   <ul class="header-menu-container">
     {{# headerMenu }}
-    <li class="header-menu-item active">
-      <a class="header-menu-item-link" href="#">
-        <span>{{ headerMenuItem }}</span>
-      </a>
-      {{#headerMenuSecondLevelItems }}
-        <ul class="header-sub-menu-container">
-          {{#item}}
-            <li class="header-sub-menu-item">
-              <a href="#" class="header-sub-menu-item-link">
-                <span>{{ item }}</span>
-              </a>
-            </li>
-          {{/item}}
-        </ul>
-      {{/headerMenuSecondLevelItems}}
-    </li>
+      {{#headerMenuSecondLevelItems.length}}
+      <li class="header-menu-item" onclick="javascript:headerNavigation.toggleSubMenu(this)">
+        <a class="header-menu-item-link">
+          <span>{{ headerMenuItem }}</span>
+
+          {{> atoms-arrow-down }}
+        </a>
+        {{#headerMenuSecondLevelItems.length }}
+          <ul class="header-sub-menu-container">
+            {{#headerMenuSecondLevelItems}}
+              <li class="header-sub-menu-item">
+                <a href="#" class="header-sub-menu-item-link">
+                  <span>{{ item }}</span>
+                </a>
+              </li>
+            {{/headerMenuSecondLevelItems}}
+          </ul>
+        {{/headerMenuSecondLevelItems.length}}
+      </li>
+      {{/headerMenuSecondLevelItems.length}}
+      {{^headerMenuSecondLevelItems.length}}
+        <li class="header-menu-item active">
+          <a class="header-menu-item-link">
+            <span>{{ headerMenuItem }}</span>
+          </a>
+        </li>
+      {{/headerMenuSecondLevelItems.length}}
     {{/ headerMenu }}
   </ul>
   <hr>
@@ -28,9 +39,5 @@
     {{/ footerMenu }}
   </ul>
   <hr>
-  <ul class="header-menu-container">
-    <li class="header-menu-item active">
-      {{> molecules-header-hotline }}
-    </li>
-  </ul>
+  {{> molecules-header-hotline }}
 </nav>

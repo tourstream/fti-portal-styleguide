@@ -39,6 +39,12 @@
   }
 }
 
+.header-mobile-navigation {
+  .header-hotline {
+    padding: 1.0625rem 0 2.875rem .9375rem;
+  }
+}
+
 @include media-breakpoint-up(lg) {
   .header-hotline {
     margin-left: 20px;

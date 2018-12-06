@@ -156,11 +156,11 @@
       ]
     },
     {
-      "headerMenuItem": "Zonvakanties",
+      "headerMenuItem": "Empty Array",
       "headerMenuSecondLevelItems": []
     },
     {
-      "headerMenuItem": "Vakantie boeken",
+      "headerMenuItem": "Empty String",
       "headerMenuSecondLevelItems": [
         {"item": ""}
       ]
