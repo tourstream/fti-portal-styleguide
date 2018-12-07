@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## 0.22.4
-- Resizes the Logo to 80x80 in XL Viewport
+- Resizes the Logo to 80x80 in LG Viewport
 
 ## 0.22.3
 - Changes tag component
