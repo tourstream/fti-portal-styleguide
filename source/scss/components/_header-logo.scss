@@ -20,6 +20,15 @@
 
     img {
       box-shadow: $box-down-shadow;
+      height: 80px;
+      width: 80px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .c-logo-link {
+    img {
       height: 100px;
       width: 100px;
     }
