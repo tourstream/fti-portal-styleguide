@@ -30,17 +30,22 @@ var closeNavigation = function () {
 };
 
 var toggleSubMenu = function(element) {
-  var subMenus = document.querySelectorAll(".header-sub-menu-container");
-  var menuLinks = document.querySelectorAll(".header-menu-item-link");
-  subMenus.forEach(function(subMenu) {
-    subMenu.classList.remove("display-block");
-  });
-  menuLinks.forEach(function(subMenu) {
-    subMenu.classList.remove("active");
-  });
+  if (element.querySelector("ul").className.indexOf('display-block') === -1) {
+    var subMenus = document.querySelectorAll(".header-sub-menu-container");
+    var menuLinks = document.querySelectorAll(".header-menu-item-link");
+    subMenus.forEach(function(subMenu) {
+      subMenu.classList.remove("display-block");
+    });
+    menuLinks.forEach(function(subMenu) {
+      subMenu.classList.remove("active");
+    });
 
-  element.querySelector("ul").classList.add("display-block");
-  element.querySelector("a").classList.add("active");
+    element.querySelector("ul").classList.add("display-block");
+    element.querySelector("a").classList.add("active");
+  } else {
+    element.querySelector("ul").classList.remove("display-block");
+    element.querySelector("a").classList.remove("active");
+  }
 };
 
 
