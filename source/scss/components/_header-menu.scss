@@ -53,11 +53,12 @@
   background-color: $white;
   height: calc(100vh - #{$logo-width-mobile});
   left: 0;
-  min-width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
+  min-width: 288px;
   overflow: scroll;
+  padding-bottom: 20px;
   position: fixed;
   top: 60px;
-  width: 335px; // Todo width or min-width? Question will be solved in 2nd level navigation
+  width: 90%;
   z-index: $header-z-index;
 
   hr {
@@ -75,7 +76,7 @@
 
       .header-menu-item-link {
         justify-content: space-between;
-        padding: 0 .9375rem;
+        padding: 0 .9375rem; // todo 1 * 15
       }
     }
 
@@ -103,12 +104,30 @@
   padding-left: 0;
 
   .header-sub-menu-item-link {
-    padding-left: 1.875rem;
+    padding-left: 1.875rem; // todo 2 * 15
   }
 }
 
 .header-menu-item-link.active {
   background-color: $gray-100;
+}
+
+@include media-breakpoint-up(sm) {
+  .header-mobile-navigation {
+    height: auto;
+    width: 100%;
+
+    hr {
+      margin: 0 auto;
+      //padding: 0 .9375rem; // todo 1 * 15
+      width: calc(335px - 1.875rem); // todo 2 * 15
+    }
+
+    .header-menu-container {
+      margin: 0 auto;
+      max-width: 335px;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {

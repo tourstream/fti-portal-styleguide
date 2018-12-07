@@ -5,7 +5,6 @@
       <li class="header-menu-item" onclick="javascript:headerNavigation.toggleSubMenu(this)">
         <a class="header-menu-item-link">
           <span>{{ headerMenuItem }}</span>
-
           {{> atoms-arrow-down }}
         </a>
         {{#headerMenuSecondLevelItems.length }}
@@ -38,6 +37,4 @@
       </li>
     {{/ footerMenu }}
   </ul>
-  <hr>
-  {{> molecules-header-hotline }}
 </nav>
