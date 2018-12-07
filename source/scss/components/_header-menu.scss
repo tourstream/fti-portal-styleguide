@@ -90,6 +90,7 @@
         font-size: 1rem;
         height: 44px;
         text-decoration: none;
+        white-space: nowrap;
       }
 
       a:hover {
@@ -119,7 +120,6 @@
 
     hr {
       margin: 0 auto;
-      //padding: 0 .9375rem; // todo 1 * 15
       width: calc(335px - 1.875rem); // todo 2 * 15
     }
 
@@ -142,10 +142,19 @@
     justify-content: center;
     padding: 0 1rem;
 
-    a,
-    a:hover,
-    a:focus {
+    li {
+      white-space: nowrap;
+    }
+
+    a {
+      color: $gray-600;
       text-decoration: none;
+      white-space: nowrap;
+    }
+
+    a:hover {
+      color: $primary;
+      text-decoration: underline;
     }
 
     .header-menu-container {
@@ -162,6 +171,20 @@
           color: $gray-600;
         }
       }
+    }
+  }
+
+  .header-sub-menu-container {
+    background-color: $white;
+    box-shadow: $box-down-shadow;
+    list-style: none;
+    position: absolute;
+
+    .header-sub-menu-item-link {
+      align-items: center;
+      display: flex;
+      height: 44px;
+      padding: 0 .9375rem; // todo 1 * 15
     }
   }
 }

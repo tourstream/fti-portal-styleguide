@@ -177,7 +177,15 @@
       ]
     },
     {
-      "headerMenuItem": "Familievakantie"
+      "headerMenuItem": "Familievakantie",
+      "headerMenuSecondLevelItems": [
+        {"item": "Pauschal & Last minute"},
+        {"item": "Pauschalreisen"},
+        {"item": "Last Minute"},
+        {"item": "Frühbucher"},
+        {"item": "All inclusive"},
+        {"item": "Reiseschnäppchen"},
+      ]
     }
   ]
 }

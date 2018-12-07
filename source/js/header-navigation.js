@@ -52,5 +52,5 @@ var toggleSubMenu = function(element) {
 module.exports = {
   openNavigation: openNavigation,
   closeNavigation: closeNavigation,
-  toggleSubMenu, toggleSubMenu
+  toggleSubMenu: toggleSubMenu
 };
