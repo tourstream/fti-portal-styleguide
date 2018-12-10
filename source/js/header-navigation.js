@@ -48,6 +48,8 @@ var toggleSubMenu = function(element) {
     element.querySelector("ul").classList.remove("display-block");
     element.querySelector("a").classList.remove("active");
   }
+
+  fixVerticalScrollOnMenu();
 };
 
 var menu = document.querySelector('.header-mobile-navigation');
