@@ -136,10 +136,6 @@
     display: none;
   }
 
-  .left-shift {
-    right: 0;
-  }
-
   .header-menu {
     background-color: $gray-100;
     color: $gray-600;
@@ -183,7 +179,9 @@
   .header-sub-menu-container {
     background-color: $white;
     box-shadow: $box-down-shadow;
+    left: -9px;
     list-style: none;
+    padding: 15px 0;
     position: absolute;
     top: 100%;
 
@@ -194,5 +192,10 @@
       margin: 0 .9375rem; // todo 1 * 15
       padding: 0 70px 0 0;
     }
+  }
+
+  .left-shift { // used in header-navigation.js
+    left: auto;
+    right: 0;
   }
 }
