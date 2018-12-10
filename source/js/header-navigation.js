@@ -19,6 +19,8 @@ var openNavigation = function () {
     element.add("display-block");
   });
   body.classList.add("unscrollable");
+
+  fixVerticalScrollOnMenu();
 };
 
 var closeNavigation = function () {
@@ -48,9 +50,37 @@ var toggleSubMenu = function(element) {
   }
 };
 
+var menu = document.querySelector('.header-mobile-navigation');
+var originalHeight = null;
+var fixVerticalScrollOnMenu = function() {
+  if (window.outerWidth >= 480) { // Tablet only
+    if (!originalHeight) {
+      originalHeight = menu.offsetHeight;
+    }
+    if (window.outerHeight < originalHeight) {
+      // Calculate visible height of the Menu inside the window, ignoring header
+      var yScroll = menu.scrollTop;
+      var elPos = menu.offsetTop - yScroll + menu.clientTop;
+      // Set new 'height' to the Menu, so that it is scrollable
+      menu.style.height = (window.outerHeight - elPos) + 'px';
+    } else {
+      // Menu is fully visible and does not need to be scrollable
+      menu.style.height = 'auto';
+    }
+  } else {
+    // Smaller screens
+    menu.style.height = '100%';
+  }
+}
+
+window.addEventListener('resize', function() {
+  fixVerticalScrollOnMenu();
+});
+
 
 module.exports = {
   openNavigation: openNavigation,
   closeNavigation: closeNavigation,
-  toggleSubMenu: toggleSubMenu
+  toggleSubMenu: toggleSubMenu,
+  fixVerticalScrollOnMenu: fixVerticalScrollOnMenu
 };
