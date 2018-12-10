@@ -53,26 +53,31 @@ var toggleSubMenu = function(element) {
 };
 
 var menu = document.querySelector('.header-mobile-navigation');
-var originalHeight = null;
 var fixVerticalScrollOnMenu = function() {
   if (window.outerWidth >= 480) { // Tablet only
-    if (!originalHeight) {
-      originalHeight = menu.offsetHeight;
-    }
-    if (window.outerHeight < originalHeight) {
+    // Changes menu height to 'auto' just to retrieve its actual current height
+    menu.style.height = 'auto';
+    if (!isElementInViewport(menu)) {
       // Calculate visible height of the Menu inside the window, ignoring header
       var yScroll = menu.scrollTop;
       var elPos = menu.offsetTop - yScroll + menu.clientTop;
-      // Set new 'height' to the Menu, so that it is scrollable
+      // Set new 'height' to the Menu, to make it scrollable
       menu.style.height = (window.outerHeight - elPos) + 'px';
-    } else {
-      // Menu is fully visible and does not need to be scrollable
-      menu.style.height = 'auto';
     }
-  } else {
-    // Smaller screens
+  } else { // Smaller screens
     menu.style.height = '100%';
   }
+}
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+  );
 }
 
 window.addEventListener('resize', function() {
