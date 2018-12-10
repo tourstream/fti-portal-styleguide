@@ -1,9 +1,7 @@
-
 var navigationElements = [];
 var openMenuClasses;
 
 openMenuClasses = document.querySelector(".menu-open").classList;
-
 
 const body = document.querySelector("body");
 
@@ -20,7 +18,7 @@ var openNavigation = function () {
   });
   body.classList.add("unscrollable");
 
-  fixVerticalScrollOnMenu();
+  updateVerticalScrollOnMenu();
 };
 
 var closeNavigation = function () {
@@ -49,25 +47,20 @@ var toggleSubMenu = function(element) {
     element.querySelector("a").classList.remove("active");
   }
 
-  fixVerticalScrollOnMenu();
+  updateVerticalScrollOnMenu();
 };
 
-var menu = document.querySelector('.header-mobile-navigation');
-var fixVerticalScrollOnMenu = function() {
-  if (window.outerWidth >= 480) { // Tablet only
-    // Changes menu height to 'auto' just to retrieve its actual current height
-    menu.style.height = 'auto';
-    if (!isElementInViewport(menu)) {
+var headerMenu = document.querySelector('.header-mobile-navigation');
+var updateVerticalScrollOnMenu = function() {
+    headerMenu.style.removeProperty('height');
+    if (!isElementInViewport(headerMenu)) {
       // Calculate visible height of the Menu inside the window, ignoring header
-      var yScroll = menu.scrollTop;
-      var elPos = menu.offsetTop - yScroll + menu.clientTop;
-      // Set new 'height' to the Menu, to make it scrollable
-      menu.style.height = (window.outerHeight - elPos) + 'px';
+      var yScroll = headerMenu.scrollTop;
+      var elPos = headerMenu.offsetTop - yScroll + headerMenu.clientTop;
+      // Set new 'height' to the menu, to make it scrollable
+      headerMenu.style.height = (window.innerHeight - elPos) + 'px';
     }
-  } else { // Smaller screens
-    menu.style.height = '100%';
-  }
-}
+};
 
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -75,19 +68,20 @@ function isElementInViewport(el) {
   return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
 
 window.addEventListener('resize', function() {
-  fixVerticalScrollOnMenu();
+  if (window.innerWidth >= 480 && window.innerWidth <= 960) {// Tablet only
+    updateVerticalScrollOnMenu();
+  }
 });
-
 
 module.exports = {
   openNavigation: openNavigation,
   closeNavigation: closeNavigation,
   toggleSubMenu: toggleSubMenu,
-  fixVerticalScrollOnMenu: fixVerticalScrollOnMenu
+  fixVerticalScrollOnMenu: updateVerticalScrollOnMenu
 };
