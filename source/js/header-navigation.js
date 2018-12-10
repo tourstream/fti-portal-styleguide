@@ -29,8 +29,11 @@ var closeNavigation = function () {
   body.classList.remove("unscrollable");
 };
 
+var subMenuUl;
 var toggleSubMenu = function(element) {
-  if (element.querySelector("ul").className.indexOf('display-block') === -1) {
+  subMenuUl = element.querySelector("ul");
+  if (subMenuUl.className.indexOf('display-block') === -1) {
+    var arrowElements = document.querySelectorAll(".fg-arrow-up");
     var subMenus = document.querySelectorAll(".header-sub-menu-container");
     var menuLinks = document.querySelectorAll(".header-menu-item-link");
     subMenus.forEach(function(subMenu) {
@@ -39,6 +42,10 @@ var toggleSubMenu = function(element) {
     menuLinks.forEach(function(subMenu) {
       subMenu.classList.remove("active");
     });
+    arrowElements.forEach(function(arrowElement) {
+      arrowElement.classList.add("fg-arrow-down");
+      arrowElement.classList.remove("fg-arrow-up");
+    });
 
     element.querySelector("ul").classList.add("display-block");
     element.querySelector("a").classList.add("active");
@@ -46,6 +53,7 @@ var toggleSubMenu = function(element) {
     var arrowElement = element.querySelector(".fg-arrow-down");
     arrowElement.classList.add("fg-arrow-up");
     arrowElement.classList.remove("fg-arrow-down");
+
   } else {
     element.querySelector("ul").classList.remove("display-block");
     element.querySelector("a").classList.remove("active");
@@ -53,7 +61,7 @@ var toggleSubMenu = function(element) {
     arrowElement.classList.add("fg-arrow-down");
     arrowElement.classList.remove("fg-arrow-up");
   }
-
+  shiftSubMenuToLeft();
   updateVerticalScrollOnMenu();
 };
 
@@ -69,6 +77,14 @@ var updateVerticalScrollOnMenu = function() {
     }
 };
 
+function shiftSubMenuToLeft() {
+  if(!subMenuUl) {return}
+  subMenuUl.classList.remove("left-shift");
+  if (!isElementInViewport(subMenuUl)) {
+    subMenuUl.classList.add("left-shift");
+  }
+}
+
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
 
@@ -81,6 +97,8 @@ function isElementInViewport(el) {
 }
 
 window.addEventListener('resize', function() {
+  console.log("eventListener")
+  shiftSubMenuToLeft();
   if (window.innerWidth >= 480 && window.innerWidth <= 960) {// Tablet only
     updateVerticalScrollOnMenu();
   }

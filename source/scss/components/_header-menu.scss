@@ -136,6 +136,10 @@
     display: none;
   }
 
+  .left-shift {
+    right: 0;
+  }
+
   .header-menu {
     background-color: $gray-100;
     color: $gray-600;
@@ -166,7 +170,8 @@
 
       .header-menu-item {
         height: auto;
-        margin: .82rem .41rem;
+        padding: .82rem .41rem;
+        position: relative;
 
         .header-menu-item-link {
           color: $gray-600;
@@ -180,12 +185,14 @@
     box-shadow: $box-down-shadow;
     list-style: none;
     position: absolute;
+    top: 100%;
 
     .header-sub-menu-item-link {
       align-items: center;
       display: flex;
       height: 44px;
-      padding: 0 .9375rem; // todo 1 * 15
+      margin: 0 .9375rem; // todo 1 * 15
+      padding: 0 70px 0 0;
     }
   }
 }
