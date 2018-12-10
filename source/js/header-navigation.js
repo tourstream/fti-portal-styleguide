@@ -42,9 +42,16 @@ var toggleSubMenu = function(element) {
 
     element.querySelector("ul").classList.add("display-block");
     element.querySelector("a").classList.add("active");
+
+    var arrowElement = element.querySelector(".fg-arrow-down");
+    arrowElement.classList.add("fg-arrow-up");
+    arrowElement.classList.remove("fg-arrow-down");
   } else {
     element.querySelector("ul").classList.remove("display-block");
     element.querySelector("a").classList.remove("active");
+    var arrowElement = element.querySelector(".fg-arrow-up");
+    arrowElement.classList.add("fg-arrow-down");
+    arrowElement.classList.remove("fg-arrow-up");
   }
 
   updateVerticalScrollOnMenu();
