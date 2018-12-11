@@ -14,10 +14,6 @@
 
 @include media-breakpoint-up(lg) {
   .c-logo-link {
-    height: 80px;
-    position: relative;
-    z-index: $header-logo-z-index;
-
     img {
       box-shadow: $box-down-shadow;
       height: 80px;
@@ -28,6 +24,10 @@
 
 @include media-breakpoint-up(xl) {
   .c-logo-link {
+    height: 80px;
+    position: relative;
+    z-index: $header-logo-z-index;
+
     img {
       height: 100px;
       width: 100px;
