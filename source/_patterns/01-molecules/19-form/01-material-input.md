@@ -1,4 +1,4 @@
 ---
 title: Material input
-state: inreview
+state: complete
 ---
