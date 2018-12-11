@@ -111,8 +111,12 @@ function isElementInViewport(el) {
 
 window.addEventListener('resize', function() {
   shiftSubMenuToLeft();
-  if (window.innerWidth >= 480 && window.innerWidth <= 960) {// Tablet only
+  if (window.innerWidth >= 480 && window.innerWidth <= 960) { // Tablet only
     updateVerticalScrollOnMenu();
+  }
+
+  if (window.innerWidth >= 960) { // Desktop
+    closeNavigation();
   }
 });
 
