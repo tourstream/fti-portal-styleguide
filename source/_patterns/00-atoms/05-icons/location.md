@@ -1,4 +1,0 @@
----
-title: Location
-state: complete
----
