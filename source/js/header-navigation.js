@@ -68,7 +68,7 @@ var toggleSubMenu = function(element) {
 // Make submenus show on hover on Desktop only
 document.querySelectorAll('.header-menu .header-menu-item').forEach( function(el) {
   var subMenu = el.querySelector('ul');
-  if (subMenu) {
+  if (subMenu) { // Ignores menu items with no children
     el.addEventListener('mouseover', function() {
         toggleSubMenu(el);
     });
@@ -110,7 +110,6 @@ function isElementInViewport(el) {
 }
 
 window.addEventListener('resize', function() {
-  console.log("eventListener")
   shiftSubMenuToLeft();
   if (window.innerWidth >= 480 && window.innerWidth <= 960) {// Tablet only
     updateVerticalScrollOnMenu();
