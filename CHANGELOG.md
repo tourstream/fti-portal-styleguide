@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.22.5
+- fixes backgground image size for iOS 10
+
 ## 0.22.4
 - Resizes the Logo to 80x80 in LG Viewport
 
