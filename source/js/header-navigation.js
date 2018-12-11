@@ -67,13 +67,15 @@ var toggleSubMenu = function(element) {
 
 // Make submenus show on hover on Desktop only
 document.querySelectorAll('.header-menu .header-menu-item').forEach( function(el) {
-  el.addEventListener('mouseover', function() {
-      toggleSubMenu(el);
-  });
-
-  el.addEventListener('mouseout', function() {
-      toggleSubMenu(el);
-  });
+  var subMenu = el.querySelector('ul');
+  if (subMenu) {
+    el.addEventListener('mouseover', function() {
+        toggleSubMenu(el);
+    });
+    el.addEventListener('mouseout', function() {
+        toggleSubMenu(el);
+    });
+  }
 });
 
 var headerMenu = document.querySelector('.header-mobile-navigation');
