@@ -2,7 +2,7 @@
   <ul class="header-menu-container">
     {{#headerMenu }}
       {{#headerMenuSecondLevelItems.length}}
-      <li class="header-menu-item" onclick="javascript:headerNavigation.toggleSubMenu(this)">
+      <li class="header-menu-item">
         <a class="header-menu-item-link" href="#">{{ headerMenuItem }}</a>
         {{> atoms-arrow-down }}
         {{#headerMenuSecondLevelItems.length }}
