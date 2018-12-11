@@ -1,0 +1,18 @@
+{{^ headerMenuItem }}
+  <ul class="header-menu-container">
+{{/headerMenuItem}}
+
+<li class="header-menu-item">
+  <a class="header-menu-item-link" href="#">
+    {{# headerMenuItem }}
+      <span>{{ headerMenuItem }}</span>
+    {{/headerMenuItem}}
+    {{^ headerMenuItem }}
+      <span>A single item</span>
+    {{/headerMenuItem}}
+  </a>
+</li>
+
+{{^ headerMenuItem }}
+  </ul>
+{{/headerMenuItem}}

@@ -77,11 +77,11 @@
   "plainText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, unde, dolore? Ex fugit, necessitatibus tempore neque ullam nostrum ducimus alias beatae voluptatibus iusto, perspiciatis tenetur consectetur reprehenderit, harum quae rerum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corrupti fuga, quas quisquam perspiciatis. Consequatur, atque ducimus dolores natus officia qui rerum consectetur repellat ullam accusantium laboriosam, reprehenderit nemo deleniti",
   "htmlText": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, unde, dolore? Ex fugit, necessitatibus tempore neque ullam nostrum ducimus alias beatae voluptatibus iusto, perspiciatis tenetur consectetur reprehenderit, harum quae rerum!</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corrupti fuga, quas quisquam perspiciatis. Consequatur, atque ducimus dolores natus officia qui rerum consectetur repellat ullam accusantium laboriosam, reprehenderit nemo deleniti</p>",
   "footerLegal": "© 2017 - FTI Touristik GmbH. Alle Rechte vorbehalten. (used atom: paragraph)",
-  "footerMenu": [
-    {"footerMenuItem": "Kontakt"},
-    {"footerMenuItem": "Unternehmen"},
-    {"footerMenuItem": "Impressum"},
-    {"footerMenuItem": "AGBs"}
+  "extraMenu": [
+    {"extraMenuItem": "Kontakt"},
+    {"extraMenuItem": "Unternehmen"},
+    {"extraMenuItem": "Impressum"},
+    {"extraMenuItem": "AGBs"}
   ],
   "teaserHeadline": "Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna",
   "teaserSubheadline": "Unser Reisetipp der Woche: El Gouna",
@@ -147,7 +147,6 @@
     {
       "headerMenuItem": "Pauschal & Last Minute",
       "headerMenuSecondLevelItems": [
-        {"item": "Pauschal & Last minute"},
         {"item": "Pauschalreisen"},
         {"item": "Last Minute"},
         {"item": "Frühbucher"},
