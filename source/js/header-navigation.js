@@ -1,128 +1,141 @@
-var navigationElements = [];
-var openMenuClasses;
+/* START - Mobile Menu */
+const body = document.querySelector('body');
+var openMobileMenuBtn = document.querySelector('.menu-open');
+var headerMobileMenu = document.querySelector('.header-mobile-navigation');
+var navigationElements = [
+  document.querySelector('.header-mobile-navigation').classList,
+  document.querySelector('.menu-close').classList,
+  document.querySelector('.backdrop').classList
+];
 
-openMenuClasses = document.querySelector(".menu-open").classList;
-
-const body = document.querySelector("body");
-
-navigationElements.push(
-  document.querySelector(".header-mobile-navigation").classList,
-  document.querySelector(".menu-close").classList,
-  document.querySelector(".backdrop").classList
-);
-
-var openNavigation = function () {
-  openMenuClasses.remove("display-block");
-  navigationElements.forEach(function (element) {
-    element.add("display-block");
+var openNavigation = function() {
+  body.classList.add('unscrollable');
+  openMobileMenuBtn.classList.remove('display-block');
+  navigationElements.forEach( function(el) {
+    el.add('display-block');
   });
-  body.classList.add("unscrollable");
 
-  updateVerticalScrollOnMenu();
+  updateVerticalScrollOnMobileMenu();
 };
 
-var closeNavigation = function () {
-  openMenuClasses.add("display-block");
-  navigationElements.forEach(function (element) {
-    element.remove("display-block");
+var closeNavigation = function() {
+  body.classList.remove('unscrollable');
+  openMobileMenuBtn.classList.add('display-block');
+  navigationElements.forEach( function(el) {
+    el.remove('display-block');
   });
-  body.classList.remove("unscrollable");
 };
 
-var subMenuUl;
-var toggleSubMenu = function(element) {
-  subMenuUl = element.querySelector("ul");
-  if (subMenuUl.className.indexOf('display-block') === -1) {
-    var arrowElements = document.querySelectorAll(".fg-arrow-up");
-    var subMenus = document.querySelectorAll(".header-sub-menu-container");
-    var menuLinks = document.querySelectorAll(".header-menu-item-link");
-    subMenus.forEach(function(subMenu) {
-      subMenu.classList.remove("display-block");
-    });
-    menuLinks.forEach(function(subMenu) {
-      subMenu.classList.remove("active");
-    });
-    arrowElements.forEach(function(arrowElement) {
-      arrowElement.classList.add("fg-arrow-down");
-      arrowElement.classList.remove("fg-arrow-up");
-    });
-
-    element.querySelector("ul").classList.add("display-block");
-    element.querySelector("a").classList.add("active");
-
-    var arrowElement = element.querySelector(".fg-arrow-down");
-    arrowElement.classList.add("fg-arrow-up");
-    arrowElement.classList.remove("fg-arrow-down");
-
-  } else {
-    element.querySelector("ul").classList.remove("display-block");
-    element.querySelector("a").classList.remove("active");
-    var arrowElement = element.querySelector(".fg-arrow-up");
-    arrowElement.classList.add("fg-arrow-down");
-    arrowElement.classList.remove("fg-arrow-up");
-  }
-  shiftSubMenuToLeft();
-  updateVerticalScrollOnMenu();
+var updateVerticalScrollOnMobileMenu = function() {
+    headerMobileMenu.style.removeProperty('height');
+    if (!isElementInViewportYAxis(headerMobileMenu)) {
+      // Calculate visible height of the Menu inside the window, ignoring header
+      var yScroll = headerMobileMenu.scrollTop;
+      var elPos = headerMobileMenu.offsetTop - yScroll + headerMobileMenu.clientTop;
+      // Set new 'height' to the menu, to make it scrollable
+      headerMobileMenu.style.height = (window.innerHeight - elPos) + 'px';
+    }
 };
+/* END - Mobile Menu */
+
+/* START - Desktop Menu */
+var desktopMenuItems = document.querySelectorAll('.header-menu .header-menu-item');
+var openSubMenuUl;
 
 // Make submenus show on hover on Desktop only
-document.querySelectorAll('.header-menu .header-menu-item').forEach( function(el) {
+desktopMenuItems.forEach( function(el) {
   var subMenu = el.querySelector('ul');
   if (subMenu) { // Ignores menu items with no children
     el.addEventListener('mouseover', function() {
-        toggleSubMenu(el);
+      toggleSubMenu(el);
     });
     el.addEventListener('mouseout', function() {
-        toggleSubMenu(el);
+      toggleSubMenu(el);
     });
   }
 });
 
-var headerMenu = document.querySelector('.header-mobile-navigation');
-var updateVerticalScrollOnMenu = function() {
-    headerMenu.style.removeProperty('height');
-    if (!isElementInViewport(headerMenu)) {
-      // Calculate visible height of the Menu inside the window, ignoring header
-      var yScroll = headerMenu.scrollTop;
-      var elPos = headerMenu.offsetTop - yScroll + headerMenu.clientTop;
-      // Set new 'height' to the menu, to make it scrollable
-      headerMenu.style.height = (window.innerHeight - elPos) + 'px';
-    }
-};
+function checkIfOpenSubMenuIsVisibleOnHover() {
+  if (!openSubMenuUl) return; // If a menu item with no children was hovered
 
-function shiftSubMenuToLeft() {
-  if(!subMenuUl) {return}
-  subMenuUl.classList.remove("left-shift");
-  if (!isElementInViewport(subMenuUl)) {
-    subMenuUl.classList.add("left-shift");
+  openSubMenuUl.classList.remove('left-shift');
+  if (!isElementInViewportYAxis(openSubMenuUl)) {
+    openSubMenuUl.classList.add('left-shift');
   }
 }
+/* END - Desktop Menu */
 
-function isElementInViewport(el) {
+/* START - Utility functions */
+function isElementInViewportYAxis(el) {
   var rect = el.getBoundingClientRect();
 
+  var verticalCheck = true;
+  if (window.innerWidth < globalVariables.breakpoints.lg) { // Tablet
+    verticalCheck = rect.top >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+  }
+  
   return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.left >= 0 &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+    verticalCheck
   );
 }
 
 window.addEventListener('resize', function() {
-  shiftSubMenuToLeft();
-  if (window.innerWidth >= 480 && window.innerWidth <= 960) { // Tablet only
-    updateVerticalScrollOnMenu();
+  checkIfOpenSubMenuIsVisibleOnHover();
+  if (window.innerWidth >= globalVariables.breakpoints.sm && window.innerWidth < globalVariables.breakpoints.lg) { // Tablet only
+    updateVerticalScrollOnMobileMenu();
   }
-
-  if (window.innerWidth >= 960) { // Desktop
+  if (window.innerWidth >= globalVariables.breakpoints.lg) { // Desktop
     closeNavigation();
   }
 });
+
+var toggleSubMenu = function(mainMenuItem) {
+  var listItemAnchor = mainMenuItem.querySelector('a');
+  openSubMenuUl = mainMenuItem.querySelector('ul');
+
+  if (openSubMenuUl.className.indexOf('display-block') === -1) {
+    var subMenus = document.querySelectorAll('.header-sub-menu-container');
+    var menuLinks = document.querySelectorAll('.header-menu-item-link');
+
+    subMenus.forEach( function(el) {
+      el.classList.remove('display-block');
+    });
+    menuLinks.forEach( function(el) {
+      el.classList.remove('active');
+    });
+
+    openSubMenuUl.classList.add('display-block');
+    listItemAnchor.classList.add('active');
+
+    var allArrowElements = document.querySelectorAll('.fg-arrow-up');
+    allArrowElements.forEach( function(el) {
+      el.classList.add('fg-arrow-down');
+      el.classList.remove('fg-arrow-up');
+    });
+
+    var arrowDownElement = mainMenuItem.querySelector('.fg-arrow-down');
+    arrowDownElement.classList.add('fg-arrow-up');
+    arrowDownElement.classList.remove('fg-arrow-down');
+  } else {
+    openSubMenuUl.classList.remove('display-block');
+    listItemAnchor.classList.remove('active');
+
+    var arrowUpElement = mainMenuItem.querySelector('.fg-arrow-up');
+    arrowUpElement.classList.add('fg-arrow-down');
+    arrowUpElement.classList.remove('fg-arrow-up');
+  }
+
+  checkIfOpenSubMenuIsVisibleOnHover();
+  updateVerticalScrollOnMobileMenu();
+};
+/* END - Utility functions */
 
 module.exports = {
   openNavigation: openNavigation,
   closeNavigation: closeNavigation,
   toggleSubMenu: toggleSubMenu,
-  fixVerticalScrollOnMenu: updateVerticalScrollOnMenu
+  updateVerticalScrollOnMobileMenu: updateVerticalScrollOnMobileMenu
 };
