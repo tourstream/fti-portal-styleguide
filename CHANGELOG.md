@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.27.0
+- Adds second level navigation
+- Adds JS file for global variables
+
 ## 0.26.0
 - fixes margin for the icon on the select component
 
