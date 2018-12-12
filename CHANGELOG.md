@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.22.6
+## 0.23.0
 - removes unused icons from pattern lab
 - changes gz extension on css, so that it can be used with gcloud bucket
 
