@@ -1,0 +1,45 @@
+.fti-select {
+  padding: unset;
+
+  >span {
+    color: #929497;
+    font-size: 12px;
+    font-weight: bold;
+    left: 26px;
+    position: absolute;
+    top: 10px;
+
+    i {
+      font-size: 22px;
+      margin-right: 20px;
+    }
+  }
+
+  select {
+    appearance: none;
+    background-clip: padding-box;
+    background-color: transparent;
+    border: unset;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    border-radius: unset;
+    border-right: 1px solid rgba(0, 0, 0, .05);
+    color: #666666;
+    display: block;
+    font-size: 16px;
+    height: 60px;
+    padding: 15px 0 0 70px;
+    width: 100%;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    +i {
+      float: right;
+      font-size: 24px;
+      margin-right: 10px;
+      margin-top: -40px;
+      pointer-events: none;
+    }
+  }
+}
