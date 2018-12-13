@@ -26,7 +26,7 @@
   height: calc(100vh - #{$logo-width-mobile});
   left: 0;
   min-width: $header-navigation-mobile-min-width;
-  overflow: scroll;
+  overflow: auto;
   padding-bottom: $content-padding-15;
   position: fixed;
   top: $logo-width-mobile;
