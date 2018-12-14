@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.23.0
+- Adds select component
+
 ## 0.22.5
 - fixes backgground image size for iOS 10
 
