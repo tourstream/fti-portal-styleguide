@@ -1,4 +1,4 @@
 ---
-title: Link List Item
+title: Link List
 state: complete
 ---

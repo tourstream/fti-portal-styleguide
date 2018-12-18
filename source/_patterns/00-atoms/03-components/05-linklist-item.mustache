@@ -1,10 +1,8 @@
-{{#anchorText}}
-  <li>
+<li class="link-list-item-li">
+  {{#anchorText}}
     <a href="{{anchorLink}}" title="{{anchorTitle}}">{{anchorText}}</a>
-  </li>
-{{/anchorText}}
-{{^anchorText}}
-  <li>
+  {{/anchorText}}
+  {{^anchorText}}
     <a href="/" title="Anchor title">Anchor text</a>
-  </li>
-{{/anchorText}}
+  {{/anchorText}}
+</li>

@@ -1,9 +1,10 @@
 <div class="link-list-25">
   <div class="link-list-body">
-    {{^singleTitle}}
-      {{> atoms-godTag(tag: "h4", tagContent: "Link List 25 headline")}}
-    {{/singleTitle}}
-    <ul>
+    {{#linkListTitle25}}
+      {{> atoms-linklist-title-25}}
+    {{/linkListTitle25}}
+
+    <ul class="link-list-ul">
       {{#linkList}}
         {{> atoms-linklist-item}}
       {{/linkList}}
