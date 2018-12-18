@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.25.0
+- Adds a new organism: Link List with Single Title
+- Updated Link List 25 for Pattern Lab
+- Updates structure of atoms and molecules related to Link Lists
+- Improved CSS for Link List 25 for when editors add less than 4 columns to the page
+- Added specific JSON data for Link Lists
+
 ## 0.23.0
 - removes unused icons from pattern lab
 - changes gz extension on css, so that it can be used with gcloud bucket
