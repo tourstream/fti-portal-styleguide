@@ -20,24 +20,24 @@
   margin-bottom: $grid-gutter-width;
   padding-left: $grid-gutter-width / 2;
   padding-right: $grid-gutter-width / 2;
-}
 
-.link-list-item-li {
-  list-style: none;
+  ul {
+    list-style: none;
+    padding: 0;
 
-  a {
-    color: $cyan;
-    font-size: .75rem;
+    li {
+      list-style: none;
+
+      a {
+        color: $cyan;
+        font-size: .75rem;
+      }
+    }
   }
 }
 
 .link-list-body {
   padding: 10px; // TODO Check with your designer, what you can do, to change unit to rem
-}
-
-.link-list-ul {
-  list-style: none;
-  padding: 0;
 }
 
 @include media-breakpoint-up("md") {

@@ -19,6 +19,15 @@
   color: #ff0000 !important;
 }
 
+/* This makes sure all atoms inside the Link List element are displayed properly on Pattern Lab */
+.link-list-item-li {
+  list-style: none;
+}
+.link-list-item-li a {
+  color: #0099cc;
+  font-size: .75rem;
+}
+
 /*.demo-animate {*/
   /*background: #ddd;*/
   /*padding: 1em;*/
