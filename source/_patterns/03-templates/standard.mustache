@@ -1,22 +1,19 @@
 {{> organisms-header }}
 {{> organisms-page-headline }}
 <main role="main" class="container">
-    <div class="teaser-list">
-        {{# teaserList }}
-            {{> organisms-content-teaser-50 }}
-        {{/ teaserList }}
+	<div class="teaser-list">
+		{{# teaserList }}
+			{{> organisms-content-teaser-50 }}
+		{{/ teaserList }}
 
-        {{> organisms-offer-teaser-50}}
-        {{> organisms-content-teaser-50}}
-        {{> organisms-content-teaser-25}}
-    </div>
+		{{> organisms-offer-teaser-50}}
+		{{> organisms-content-teaser-50}}
+		{{> organisms-content-teaser-25}}
+	</div>
 
-    <div class="link-list">
-        {{> molecules-link-list }}
-        {{> molecules-link-list }}
-        {{> molecules-link-list }}
-        {{> molecules-link-list }}
-    </div>
+	{{> organisms-linklist-25 }}
+
+	{{> organisms-linklist-single-title }}
 </main>
 
 {{> organisms-footer }}

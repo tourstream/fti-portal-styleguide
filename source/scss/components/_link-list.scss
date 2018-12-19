@@ -5,6 +5,14 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+
+  &.single-title {
+    display: block;
+
+    h3 {
+      padding: 0 #{$grid-gutter-width/2 + 10px}; // TODO Check with your designer, what you can do, to change the 10px unit to rem
+    }
+  }
 }
 
 .link-list-25 {
@@ -13,32 +21,43 @@
   padding-left: $grid-gutter-width / 2;
   padding-right: $grid-gutter-width / 2;
 
-  ul li a {
-    font-size: .75rem;
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      list-style: none;
+
+      a {
+        color: $cyan;
+        font-size: .75rem;
+      }
+    }
   }
 }
 
 .link-list-body {
   padding: 10px; // TODO Check with your designer, what you can do, to change unit to rem
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  a {
-    color: $cyan;
-  }
 }
 
 @include media-breakpoint-up("md") {
   .link-list {
     flex-wrap: nowrap;
+
+    &.single-title {
+      h3 {
+        padding: 0 $grid-gutter-width/2;
+      }
+
+      .link-list-container {
+        display: flex;
+      }
+    }
   }
 
   .link-list-25 {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 1 0 25%;
+    max-width: 100%;
   }
 
   .link-list-body {

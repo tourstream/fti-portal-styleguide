@@ -1,0 +1,44 @@
+{
+  "linkList": [
+    {
+      "anchorLink"  : "/",
+      "anchorTitle" : "Ahwahnee Hotel",
+      "anchorText"  : "Ahwahnee Hotel****"
+    },
+    {
+      "anchorLink"  : "/",
+      "anchorTitle" : "Angels Hotel",
+      "anchorText"  : "Angels Hotel***"
+    },
+    {
+      "anchorLink"  : "/",
+      "anchorTitle" : "Apple Farm Inn",
+      "anchorText"  : "Apple Farm Inn****"
+    },
+    {
+      "anchorLink"  : "/",
+      "anchorTitle" : "Apple Valley Inn",
+      "anchorText"  : "Apple Valley Inn***"
+    },
+    {
+      "anchorLink"  : "/",
+      "anchorTitle" : "Aztec Hotel",
+      "anchorText"  : "Aztec Hotel**"
+    },
+    {
+      "anchorLink"  : "/",
+      "anchorTitle" : "Balboa Bay Club & Resort",
+      "anchorText"  : "Balboa Bay Club & Resort*****"
+    },
+    {
+      "anchorLink"  : "/",
+      "anchorTitle" : "Balboa Inn",
+      "anchorText"  : "Balboa Inn****"
+    },
+    {
+      "anchorLink"  : "/",
+      "anchorTitle" : "Beverly Wilshire Hotel",
+      "anchorText"  : "Beverly Wilshire Hotel*****"
+    }
+  ]
+}
