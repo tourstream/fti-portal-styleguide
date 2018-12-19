@@ -87,7 +87,8 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          './source/css/style.css': path.resolve(paths().source.scss + 'style.scss')
+          './source/css/style.css': path.resolve(paths().source.scss + 'style.scss'),
+          './source/css/style-qs-isolated.css': path.resolve(paths().source.scss + 'style-qs-isolated.scss'),
         }
       }
     },
@@ -98,7 +99,11 @@ module.exports = function (grunt) {
       our_single_file: {
         src: path.resolve(paths().source.css + 'style.css'),
         dest: path.resolve(paths().source.css + 'style.css')
-      }
+      },
+      our_single_file_isolated: {
+        src: path.resolve(paths().source.css + 'style-qs-isolated.css'),
+        dest: path.resolve(paths().source.css + 'style-qs-isolated.css')
+      },
     },
     cssmin: {
       options: {
@@ -107,7 +112,8 @@ module.exports = function (grunt) {
       },
       target: {
         files: {
-          './source/css/style.min.css': [path.resolve(paths().source.css + 'style.css')]
+          './source/css/style.min.css': [path.resolve(paths().source.css + 'style.css')],
+          './source/css/style-qs-isolated.min.css': [path.resolve(paths().source.css + 'style-qs-isolated.css')],
         }
       }
     },
@@ -118,7 +124,7 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          src: ['./source/css/style.min.css'],
+          src: ['./source/css/style.min.css', './source/css/style-qs-isolated.min.css'],
           dest: './',
           ext: '.min.gz.css'
         }]
