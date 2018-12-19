@@ -118,7 +118,7 @@ module.exports = function (grunt) {
           expand: true,
           src: ['./source/css/style.min.css'],
           dest: './',
-          ext: '.min.css.gz'
+          ext: '.min.gz.css'
         }]
       }
     },

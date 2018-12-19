@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.24.0
+- Adds select component
+
+## 0.23.0
+- removes unused icons from pattern lab
+- changes gz extension on css, so that it can be used with gcloud bucket
+
 ## 0.22.5
 - fixes backgground image size for iOS 10
 
