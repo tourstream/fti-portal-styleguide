@@ -18,6 +18,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-compress');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-browserify');
 
   /******************************************************
@@ -111,7 +112,7 @@ module.exports = function (grunt) {
       }
     },
     compress: {
-      main: {
+      css: {
         options: {
           mode: 'gzip'
         },
@@ -120,6 +121,17 @@ module.exports = function (grunt) {
           src: ['./source/css/style.min.css'],
           dest: './',
           ext: '.min.gz.css'
+        }]
+      },
+      js: {
+        options: {
+          mode: 'gzip'
+        },
+        files: [{
+          expand: true,
+          src: ['./public/js/bundle.min.js'],
+          dest: './',
+          ext: '.min.gz.js'
         }]
       }
     },
@@ -144,14 +156,22 @@ module.exports = function (grunt) {
         ]
       }
     },
-
     /******************************************************
      * GENERATE THE BUNDLE WITH BROWSERIFY
      ******************************************************/
-
     browserify: {
       dist: {
-        files: { 'public/js/bundle.js' : ['source/js/main.js']},
+        files: { 'public/js/bundle.js' : ['public/js/main.js']}
+      }
+    },
+    uglify: {
+      options: {
+        mangle: false
+      },
+      js: {
+        files: {
+          'public/js/bundle.min.js': ['public/js/bundle.js']
+        }
       }
     },
     /******************************************************
@@ -171,10 +191,6 @@ module.exports = function (grunt) {
           path.resolve(paths().source.root + '/*.ico')
         ],
         tasks: ['default', 'bsReload:css']
-      },
-      browserify: {
-        files: [path.resolve(paths().source.js + '/*.js')],
-        task: ['browserify']
       }
     },
     browserSync: {
@@ -228,10 +244,10 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'css', 'browserify', 'copy:main']);
-  grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer', 'cssmin', 'compress']);
-  grunt.registerTask('patternlab:build', ['default', 'browserify']);
-  grunt.registerTask('patternlab:watch', ['default', 'watch:all', 'watch:browserify']);
+  grunt.registerTask('default', ['patternlab', 'css', 'copy:main', 'buildjs']);
+  grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer', 'cssmin', 'compress:css']);
+  grunt.registerTask('buildjs', ['browserify', 'uglify', 'compress:js']);
+  grunt.registerTask('patternlab:build', ['default']);
+  grunt.registerTask('patternlab:watch', ['default', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['default', 'browserSync', 'watch:all']);
-
 };

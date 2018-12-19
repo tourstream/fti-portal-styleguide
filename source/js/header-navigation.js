@@ -1,16 +1,16 @@
 /* global globalVariables:false */
 
 /* START - Mobile Menu */
-const body = document.querySelector("body");
-const openMobileMenuButton = document.querySelector(".menu-open");
-const headerMobileMenu = document.querySelector(".header-mobile-navigation");
-const navigationElements = [
+var body = document.querySelector("body");
+var openMobileMenuButton = document.querySelector(".menu-open");
+var headerMobileMenu = document.querySelector(".header-mobile-navigation");
+var navigationElements = [
   document.querySelector(".header-mobile-navigation"),
   document.querySelector(".menu-close"),
   document.querySelector(".backdrop")
 ];
 
-const openNavigation = function() {
+var openNavigation = function() {
   addClassToElements(body, "unscrollable");
   addClassToElements(navigationElements, "display-block");
   removeClassFromElements(openMobileMenuButton, "display-block");
@@ -18,18 +18,18 @@ const openNavigation = function() {
   updateVerticalScrollOnMobileMenu();
 };
 
-const closeNavigation = function() {
+var closeNavigation = function() {
   removeClassFromElements(body, "unscrollable");
   removeClassFromElements(navigationElements, "display-block");
   addClassToElements(openMobileMenuButton, "display-block");
 };
 
-const updateVerticalScrollOnMobileMenu = function() {
+var updateVerticalScrollOnMobileMenu = function() {
   headerMobileMenu.style.removeProperty("height");
   if (!isElementInViewportYAxis(headerMobileMenu)) {
     // Calculate visible height of the Menu inside the window, ignoring header
-    const yScroll = headerMobileMenu.scrollTop;
-    const elPos = headerMobileMenu.offsetTop - yScroll + headerMobileMenu.clientTop;
+    var yScroll = headerMobileMenu.scrollTop;
+    var elPos = headerMobileMenu.offsetTop - yScroll + headerMobileMenu.clientTop;
     // Set new "height" to the menu, to make it scrollable
     headerMobileMenu.style.height = (window.innerHeight - elPos) + "px";
   }
@@ -37,12 +37,12 @@ const updateVerticalScrollOnMobileMenu = function() {
 /* END - Mobile Menu */
 
 /* START - Desktop Menu */
-const desktopMenuItems = document.querySelectorAll(".header-menu .header-menu-item");
-let openSubMenuUl;
+var desktopMenuItems = document.querySelectorAll(".header-menu .header-menu-item");
+var openSubMenuUl;
 
 // Make submenus show on hover on Desktop only
 desktopMenuItems.forEach( function(element) {
-  const subMenu = element.querySelector("ul");
+  var subMenu = element.querySelector("ul");
   if (subMenu) { // Ignores menu items with no children
     element.addEventListener("mouseover", function() {
       toggleSubMenu(element);
@@ -65,10 +65,10 @@ function toggleLeftShift() {
 
 /* START - Utility functions */
 function isElementInViewportYAxis(element) {
-  const rect = element.getBoundingClientRect();
+  var rect = element.getBoundingClientRect();
 
-  let verticalCheck = true;
-  if (window.innerWidth < globalVariables.breakpoints.lg) { // Tablet
+  var verticalCheck = true;
+  if (window.innerWidth < globalVariables.breakpoints.lg) { // Tabvar
     verticalCheck = rect.top >= 0 &&
                     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
   }
@@ -83,7 +83,7 @@ function isElementInViewportYAxis(element) {
 window.addEventListener("resize", function() {
   toggleLeftShift();
   if (window.innerWidth >= globalVariables.breakpoints.sm &&
-      window.innerWidth < globalVariables.breakpoints.lg) { // Tablet only
+      window.innerWidth < globalVariables.breakpoints.lg) { // Tabvar only
     updateVerticalScrollOnMobileMenu();
   }
   if (window.innerWidth >= globalVariables.breakpoints.lg) { // Desktop
@@ -91,13 +91,13 @@ window.addEventListener("resize", function() {
   }
 });
 
-const toggleSubMenu = function(mainMenuItem) {
-  const listItemAnchor = mainMenuItem.querySelector("a");
+var toggleSubMenu = function(mainMenuItem) {
+  var listItemAnchor = mainMenuItem.querySelector("a");
   openSubMenuUl = mainMenuItem.querySelector("ul");
 
   if (openSubMenuUl.className.indexOf("display-block") === -1) {
-    const subMenus = document.querySelectorAll(".header-sub-menu-container");
-    const menuLinks = document.querySelectorAll(".header-menu-item-link");
+    var subMenus = document.querySelectorAll(".header-sub-menu-container");
+    var menuLinks = document.querySelectorAll(".header-menu-item-link");
 
     removeClassFromElements(subMenus, "display-block");
     removeClassFromElements(menuLinks, "active");
@@ -105,17 +105,17 @@ const toggleSubMenu = function(mainMenuItem) {
     addClassToElements(openSubMenuUl, "display-block");
     addClassToElements(listItemAnchor, "active");
 
-    const arrows = document.querySelectorAll(".fg-arrow-up");
+    var arrows = document.querySelectorAll(".fg-arrow-up");
     addAndRemoveClass(arrows, "fg-arrow-down", "fg-arrow-up");
 
-    const arrowDown = mainMenuItem.querySelector(".fg-arrow-down");
+    var arrowDown = mainMenuItem.querySelector(".fg-arrow-down");
     addAndRemoveClass(arrowDown, "fg-arrow-up", "fg-arrow-down");
 
   } else {
     removeClassFromElements(openSubMenuUl, "display-block");
     removeClassFromElements(listItemAnchor, "active");
 
-    const arrowUp = mainMenuItem.querySelector(".fg-arrow-up");
+    var arrowUp = mainMenuItem.querySelector(".fg-arrow-up");
     addAndRemoveClass(arrowUp, "fg-arrow-down", "fg-arrow-up");
   }
 
@@ -123,7 +123,7 @@ const toggleSubMenu = function(mainMenuItem) {
   updateVerticalScrollOnMobileMenu();
 };
 
-const removeClassFromElements = function (elements, classToRemove) {
+var removeClassFromElements = function (elements, classToRemove) {
   if (elements.length <= 0) {return;}
   elements = elements.length ? elements : [elements];
   elements.forEach( function(element) {
@@ -131,7 +131,7 @@ const removeClassFromElements = function (elements, classToRemove) {
   });
 };
 
-const addClassToElements = function (elements, classToAdd) {
+var addClassToElements = function (elements, classToAdd) {
   if (elements.length <= 0) {return;}
   elements = elements.length ? elements : [elements];
   elements.forEach( function(element) {
@@ -139,7 +139,7 @@ const addClassToElements = function (elements, classToAdd) {
   });
 };
 
-const addAndRemoveClass = function(elements, classToAdd, classToRemove) {
+var addAndRemoveClass = function(elements, classToAdd, classToRemove) {
   removeClassFromElements(elements, classToRemove);
   addClassToElements(elements, classToAdd);
 };

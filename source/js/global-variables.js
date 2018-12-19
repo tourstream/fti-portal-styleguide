@@ -1,5 +1,5 @@
 // Sass breakpoints
-const breakpoints = {
+var breakpoints = {
   sm: 480,
   md: 768,
   lg: 960,
