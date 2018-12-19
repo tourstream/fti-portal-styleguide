@@ -20,6 +20,7 @@
     padding: $content-padding-15 0;
     position: absolute;
     top: 100%;
+    z-index: $header-sub-menu-desktop-z-index;
   }
 
   .header-sub-menu-item {
