@@ -1,0 +1,43 @@
+.fti-select {
+  padding: 0;
+
+  >span {
+    color: $gray-400;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 15px;
+    position: absolute;
+    top: 10px;
+
+    i {
+      font-size: 22px;
+      margin-right: 15px;
+    }
+  }
+
+  select {
+    appearance: none;
+    background-clip: padding-box;
+    background-color: transparent;
+    border: 1px solid $gray-200;
+    border-radius: unset;
+    color: $gray-600;
+    display: block;
+    font-size: 16px;
+    height: 60px;
+    padding: 15px 0 0 56px;
+    width: 100%;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    +i {
+      float: right;
+      font-size: 24px;
+      margin-right: 10px;
+      margin-top: -40px;
+      pointer-events: none;
+    }
+  }
+}
