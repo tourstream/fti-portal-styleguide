@@ -68,7 +68,7 @@ function isElementInViewportYAxis(element) {
   var rect = element.getBoundingClientRect();
 
   var verticalCheck = true;
-  if (window.innerWidth < globalVariables.breakpoints.lg) { // Tabvar
+  if (window.innerWidth < globalVariables.breakpoints.lg) { // Tablet
     verticalCheck = rect.top >= 0 &&
                     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
   }
@@ -83,7 +83,7 @@ function isElementInViewportYAxis(element) {
 window.addEventListener("resize", function() {
   toggleLeftShift();
   if (window.innerWidth >= globalVariables.breakpoints.sm &&
-      window.innerWidth < globalVariables.breakpoints.lg) { // Tabvar only
+      window.innerWidth < globalVariables.breakpoints.lg) { // Tablet only
     updateVerticalScrollOnMobileMenu();
   }
   if (window.innerWidth >= globalVariables.breakpoints.lg) { // Desktop
