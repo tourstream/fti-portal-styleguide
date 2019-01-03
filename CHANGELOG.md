@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.25.1
+## 0.26.0
 - fixes margin for the icon on the select component
 
 ## 0.25.0
