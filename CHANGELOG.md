@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.25.1
+- fixes margin for the icon on the select component
+
 ## 0.25.0
 - Adds a new organism: Link List with Single Title
 - Updated Link List 25 for Pattern Lab
