@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.26.1
+- fixes clickable area for select component
+
 ## 0.26.0
 - fixes margin for the icon on the select component
 
