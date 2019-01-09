@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 - Adds second level navigation
 - Adds JS file for global variables
 
+## 0.26.2
+- Adds a scss variable for the select component's z-index 
+
+## 0.26.1
+- fixes clickable area for select component
+
 ## 0.26.0
 - fixes margin for the icon on the select component
 
