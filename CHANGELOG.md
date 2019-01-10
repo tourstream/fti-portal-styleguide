@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.27.0
+- Adds second level navigation
+- Adds JS file for global variables
+
 ## 0.26.2
 - Adds a scss variable for the select component's z-index 
 

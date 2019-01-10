@@ -1,0 +1,146 @@
+// HEADER-MENU.SCSS
+
+// TODO padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+.header-menu {
+  display: none;
+}
+
+// Will be overwritten with onClick behavior by adding and removing classes
+// in header-navigation.js
+.header-mobile-navigation {
+  display: none;
+}
+
+.header-mobile-menu {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.header-menu-separator {
+  margin: 0 $content-padding-15;
+}
+
+.header-mobile-navigation {
+  background-color: $white;
+  height: calc(100vh - #{$logo-width-mobile});
+  left: 0;
+  min-width: $header-navigation-mobile-min-width;
+  overflow: auto;
+  padding-bottom: $content-padding-15;
+  position: fixed;
+  top: $logo-width-mobile;
+  width: $header-navigation-mobile-width;
+  z-index: $header-z-index;
+}
+
+.header-menu-container {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.header-menu-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.header-menu-item-link {
+  justify-content: space-between;
+  padding: 0 $content-padding-15;
+}
+
+.header-menu-item-link.active {
+  background-color: $gray-100;
+}
+
+//Tablet
+@include media-breakpoint-up(sm) {
+  .header-mobile-navigation {
+    height: auto;
+    width: 100%;
+  }
+
+  .header-menu-separator {
+    margin: 0 auto;
+    width: calc(#{$header-navigation-tablet-width} - #{$content-padding-15 * 2});
+  }
+
+  .header-menu-container {
+    margin: 0 auto;
+    max-width: $header-navigation-tablet-width;
+  }
+}
+
+@include media-breakpoint-down(md) { //<960
+  .header-menu-item-link,
+  .header-sub-menu-item-link {
+    align-items: center;
+    color: $gray-600;
+    display: flex;
+    font-size: 1rem;
+    height: $header-navigation-item-height;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .header-menu-item-link:hover,
+  .header-sub-menu-item-link:hover {
+    background-color: $gray-100;
+    color: $gray-600;
+    text-decoration: none;
+  }
+}
+
+//Desktop
+@include media-breakpoint-up(lg) { //>960
+  %underline {
+    text-decoration: underline;
+  }
+
+  %anchor-styles {
+    color: $gray-600;
+    display: inline;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .header-mobile-menu {
+    display: none;
+  }
+
+  .header-menu {
+    background-color: $gray-100;
+    color: $gray-600;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .header-menu-container {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    max-width: none;
+  }
+
+  .header-menu-item {
+    display: inline;
+    height: auto;
+    padding: $content-padding-15 #{$content-padding-15 / 2};
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .header-menu-item-link {
+    @extend %anchor-styles;
+    padding: 0;
+  }
+
+  .header-menu-item-link:hover {
+    @extend %underline;
+    color: $gray-600;
+  }
+}

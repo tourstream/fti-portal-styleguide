@@ -1,0 +1,48 @@
+.header-sub-menu-container {
+  display: none;
+  padding-left: 0;
+}
+
+.header-sub-menu-item {
+  list-style: none;
+}
+
+.header-sub-menu-item-link {
+  padding-left: $content-padding-15 * 2;
+}
+
+@include media-breakpoint-up(lg) { //>960
+  .header-sub-menu-container {
+    background-color: $white;
+    box-shadow: $box-down-shadow;
+    left: -9px;
+    list-style: none;
+    padding: $content-padding-15 0;
+    position: absolute;
+    top: 100%;
+    z-index: $header-sub-menu-desktop-z-index;
+  }
+
+  .header-sub-menu-item {
+    white-space: nowrap;
+  }
+
+  .header-sub-menu-item-link {
+    @extend %underline;
+    @extend %anchor-styles;
+    align-items: center;
+    display: flex;
+    height: $header-navigation-item-height;
+    margin: 0 $content-padding-15;
+    padding: 0 $header-sub-navigation-desktop-padding 0 0;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .left-shift { // used in header-navigation.js
+    left: auto;
+    right: 0;
+  }
+}

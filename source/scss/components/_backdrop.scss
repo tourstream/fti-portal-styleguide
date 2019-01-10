@@ -1,0 +1,11 @@
+.backdrop {
+  background: #000000;
+  background: $tab-background-color;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: $logo-width-mobile;
+  width: 100%;
+  z-index: $backdrop-z-index;
+}

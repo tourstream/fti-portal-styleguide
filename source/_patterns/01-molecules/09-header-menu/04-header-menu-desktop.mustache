@@ -1,0 +1,18 @@
+<nav class="header-menu">
+  <ul class="header-menu-container">
+    {{#headerMenu }}
+      {{#headerMenuSecondLevelItems.length}}
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">{{ headerMenuItem }}</a>
+        {{> atoms-arrow-down }}
+        {{#headerMenuSecondLevelItems.length }}
+          {{> atoms-header-sub-menu}}
+        {{/headerMenuSecondLevelItems.length}}
+      </li>
+      {{/headerMenuSecondLevelItems.length}}
+      {{^headerMenuSecondLevelItems.length}}
+        {{>atoms-header-menu-single-item}}
+      {{/headerMenuSecondLevelItems.length}}
+    {{/headerMenu}}
+  </ul>
+</nav>

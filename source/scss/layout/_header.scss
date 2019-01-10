@@ -5,6 +5,7 @@ body > header {
   background-color: $white;
   display: block;
   margin: 0 auto;
+  min-width: 320px;
   position: fixed;
   top: 0;
   width: 100%;

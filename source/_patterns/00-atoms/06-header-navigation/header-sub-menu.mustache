@@ -1,0 +1,22 @@
+<ul class="header-sub-menu-container">
+  {{#headerMenuSecondLevelItems}}
+    <li class="header-sub-menu-item">
+      <a href="#" class="header-sub-menu-item-link">
+        <span>{{ item }}</span>
+      </a>
+    </li>
+  {{/headerMenuSecondLevelItems}}
+  {{^headerMenuSecondLevelItems}}
+    <li class="header-sub-menu-item">
+      <a href="#" class="header-sub-menu-item-link">
+        <span>This is my item</span>
+      </a>
+    </li>
+    <li class="header-sub-menu-item">
+      <a href="#" class="header-sub-menu-item-link">
+        <span>This is my 2nd item</span>
+      </a>
+    </li>
+  {{/headerMenuSecondLevelItems}}
+</ul>
+

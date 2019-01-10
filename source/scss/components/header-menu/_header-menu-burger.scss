@@ -1,0 +1,20 @@
+.menu-open,
+.menu-close {
+  align-items: center;
+  color: $gray-600;
+  cursor: pointer;
+  display: none;
+  font-size: .75rem;
+
+  &:hover {
+    color: $gray-600;
+    text-decoration: none;
+  }
+
+  > div > i {
+    font-size: 1rem;
+    height: $content-padding-15 * 2;
+    margin-right: 5px;
+    width: 21px;
+  }
+}

@@ -1,0 +1,26 @@
+<nav class="header-mobile-navigation">
+  <ul class="header-menu-container">
+    {{# headerMenu }}
+      {{#headerMenuSecondLevelItems.length }}
+      <li class="header-menu-item" onclick="javascript:headerNavigation.toggleSubMenu(this)">
+        <a class="header-menu-item-link">
+          <span>{{headerMenuItem }}</span>
+          {{> atoms-arrow-down }}
+        </a>
+        {{> atoms-header-sub-menu }}
+      </li>
+      {{/headerMenuSecondLevelItems.length }}
+      {{^headerMenuSecondLevelItems.length }}
+        {{> atoms-header-menu-single-item }}
+      {{/headerMenuSecondLevelItems.length }}
+    {{/ headerMenu }}
+  </ul>
+  {{> atoms-header-menu-separator}}
+  <ul class="header-menu-container">
+    {{# extraMenu }}
+      <li class="header-menu-item">
+        <a class="header-menu-item-link" href="#">{{ extraMenuItem }}</a>
+      </li>
+    {{/ extraMenu }}
+  </ul>
+</nav>
