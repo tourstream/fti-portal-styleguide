@@ -44,11 +44,19 @@ var openSubMenuUl;
 desktopMenuItems.forEach( function(element) {
   var subMenu = element.querySelector("ul");
   if (subMenu) { // Ignores menu items with no children
-    element.addEventListener("mouseover", function() {
-      toggleSubMenu(element);
+    element.addEventListener("mouseover", function(event) {
+      if (event.target === this || this.hasChildNodes(event.target)) {
+        event.preventDefault();
+        openSubMenu(element);
+        toggleLeftShift();
+      }
     });
-    element.addEventListener("mouseout", function() {
-      toggleSubMenu(element);
+    element.addEventListener("mouseout", function(event) {
+      if (event.target === this || this.hasChildNodes(event.target)) {
+        event.preventDefault();
+        closeSubMenu(element);
+        toggleLeftShift();
+      }
     });
   }
 });
@@ -91,35 +99,48 @@ window.addEventListener("resize", function() {
   }
 });
 
-var toggleSubMenu = function(mainMenuItem) {
+var closeSubMenu = function (mainMenuItem) {
   var listItemAnchor = mainMenuItem.querySelector("a");
   openSubMenuUl = mainMenuItem.querySelector("ul");
 
-  if (openSubMenuUl.className.indexOf("display-block") === -1) {
-    var subMenus = document.querySelectorAll(".header-sub-menu-container");
-    var menuLinks = document.querySelectorAll(".header-menu-item-link");
+  removeClassFromElements(openSubMenuUl, "display-block");
+  removeClassFromElements(listItemAnchor, "active");
 
-    removeClassFromElements(subMenus, "display-block");
-    removeClassFromElements(menuLinks, "active");
-
-    addClassToElements(openSubMenuUl, "display-block");
-    addClassToElements(listItemAnchor, "active");
-
-    var arrows = document.querySelectorAll(".fg-arrow-up");
-    addAndRemoveClass(arrows, "fg-arrow-down", "fg-arrow-up");
-
-    var arrowDown = mainMenuItem.querySelector(".fg-arrow-down");
-    addAndRemoveClass(arrowDown, "fg-arrow-up", "fg-arrow-down");
-
-  } else {
-    removeClassFromElements(openSubMenuUl, "display-block");
-    removeClassFromElements(listItemAnchor, "active");
-
-    var arrowUp = mainMenuItem.querySelector(".fg-arrow-up");
-    addAndRemoveClass(arrowUp, "fg-arrow-down", "fg-arrow-up");
+  var arrowUp = mainMenuItem.querySelector(".fg-arrow-up");
+  if(arrowUp) {
+    addAndRemoveClass(arrowUp, "fg-arrow-down", "fg-arrow-up"); // error comes from here
   }
 
-  toggleLeftShift();
+};
+
+var openSubMenu = function(mainMenuItem) {
+  var listItemAnchor = mainMenuItem.querySelector("a");
+  openSubMenuUl = mainMenuItem.querySelector("ul");
+  var subMenus = document.querySelectorAll(".header-sub-menu-container");
+  var menuLinks = document.querySelectorAll(".header-menu-item-link");
+
+  removeClassFromElements(subMenus, "display-block");
+  removeClassFromElements(menuLinks, "active");
+
+  addClassToElements(openSubMenuUl, "display-block");
+  addClassToElements(listItemAnchor, "active");
+
+  var arrows = document.querySelectorAll(".fg-arrow-up");
+  addAndRemoveClass(arrows, "fg-arrow-down", "fg-arrow-up");
+
+  var arrowDown = mainMenuItem.querySelector(".fg-arrow-down");
+  addAndRemoveClass(arrowDown, "fg-arrow-up", "fg-arrow-down");
+};
+
+var toggleMobileSubMenu = function(mainMenuItem) {
+  openSubMenuUl = mainMenuItem.querySelector("ul");
+
+  if (openSubMenuUl.className.indexOf("display-block") === -1) {
+    openSubMenu(mainMenuItem);
+  } else {
+    closeSubMenu(mainMenuItem);
+  }
+
   updateVerticalScrollOnMobileMenu();
 };
 
@@ -148,6 +169,8 @@ var addAndRemoveClass = function(elements, classToAdd, classToRemove) {
 module.exports = {
   openNavigation  : openNavigation,
   closeNavigation : closeNavigation,
-  toggleSubMenu   : toggleSubMenu,
+  toggleSubMenu   : toggleMobileSubMenu,
+  openSubMenu     : openSubMenu,
+  closeSubMenu    : closeSubMenu,
   updateVerticalScrollOnMobileMenu: updateVerticalScrollOnMobileMenu
 };

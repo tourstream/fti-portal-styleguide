@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.27.1
+- updates navigation, making it more resilient against hick ups when opening and closing it
+
 ## 0.27.0
 - Adds second level navigation
 - Adds JS file for global variables
