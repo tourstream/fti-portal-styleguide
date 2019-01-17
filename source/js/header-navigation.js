@@ -2,6 +2,7 @@
 
 /* START - Mobile Menu */
 var body = document.querySelector("body");
+var html = document.querySelector("html");
 var openMobileMenuButton = document.querySelector(".menu-open");
 var headerMobileMenu = document.querySelector(".header-mobile-navigation");
 var navigationElements = [
@@ -12,6 +13,7 @@ var navigationElements = [
 
 var openNavigation = function() {
   addClassToElements(body, "unscrollable");
+  addClassToElements(html, "unscrollable");
   addClassToElements(navigationElements, "display-block");
   removeClassFromElements(openMobileMenuButton, "display-block");
 
@@ -20,6 +22,7 @@ var openNavigation = function() {
 
 var closeNavigation = function() {
   removeClassFromElements(body, "unscrollable");
+  removeClassFromElements(html, "unscrollable");
   removeClassFromElements(navigationElements, "display-block");
   addClassToElements(openMobileMenuButton, "display-block");
 };

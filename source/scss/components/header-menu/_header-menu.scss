@@ -55,6 +55,12 @@
   background-color: $gray-100;
 }
 
+@include media-breakpoint-down(md) {
+  .header-menu-item-link.active {
+    font-weight: 500;
+  }
+}
+
 //Tablet
 @include media-breakpoint-up(sm) {
   .header-mobile-navigation {
