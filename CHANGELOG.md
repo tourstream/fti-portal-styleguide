@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.27.2
+- Fixes unscrollable background on Safari on iOS
+- Adds transition delay for openening submenus on desktop
+- Adds bold highlight on menu on mobile and tablet view
+
 ## 0.27.1
 - updates navigation, making it more resilient against hick ups when opening and closing it
 
