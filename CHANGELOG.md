@@ -2,9 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.27.3
+- Reverses transition behaviour, to avoid Quicksearch not being accessible
+
 ## 0.27.2
 - Fixes unscrollable background on Safari on iOS
-- Adds transition delay for openening submenus on desktop
+- Adds transition delay for opening submenus on desktop
 - Adds bold highlight on menu on mobile and tablet view
 
 ## 0.27.1
