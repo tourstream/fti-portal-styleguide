@@ -11,6 +11,17 @@
   padding-left: $content-padding-15 * 2;
 }
 
+// LG:
+// for IE11 it needs to be outside of a media query
+@keyframes delay-open-subMenu {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.header-menu .header-sub-menu-container.display-block {
+  animation: delay-open-subMenu .5s;
+}
+
 @include media-breakpoint-up(lg) { //>960
   .header-sub-menu-container {
     background-color: $white;
