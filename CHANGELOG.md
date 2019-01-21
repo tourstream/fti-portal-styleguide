@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.27.4
+- Adds delay when opening sub menu on desktop
+- Prevents bubbling on mouseout by using mouseleave
+
 ## 0.27.3
 - Reverses transition behaviour, to avoid Quicksearch not being accessible
 
