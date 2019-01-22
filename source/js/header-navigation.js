@@ -49,14 +49,12 @@ desktopMenuItems.forEach( function(element) {
   if (subMenu) { // Ignores menu items with no children
     element.addEventListener("mouseover", function(event) {
       if (event.target === this || this.hasChildNodes(event.target)) {
-        event.preventDefault();
         openSubMenu(element);
         toggleLeftShift();
       }
     });
-    element.addEventListener("mouseout", function(event) {
+    element.addEventListener("mouseleave", function(event) {
       if (event.target === this || this.hasChildNodes(event.target)) {
-        event.preventDefault();
         closeSubMenu(element);
         toggleLeftShift();
       }
