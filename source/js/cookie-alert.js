@@ -17,7 +17,7 @@ var setCookie = function(cookieName, cookieValue, expirationDays) {
   date.setTime(date.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
   var expires = "expires=" + date.toUTCString() + ";";
   var domain = getDomainName(window.location.hostname);
-  document.cookie = cookieName.concat('=', cookieValue, ';', 'expires=', expires, ';', 'domain=', domain, ';', 'path=/;');
+  document.cookie = cookieName.concat("=", cookieValue, ";", "expires=", expires, ";", "domain=", domain, ";", "path=/;");
 };
 
 var getDomainName = function (hostName) {
@@ -27,10 +27,10 @@ var getDomainName = function (hostName) {
 var getCookie = function (cookieName) {
   var name = cookieName + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
-  var cookieBits = decodedCookie.split(';');
+  var cookieBits = decodedCookie.split(";");
   for (var i = 0; i < cookieBits.length; i++) {
     var cookieBitIterator = cookieBits[i];
-    while (cookieBitIterator.charAt(0) === ' ') {
+    while (cookieBitIterator.charAt(0) === " ") {
       cookieBitIterator = cookieBitIterator.substring(1);
     }
     if (cookieBitIterator.indexOf(name) === 0) {
