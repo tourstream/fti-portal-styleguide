@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.27.6
+- Updates the value of the `$grey-100` variable to improve its visibility
+
 ## 0.27.4
 - Adds delay when opening sub menu on desktop
 - Prevents bubbling on mouseout by using mouseleave
