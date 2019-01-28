@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.27.7
+## 0.28.0
 - outputs an "isolated" css file, so styles apply only to an element instead of the whole document
 
 ## 0.27.6
