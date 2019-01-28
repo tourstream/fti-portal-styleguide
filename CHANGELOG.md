@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.27.7
+- outputs an "isolated" css file, so styles apply only to an element instead of the whole document
+
 ## 0.27.6
 - Updates the value of the `$grey-100` variable to improve its visibility
 

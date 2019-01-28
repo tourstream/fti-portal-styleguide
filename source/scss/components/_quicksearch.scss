@@ -66,4 +66,20 @@
   }
 
 }
+@include media-breakpoint-down("md") {
+  .no_scroll {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .qs_dropdown_menu {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+}
+
+
 
