@@ -1,4 +1,4 @@
 ---
-title: Side add
+title: Skyscraper ad
 state: in progress
 ---

@@ -1,19 +1,44 @@
-.third-party-ads {
-  background: #f00000;
-  display: block;
-  float: right;
-  height: 1200px;
-  position: relative;
-  width: 200px;
-}
-
-.full-wrapper {
+.ad-skyscraper-wrapper {
+  display: none;
   left: 50%;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
   top: 230px;
   transform: translateX(-50%);
-  width: 1663px;
+  width: 1583px;
   z-index: -400;
+
+  .ad-skyscrapper {
+    background: #f00000;
+    display: block;
+    float: right;
+    height: 1200px;
+    position: relative;
+    width: 160px;
+  }
+}
+
+@include media-breakpoint-up(ad) {
+  .ad-skyscraper-wrapper {
+    display: block;
+  }
+}
+
+.ad-leaderboard-wrapper {
+  background-color: #00ff00;
+  display: none;
+  height: 90px;
+  position: static;
+  width: 728px;
+
+  .ad-leaderboard {
+    width: 728px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .ad-leaderboard-wrapper {
+    display: block;
+  }
 }
