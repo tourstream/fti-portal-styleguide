@@ -3,18 +3,18 @@
   left: 50%;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1583px;
   position: absolute;
   top: 230px;
   transform: translateX(-50%);
-  width: 1583px;
   z-index: -400;
 
   .ad-skyscrapper {
     display: block;
     float: right;
-    height: 1200px;
+    max-height: 1200px;
+    max-width: 160px;
     position: relative;
-    width: 160px;
   }
 }
 
@@ -26,12 +26,12 @@
 
 .ad-leaderboard-wrapper {
   display: none;
-  height: 90px;
+  max-height: 90px;
+  max-width: 728px;
   position: static;
-  width: 728px;
 
   .ad-leaderboard {
-    width: 728px;
+    max-width: 728px;
   }
 }
 

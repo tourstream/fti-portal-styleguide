@@ -1,0 +1,61 @@
+/*
+    Following import contains the basic setup for the FTI Styleguide under a
+    namespace so that it can be used in combination with e.g. bootstrap3
+ */
+
+// Bootstrap imports
+
+// Bootstrap custom variables
+@import "fti-bootstrap/custom-variables";
+
+
+// some overwrites
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 991px,
+  xl: 1024px
+);
+$container-max-widths: (
+  sm: 768px,
+  md: 991px,
+  lg: 1024px,
+  xl: 1024px
+);
+
+
+
+.fti-portal-styleguide {
+
+  // Customized mixins:
+  @import "abstracts/mixins";
+
+  // Customized Bootstrap import:
+  // It includes custom utility imports:
+  @import "fti-bootstrap/bootstrap";
+
+  // Helper Classes
+  @import "abstracts/helper-classes";
+
+
+  // Components
+
+  // Body:
+  @import "layout/body";
+  @import "components/backdrop";
+
+
+  // Content section and its components:
+  @import "components/button";
+  @import "components/tab-menu";
+  @import "components/dropdown";
+  @import "components/select";
+  @import "components/material-input";
+  @import "components/tag";
+
+  @import "components/form-checkbox";
+
+  // quick search
+  @import "components/quicksearch";
+}
