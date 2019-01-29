@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.27.6
+- Adds components for ads
+
 ## 0.27.5
 - Fixes cookie alert, it saves sessions again
 
