@@ -42,7 +42,6 @@
 */
 
 // COLORS
-
 $gray-100: #eeeeee;
 $gray-300: #b3b3b3;
 $gray-400: #929497;
@@ -81,7 +80,6 @@ $body-bg: $white;
 $body-color: $gray-600;
 
 // HEADER
-
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{rgba($gray-600, .9999)}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 
 // NAVIGATION
@@ -92,12 +90,10 @@ $header-navigation-item-height: 44px;
 $header-sub-navigation-desktop-padding: 70px;
 
 // LINKS
-
 $link-color: $orange;
 $link-hover-color: $link-color;
 
 // TEXT
-
 $text-muted: $gray-300;
 
 // TAB
@@ -125,7 +121,6 @@ $border-radius-lg: .125rem;
 $border-radius-sm: .125rem;
 
 // TYPOGRAPHY
-
 $font-family-sans-serif: "Helvetica Neue", helvetica, arial, sans-serif;
 
 $font-size-base: 1rem; // Assumes the browser default, typically '16px'
@@ -186,7 +181,6 @@ $h1-font-size-md-qs: $font-size-base * 2.3;
 $h1-font-size-sm-qs: $font-size-base * 1.8;
 
 // GRID BREAKPOINTS
-
 $grid-breakpoints: (
   xs: 0,
   sm: 480px,
@@ -197,7 +191,6 @@ $grid-breakpoints: (
 );
 
 // GRID CONTAINERS
-
 $container-max-widths: (
   sm: 451px + 30px,
   md: 722px + 30px,
@@ -206,9 +199,7 @@ $container-max-widths: (
 );
 
 // LOGO
-
 $logo-width-mobile: 60px;
 
 // MARGINS & PADDINGS
-
 $content-padding-15: .9375rem;

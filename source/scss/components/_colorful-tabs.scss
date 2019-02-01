@@ -1,0 +1,38 @@
+.colorful-tabs {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px 16px;
+}
+
+.colorful-tab {
+  cursor: default;
+  flex-grow: 1;
+  font-size: 12px;
+  height: 35px;
+  line-height: 35px;
+  margin-right: 8px;
+  min-width: 70px;
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    border-bottom: 1px solid $orange;
+    color: $orange;
+  }
+
+  &.completed {
+    border-bottom: 1px solid $green;
+    color: $green;
+  }
+
+  &.pending {
+    border-bottom: 1px solid $gray-300;
+    color: $gray-300;
+  }
+
+}
