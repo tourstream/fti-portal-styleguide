@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.29.0
+- Adds colorful tabs component
+
 ## 0.28.1
 - Adds components for the ads
 
