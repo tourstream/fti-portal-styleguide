@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.29.1
+- Fixes dropdown breakpoint bug in quicksearch
+
 ## 0.29.0
 - Adds colorful tabs component
 
