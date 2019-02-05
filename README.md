@@ -71,6 +71,8 @@ Take that to test the styles inside your portal locally by replacing the old sty
 
 Use `npm run lint` to test your code styling.
 
+Use `debug=1` as a url parameter to turn on debug mode and see silent errors in the browser's console.
+
 ### Changelog
 [Changelog](https://github.com/tourstream/fti-portal-styleguide/blob/master/CHANGELOG.md)
 
