@@ -5,10 +5,26 @@ var body = document.querySelector("body");
 var html = document.querySelector("html");
 var openMobileMenuButton = document.querySelector(".menu-open");
 var headerMobileMenu = document.querySelector(".header-mobile-navigation");
+var menuClose = document.querySelector(".menu-close");
+var backdrop = document.querySelector(".backdrop");
+
+// Guards
+var guardOpenMobileMenuButton = errorHandling.checkElement(openMobileMenuButton, function(){return true});
+var guardHeaderMobileMenu = errorHandling.checkElement(headerMobileMenu, function(){return true});
+var guardMenuClose = errorHandling.checkElement(menuClose, function(){return true});
+var guardBackdrop = errorHandling.checkElement(backdrop, function(){return true});
+
+if (
+  guardOpenMobileMenuButton === false ||
+  guardHeaderMobileMenu === false ||
+  guardMenuClose === false ||
+  guardBackdrop === false
+) {return}
+
 var navigationElements = [
-  document.querySelector(".header-mobile-navigation"),
-  document.querySelector(".menu-close"),
-  document.querySelector(".backdrop")
+  headerMobileMenu,
+  menuClose,
+  backdrop
 ];
 
 var openNavigation = function() {
