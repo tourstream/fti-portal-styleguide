@@ -2,11 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.29.2
+- Fixes little styling problem with the ads component
+
 ## 0.29.1
 - Fixes dropdown breakpoint bug in quicksearch
 
 ## 0.29.0
 - Adds colorful tabs component
+
+## 0.28.2
+- Fixes positioning of the Skyscraper ad
 
 ## 0.28.1
 - Adds components for the ads
