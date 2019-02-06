@@ -1,20 +1,21 @@
 .ad-skyscraper-wrapper {
   display: none;
+  height: 600px;
   left: 50%;
-  margin-left: auto;
+  margin-left: 700px;
   margin-right: auto;
-  max-width: 1583px;
   position: absolute;
-  top: 230px;
+  top: 320px;
   transform: translateX(-50%);
+  width: 160px;
   z-index: -400;
 
   .ad-skyscrapper {
     display: block;
     float: right;
-    max-height: 1200px;
-    max-width: 160px;
+    height: 600px;
     position: relative;
+    width: 160px;
   }
 }
 
@@ -27,11 +28,12 @@
 .ad-leaderboard-wrapper {
   display: none;
   max-height: 90px;
-  max-width: 728px;
   position: static;
+  width: 728px;
 
   .ad-leaderboard {
-    max-width: 728px;
+    height: 90px;
+    width: 728px;
   }
 }
 

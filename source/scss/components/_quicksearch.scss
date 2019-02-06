@@ -1,7 +1,6 @@
 .on_top {
   z-index: $quicksearch-z-index-mobile;
-
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up("md") {
     z-index: $quicksearch-z-index-desktop;
   }
 }
@@ -66,7 +65,8 @@
   }
 
 }
-@include media-breakpoint-down("md") {
+
+@include media-breakpoint-down("sm") {
   .no_scroll {
     height: 100%;
     overflow: hidden;
@@ -80,6 +80,3 @@
     top: 0;
   }
 }
-
-
-
