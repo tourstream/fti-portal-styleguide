@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.29.3
+- Fixes width overflow bug on IE11 with LinkList25 elements
+
 ## 0.29.2
 - Fixes little styling problem with the ads component
 
@@ -10,9 +13,6 @@ All notable changes to this project will be documented in this file.
 
 ## 0.29.0
 - Adds colorful tabs component
-
-## 0.28.3
-- Fixes width overflow bug on IE11 with LinkList25 elements
 
 ## 0.28.2
 - Fixes positioning of the Skyscraper ad
