@@ -5,9 +5,9 @@ var initAcceptCookies = function() {
   var acceptCookies = document.querySelector(".accept-cookies");
 
   // Guards
-  var guardCookieAlert = errorHandling.checkElement(cookieAlert, function(){return true});
-  var guardAcceptCookies = errorHandling.checkElement(acceptCookies, function(){return true});
-  if (guardCookieAlert === false || guardAcceptCookies === false) {return}
+  var guardCookieAlert = errorHandling.checkElement(cookieAlert, function(){return true;});
+  var guardAcceptCookies = errorHandling.checkElement(acceptCookies, function(){return true;});
+  if (guardCookieAlert === false || guardAcceptCookies === false) {return;}
 
   if (!cookie.getCookie("ftiAcceptCookies")) {
     cookieAlert.classList.add("show");

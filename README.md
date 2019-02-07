@@ -12,20 +12,18 @@
 
 > Styleguide based on Pattern Lab for FTI portal and Quicksearch
 
-This [demo page][demo-url] will show all implementated parts of the latest version (master branch) of this package.
-
-It creates CSS files, style.css, which will be implemented into our portals via NPM dependencies.
+This [demo page][demo-url] will show all implemented parts of the latest version (master branch) of this package.
+It creates asset files, **style.css** and **bundle.js**, which will be implemented into our portals.
 
 ## Dependents
 
-If you have a project that relies on this styleguide, please add it here.
+If you have a project that relies on this style guide, please add it here.
 - FTI Portal
 - Quicksearch
 
 ## Usage
 
-There are different ways to use this package:
-
+There are different ways to use the Styleguide:
 
 ### Link the source - CDN at Google Cloud Storage (GCS)
 
@@ -39,6 +37,7 @@ Use "latest" for internal test purposes.
 ```sh
 <link rel="stylesheet" href="https://assets.gcloud.fti-group.com/fti-portal-styleguide/latest/css/style.css">
 ```
+Note: Some portals use an individual way to implement the Styleguide. Read their instructions.
 
 ### npm package
 
@@ -48,22 +47,18 @@ If you want to use the npm package just install with [npm](https://www.npmjs.com
 $ npm install @tourstream/fti-portal-styleguide --save
 ```
 
-or with [yarn](https://yarnpkg.com/lang/en/)
-
-```sh
-$ yarn add @tourstream/fti-portal-styleguide
-```
-
 After this step you can use the sources as you like. They can be found in `./node_modules/@tourstream/fti-portal-styleguide/source`
 
 ## Development
 
 [Pattern Lab](https://patternlab.io/) is based on [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/). Start with atoms and work your way up to templates and pages.
 The SCSS files are component based.
-Use mixins to avoid dublicated code and keep the styles on the components for high readability.
+Use mixins to avoid duplicated code and keep the styles on the components for high readability.
 Component's own mixins come at the top of each component's file.
 Use "dev-" as prefix for your templates name, that are not used in portals.
 We code [mobile-first](https://zellwk.com/blog/how-to-write-mobile-first-css/).
+
+We handle our Javascript files component based, which will be automatically bundled in one exported bundle file.
 
 Use `npm run serve` to run Pattern Lab locally. It will also watch.
 Use `npm run build` to build and render Pattern Lab and CSS files. You can find the files styles.css and styles.min.css  at `./dist-master/fti-portal-styleguide/latest/css`.
@@ -71,7 +66,10 @@ Take that to test the styles inside your portal locally by replacing the old sty
 
 Use `npm run lint` to test your code styling.
 
-Use `debug=1` as a url parameter to turn on debug mode and see silent errors in the browser's console.
+### Debug mode
+The Styleguide turns on debug mode per default using a cookie.
+You can turn on debug mode on your portal by creating a cookie manually with debug=1.
+Follow the instructions inside the error handling.
 
 ### Changelog
 [Changelog](https://github.com/tourstream/fti-portal-styleguide/blob/master/CHANGELOG.md)
@@ -83,7 +81,7 @@ A branch is available on Bamboo after the branch is created on Github.
 `https://assets.gcloud.fti-group.com/fti-portal-styleguide/staging/<BRANCH-NAME>/index.html`
 
 #### Production
-After merge to master on master run `npm version <major|minor|patch>`.
+After merge to master on master run `npm version <major|minor|patch>` or with the specific version.
 It requires ssh connection to Github. It will deploy to NPM and GCS using our Travis configuration.
 
 ### Usage on your portal

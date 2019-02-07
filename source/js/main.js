@@ -4,5 +4,8 @@ window.cookie = require("./cookie");
 window.cookieAlert = require("./cookie-alert");
 window.errorHandling = require("./error-handling");
 window.headerNavigation = require("./header-navigation");
+window.googleAds = require("./google-ads");
+window.headerNavigation.initHeaderNavigation();
+window.googleAds.adjustSkyscraperPositioning();
 window.globalVariables.initDebugMode();
 window.cookieAlert.initAcceptCookies();
