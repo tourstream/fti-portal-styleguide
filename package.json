@@ -30,7 +30,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {},
+  "dependencies": {
+    "core-js-bundle": "^3.0.0-beta.13"
+  },
   "devDependencies": {
     "bootstrap": "^4.1.2",
     "browserify": "^16.2.3",

@@ -1,3 +1,4 @@
+require("core-js-bundle");
 window.globalVariables = require("./global-variables");
 window.cookieAlert = require("./cookie-alert");
 window.cookieAlert.initCookieAlert();
