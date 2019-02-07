@@ -1,6 +1,7 @@
 window.globalVariables = require("./global-variables");
-window.globalVariables.initDebugMode();
-window.errorHandling = require("./error-handling");
+window.cookie = require("./cookie");
 window.cookieAlert = require("./cookie-alert");
-window.cookieAlert.initCookieAlert();
+window.errorHandling = require("./error-handling");
 window.headerNavigation = require("./header-navigation");
+window.globalVariables.initDebugMode();
+window.cookieAlert.initAcceptCookies();

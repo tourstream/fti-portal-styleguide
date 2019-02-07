@@ -1,11 +1,11 @@
 /* global globalVariables:false */
-
 /**
- * Makes script keep running.
+ * Catches Errors and
+ * makes script keep running.
  *
- * element: Check if DOM element exists or is undefined,
- * callbackFunction: function(){return true} or a function that does something before return
- *
+ * @param {Object} element Check if DOM element exists or is undefined,
+ * @param {Function} callbackFunction function(){return true} or a function that does something before return
+ * @return {Boolean}
  * Create a guard using false as return value.
  * Example: if (guard === false) {return}
  *
@@ -13,28 +13,28 @@
  * */
 
 var checkElement = function(element, callbackFunction) {
-
+  /*eslint no-console: ["error", { allow: ["error"] }] */
   if(globalVariables.debugMode === "1") {
     // Debug mode
     switch (element) {
-      case null:
-        console.error("This element does not exist");
-        return false;
-      case undefined:
-        console.error("The value is undefined");
-        break;
-      default:
-        callbackFunction();
+    case null:
+      console.error("This element does not exist");
+      return false;
+    case undefined:
+      console.error("The value is undefined");
+      break;
+    default:
+      callbackFunction();
     }
   } else {
     // Production
     switch (element) {
-      case null:
-        return false;
-      case undefined:
-        break;
-      default:
-        callbackFunction();
+    case null:
+      return false;
+    case undefined:
+      break;
+    default:
+      callbackFunction();
     }
   }
 };

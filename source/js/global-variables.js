@@ -1,3 +1,5 @@
+/* global globalVariables:false cookie:false */
+
 // Sass breakpoints
 var breakpoints = {
   sm: 480,
@@ -6,20 +8,13 @@ var breakpoints = {
   xl: 1280
 };
 
-var debugMode;
+var debugMode = "";
 
 var initDebugMode = function () {
-
-  // Patternlab iFrame
-  var isInIframe = (parent !== window);
-
-  var url = isInIframe ? new URL(document.referrer) : new URL(window.location.href);
-  var debug = url.searchParams.get("debug");
-  if (debug) {
+  /*eslint no-console: ["error", { allow: ["warn"] }] */
+  globalVariables.debugMode = cookie.getCookie("debug");
+  if (globalVariables.debugMode === "1") {
     console.warn("Debug mode on");
-    globalVariables.debugMode = debug;
-  } else {
-    return false;
   }
 };
 

@@ -202,6 +202,15 @@ module.exports = function (grunt) {
     browserSync: {
       dev: {
         options: {
+          middleware: [
+            {
+              route: "/",
+              handle: function(req,res,next) {
+                res.setHeader('set-cookie', 'debug=1');
+                next();
+              }
+            }
+           ],
           server:  path.resolve(paths().public.root),
           watchTask: true,
           watchOptions: {
