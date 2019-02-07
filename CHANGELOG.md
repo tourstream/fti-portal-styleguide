@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.29.4
+- Adds core-js to the bundle so it includes the polyfills directly from our bundle
+
 ## 0.29.3
 - Fixes width overflow bug on IE11 with LinkList25 elements
 
