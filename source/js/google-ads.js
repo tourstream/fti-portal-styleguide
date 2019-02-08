@@ -11,7 +11,7 @@ var adjustSkyscraperPositioning = function() {
   ) {return;}
 
   var newHeight = mainElement.offsetTop;
-  document.getElementsByClassName("ad-skyscraper-wrapper")[0].style.top = newHeight + "px";
+  skyscraper.style.top = newHeight + "px";
 };
 
 module.exports = {
