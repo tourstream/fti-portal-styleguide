@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.29.5
+## 0.30.1
 - Fixes JS bug related to the Skyscraper ad 
 
 ## 0.29.4
