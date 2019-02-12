@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.30.1
+- Fixes JS bug related to the Skyscraper ad 
+
 ## 0.30.0
 - Adds loading spinner component
 
