@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.30.2
+- Fixes bug where the Skyscraper ad was not clickable
+
 ## 0.30.1
 - Fixes JS bug related to the Skyscraper ad 
 
