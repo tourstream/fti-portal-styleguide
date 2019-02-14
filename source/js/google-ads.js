@@ -6,7 +6,7 @@ var adjustSkyscraperPositioning = function() {
   var guardSkyscraper = errorHandling.checkElement(skyscraper, function(){return true;});
 
   if (
-    guardMainElement === false||
+    guardMainElement === false ||
     guardSkyscraper === false
   ) {return;}
 
