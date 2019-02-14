@@ -1,7 +1,11 @@
 require("core-js-bundle");
 window.globalVariables = require("./global-variables");
+window.cookie = require("./cookie");
 window.cookieAlert = require("./cookie-alert");
-window.cookieAlert.initCookieAlert();
+window.errorHandling = require("./error-handling");
 window.headerNavigation = require("./header-navigation");
 window.googleAds = require("./google-ads");
+window.globalVariables.initDebugMode();
+window.cookieAlert.initAcceptCookies();
+window.headerNavigation.initHeaderNavigation();
 window.googleAds.adjustSkyscraperPositioning();

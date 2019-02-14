@@ -1,3 +1,5 @@
+/* global globalVariables:false cookie:false */
+
 // Sass breakpoints
 var breakpoints = {
   sm: 480,
@@ -6,6 +8,18 @@ var breakpoints = {
   xl: 1280
 };
 
+var debugMode = "";
+
+var initDebugMode = function () {
+  /*eslint no-console: ["error", { allow: ["warn"] }] */
+  globalVariables.debugMode = cookie.getCookie("debug");
+  if (globalVariables.debugMode === "1") {
+    console.warn("Debug mode on");
+  }
+};
+
 module.exports = {
-  breakpoints: breakpoints
+  breakpoints: breakpoints,
+  initDebugMode : initDebugMode,
+  debugMode : debugMode
 };

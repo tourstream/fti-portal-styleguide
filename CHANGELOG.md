@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.31.0
+- Adds error handling of DOM elements and keeps the script running
+
 ## 0.30.2
 - Fixes bug where the Skyscraper ad was not clickable
 
