@@ -2,10 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.31.1
-- Changes select cursor to pointer
-
 ## 0.31.0
+- Changes select cursor to pointer
 - Adds error handling of DOM elements and keeps the script running
 
 ## 0.30.2
