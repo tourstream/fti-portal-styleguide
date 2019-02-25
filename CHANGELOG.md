@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.31.1
+- Fixes JS for the Skyscraper ad positioning
+
 ## 0.31.0
 - Changes select cursor to pointer
 - Adds error handling of DOM elements and keeps the script running
