@@ -1,0 +1,12 @@
+button:focus,
+a:focus,
+div:focus,
+select:focus {
+  box-shadow: $input-btn-focus-box-shadow !important;
+  outline: 0 !important;
+}
+
+select:focus::-ms-value {
+  background: none;
+  color: inherit;
+}
