@@ -22,6 +22,10 @@
   position: relative;
   user-select: none;
 
+  input:focus + span {
+    box-shadow: $input-btn-focus-box-shadow;
+  }
+
   input {
     height: 0;
     opacity: 0;

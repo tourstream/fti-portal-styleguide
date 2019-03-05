@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.31.2
+- Changes focus style
+
 ## 0.31.1
 - Fixes JS for the Skyscraper ad positioning
 
