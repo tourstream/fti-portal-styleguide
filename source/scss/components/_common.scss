@@ -2,8 +2,8 @@ button:focus,
 a:focus,
 div:focus,
 select:focus {
-  box-shadow: $input-btn-focus-box-shadow !important;
-  outline: 0 !important;
+  outline: 3px solid transparentize($primary, .5);
+  outline-offset: -3px;
 }
 
 select:focus::-ms-value {

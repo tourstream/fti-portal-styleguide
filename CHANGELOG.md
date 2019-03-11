@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.31.3
+- Fixes focus using styled outline
+
 ## 0.31.2
 - Changes focus style
 
@@ -16,7 +19,7 @@ All notable changes to this project will be documented in this file.
 - Fixes bug where the Skyscraper ad was not clickable
 
 ## 0.30.1
-- Fixes JS bug related to the Skyscraper ad 
+- Fixes JS bug related to the Skyscraper ad
 
 ## 0.30.0
 - Adds loading spinner component
