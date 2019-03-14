@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.31.4
+- Fixes material input border-bottom, implementing input wrapper
+
 ## 0.31.3
 - Fixes focus using styled outline
 
