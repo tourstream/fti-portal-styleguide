@@ -1,0 +1,42 @@
+// HOTEL CATEGORY IMAGE ELEMENTS (previously known as Stars)
+
+.mot_stars {
+  display: flex;
+  padding-top: 2px;
+  white-space: nowrap;
+  width: 72px;
+
+  .rating-star:first-child {
+    margin-left: 0;
+  }
+}
+
+.rating-star {
+  background-color: $orange;
+  border: 1px solid $orange;
+  display: inline-block;
+  height: 12px;
+  margin-left: 3px;
+  position: relative;
+  width: 12px;
+
+  &.rating-star-empty {
+    background-color: transparent;
+  }
+
+  &.rating-star-half-empty {
+    background-color: transparent;
+    overflow: hidden;
+
+    &::after {
+      background-color: $orange;
+      content: "";
+      height: 100%;
+      position: absolute;
+      right: 1px;
+      top: -3px;
+      transform: rotate(-45deg);
+      width: 150%;
+    }
+  }
+}

@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.32.0
+- Adds new Hotel Category images (previously known as 'Stars')
+
 ## 0.31.4
 - Fixes material input border-bottom, implementing input wrapper
 
