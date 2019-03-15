@@ -2,8 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.32.0
+## 0.33.0
 - Adds new Hotel Category images (previously known as 'Stars')
+
+## 0.32.0
+## This version was skipped because of an issue with the repository
+## Refer to https://ftiecom.slack.com/archives/CB3DH5CK0/p1550674129002300
 
 ## 0.31.4
 - Fixes material input border-bottom, implementing input wrapper
