@@ -2,7 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.33.1 
+## 0.33.2
+- Fixes QS focus on IE
+
+## 0.33.1
 - Adds some style for the QS position
 
 ## 0.33.0
