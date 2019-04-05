@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.33.3
+- Updates isolated scss
+
 ## 0.33.2
 - Fixes QS focus on IE
 
