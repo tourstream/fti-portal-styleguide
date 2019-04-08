@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.34
+- Adds new molecule group: messages
+- Adds new icon: Simple Info
+
 ## 0.33.2
 - Fixes QS focus on IE
 
