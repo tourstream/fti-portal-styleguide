@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.34
+## 0.34.0
 - Adds new molecule group: Messages
 - Adds one Message: Info Message
 - Adds new icon: Simple Info
