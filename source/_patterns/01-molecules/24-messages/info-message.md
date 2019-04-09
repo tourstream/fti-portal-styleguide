@@ -1,4 +1,4 @@
 ---
 title: Info message
-state: inprogress
+state: done
 ---
