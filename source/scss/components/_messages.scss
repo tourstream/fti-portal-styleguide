@@ -1,0 +1,62 @@
+.fti-message {
+  color: $white;
+  padding: .875rem .9375rem;
+
+  &.info-message {
+    background-color: $cyan;
+  }
+
+  .message-container {
+    align-items: center;
+    display: flex;
+    min-height: 60px;
+
+    .icon-container {
+      align-items: center;
+      display: flex;
+      height: 24px;
+      justify-content: center;
+      width: 24px;
+
+      &.left-icon-container {
+        margin-right: 10px;
+      }
+
+      &.right-icon-container {
+        margin-left: 16px;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.25;
+      margin: 0;
+      width: 100%;
+
+      a {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up("lg") {
+  .fti-message {
+    padding: 1.25rem 3.75rem;
+  
+    .message-container {
+      min-height: 20px;
+
+      .icon-container {
+        &.right-icon-container {
+          margin-left: 34px;
+        }
+      }
+
+      p {
+        line-height: 1.125;
+      }
+    }
+  }
+}
