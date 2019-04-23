@@ -13,7 +13,9 @@ var body,
   openMobileMenuButton,
   headerMobileMenu,
   menuClose,
-  backdrop;
+  backdrop,
+  lastScrollPosition = 0,
+  scrollTicking = false;
 
 /* START - Mobile Menu */
 var openNavigation = function() {
@@ -41,6 +43,43 @@ var updateVerticalScrollOnMobileMenu = function() {
     headerMobileMenu.style.height = (window.innerHeight - elPos) + "px";
   }
 };
+
+var updateNavigationDistance = function(position) {
+
+  var message = document.querySelector(".fti-message");
+  var backdrop = document.querySelector(".backdrop");
+  var header = document.querySelector("header");
+  var headerMobileNavigation = document.querySelector(".header-mobile-navigation");
+
+  // Guards
+  var guardBackdrop = errorHandling.checkElement(backdrop, function(){return true;});
+  var guardMessage = errorHandling.checkElement(message, function(){return true;});
+  var guardHeaderMobileNavigation = errorHandling.checkElement(header, function(){return true;});
+  var guardHeader = errorHandling.checkElement(header, function(){return true;});
+
+  if(
+    guardHeader === false ||
+    guardHeaderMobileNavigation === false ||
+    guardBackdrop === false
+  )
+  {return;}
+  var height = guardMessage === undefined ? message.offsetHeight : 0;
+
+  if (window.innerWidth >= globalVariables.breakpoints.sm &&
+    window.innerWidth < globalVariables.breakpoints.lg) { // Tablet only
+    if(position > height) {
+      header.style.position = "fixed";
+    } else {
+      header.style.position = "static";
+    }
+    var messageHeight = message ? parseInt(getComputedStyle(message).height) : 0;
+    height = parseInt(getComputedStyle(header).height) + messageHeight;
+
+    headerMobileNavigation.style.top = height + "px";
+    backdrop.style.top = height + "px";
+  }
+};
+
 /* END - Mobile Menu */
 
 /* START - Desktop Menu */
@@ -137,6 +176,7 @@ var addClassToElements = function (elements, classToAdd) {
   elements.forEach( function(element) {
     element.classList.add(classToAdd);
   });
+
 };
 
 var addAndRemoveClass = function(elements, classToAdd, classToRemove) {
@@ -165,15 +205,33 @@ var addEventListenersToDesktopMenuItems = function(){
   });
 };
 
-var addEventListenersToWindow = function() {
+var addEventListenersForWindowResizing = function() {
   window.addEventListener("resize", function() {
     toggleLeftShift();
     if (window.innerWidth >= globalVariables.breakpoints.sm &&
       window.innerWidth < globalVariables.breakpoints.lg) { // Tablet only
       updateVerticalScrollOnMobileMenu();
+      updateNavigationDistance(lastScrollPosition);
     }
     if (window.innerWidth >= globalVariables.breakpoints.lg) { // Desktop
       closeNavigation();
+    }
+  });
+};
+
+var addEventListenerForMobileScrolling = function() {
+  window.addEventListener("scroll", function() {
+    lastScrollPosition = window.scrollY;
+
+    if (!scrollTicking) {
+      window.requestAnimationFrame(function() {
+        updateNavigationDistance(lastScrollPosition);
+
+        scrollTicking = false;
+        return;
+      });
+
+      scrollTicking = true;
     }
   });
 };
@@ -209,7 +267,8 @@ var initHeaderNavigation = function(){
     backdrop
   ];
 
-  addEventListenersToWindow();
+  addEventListenersForWindowResizing();
+  addEventListenerForMobileScrolling();
 };
 
 module.exports = {
@@ -219,5 +278,6 @@ module.exports = {
   toggleSubMenu   : toggleMobileSubMenu,
   openSubMenu     : openSubMenu,
   closeSubMenu    : closeSubMenu,
-  updateVerticalScrollOnMobileMenu: updateVerticalScrollOnMobileMenu
+  updateVerticalScrollOnMobileMenu: updateVerticalScrollOnMobileMenu,
+  updateNavigationDistance : updateNavigationDistance
 };
