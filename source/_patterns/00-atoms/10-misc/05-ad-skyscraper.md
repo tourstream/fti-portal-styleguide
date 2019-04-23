@@ -1,4 +1,4 @@
 ---
 title: Skyscraper ad
-state: in progress
+state: usable
 ---

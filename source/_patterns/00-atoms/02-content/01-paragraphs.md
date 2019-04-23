@@ -1,5 +1,5 @@
 ---
 title: Paragraphs
-state: usable
+state: inreview
 ---
 standard paragraph and paragraph including heading classes
