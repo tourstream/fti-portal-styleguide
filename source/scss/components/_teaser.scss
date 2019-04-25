@@ -33,18 +33,9 @@
 // +------------------------------------------------------------------------+
 //
 
-// teaser - mixins
-@mixin set-font-values-and-cut($fontSize, $lineHeight, $marginButton, $lineCount) {
-  @include multi-line-cut($lineHeight, $lineCount);
-  font-size: $fontSize;
-  line-height: $lineHeight;
-  margin-bottom: $marginButton;
-}
-
 // teaser - global definitions
 
-// teaser - special class - yes, the wrapper
-// TODO this class should be renamed for more general usage
+// teaser - the wrapper
 .teaser-list {
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +74,7 @@
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
-  padding: 15px;
+  padding: $content-padding-15;
 }
 
 .teaser-cta {
@@ -114,7 +105,7 @@
 }
 
 .teaser-description {
-  @include multi-line-cut($paragraph-line-height, 4);
+  @include multi-line-cut($p-line-height, 4);
   margin-bottom: 1rem;
 }
 
@@ -124,6 +115,31 @@
     hyphens: auto;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+
+// specials by teaser-size
+.teaser-25 {
+  .teaser-headline {
+    font-size: $teaser-25-h3-font-size;
+    line-height: $teaser-25-h3-line-height;
+  }
+
+  .teaser-description {
+    font-size: $teaser-25-p-font-size;
+    line-height: $teaser-25-p-line-height;
+  }
+}
+
+.teaser-50 {
+  .teaser-headline {
+    font-size: $teaser-50-h3-font-size;
+    line-height: $teaser-50-h3-line-height;
+  }
+
+  .teaser-description {
+    font-size: $font-size-base;
+    line-height: $teaser-50-p-line-height;
   }
 }
 
@@ -148,53 +164,30 @@
     max-width: 50%;
   }
 
-  .teaser-75 {
-    flex: 0 0 75%;
-    max-width: 75%;
-  }
-
   //basic structure
   .teaser-body {
-    padding: 15px 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    //padding: $content-padding-15 10px;
   }
 
   // basic elements
   .teaser-headline {
-    @include multi-line-cut($h3-line-height-md, 2);
+    @include multi-line-cut($teaser-50-h3-line-height, 2);
   }
 
   .teaser-description {
-    @include multi-line-cut($paragraph-line-height-md, 4);
+    @include multi-line-cut($teaser-50-p-line-height, 4);
   }
 
   // specials by teaser-size
   .teaser-25 {
     .teaser-headline {
-      @include set-font-values-and-cut ($h3-font-size, $h3-line-height, $h3-margin-bottom, 2);
+      @include multi-line-cut($teaser-25-h3-line-height, 2);
     }
 
     .teaser-description {
-      @include set-font-values-and-cut ($paragraph-font-size, $paragraph-line-height, 1rem, 4);
+      @include multi-line-cut($teaser-25-p-line-height, 4);
     }
-  }
-}
-
-@include media-breakpoint-up("lg") {
-  // specials by teaser-size
-  .teaser-25 {
-    .teaser-headline {
-      @include set-font-values-and-cut ($h3-font-size-md, $h3-line-height-md, $h3-margin-bottom-md, 2);
-    }
-
-    .teaser-description {
-      @include set-font-values-and-cut ($paragraph-font-size-md, $paragraph-line-height-md, 1rem, 4);
-    }
-  }
-}
-
-@include media-breakpoint-up("xl") {
-  // basic structure
-  .teaser-body {
-    padding: 15px;
   }
 }

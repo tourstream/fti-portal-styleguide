@@ -14,7 +14,7 @@
 // Bootstrap imports
 
 // Bootstrap custom variables
-@import "fti-bootstrap/custom-variables";
+@import "variables/custom-variables";
 
 // Customized mixins:
 @import "abstracts/mixins";
@@ -82,7 +82,8 @@
 // Cookie alert:
 @import "components/cookie-alert";
 
+// Form Checkbox
 @import "components/form-checkbox";
 
-// quick search
+// Quick search
 @import "components/quicksearch";

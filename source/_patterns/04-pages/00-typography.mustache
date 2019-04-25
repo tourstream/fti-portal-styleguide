@@ -1,0 +1,111 @@
+<main role="main" class="container">
+  <h2>Headlines</h2>
+
+  {{> atoms-h1(content: 'This is a simple <H1> headline') }}
+  {{> atoms-h2(content: 'This is a simple <H2> headline') }}
+  {{> atoms-h3(content: 'This is a simple <H3> headline') }}
+  {{> atoms-h4(content: 'This is a simple <H4> headline') }}
+  {{> atoms-h5(content: 'This is a simple <H5> headline') }}
+
+  We don't use a &#60;h6&#62; headline. But if we used it, it would look like
+  <h6>this headline</h6>
+
+  <br>
+  <br>
+
+  <p class="h1">&#60;p&#62;-tag with class ".h1" heading</p>
+  <p class="h2">&#60;p&#62;-tag with class ".h2" heading</p>
+  <p class="h3">&#60;p&#62;-tag with class ".h3" heading</p>
+  <p class="h4">&#60;p&#62;-tag with class ".h4" heading</p>
+  <p class="h5">&#60;p&#62;-tag with class ".h5" heading</p>
+
+  <hr>
+
+  <h2>Text</h2>
+
+  Simple body text with direct styling of the &#60;body&#62;-tag.
+
+  <br>
+  <br>
+
+  Lorem <i class="fg fg-calendar"></i> ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue. Morbi non magna eget nunc tempor pretium. Maecenas congue condimentum orci at eleifend. Maecenas id pretium nisl, aliquam faucibus elit. Ut tempor vitae tortor a pharetra. Aliquam porta dignissim arcu non commodo. Nunc erat leo, auctor vel placerat vel, ornare in lacus. Phasellus quis nibh iaculis, ultrices dolor sed, mollis sapien. Donec vel pulvinar est. Ut mattis vehicula justo. Integer ultrices iaculis lorem, at euismod erat. Vestibulum ultrices, nisl in accumsan vulputate, metus massa dignissim mauris, eu commodo metus felis nec tortor. Aenean sollicitudin sed mauris sed tincidunt. Ut gravida arcu non ultrices laoreet.
+  Nunc elementum, ligula at mollis interdum, ante neque bibendum mi, ac tempus augue metus vel justo. In lacinia auctor convallis. Donec ut tortor nisl. Mauris accumsan suscipit sagittis. Mauris eget odio at est finibus sagittis id et quam. Aliquam interdum luctus commodo. Pellentesque ultricies ante eget turpis posuere, ac ullamcorper nibh ultricies. Aliquam erat volutpat. Nunc aliquam leo quis pellentesque aliquet. Vestibulum sit amet ante dapibus, elementum elit eu, pellentesque leo. Praesent nec purus vel metus congue feugiat ut id turpis. Integer quis nibh ultricies velit ornare faucibus.
+
+  <hr>
+
+  {{> atoms-simple-p-text }}
+
+  <p>Lorem <i class="fg fg-calendar"></i> ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue. Morbi non magna eget nunc tempor pretium. Maecenas congue condimentum orci at eleifend. Maecenas id pretium nisl, aliquam faucibus elit. Ut tempor vitae tortor a pharetra. Aliquam porta dignissim arcu non commodo. Nunc erat leo, auctor vel placerat vel, ornare in lacus. Phasellus quis nibh iaculis, ultrices dolor sed, mollis sapien. Donec vel pulvinar est. Ut mattis vehicula justo. Integer ultrices iaculis lorem, at euismod erat. Vestibulum ultrices, nisl in accumsan vulputate, metus massa dignissim mauris, eu commodo metus felis nec tortor. Aenean sollicitudin sed mauris sed tincidunt. Ut gravida arcu non ultrices laoreet.</p>
+  <p>Nunc elementum, ligula at mollis interdum, ante neque bibendum mi, ac tempus augue metus vel justo. In lacinia auctor convallis. Donec ut tortor nisl. Mauris accumsan suscipit sagittis. Mauris eget odio at est finibus sagittis id et quam. Aliquam interdum luctus commodo. Pellentesque ultricies ante eget turpis posuere, ac ullamcorper nibh ultricies. Aliquam erat volutpat. Nunc aliquam leo quis pellentesque aliquet. Vestibulum sit amet ante dapibus, elementum elit eu, pellentesque leo. Praesent nec purus vel metus congue feugiat ut id turpis. Integer quis nibh ultricies velit ornare faucibus.</p>
+
+  <hr>
+
+  <div>
+    {{> atoms-simple-span-text }}
+  </div>
+
+  <br>
+
+  <span>Lorem <i class="fg fg-calendar"></i> ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue. Morbi non magna eget nunc tempor pretium. Maecenas congue condimentum orci at eleifend. Maecenas id pretium nisl, aliquam faucibus elit. Ut tempor vitae tortor a pharetra. Aliquam porta dignissim arcu non commodo. Nunc erat leo, auctor vel placerat vel, ornare in lacus. Phasellus quis nibh iaculis, ultrices dolor sed, mollis sapien. Donec vel pulvinar est. Ut mattis vehicula justo. Integer ultrices iaculis lorem, at euismod erat. Vestibulum ultrices, nisl in accumsan vulputate, metus massa dignissim mauris, eu commodo metus felis nec tortor. Aenean sollicitudin sed mauris sed tincidunt. Ut gravida arcu non ultrices laoreet.</span>
+  <span>Nunc elementum, ligula at mollis interdum, ante neque bibendum mi, ac tempus augue metus vel justo. In lacinia auctor convallis. Donec ut tortor nisl. Mauris accumsan suscipit sagittis. Mauris eget odio at est finibus sagittis id et quam. Aliquam interdum luctus commodo. Pellentesque ultricies ante eget turpis posuere, ac ullamcorper nibh ultricies. Aliquam erat volutpat. Nunc aliquam leo quis pellentesque aliquet. Vestibulum sit amet ante dapibus, elementum elit eu, pellentesque leo. Praesent nec purus vel metus congue feugiat ut id turpis. Integer quis nibh ultricies velit ornare faucibus.</span>
+
+  <hr>
+
+  <div>
+    <em>{{> atoms-simple-span-text(content: 'A simple span text emphasized / italic')}}</em>
+  </div>
+  <div>
+    <strong>{{> atoms-simple-span-text(content: 'A simple span text strong / bold')}}</strong>
+  </div>
+
+  <hr>
+
+  <h2>Small Text</h2>
+
+  Use the classes ".small" and ".smaller" to add the class to the HTML-tag or to extend an SCSS class.
+
+  <br>
+  <br>
+
+  <div>
+    <span class="small">&#60;span&#62;-tag with class ".small".</span>
+  </div>
+
+  &#60;p&#62;-tag with class ".small":
+  <p class="small">Lorem <i class="fg fg-calendar"></i> ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue. Morbi non magna eget nunc tempor pretium. Maecenas congue condimentum orci at eleifend. Maecenas id pretium nisl, aliquam faucibus elit. Ut tempor vitae tortor a pharetra. Aliquam porta dignissim arcu non commodo. Nunc erat leo, auctor vel placerat vel, ornare in lacus. Phasellus quis nibh iaculis, ultrices dolor sed, mollis sapien. Donec vel pulvinar est. Ut mattis vehicula justo. Integer ultrices iaculis lorem, at euismod erat. Vestibulum ultrices, nisl in accumsan vulputate, metus massa dignissim mauris, eu commodo metus felis nec tortor. Aenean sollicitudin sed mauris sed tincidunt. Ut gravida arcu non ultrices laoreet.</p>
+  <p class="small">Nunc elementum, ligula at mollis interdum, ante neque bibendum mi, ac tempus augue metus vel justo. In lacinia auctor convallis. Donec ut tortor nisl. Mauris accumsan suscipit sagittis. Mauris eget odio at est finibus sagittis id et quam. Aliquam interdum luctus commodo. Pellentesque ultricies ante eget turpis posuere, ac ullamcorper nibh ultricies. Aliquam erat volutpat. Nunc aliquam leo quis pellentesque aliquet. Vestibulum sit amet ante dapibus, elementum elit eu, pellentesque leo. Praesent nec purus vel metus congue feugiat ut id turpis. Integer quis nibh ultricies velit ornare faucibus.</p>
+
+  <br>
+
+  <div>
+    <span class="smaller">&#60;span&#62;-tag with class ".smaller".</span>
+  </div>
+
+  &#60;p&#62;-tag with class ".smaller":
+  <p class="smaller">Lorem <i class="fg fg-calendar"></i> ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et feugiat lorem, vitae accumsan augue. Morbi non magna eget nunc tempor pretium. Maecenas congue condimentum orci at eleifend. Maecenas id pretium nisl, aliquam faucibus elit. Ut tempor vitae tortor a pharetra. Aliquam porta dignissim arcu non commodo. Nunc erat leo, auctor vel placerat vel, ornare in lacus. Phasellus quis nibh iaculis, ultrices dolor sed, mollis sapien. Donec vel pulvinar est. Ut mattis vehicula justo. Integer ultrices iaculis lorem, at euismod erat. Vestibulum ultrices, nisl in accumsan vulputate, metus massa dignissim mauris, eu commodo metus felis nec tortor. Aenean sollicitudin sed mauris sed tincidunt. Ut gravida arcu non ultrices laoreet.</p>
+  <p class="smaller">Nunc elementum, ligula at mollis interdum, ante neque bibendum mi, ac tempus augue metus vel justo. In lacinia auctor convallis. Donec ut tortor nisl. Mauris accumsan suscipit sagittis. Mauris eget odio at est finibus sagittis id et quam. Aliquam interdum luctus commodo. Pellentesque ultricies ante eget turpis posuere, ac ullamcorper nibh ultricies. Aliquam erat volutpat. Nunc aliquam leo quis pellentesque aliquet. Vestibulum sit amet ante dapibus, elementum elit eu, pellentesque leo. Praesent nec purus vel metus congue feugiat ut id turpis. Integer quis nibh ultricies velit ornare faucibus.</p>
+
+  <hr>
+
+  <div>
+    <h2>Lists</h2>
+
+    <p>A simple unordered list</p>
+    <ul>
+      <li>first point</li>
+      <li>second point</li>
+    </ul>
+
+    <p>A simple ordered list</p>
+    <ol>
+      <li>first point</li>
+      <li>second point</li>
+    </ol>
+
+    <p>An unordered list with "list-styled-dots-primary" styling</p>
+    <ul class="list-styled-dots-primary">
+      <li>first point</li>
+      <li>second point</li>
+    </ul>
+  </div>
+</main>

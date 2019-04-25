@@ -5,7 +5,7 @@
   display: flex;
   font-size: .93rem; // The icon-size is bound to the font-size
 
-  // some CSS that gives the content the approximately the size it should have
+  // some CSS that gives the content approximately the size it should have
   > i {
     font-size: 19px;
   }
@@ -14,8 +14,6 @@
   > p {
     display: flex;
     flex-direction: column;
-    font-size: .75rem;
-    font-weight: 500;
     margin-left: 5px;
 
     .header-hotline-number {
@@ -31,7 +29,9 @@
   // It's a p-tag, because the Typo3 Fluid contentElement creates a p-Tag.
   > p > span {
     display: flex;
-    line-height: 1rem;
+    font-size: $header-hotline-font-size;
+    font-weight: $font-weight-regular;
+    line-height: $header-hotline-line-height;
 
     a {
       color: $gray-600;

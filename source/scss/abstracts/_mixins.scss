@@ -1,47 +1,4 @@
 /* mixin for multiline */
-@mixin multi-line-ellipsis($lineHeight, $lineCount, $bgColor: white) {
-  line-height: $lineHeight;
-  margin-right: -1em;
-  max-height: $lineHeight * $lineCount;
-  overflow: hidden;
-  padding-right: 1em;
-  position: relative;
-  text-align: justify;
-
-  &::before {
-    bottom: 0;
-    content: "\2026"; // code for &hellip; -> ...
-    position: absolute;
-    right: 0;
-  }
-
-  &::after {
-    background: $bgColor;
-    content: "";
-    height: 1em;
-    margin-top: .2em;
-    position: absolute;
-    right: 0;
-    width: 1em;
-  }
-}
-
-@mixin multi-line-fade($lineHeight, $lineCount, $bgColor: white) {
-  height: $lineHeight * $lineCount; /* exactly three lines */
-  overflow: hidden;
-  position: relative;
-
-  &::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
-    bottom: 0;
-    content: "";
-    height: 1.2em;
-    position: absolute;
-    right: 0;
-    text-align: right;
-    width: 15%;
-  }
-}
 
 @mixin multi-line-cut($lineHeight, $lineCount) {
   /* stylelint-disable property-no-vendor-prefix */
@@ -52,8 +9,7 @@
   display: -webkit-box;
   -webkit-line-clamp: $lineCount;
   /* stylelint-enable */
-  line-height: $lineHeight;        /* fallback */
-  max-height: $lineHeight * $lineCount;       /* fallback */
+  max-height: $lineHeight * $lineCount; /* fallback */
   overflow: hidden;
   text-overflow: ellipsis;
 }

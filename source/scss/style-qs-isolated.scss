@@ -6,7 +6,7 @@
 // Bootstrap imports
 
 // Bootstrap custom variables
-@import "fti-bootstrap/custom-variables";
+@import "variables/custom-variables";
 
 
 // some overwrites
@@ -20,8 +20,7 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 768px,
   md: 991px,
-  lg: 1024px,
-  xl: 1024px
+  lg: 1024px
 );
 
 

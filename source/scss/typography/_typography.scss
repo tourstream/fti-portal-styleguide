@@ -1,3 +1,4 @@
+// GENERAL
 html {
   font-size: $font-size-base;
   font-weight: $font-weight-base;
@@ -5,30 +6,24 @@ html {
 }
 
 body {
-  font-size: $paragraph-font-size;
+  font-size: $p-font-size;
   font-weight: $font-weight-normal;
-  line-height: $paragraph-line-height;
+  line-height: $p-line-height;
 }
 
-
-/**
- * the following styles changes the styles for
- * the ones which are set in bootstrap
- */
+// HEADLINES
 h1,
 .h1 {
   font-size: $h1-font-size;
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-regular;
   line-height: $h1-line-height;
-  margin-bottom: $h1-margin-bottom;
 }
 
 h2,
 .h2 {
   font-size: $h2-font-size;
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-regular;
   line-height: $h2-line-height;
-  margin-bottom: $h2-margin-bottom;
 }
 
 h3,
@@ -36,16 +31,13 @@ h3,
   font-size: $h3-font-size;
   font-weight: $font-weight-bold;
   line-height: $h3-line-height;
-  margin-bottom: $h3-margin-bottom;
 }
 
 h4,
 .h4 {
   font-size: $h4-font-size;
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-regular;
   line-height: $h4-line-height;
-  margin-bottom: $h4-margin-bottom;
-
   text-transform: uppercase;
 }
 
@@ -54,84 +46,45 @@ h5,
   font-size: $h5-font-size;
   font-weight: $font-weight-bold;
   line-height: $h5-line-height;
-  margin-bottom: $h5-margin-bottom;
 }
 
-h6,
-.h6 {
-  font-size: $h6-font-size;
-  font-weight: $font-weight-normal;
-  line-height: $h6-line-height;
-  margin-bottom: $h6-margin-bottom;
-}
-
+// TEXT: P-TAG / SPAN-TAG
 p {
-  margin-bottom: $paragraph-margin-bottom;
+  font-size: $p-font-size;
+  line-height: $p-line-height;
 }
 
-@include media-breakpoint-up(md) {
-  body {
-    font-size: $paragraph-font-size-md;
-    font-weight: $font-weight-normal;
-    line-height: $paragraph-line-height-md;
-  }
-
-  h1,
-  .h1 {
-    font-size: $h1-font-size-md;
-    font-weight: $font-weight-light;
-    line-height: $h1-line-height-md;
-    margin-bottom: $h1-margin-bottom-md;
-  }
-
-  h2,
-  .h2 {
-    font-size: $h2-font-size-md;
-    font-weight: $font-weight-light;
-    line-height: $h2-line-height-md;
-    margin-bottom: $h2-margin-bottom-md;
-  }
-
-  h3,
-  .h3 {
-    font-size: $h3-font-size-md;
-    font-weight: $font-weight-bold;
-    line-height: $h3-line-height-md;
-    margin-bottom: $h3-margin-bottom-md;
-  }
-
-  h4,
-  .h4 {
-    font-size: $h4-font-size-md;
-    font-weight: $font-weight-light;
-    line-height: $h4-line-height-md;
-    margin-bottom: $h4-margin-bottom-md;
-  }
-
-  h5,
-  .h5 {
-    font-size: $h5-font-size-md;
-    font-weight: $font-weight-bold;
-    line-height: $h5-line-height-md;
-    margin-bottom: $h5-margin-bottom-md;
-  }
-
-  h6,
-  .h6 {
-    font-size: $h6-font-size-md;
-    font-weight: $font-weight-normal;
-    line-height: $h6-line-height-md;
-    margin-bottom: $h6-margin-bottom-md;
-  }
-
-  p {
-    margin-bottom: $paragraph-margin-bottom-md;
-  }
+span {
+  font-size: $span-font-size;
+  line-height: $span-line-height;
 }
 
-/*
- * customized list-style for FTi ..yeahhh
- */
+strong {
+  font-weight: $font-weight-bold;
+}
+
+ul {
+  font-size: $ul-font-size;
+  line-height: $ul-line-height;
+}
+
+ol {
+  font-size: $ol-font-size;
+  line-height: $ol-line-height;
+}
+
+.small {
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+}
+
+.smaller {
+  font-size: $smaller-font-size;
+  line-height: $smaller-line-height;
+;
+}
+
+// Special unordered list styles, not defined in design-guide
 
 .list-styled-dots-primary {
   list-style: none;
