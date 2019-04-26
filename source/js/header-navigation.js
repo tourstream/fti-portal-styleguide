@@ -20,10 +20,10 @@ var body,
 /* START - Mobile Menu */
 var openNavigation = function() {
   addClassToElements(body, "unscrollable");
-  addClassToElements(html, "unscrollable");
+  //addClassToElements(html, "unscrollable");
   addClassToElements(navigationElements, "display-block");
   removeClassFromElements(openMobileMenuButton, "display-block");
-  updateVerticalScrollOnMobileMenu();
+  updateNavigationDistance(lastScrollPosition);
 };
 
 var closeNavigation = function() {
@@ -33,50 +33,64 @@ var closeNavigation = function() {
   addClassToElements(openMobileMenuButton, "display-block");
 };
 
-var updateVerticalScrollOnMobileMenu = function() {
-  headerMobileMenu.style.removeProperty("height");
-  if (!isElementInViewportYAxis(headerMobileMenu)) {
-    // Calculate visible height of the Menu inside the window, ignoring header
-    var yScroll = headerMobileMenu.scrollTop;
-    var elPos = headerMobileMenu.offsetTop - yScroll + headerMobileMenu.clientTop;
-    // Set new "height" to the menu, to make it scrollable
-    headerMobileMenu.style.height = (window.innerHeight - elPos) + "px";
-  }
-};
-
 var updateNavigationDistance = function(position) {
 
-  var message = document.querySelector(".fti-message");
-  var backdrop = document.querySelector(".backdrop");
+  // Resetting desktop menu
   var header = document.querySelector("header");
-  var headerMobileNavigation = document.querySelector(".header-mobile-navigation");
-
-  // Guards
-  var guardBackdrop = errorHandling.checkElement(backdrop, function(){return true;});
-  var guardMessage = errorHandling.checkElement(message, function(){return true;});
-  var guardHeaderMobileNavigation = errorHandling.checkElement(header, function(){return true;});
   var guardHeader = errorHandling.checkElement(header, function(){return true;});
+  if(guardHeader === false){return;}
 
-  if(
-    guardHeader === false ||
-    guardHeaderMobileNavigation === false ||
-    guardBackdrop === false
-  )
-  {return;}
-  var height = guardMessage === undefined ? message.offsetHeight : 0;
+  if (window.innerWidth >= globalVariables.breakpoints.lg) {
+    header.style.position = "static";
+  } else {
+    // Tablet and mobile functionality
+    var message = document.querySelector(".fti-message");
+    var backdrop = document.querySelector(".backdrop");
+    var headerMobileNavigation = document.querySelector(".header-mobile-navigation");
 
-  if (window.innerWidth >= globalVariables.breakpoints.sm &&
-    window.innerWidth < globalVariables.breakpoints.lg) { // Tablet only
-    if(position > height) {
+    // Guards
+    var guardBackdrop = errorHandling.checkElement(backdrop, function(){return true;});
+    var guardMessage = errorHandling.checkElement(message, function(){return true;});
+    var guardHeaderMobileNavigation = errorHandling.checkElement(header, function(){return true;});
+
+
+    if(
+      guardHeaderMobileNavigation === false ||
+      guardBackdrop === false
+    )
+    {return;}
+    var distance = guardMessage === undefined ? message.offsetHeight : 0;
+    var messageHeight = message ? parseInt(getComputedStyle(message).height) : 0;
+    var headerHeight = parseInt(getComputedStyle(header).height);
+
+    if(position > distance) {
       header.style.position = "fixed";
+      distance = headerHeight;
     } else {
       header.style.position = "static";
+      distance = headerHeight + messageHeight;
     }
-    var messageHeight = message ? parseInt(getComputedStyle(message).height) : 0;
-    height = parseInt(getComputedStyle(header).height) + messageHeight;
 
-    headerMobileNavigation.style.top = height + "px";
-    backdrop.style.top = height + "px";
+    // Positioning
+    headerMobileNavigation.style.top = distance + "px";
+    backdrop.style.top = distance + "px";
+
+    // Heighting
+    if (
+      window.innerWidth < globalVariables.breakpoints.sm ||
+      (
+        window.innerWidth < globalVariables.breakpoints.lg &&
+        window.innerHeight < parseInt(getComputedStyle(headerMobileNavigation).height)
+      )
+    ) {
+      headerMobileNavigation.style.height = (window.innerHeight - headerHeight - messageHeight) + "px";
+      console.log('overflow')
+    } else {
+      headerMobileNavigation.style.height = "auto";
+      console.log('auto')
+      // Todo opening sub Navigation with a certain height, leaves navigation in auto state. It should be in overflow state. probably the submenu needs to be targeted for if-statements
+    }
+
   }
 };
 
@@ -102,7 +116,7 @@ function isElementInViewportYAxis(element) {
     document.documentElement.clientHeight;
 
   var verticalCheck = true;
-  if (window.innerWidth < globalVariables.breakpoints.lg) { // Tablet
+  if (window.innerWidth < globalVariables.breakpoints.lg) { // Tablet and mobile
     verticalCheck = rect.top >= 0 &&
                     rect.bottom <= windowHeight;
   }
@@ -148,7 +162,10 @@ var openSubMenu = function(mainMenuItem) {
 
   var arrowDown = mainMenuItem.querySelector(".fg-arrow-down");
   addAndRemoveClass(arrowDown, "fg-arrow-up", "fg-arrow-down");
+
+  updateNavigationDistance(lastScrollPosition); // todo re-factor, we need the heihting only
 };
+
 
 var toggleMobileSubMenu = function(mainMenuItem) {
   openSubMenuUl = mainMenuItem.querySelector("ul");
@@ -158,8 +175,6 @@ var toggleMobileSubMenu = function(mainMenuItem) {
   } else {
     closeSubMenu(mainMenuItem);
   }
-
-  updateVerticalScrollOnMobileMenu();
 };
 
 var removeClassFromElements = function (elements, classToRemove) {
@@ -205,16 +220,19 @@ var addEventListenersToDesktopMenuItems = function(){
   });
 };
 
+// Todo enable scrolling inside the mobile/tablet navigation
+
 var addEventListenersForWindowResizing = function() {
   window.addEventListener("resize", function() {
     toggleLeftShift();
-    if (window.innerWidth >= globalVariables.breakpoints.sm &&
-      window.innerWidth < globalVariables.breakpoints.lg) { // Tablet only
-      updateVerticalScrollOnMobileMenu();
+    // Exits desktop navigation, when entering tablet or mobile view
+    if (window.innerWidth < globalVariables.breakpoints.lg) {
       updateNavigationDistance(lastScrollPosition);
     }
-    if (window.innerWidth >= globalVariables.breakpoints.lg) { // Desktop
+    // Exits mobile/tablet navigation, when entering desktop view
+    if (window.innerWidth >= globalVariables.breakpoints.lg) {
       closeNavigation();
+      updateNavigationDistance(lastScrollPosition);
     }
   });
 };
@@ -278,6 +296,5 @@ module.exports = {
   toggleSubMenu   : toggleMobileSubMenu,
   openSubMenu     : openSubMenu,
   closeSubMenu    : closeSubMenu,
-  updateVerticalScrollOnMobileMenu: updateVerticalScrollOnMobileMenu,
   updateNavigationDistance : updateNavigationDistance
 };

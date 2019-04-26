@@ -23,7 +23,6 @@
 
 .header-mobile-navigation {
   background-color: $white;
-  height: calc(100vh - #{$logo-width-mobile});
   left: 0;
   min-width: $header-navigation-mobile-min-width;
   overflow: auto;
@@ -64,7 +63,6 @@
 //Tablet
 @include media-breakpoint-up(sm) {
   .header-mobile-navigation {
-    height: auto;
     width: 100%;
   }
 
