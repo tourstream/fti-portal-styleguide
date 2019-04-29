@@ -26,7 +26,6 @@
   left: 0;
   min-width: $header-navigation-mobile-min-width;
   overflow: auto;
-  padding-bottom: $content-padding-15;
   position: fixed;
   top: 0;
   width: $header-navigation-mobile-width;
@@ -43,6 +42,11 @@
   flex-direction: column;
   flex-wrap: nowrap;
   list-style: none;
+}
+
+.header-menu-container:last-child >
+.header-menu-item:last-child {
+  padding-bottom: $content-padding-15;
 }
 
 .header-menu-item-link {

@@ -20,7 +20,7 @@ var body,
 /* START - Mobile Menu */
 var openNavigation = function() {
   addClassToElements(body, "unscrollable");
-  //addClassToElements(html, "unscrollable");
+  addClassToElements(html, "unscrollable");
   addClassToElements(navigationElements, "display-block");
   removeClassFromElements(openMobileMenuButton, "display-block");
   updateNavigationDistance(lastScrollPosition);
@@ -42,55 +42,41 @@ var updateNavigationDistance = function(position) {
 
   if (window.innerWidth >= globalVariables.breakpoints.lg) {
     header.style.position = "static";
+    return;
+  }
+
+  // Tablet and mobile functionality
+  var message = document.querySelector(".fti-message");
+
+  // Guards
+  var guardMessage = errorHandling.checkElement(message, function(){return true;});
+
+  var distance = guardMessage === undefined ? message.offsetHeight : 0;
+  var messageHeight = message ? parseInt(getComputedStyle(message).height) : 0;
+  var headerHeight = parseInt(getComputedStyle(header).height);
+
+  // Making Navigation sticky depending on scroll position
+  if(position > distance) {
+    header.style.position = "fixed";
+    distance = headerHeight;
   } else {
-    // Tablet and mobile functionality
-    var message = document.querySelector(".fti-message");
-    var backdrop = document.querySelector(".backdrop");
-    var headerMobileNavigation = document.querySelector(".header-mobile-navigation");
+    header.style.position = "static";
+    distance = headerHeight + messageHeight;
+  }
 
-    // Guards
-    var guardBackdrop = errorHandling.checkElement(backdrop, function(){return true;});
-    var guardMessage = errorHandling.checkElement(message, function(){return true;});
-    var guardHeaderMobileNavigation = errorHandling.checkElement(header, function(){return true;});
+  // Positioning of Navigation
+  headerMobileMenu.style.top = distance + "px";
+  backdrop.style.top = distance + "px";
 
-
-    if(
-      guardHeaderMobileNavigation === false ||
-      guardBackdrop === false
-    )
-    {return;}
-    var distance = guardMessage === undefined ? message.offsetHeight : 0;
-    var messageHeight = message ? parseInt(getComputedStyle(message).height) : 0;
-    var headerHeight = parseInt(getComputedStyle(header).height);
-
-    if(position > distance) {
-      header.style.position = "fixed";
-      distance = headerHeight;
-    } else {
-      header.style.position = "static";
-      distance = headerHeight + messageHeight;
-    }
-
-    // Positioning
-    headerMobileNavigation.style.top = distance + "px";
-    backdrop.style.top = distance + "px";
-
-    // Heighting
-    if (
-      window.innerWidth < globalVariables.breakpoints.sm ||
-      (
-        window.innerWidth < globalVariables.breakpoints.lg &&
-        window.innerHeight < parseInt(getComputedStyle(headerMobileNavigation).height)
-      )
-    ) {
-      headerMobileNavigation.style.height = (window.innerHeight - headerHeight - messageHeight) + "px";
-      console.log('overflow')
-    } else {
-      headerMobileNavigation.style.height = "auto";
-      console.log('auto')
-      // Todo opening sub Navigation with a certain height, leaves navigation in auto state. It should be in overflow state. probably the submenu needs to be targeted for if-statements
-    }
-
+  // Heighting the Navigation
+  headerMobileMenu.style.removeProperty("height"); // Makes calculation much smoother
+  if (
+    window.innerWidth < globalVariables.breakpoints.sm
+    || (window.innerHeight - distance < parseInt(getComputedStyle(headerMobileMenu).height))
+  ) {
+    headerMobileMenu.style.height = (window.innerHeight - headerHeight - messageHeight) + "px";
+  } else {
+    headerMobileMenu.style.height = "auto";
   }
 };
 
@@ -109,7 +95,7 @@ function toggleLeftShift() {
 
 /* START - Utility functions */
 function isElementInViewportYAxis(element) {
-  var rect = element.getBoundingClientRect();
+  var elementBoundaries = element.getBoundingClientRect();
 
   var windowHeight = window.innerHeight <= document.documentElement.clientHeight ?
     window.innerHeight :
@@ -117,8 +103,8 @@ function isElementInViewportYAxis(element) {
 
   var verticalCheck = true;
   if (window.innerWidth < globalVariables.breakpoints.lg) { // Tablet and mobile
-    verticalCheck = rect.top >= 0 &&
-                    rect.bottom <= windowHeight;
+    verticalCheck = elementBoundaries.top >= 0 &&
+                    elementBoundaries.bottom <= windowHeight;
   }
 
   var windowWidth = window.innerWidth <= document.documentElement.clientWidth ?
@@ -126,7 +112,7 @@ function isElementInViewportYAxis(element) {
     document.documentElement.clientWidth;
 
   return (
-    rect.left >= 0 &&
+    elementBoundaries.left >= 0 &&
     windowWidth &&
     verticalCheck
   );
@@ -163,18 +149,18 @@ var openSubMenu = function(mainMenuItem) {
   var arrowDown = mainMenuItem.querySelector(".fg-arrow-down");
   addAndRemoveClass(arrowDown, "fg-arrow-up", "fg-arrow-down");
 
-  updateNavigationDistance(lastScrollPosition); // todo re-factor, we need the heihting only
+  updateNavigationDistance(lastScrollPosition);
 };
 
 
 var toggleMobileSubMenu = function(mainMenuItem) {
   openSubMenuUl = mainMenuItem.querySelector("ul");
-
   if (openSubMenuUl.className.indexOf("display-block") === -1) {
     openSubMenu(mainMenuItem);
   } else {
     closeSubMenu(mainMenuItem);
   }
+  updateNavigationDistance(lastScrollPosition);
 };
 
 var removeClassFromElements = function (elements, classToRemove) {
@@ -199,6 +185,8 @@ var addAndRemoveClass = function(elements, classToAdd, classToRemove) {
   addClassToElements(elements, classToAdd);
 };
 
+// Event Listeners:
+
 var addEventListenersToDesktopMenuItems = function(){
   // Make submenus show on hover on Desktop only
   desktopMenuItems.forEach( function(element) {
@@ -219,8 +207,6 @@ var addEventListenersToDesktopMenuItems = function(){
     }
   });
 };
-
-// Todo enable scrolling inside the mobile/tablet navigation
 
 var addEventListenersForWindowResizing = function() {
   window.addEventListener("resize", function() {
