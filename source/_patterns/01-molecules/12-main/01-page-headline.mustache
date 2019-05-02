@@ -1,1 +1,8 @@
-<h1>{{ pageHeadline }}</h1>
+<h1>
+  {{#content}}
+    {{content}}
+  {{/content}}
+  {{^content}}
+    {{ pageHeadline }}
+  {{/content}}
+</h1>

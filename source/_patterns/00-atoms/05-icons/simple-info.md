@@ -1,4 +1,4 @@
 ---
 title: Simple info
-state: done
+state: complete
 ---

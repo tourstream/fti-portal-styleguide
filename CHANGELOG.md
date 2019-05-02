@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.34.1
+- Navigation no longer overlaps crisis information
+- Small fixes:
+  - Fixes console log errors
+  - Fixes grey states on Pattern Lab
+  - Fixes states according to the design guide
+
 ## 0.34.0
 - Adds new molecule group: Messages
 - Adds one Message: Info Message

@@ -1,7 +1,8 @@
 /* global errorHandling:false */
 var adjustSkyscraperPositioning = function() {
-  var mainElement = document.getElementsByTagName("main")[0];
-  var skyscraper = document.getElementsByClassName("ad-skyscraper-wrapper")[0];
+  var mainElement = document.querySelector("main");
+  var skyscraper = document.querySelector("ad-skyscraper-wrapper");
+
   var guardMainElement = errorHandling.checkElement(mainElement, function(){return true;});
   var guardSkyscraper = errorHandling.checkElement(skyscraper, function(){return true;});
 

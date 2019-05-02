@@ -23,13 +23,11 @@
 
 .header-mobile-navigation {
   background-color: $white;
-  height: calc(100vh - #{$logo-width-mobile});
   left: 0;
   min-width: $header-navigation-mobile-min-width;
   overflow: auto;
-  padding-bottom: $content-padding-15;
   position: fixed;
-  top: $logo-width-mobile;
+  top: 0;
   width: $header-navigation-mobile-width;
   z-index: $header-z-index;
 }
@@ -44,6 +42,11 @@
   flex-direction: column;
   flex-wrap: nowrap;
   list-style: none;
+}
+
+.header-menu-container:last-child >
+.header-menu-item:last-child {
+  padding-bottom: $content-padding-15;
 }
 
 .header-menu-item-link {
@@ -64,7 +67,6 @@
 //Tablet
 @include media-breakpoint-up(sm) {
   .header-mobile-navigation {
-    height: auto;
     width: 100%;
   }
 

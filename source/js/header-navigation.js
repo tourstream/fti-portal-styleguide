@@ -13,7 +13,9 @@ var body,
   openMobileMenuButton,
   headerMobileMenu,
   menuClose,
-  backdrop;
+  backdrop,
+  lastScrollPosition = 0,
+  scrollTicking = false;
 
 /* START - Mobile Menu */
 var openNavigation = function() {
@@ -21,7 +23,7 @@ var openNavigation = function() {
   addClassToElements(html, "unscrollable");
   addClassToElements(navigationElements, "display-block");
   removeClassFromElements(openMobileMenuButton, "display-block");
-  updateVerticalScrollOnMobileMenu();
+  updateNavigationDistance(lastScrollPosition);
 };
 
 var closeNavigation = function() {
@@ -31,16 +33,53 @@ var closeNavigation = function() {
   addClassToElements(openMobileMenuButton, "display-block");
 };
 
-var updateVerticalScrollOnMobileMenu = function() {
-  headerMobileMenu.style.removeProperty("height");
-  if (!isElementInViewportYAxis(headerMobileMenu)) {
-    // Calculate visible height of the Menu inside the window, ignoring header
-    var yScroll = headerMobileMenu.scrollTop;
-    var elPos = headerMobileMenu.offsetTop - yScroll + headerMobileMenu.clientTop;
-    // Set new "height" to the menu, to make it scrollable
-    headerMobileMenu.style.height = (window.innerHeight - elPos) + "px";
+var updateNavigationDistance = function(position) {
+
+  // Resetting desktop menu
+  var header = document.querySelector("header");
+  var guardHeader = errorHandling.checkElement(header, function(){return true;});
+  if(guardHeader === false){return;}
+
+  if (window.innerWidth >= globalVariables.breakpoints.lg) {
+    header.style.position = "static";
+    return;
+  }
+
+  // Tablet and mobile functionality
+  var message = document.querySelector(".fti-message");
+
+  // Guards
+  var guardMessage = errorHandling.checkElement(message, function(){return true;});
+
+  var distance = guardMessage === undefined ? message.offsetHeight : 0;
+  var messageHeight = message ? parseInt(getComputedStyle(message).height) : 0;
+  var headerHeight = parseInt(getComputedStyle(header).height);
+
+  // Making Navigation sticky depending on scroll position
+  if(position > distance) {
+    header.style.position = "fixed";
+    distance = headerHeight;
+  } else {
+    header.style.position = "static";
+    distance = headerHeight + messageHeight;
+  }
+
+  // Positioning of Navigation
+  headerMobileMenu.style.top = distance + "px";
+  backdrop.style.top = distance + "px";
+
+  // Heighting the Navigation
+  headerMobileMenu.style.removeProperty("height"); // Makes calculation much smoother
+  if (
+    window.innerWidth < globalVariables.breakpoints.sm
+    || (window.innerHeight - distance < parseInt(getComputedStyle(headerMobileMenu).height))
+  ) {
+    headerMobileMenu.style.height = (window.innerHeight - headerHeight - messageHeight) + "px";
+  } else {
+    headerMobileMenu.style.height = "auto";
   }
 };
+
 /* END - Mobile Menu */
 
 /* START - Desktop Menu */
@@ -56,16 +95,16 @@ function toggleLeftShift() {
 
 /* START - Utility functions */
 function isElementInViewportYAxis(element) {
-  var rect = element.getBoundingClientRect();
+  var elementBoundaries = element.getBoundingClientRect();
 
   var windowHeight = window.innerHeight <= document.documentElement.clientHeight ?
     window.innerHeight :
     document.documentElement.clientHeight;
 
   var verticalCheck = true;
-  if (window.innerWidth < globalVariables.breakpoints.lg) { // Tablet
-    verticalCheck = rect.top >= 0 &&
-                    rect.bottom <= windowHeight;
+  if (window.innerWidth < globalVariables.breakpoints.lg) { // Tablet and mobile
+    verticalCheck = elementBoundaries.top >= 0 &&
+                    elementBoundaries.bottom <= windowHeight;
   }
 
   var windowWidth = window.innerWidth <= document.documentElement.clientWidth ?
@@ -73,7 +112,7 @@ function isElementInViewportYAxis(element) {
     document.documentElement.clientWidth;
 
   return (
-    rect.left >= 0 &&
+    elementBoundaries.left >= 0 &&
     windowWidth &&
     verticalCheck
   );
@@ -109,18 +148,19 @@ var openSubMenu = function(mainMenuItem) {
 
   var arrowDown = mainMenuItem.querySelector(".fg-arrow-down");
   addAndRemoveClass(arrowDown, "fg-arrow-up", "fg-arrow-down");
+
+  updateNavigationDistance(lastScrollPosition);
 };
+
 
 var toggleMobileSubMenu = function(mainMenuItem) {
   openSubMenuUl = mainMenuItem.querySelector("ul");
-
   if (openSubMenuUl.className.indexOf("display-block") === -1) {
     openSubMenu(mainMenuItem);
   } else {
     closeSubMenu(mainMenuItem);
   }
-
-  updateVerticalScrollOnMobileMenu();
+  updateNavigationDistance(lastScrollPosition);
 };
 
 var removeClassFromElements = function (elements, classToRemove) {
@@ -137,12 +177,15 @@ var addClassToElements = function (elements, classToAdd) {
   elements.forEach( function(element) {
     element.classList.add(classToAdd);
   });
+
 };
 
 var addAndRemoveClass = function(elements, classToAdd, classToRemove) {
   removeClassFromElements(elements, classToRemove);
   addClassToElements(elements, classToAdd);
 };
+
+// Event Listeners:
 
 var addEventListenersToDesktopMenuItems = function(){
   // Make submenus show on hover on Desktop only
@@ -165,15 +208,34 @@ var addEventListenersToDesktopMenuItems = function(){
   });
 };
 
-var addEventListenersToWindow = function() {
+var addEventListenersForWindowResizing = function() {
   window.addEventListener("resize", function() {
     toggleLeftShift();
-    if (window.innerWidth >= globalVariables.breakpoints.sm &&
-      window.innerWidth < globalVariables.breakpoints.lg) { // Tablet only
-      updateVerticalScrollOnMobileMenu();
+    // Exits desktop navigation, when entering tablet or mobile view
+    if (window.innerWidth < globalVariables.breakpoints.lg) {
+      updateNavigationDistance(lastScrollPosition);
     }
-    if (window.innerWidth >= globalVariables.breakpoints.lg) { // Desktop
+    // Exits mobile/tablet navigation, when entering desktop view
+    if (window.innerWidth >= globalVariables.breakpoints.lg) {
       closeNavigation();
+      updateNavigationDistance(lastScrollPosition);
+    }
+  });
+};
+
+var addEventListenerForMobileScrolling = function() {
+  window.addEventListener("scroll", function() {
+    lastScrollPosition = window.scrollY;
+
+    if (!scrollTicking) {
+      window.requestAnimationFrame(function() {
+        updateNavigationDistance(lastScrollPosition);
+
+        scrollTicking = false;
+        return;
+      });
+
+      scrollTicking = true;
     }
   });
 };
@@ -209,7 +271,8 @@ var initHeaderNavigation = function(){
     backdrop
   ];
 
-  addEventListenersToWindow();
+  addEventListenersForWindowResizing();
+  addEventListenerForMobileScrolling();
 };
 
 module.exports = {
@@ -219,5 +282,5 @@ module.exports = {
   toggleSubMenu   : toggleMobileSubMenu,
   openSubMenu     : openSubMenu,
   closeSubMenu    : closeSubMenu,
-  updateVerticalScrollOnMobileMenu: updateVerticalScrollOnMobileMenu
+  updateNavigationDistance : updateNavigationDistance
 };
