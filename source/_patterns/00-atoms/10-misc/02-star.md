@@ -1,4 +1,4 @@
 ---
 title: star
-state: inprogress
+state: undefined
 ---

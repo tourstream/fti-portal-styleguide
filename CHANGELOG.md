@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.35.0
+- Updates the typography
+- Additionally specifically defines typography for teasers and header elements
+- Renames usable to undefined: Making it possible to explicitly define elements, that are not defined inside design-guide
+- Some clean-up refactoring
+
 ## 0.34.1
 - Navigation no longer overlaps crisis information
 - Small fixes:

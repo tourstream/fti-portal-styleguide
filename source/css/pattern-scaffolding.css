@@ -11,7 +11,7 @@
   padding: 0 0.5em;
 }
 
-.usable::before {
+.undefined::before {
   color: #CC33FF !important;
 }
 
