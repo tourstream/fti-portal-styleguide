@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.35.1
+- Updates the typography for the footer
+
 ## 0.35.0
 - Updates the typography
 - Additionally specifically defines typography for teasers and header elements
