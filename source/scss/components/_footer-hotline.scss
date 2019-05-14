@@ -5,6 +5,10 @@
   background-color: $gray-100;
   color: $gray-600;
 
+  h5 {
+    @extend %small;
+  }
+
   > div > div > div {
     flex: 0 0 100%;
     max-width: 100%;

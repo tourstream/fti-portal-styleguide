@@ -73,15 +73,22 @@ ol {
   line-height: $ol-line-height;
 }
 
-.small {
+%small {
   font-size: $small-font-size;
   line-height: $small-line-height;
 }
 
-.smaller {
+.small {
+  @extend %small;
+}
+
+%smaller {
   font-size: $smaller-font-size;
   line-height: $smaller-line-height;
-;
+}
+
+.smaller {
+  @extend %smaller;
 }
 
 // Special unordered list styles, not defined in design-guide

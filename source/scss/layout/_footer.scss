@@ -2,10 +2,14 @@
 
 // TODO font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 
+//@import "../typography/typography";
+
 footer {
-  font-size: 12px;
-  line-height: 14px;
   text-align: center;
+
+  p {
+    @extend %smaller;
+  }
 }
 
 .footer-hotline,
