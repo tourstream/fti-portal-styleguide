@@ -4,6 +4,7 @@
 
 .footer-menu {
   .nav-item {
+    @extend %smaller;
     border-right: 1px solid $link-color;
 
     &:last-child {
