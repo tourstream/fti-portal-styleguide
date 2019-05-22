@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.37.0
+- Adds new element linked price
+
 ## 0.36.0
 - Re-design of hotel category in a simpler, more stable way
 - Hotel Category is p-font-size dependent
