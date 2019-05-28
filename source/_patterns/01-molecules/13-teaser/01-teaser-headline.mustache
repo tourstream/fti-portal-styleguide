@@ -1,1 +1,6 @@
-<h3 class="teaser-headline">{{ teaserHeadline }}</h3>
+<h3 class="teaser-headline">
+  {{ teaserHeadline }}
+  {{^ teaserHeadline }}
+    The is a teaser headline
+  {{/teaserHeadline}}
+</h3>

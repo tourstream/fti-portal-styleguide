@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.36.0
+- Re-design of hotel category in a simpler, more stable way
+- Hotel Category is p-font-size dependent
+- re-structured data-strings
+- deleted unused components
+- teaser-related components are marked as inprogress
+- body-tag has got a general font-color
+
 ## 0.35.1
 - Updates the typography for the footer
 

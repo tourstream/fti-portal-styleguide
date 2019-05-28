@@ -83,39 +83,6 @@
     {"extraMenuItem": "Impressum"},
     {"extraMenuItem": "AGBs"}
   ],
-  "teaserHeadline": "Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna Unser Reisetipp der Woche: El Gouna",
-  "teaserSubheadline": "Unser Reisetipp der Woche: El Gouna",
-  "teaserDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er dolore magna aliquyam erat",
-  "teaserList": [
-    {
-      "teaserHeadline": "Le petit offer teaser",
-      "teaserDescription": "short description",
-      "btngrdValue": "zu den Angeboten",
-      "btngrdPrefix": "",
-      "btngrdSuffix": "",
-      "btngrdBefore": "",
-      "btngrdAfter": ""
-    },
-    {
-      "teaserHeadline": "looooogn teaser headling with a lot of letters taht no one needs to recognize what this offer is about ",
-      "teaserSubheadline": "Unser Reisetipp der Woche: El Gouna",
-      "teaserDescription": "oh yes, this is a loooooong description ... believe me ... oh yes, this is a loooooong description ... believe me ... oh yes, this is a loooooong description ... believe me ... oh yes, this is a loooooong description ... believe me ... ",
-      "btngrdValue": "zu den Angeboten",
-      "btngrdPrefix": "Rabatt-Schlacht",
-      "btngrdSuffix": "",
-      "btngrdBefore": "heute Spar-Tag mit mehr als 200% Rabatt auf alles *",
-      "btngrdAfter": "* Rabatt auf alles, außer Teewurst"
-    },
-    {
-      "teaserHeadline": "teaserHeadline",
-      "teaserDescription": "teaserDescription",
-      "btngrdValue": "zu den Angeboten",
-      "btngrdPrefix": "",
-      "btngrdSuffix": "",
-      "btngrdBefore": "",
-      "btngrdAfter": ""
-    }
-  ],
   "btngrdValue": "6.666 €",
   "btngrdPrefix": "p.P. ab",
   "btngrdSuffix": "",

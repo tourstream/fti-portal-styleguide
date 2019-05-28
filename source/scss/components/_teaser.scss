@@ -1,6 +1,6 @@
 // TEASER.SCSS
 
-// TODO font-size and padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+// TODO padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 // +-- teaser (optional variant classes) -----------------------------------+
 // | e.g. teaser-content | teaser-offer ... teaser-25 | teaser-50           |
 // |                                                                        |
@@ -13,10 +13,6 @@
 // | |  +-- teaser-body -----------------------------------------------+  | |
 // | |  |                                                              |  | |
 // | |  | +-- teaser-headline --------------------------------------+  |  | |
-// | |  | |                                                         |  |  | |
-// | |  | +---------------------------------------------------------+  |  | |
-// | |  |                                                              |  | |
-// | |  | +-- teaser-subtitle (optional) ---------------------------+  |  | |
 // | |  | |                                                         |  |  | |
 // | |  | +---------------------------------------------------------+  |  | |
 // | |  |                                                              |  | |
@@ -94,8 +90,7 @@
 }
 
 .teaser-headline,
-.teaser-description,
-.teaser-subtitle {
+.teaser-description {
   flex: 0 0 auto;
   hyphens: auto;
 }
@@ -168,7 +163,6 @@
   .teaser-body {
     padding-bottom: 10px;
     padding-top: 10px;
-    //padding: $content-padding-15 10px;
   }
 
   // basic elements

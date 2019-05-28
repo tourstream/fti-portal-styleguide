@@ -1,1 +1,11 @@
-<p class="teaser-description">{{ teaserDescription }}</p>
+<p class="teaser-description">
+    {{ teaserDescription }}
+    {{^teaserDescription }}
+      This is a teaser description. It contains <strong>multiple lines</strong>.
+      The font-color is grey and mostly used inside a paragraph-tag.
+      The usual font size is 16 pixel, which is very readable.
+      If the lines exceeds a certain number of lines, the lines end with three dots.
+      This is how we make sure the teaser always has the right height.
+      So read closely it watch it vanishing.
+    {{/teaserDescription}}
+</p>

@@ -6,6 +6,7 @@ html {
 }
 
 body {
+  color: $font-color;
   font-size: $p-font-size;
   font-weight: $font-weight-normal;
   line-height: $p-line-height;
@@ -60,6 +61,7 @@ span {
 }
 
 strong {
+  display: inline;
   font-weight: $font-weight-bold;
 }
 
