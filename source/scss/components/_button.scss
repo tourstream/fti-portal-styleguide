@@ -9,3 +9,9 @@
   padding: 0;
   vertical-align: baseline;
 }
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: $white;
+}

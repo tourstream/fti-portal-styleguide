@@ -1,0 +1,22 @@
+{{> organisms-header }}
+{{> organisms-page-headline }}
+
+<main role="main" class="container">
+
+  <p>On this page you will see different versions of linked prices inside an offer teaser 50.</p>
+
+
+  <h3>Teaser offer 50</h3>
+  <div class="teaser-list">
+    {{# teaserOffer50List }}
+      {{> organisms-offer-teaser-linked-price-50 }}
+    {{/ teaserOffer50List }}
+
+    {{^ teaserOffer50List }}
+      <p>... coming soon ...</p>
+    {{/ teaserOffer50List }}
+  </div>
+
+</main>
+{{> organisms-footer }}
+

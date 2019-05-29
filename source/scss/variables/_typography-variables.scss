@@ -60,6 +60,15 @@ $header-bookmark-line-height: .75rem;
 $header-hotline-font-size: $smaller-font-size;
 $header-hotline-line-height: $font-size-base;
 
+// Linked Price
+// Used for Offer Teaser and Multi Offer Teaser
+$linked-price-font-size: $font-size-base * 1.375;
+$linked-price-line-height: $font-size-base * 1.625;
+$linked-price-font-weight: $font-weight-bold;
+$linked-price-letter-spacing: .3px;
+$linked-price-info-font-size: $font-size-base * .75;
+$linked-price-info-line-height: $font-size-base * 1;
+
 /*
   Todo another definition of H1 which, for SEO reasons, shouldn't be here. We should prevent having an h1 title in the background element.
    Or semantic html division.

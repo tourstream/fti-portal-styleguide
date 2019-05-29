@@ -1,0 +1,54 @@
+// Base
+$gray-100: #eeeeee;
+$gray-300: #b3b3b3;
+$gray-400: #929497;
+$gray-600: #666666;
+$gray-800: #424242;
+
+$red: #fc1119;
+$orange: #ff9933;
+$yellow: #ffc700;
+$green: #96c948;
+$cyan: #0099cc;
+$white: #ffffff;
+$black: #000000;
+
+// Corporate Colors
+$primary: $orange;
+$primary-20: lighten($primary, 20%);
+$primary-40: lighten($primary, 40%);
+$primary-60: lighten($primary, 60%);
+$primary-80: lighten($primary, 80%);
+
+$secondary: $gray-600;
+$secondary-20: lighten($secondary, 20%);
+$secondary-40: lighten($secondary, 40%);
+$secondary-60: lighten($secondary, 60%);
+$secondary-80: lighten($secondary, 80%);
+
+$font-color: $gray-600;
+
+///////// LIGHT/DARK CONTRAST
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+//$yiq-contrasted-threshold: 200;
+
+// TEXT
+$text-muted: $gray-300;
+
+// BOX-SHADOW
+$box-down-shadow: 0 3px 10px 0 transparentize($black, .9);
+$box-shadow: 0 0 1rem 0 transparentize($black, .9);
+$dropdown-shadow: 0 4px 5px 2px transparentize($black, .9);
+
+// FOCUS
+$input-btn-focus-color: transparentize($primary, .5);
+
+///////// COMPONENTS
+
+// LINKS
+$link-color: $orange;
+$link-hover-color: $link-color;
+
+// TAB
+$tab-background-color: transparentize($gray-100, .25);

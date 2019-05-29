@@ -1,0 +1,82 @@
+
+// +----- linked-price (optional variant classes) -------------------------------------------+
+// |                                                                                         |
+// | +--- linked-price-top ----------------------------------------------------------------+ |
+// | |                                                                                     | |
+// | | +- linked-price-info -----------------------------------+  +----------------------+ | |
+// | | |                                                       |  |                      | | |
+// | | |                        atom                           |  |           x          | | |
+// | | |                                                       |  |                      | | |
+// | | +-------------------------------------------------------+  +----------------------+ | |
+// | +-------------------------------------------------------------------------------------+ |
+// |                                                                                         |
+// | +--- linked-price-body ---------------------------------------------------------------+ |
+// | |                                                                                     | |
+// | | +- linked-price-currency -+  +- linked-price-value -----+  +- linked-price-arrow -+ | |
+// | | |                         |  |                          |  |     arrow-right      | | |
+// | | |                         |  |                          |  |         or           | | |
+// | | |            atom         |  |       atom               |  |          x           | | |
+// | | |                         |  |                          |  |                      | | |
+// | | +-------------------------+  +--------------------------+  +----------------------+ | |
+// | +-------------------------------------------------------------------------------------+ |
+// +-----------------------------------------------------------------------------------------+
+
+// Grid definitions:
+.linked-price {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+
+  .linked-price-top,
+  .linked-price-body {
+    display: flex;
+
+    div:first-child {
+      flex-grow: 1;
+    }
+
+    div:last-child {
+      width: $linked-price-font-size;
+    }
+  }
+
+  .linked-price-body {
+    align-items: baseline;
+    line-height: normal;
+  }
+}
+
+// Typography:
+.linked-price-value {
+  font-size: $linked-price-font-size;
+  font-weight: $linked-price-font-weight;
+  letter-spacing: $linked-price-letter-spacing;
+  line-height: $linked-price-line-height;
+}
+
+.linked-price-currency {
+  font-weight: $linked-price-font-weight;
+  margin-right: 4px;
+  text-align: right;
+}
+
+.linked-price-info {
+  color: transparentize($secondary, .2);
+  font-size: $linked-price-info-font-size;
+  line-height: $linked-price-info-line-height;
+  text-align: right;
+}
+
+.linked-price-currency,
+.linked-price-value,
+.linked-price-arrow {
+  color: $primary;
+  height: 0%;
+}
+
+.linked-price-arrow i {
+  font-size: $linked-price-font-size;
+  position: relative;
+  top: 3px;
+  vertical-align: baseline;
+}
