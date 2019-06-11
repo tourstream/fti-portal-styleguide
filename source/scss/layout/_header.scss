@@ -6,6 +6,7 @@ body > header {
   display: block;
   margin: 0 auto;
   min-width: 320px;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: $header-z-index;
@@ -29,18 +30,17 @@ body > header {
   }
 }
 
-.fixed-header {
-  display: block;
-  height: $logo-width-mobile;
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body > header {
+    position: fixed;
+    top: 0;
+    transition: all 0ms;
+  }
 }
 
 @include media-breakpoint-up(lg) {
   body > header {
     position: static;
-  }
-
-  .fixed-header {
-    display: none;
   }
 
   body > header > div > :nth-child(3) {

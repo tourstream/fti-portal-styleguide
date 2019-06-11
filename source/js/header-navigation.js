@@ -34,50 +34,47 @@ var closeNavigation = function() {
 };
 
 var updateNavigationDistance = function(position) {
-
-  // Resetting desktop menu
+  var isBreakPointSM = window.innerWidth < globalVariables.breakpoints.sm;
+  var isBreakPointLG = window.innerWidth < globalVariables.breakpoints.lg;
   var header = document.querySelector("header");
+  var message = document.querySelector(".fti-message");
+  // Guards
   var guardHeader = errorHandling.checkElement(header, function(){return true;});
+  var guardMessage = errorHandling.checkElement(message, function(){return true;});
   if(guardHeader === false){return;}
 
-  if (window.innerWidth >= globalVariables.breakpoints.lg) {
-    header.style.position = "static";
-    return;
-  }
+  var navigationDistance = guardMessage === undefined ? message.offsetHeight : 0;
 
-  // Tablet and mobile functionality
-  var message = document.querySelector(".fti-message");
-
-  // Guards
-  var guardMessage = errorHandling.checkElement(message, function(){return true;});
-
-  var distance = guardMessage === undefined ? message.offsetHeight : 0;
-  var messageHeight = message ? parseInt(getComputedStyle(message).height) : 0;
+  var messageHeight = message ? parseInt(getComputedStyle(message).height) + parseInt(getComputedStyle(message).paddingBottom) + parseInt(getComputedStyle(message).paddingTop) : 0;
   var headerHeight = parseInt(getComputedStyle(header).height);
 
-  // Making Navigation sticky depending on scroll position
-  if(position > distance) {
-    header.style.position = "fixed";
-    distance = headerHeight;
-  } else {
-    header.style.position = "static";
-    distance = headerHeight + messageHeight;
+  // iE11: Makes <header> sticky and positions it depending on scroll position
+  if (isIE) {
+    if(isBreakPointLG && position > navigationDistance ) {
+      header.style.position = "fixed";
+      header.style.top = "0px";
+    }
+    else {
+      header.style.position = "static";
+      header.style.top = messageHeight + "px";
+    }
   }
 
-  // Positioning of Navigation
-  headerMobileMenu.style.top = distance + "px";
-  backdrop.style.top = distance + "px";
+  position > navigationDistance ?
+    navigationDistance = headerHeight :
+    navigationDistance = headerHeight + messageHeight;
+
+  // Positions Navigation
+  headerMobileMenu.style.top = navigationDistance + "px";
+  backdrop.style.top = navigationDistance + "px";
 
   // Heighting the Navigation
+  var isOverflowingWindowHeight = window.innerHeight - navigationDistance < parseInt(getComputedStyle(headerMobileMenu).height);
   headerMobileMenu.style.removeProperty("height"); // Makes calculation much smoother
-  if (
-    window.innerWidth < globalVariables.breakpoints.sm
-    || (window.innerHeight - distance < parseInt(getComputedStyle(headerMobileMenu).height))
-  ) {
-    headerMobileMenu.style.height = (window.innerHeight - headerHeight - messageHeight) + "px";
-  } else {
+
+  isBreakPointSM || isOverflowingWindowHeight ?
+    headerMobileMenu.style.height = (window.innerHeight - headerHeight - messageHeight) + "px" :
     headerMobileMenu.style.height = "auto";
-  }
 };
 
 /* END - Mobile Menu */
@@ -185,6 +182,15 @@ var addAndRemoveClass = function(elements, classToAdd, classToRemove) {
   addClassToElements(elements, classToAdd);
 };
 
+var isIE = (function () {
+  return (
+    (navigator.appName === "Microsoft Internet Explorer") ||
+    (
+      (navigator.appName === "Netscape") &&
+      (new RegExp("Trident/.*rv:([0-9]+[0-9]*)").exec(navigator.userAgent) != null)
+    ));
+})();
+
 // Event Listeners:
 
 var addEventListenersToDesktopMenuItems = function(){
@@ -225,12 +231,11 @@ var addEventListenersForWindowResizing = function() {
 
 var addEventListenerForMobileScrolling = function() {
   window.addEventListener("scroll", function() {
-    lastScrollPosition = window.scrollY;
+    lastScrollPosition = isIE ? window.pageYOffset : window.scrollY;
 
     if (!scrollTicking) {
       window.requestAnimationFrame(function() {
         updateNavigationDistance(lastScrollPosition);
-
         scrollTicking = false;
         return;
       });
@@ -273,6 +278,8 @@ var initHeaderNavigation = function(){
 
   addEventListenersForWindowResizing();
   addEventListenerForMobileScrolling();
+
+  updateNavigationDistance();
 };
 
 module.exports = {

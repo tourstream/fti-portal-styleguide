@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.38.0
+- Removes the space created under the header
+- Cleaned up code and made it more stable and readable
+
 ## 0.37.0
 - Adds new element linked price
 
