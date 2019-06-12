@@ -1,0 +1,20 @@
+{{> organisms-header }}
+{{> organisms-page-headline }}
+
+<main role="main" class="container">
+
+  <p>We are slowly building multioffer teasers here.</p>
+
+  <div class="teaser-list">
+    {{# multiOfferTeaser50List }}
+      {{> organisms-multioffer-teaser-50 }}
+    {{/ multiOfferTeaser50List }}
+
+    {{^ multiOfferTeaser50List }}
+      <p>... coming soon ...</p>
+    {{/ multiOfferTeaser50List }}
+  </div>
+
+</main>
+{{> organisms-footer }}
+

@@ -1,0 +1,40 @@
+{
+  "pageHeadline": "Multioffer Teaser",
+  "multiOfferTeaser50List": [
+    {
+      "h3Content": "Le petit multi offer teaser",
+      "h4Content": "A short description",
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.P. ab",
+      "linkedPriceValue": "3.824"
+    },
+    {
+      "h3Content": "A multioffer h3 headline",
+      "h4Content": "A multioffer h4 in raw case",
+      "linkedPriceCurrency": "CHF",
+      "linkedPriceInfo": "p.P. ab € 3.824 /",
+      "linkedPriceValue": "4359"
+    },
+    {
+      "h3Content": "Top 5 LABRANDA Hotels weltweit ",
+      "h4Content": "inkl. Flug",
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.p vanaf",
+      "linkedPriceValue": "4.359"
+    },
+    {
+      "h3Content": "What Really Is The Best #Headline Length?",
+      "h4Content": "What Really Is The Best #Headline Length?",
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.p vanaf",
+      "linkedPriceValue": "4.359"
+    },
+    {
+      "h3Content": "How To Write The Best Headlines The Old School Way And Wondering Why We Are Doing This",
+      "h4Content": "How To Write The Best Headlines The Old School Way",
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.p vanaf",
+      "linkedPriceValue": "4.359"
+    }
+  ]
+}

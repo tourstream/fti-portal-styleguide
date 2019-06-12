@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.39.0
+- Adds Multioffer Teaser headlines
+- Changes Linked Price page to Multioffer Teaser page to show both together
+
 ## 0.38.0
 - Removes the space created under the header
 - Cleaned up code and made it more stable and readable

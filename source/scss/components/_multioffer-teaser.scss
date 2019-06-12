@@ -1,0 +1,18 @@
+.multioffer-teaser-head {
+
+  margin-bottom: $content-padding-15;
+
+  h3 {
+    @include multi-line-cut($mo-teaser-h3-line-height, 2);
+    line-height: $mo-teaser-h3-line-height;
+  }
+
+  h4 {
+    @include multi-line-cut($h4-line-height, 1);
+    text-transform: none;
+  }
+
+  h4:empty {
+    display: none;
+  }
+}
