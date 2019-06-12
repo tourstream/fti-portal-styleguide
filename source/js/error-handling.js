@@ -3,7 +3,7 @@
  * Catches Errors and
  * makes script keep running.
  * The Styleguide uses a cookie per default.
- * On your portal add a cookie with debug=1.
+ * On your portal add a cookie with debug=1 or add ?debug=1 to your url parameters.
  * */
 
 /**

@@ -1,7 +1,7 @@
 /* global errorHandling:false */
 var adjustSkyscraperPositioning = function() {
   var mainElement = document.querySelector("main");
-  var skyscraper = document.querySelector("ad-skyscraper-wrapper");
+  var skyscraper = document.querySelector(".ad-skyscraper-wrapper");
 
   var guardMainElement = errorHandling.checkElement(mainElement, function(){return true;});
   var guardSkyscraper = errorHandling.checkElement(skyscraper, function(){return true;});
@@ -12,7 +12,10 @@ var adjustSkyscraperPositioning = function() {
   ) {return;}
 
   var newHeight = mainElement.offsetTop;
+
   skyscraper.style.top = newHeight + "px";
+
+  return newHeight;
 };
 
 module.exports = {

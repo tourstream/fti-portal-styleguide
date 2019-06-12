@@ -68,7 +68,7 @@ Use `npm run lint` to test your code styling.
 
 ### Debug mode
 The Styleguide turns on debug mode per default using a cookie.
-You can turn on debug mode on your portal by creating a cookie manually with debug=1.
+You can turn on debug mode on your portal by creating a cookie manually with debug=1 or by adding ?debug=1 to your url parameters.
 Follow the instructions inside the error handling.
 
 ### Changelog

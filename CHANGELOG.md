@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.39.1
+- Fixes skyscraper positioning
+- Adds url parameter option to debug mode
+
 ## 0.39.0
 - Adds Multioffer Teaser headlines
 - Changes Linked Price page to Multioffer Teaser page to show both together
