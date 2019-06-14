@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.39.2
+- Corrects font-family
+
 ## 0.39.1
 - Fixes skyscraper positioning
 - Adds url parameter option to debug mode
