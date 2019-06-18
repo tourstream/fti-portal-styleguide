@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.39.3
+- Fixes primary button hover color
+
 ## 0.39.2
 - Corrects font-family
 

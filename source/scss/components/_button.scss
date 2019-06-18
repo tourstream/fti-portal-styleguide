@@ -14,4 +14,12 @@
   background-color: $primary;
   border-color: $primary;
   color: $white;
+
+  &:hover,
+  &:active,
+  &:not(:disabled):not(.disabled):active {
+    background-color: $button-hover-color;
+    border-color: $button-hover-border-color;
+    color: $white;
+  }
 }
