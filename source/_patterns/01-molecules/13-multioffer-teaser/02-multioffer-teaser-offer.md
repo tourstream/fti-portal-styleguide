@@ -1,4 +1,5 @@
 ---
 title: Multioffer Teaser Offer
-state: inprogress
+state: complete
 ---
+

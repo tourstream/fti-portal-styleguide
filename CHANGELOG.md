@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.40.0
+- Introduces Multi Offer Teaser
+
 ## 0.39.3
 - Fixes primary button hover color
 

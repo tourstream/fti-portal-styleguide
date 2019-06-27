@@ -1,0 +1,51 @@
+{
+  "h3Content": "How To Write The Best Headlines The Old School Way And Wondering Why We Are Doing This",
+  "h4Content": "It has 5 offers to show. How To Write The Best Headlines The Old School Way",
+  "multiOffer": [
+    {
+      "h5Content": "Fuerteventura ",
+      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"content": "LABRANDA Blue Bay "},
+      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.p vanaf",
+      "linkedPriceValue": "2.352"
+    },
+    {
+      "h5Content": "Ramada Plaza Jumeirah Beach ",
+      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"content": "LABRANDA Blue Bay "},
+      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.p vanaf",
+      "linkedPriceValue": "4.359"
+    },
+    {
+      "h5Content": "Vakanties Turkije All-inclusive naar Turkije ",
+      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"content": "LABRANDA Blue Bay "},
+      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.p vanaf",
+      "linkedPriceValue": "2.352"
+    },
+    {
+      "h5Content": "Griekenland vakanties Kies voor de Griekse eilanden ",
+      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"content": "LABRANDA Blue Bay "},
+      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.p vanaf",
+      "linkedPriceValue": "6.359"
+    },
+    {
+      "h5Content": "Vakanties Marokko Naar het zonnige Marokko ",
+      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"content": "LABRANDA Blue Bay "},
+      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.p vanaf",
+      "linkedPriceValue": "3.379"
+    }
+  ]
+}

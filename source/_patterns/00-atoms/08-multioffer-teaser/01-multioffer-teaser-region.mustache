@@ -1,0 +1,10 @@
+<div class="multi-teaser-region">
+  {{#region}}
+    {{#content}}
+      {{> atoms-simple-p-text}}
+    {{/content}}
+    {{^content}}
+      <p><!-- Imitating empty p-tag to trigger :empty css selector --></p>
+    {{/content}}
+  {{/region}}
+</div>

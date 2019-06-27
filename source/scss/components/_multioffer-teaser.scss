@@ -1,6 +1,105 @@
-.multioffer-teaser-head {
+// +----- multi-teaser-list (Optional variant classes) --------------------------------------+
+// |                                                                                         |
+// | +--- multi-teaser multi-teaser-100 or multi-teaser multi-teaser-50 -------------------+ |
+// | |                                                                                     | |
+// | |    molecules                                                                        | |
+// | +-------------------------------------------------------------------------------------+ |
+// |                                                                                         |
+// | +--- multi-teaser multi-teaser-100 or multi-teaser multi-teaser-50 -------------------+ |
+// | |                                                                                     | |
+// | |    molecules                                                                        | |
+// | +-------------------------------------------------------------------------------------+ |
+// +-----------------------------------------------------------------------------------------+
 
-  margin-bottom: $content-padding-15;
+
+// +----- multi-teaser multi-teaser-100 or multi-teaser multi-teaser-50----------------------+
+// |                                                                                         |
+// | +--- multi-teaser-head ---------------------------------------------------------------+ |
+// | |                                                                                     | |
+// | | +--- h3 --------------------------------------------------------------------------+ | |
+// | | +---------------------------------------------------------------------------------+ | |
+// | |                                                                                     | |
+// | | +--- h4 (Can be empty)------------------------------------------------------------+ | |
+// | | +---------------------------------------------------------------------------------+ | |
+// | +-------------------------------------------------------------------------------------+ |
+// |                                                                                         |
+// | +--- multi-teaser-offer-container (Contains all offers) ------------------------------+ |
+// | |                                                                                     | |
+// | |    Molcule: multioffer-teaser-offer                                                 | |
+// | +-------------------------------------------------------------------------------------+ |
+// +-----------------------------------------------------------------------------------------+
+
+
+// +----- multi-teaser-offer ----------------------------------------------------------------+
+// |                                                                                         |
+// | +---- h5 -----------------------------------------------------------------------------+ |
+// | +-------------------------------------------------------------------------------------+ |
+// |                                                                                         |
+// | +---- div -------------------------------------------------------------+ +------------+ |
+// | |                                                                      | |            | |
+// | | +---- multi-teaser-region -----------------------------------------+ | |            | |
+// | | |                                                                  | | |   linked   | |
+// | | +------------------------------------------------------------------+ | |    price   | |
+// | | +---- multi-teaser-hotel-content -+ +---- multi-teaser-info -------+ | |            | |
+// | | |                                 | |       (Floats down)          | | |            | |
+// | | +------------------------------------------------------------------+ | +------------+ |
+// | +-------------------------------------------------------------------------------------+ |
+// +-----------------------------------------------------------------------------------------+
+
+// Parent element
+.multi-teaser-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: ($grid-gutter-width / 2 * -1);
+  margin-right: ($grid-gutter-width / 2 * -1);
+}
+
+.multi-teaser-50 {
+  flex: 0 1 100%;
+  margin-bottom: $grid-gutter-width;
+  margin-left: $grid-gutter-width / 2;
+  margin-right: $grid-gutter-width / 2;
+
+  .multi-teaser-hotel-content {
+    flex: 1 0 55%;
+  }
+}
+
+.multi-teaser-100 {
+  flex: 0 1 100%;
+  margin-bottom: $grid-gutter-width;
+  margin-left: $grid-gutter-width / 2;
+  margin-right: $grid-gutter-width / 2;
+
+  .multi-teaser-hotel-content {
+    flex: 1 0 55%;
+    @include media-breakpoint-up(md) {
+      flex: 0 0 55%;
+    }
+  }
+}
+
+@include media-breakpoint-up("md") {
+  .multi-teaser-50 {
+    flex: 0 1 calc(50% - #{$grid-gutter-width});
+    max-width: calc(50% - #{$grid-gutter-width});
+  }
+}
+
+// Multi Teaser
+.multi-teaser {
+  @extend %teaser-boxing;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.multi-teaser-head {
+  flex: 0 0 auto;
+  padding: $content-padding-15;
 
   h3 {
     @include multi-line-cut($mo-teaser-h3-line-height, 2);
@@ -16,3 +115,117 @@
     display: none;
   }
 }
+
+.multi-teaser-offer-container {
+  align-items: center;
+  border-bottom: $gray-100 1px solid;
+  display: flex;
+  flex: 1 0 auto;
+  padding: auto 0;
+
+  &:hover,
+  &:active {
+    background-color: transparentize($gray-300, .9);
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.multi-teaser-offer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px $content-padding-15;
+  width: 100%;
+
+  h5 {
+    @include multi-line-cut($h5-line-height, 1);
+    flex: 1 0 100%;
+  }
+}
+
+.multi-teaser-offer-body {
+  display: flex;
+  width: 100%;
+
+  .linked-price {
+    flex: 0 0 110px;
+    justify-content: flex-end;
+    margin-left: $grid-gutter-width / 2;
+  }
+
+  > div {
+    align-content: flex-end;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+  }
+
+  > div > .multi-teaser-region {
+    flex: 1 1 100%;
+  }
+
+  > div > .multi-teaser-info {
+
+    @include multi-line-cut($small-line-height, 1);
+    flex: 1 1 auto;
+
+    p {
+      @extend %small;
+    }
+  }
+}
+
+.multi-teaser-hotel-content {
+  display: flex;
+  margin-right: $grid-gutter-width / 2;
+
+
+}
+
+
+%subline {
+  display: flex; // TODO flex stuff
+  flex: 1 1 100%;
+  flex-wrap: nowrap;
+
+  p {
+    @extend %small;
+    @include multi-line-cut($small-line-height, 1);
+  }
+
+  &:empty,
+  p:empty {
+    display: none;
+  }
+}
+
+.multi-teaser-region {
+  @extend %subline;
+}
+
+.multi-teaser-hotel-name {
+  @extend %subline;
+
+  .mot_stars {
+    top: 0;
+  }
+
+  p {
+    margin-right: 5px;
+  } // Quick fix for Hotel stars ignoring white space in Hotel Name
+}
+
+/// Extra typography
+
+.multi-teaser-offer h5 {
+  font-size: $font-size-base;
+}
+
+@include media-breakpoint-up(md) {
+  .multi-teaser-offer h5 {
+    font-size: $font-size-base * 1.125;
+  }
+}
+

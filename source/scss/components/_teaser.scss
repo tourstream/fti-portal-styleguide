@@ -1,5 +1,10 @@
 // TEASER.SCSS
 
+%teaser-boxing {
+  background-color: $white;
+  box-shadow: $box-shadow;
+}
+
 // TODO padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 // +-- teaser (optional variant classes) -----------------------------------+
 // | e.g. teaser-content | teaser-offer ... teaser-25 | teaser-50           |
@@ -48,8 +53,8 @@
 }
 
 .teaser-box {
-  background-color: $white;
-  box-shadow: $box-shadow;
+  @extend %teaser-boxing;
+
   color: inherit;
   display: flex;
   flex-direction: column;

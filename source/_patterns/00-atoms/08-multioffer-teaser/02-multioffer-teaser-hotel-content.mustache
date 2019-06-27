@@ -1,0 +1,13 @@
+<div class="multi-teaser-hotel-content">
+  <div class="multi-teaser-hotel-name">
+    {{#hotel}}
+      {{#content}}
+        {{> atoms-simple-p-text}}
+      {{/content}}
+      {{^hotel.content}}
+        <p><!-- Imitating empty p-tag to trigger :empty css selector --></p>
+      {{/hotel.content}}
+    {{/hotel}}
+    {{> molecules-hotel-category-images }}
+  </div>
+</div>

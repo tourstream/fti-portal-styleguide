@@ -4,15 +4,32 @@
 <main role="main" class="container">
 
   <p>We are slowly building multioffer teasers here.</p>
+  <p>Each set of offers in a multi teaser has the same set of content:
+    For example Title, region, hotel name with hotel rating, info and price button.
+    Another multi teaser could have only a title, hotel rating, info and price button.</p>
 
-  <div class="teaser-list">
-    {{# multiOfferTeaser50List }}
+  <h4>Multi Teaser with 50% width</h4>
+
+  <div class="multi-teaser-list">
+    {{# multiOfferTeaserList }}
       {{> organisms-multioffer-teaser-50 }}
-    {{/ multiOfferTeaser50List }}
+    {{/ multiOfferTeaserList }}
 
-    {{^ multiOfferTeaser50List }}
-      <p>... coming soon ...</p>
-    {{/ multiOfferTeaser50List }}
+    {{^ multiOfferTeaserList }}
+      <p>... No multi teaser found ...</p>
+    {{/ multiOfferTeaserList }}
+  </div>
+
+  <h4>Multi Teaser with 100% width</h4>
+
+  <div class="multi-teaser-list">
+    {{# multiOfferTeaserList }}
+      {{> organisms-multioffer-teaser-100 }}
+    {{/ multiOfferTeaserList }}
+
+    {{^ multiOfferTeaserList }}
+      <p>... No multi teaser found ...</p>
+    {{/ multiOfferTeaserList }}
   </div>
 
 </main>

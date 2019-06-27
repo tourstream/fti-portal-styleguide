@@ -24,8 +24,7 @@
   "homepage": "https://github.com/tourstream/fti-portal-styleguide#readme",
   "engines": {
     "node": ">= 8.6.0",
-    "npm": ">= 3.0.0",
-    "yarn": ">= 1.0.0"
+    "npm": ">= 3.0.0"
   },
   "publishConfig": {
     "access": "public"
