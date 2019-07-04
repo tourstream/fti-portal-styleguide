@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.41.1
+## 0.41.2
 - With adding .container to info-message it becomes part of the centered content
 
 ## 0.40.0
