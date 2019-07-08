@@ -1,3 +1,5 @@
+// TODO general anker definitions should go here.
+
 // GENERAL
 html {
   font-size: $font-size-base;
@@ -108,4 +110,9 @@ ol {
       margin-right: 10px;
     }
   }
+}
+
+%teaser-anker-text {
+  color: inherit;
+  text-decoration: none;
 }

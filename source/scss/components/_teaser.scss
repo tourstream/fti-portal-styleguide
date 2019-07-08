@@ -54,15 +54,14 @@
 
 .teaser-box {
   @extend %teaser-boxing;
-
-  color: inherit;
+  @extend %teaser-anker-text;
+  
   display: flex;
   flex-direction: column;
   height: 100%;
 
   &:hover {
-    color: inherit;
-    text-decoration: none;
+    @extend %teaser-anker-text;
   }
 }
 

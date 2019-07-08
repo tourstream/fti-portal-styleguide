@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.41.3
+- Improves Multi Offer Teaser by giving it an anker for the offer
+
 ## 0.41.2
 - With adding .container to info-message it becomes part of the centered content
 

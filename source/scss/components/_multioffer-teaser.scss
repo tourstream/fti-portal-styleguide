@@ -23,7 +23,7 @@
 // | | +---------------------------------------------------------------------------------+ | |
 // | +-------------------------------------------------------------------------------------+ |
 // |                                                                                         |
-// | +--- multi-teaser-offer-container (Contains all offers) ------------------------------+ |
+// | +--- a multi-teaser-offer-container (Contains all offers) ----------------------------+ |
 // | |                                                                                     | |
 // | |    Molcule: multioffer-teaser-offer                                                 | |
 // | +-------------------------------------------------------------------------------------+ |
@@ -117,6 +117,7 @@
 }
 
 .multi-teaser-offer-container {
+  @extend %teaser-anker-text;
   align-items: center;
   border-bottom: $gray-100 1px solid;
   display: flex;
@@ -125,6 +126,7 @@
 
   &:hover,
   &:active {
+    @extend %teaser-anker-text;
     background-color: transparentize($gray-300, .9);
   }
 
