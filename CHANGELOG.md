@@ -1,6 +1,11 @@
-# fti-portal-styleguide Change Log
+
 
 All notable changes to this project will be documented in this file.
+
+## 0.42.0
+- Adds cross-browser multiline ellipsis
+- Updates sass configuration for Node 8+ usages
+- Updates README
 
 ## 0.41.3
 - Improves Multi Offer Teaser by giving it an anker for the offer

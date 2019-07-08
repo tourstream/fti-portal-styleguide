@@ -75,6 +75,7 @@
   flex: 1 0 auto;
   flex-direction: column;
   padding: $content-padding-15;
+  word-break: break-all;
 }
 
 .teaser-cta {
@@ -99,12 +100,7 @@
   hyphens: auto;
 }
 
-.teaser-headline {
-  @include multi-line-cut($h3-line-height, 2);
-}
-
 .teaser-description {
-  @include multi-line-cut($p-line-height, 4);
   margin-bottom: 1rem;
 }
 
@@ -167,25 +163,5 @@
   .teaser-body {
     padding-bottom: 10px;
     padding-top: 10px;
-  }
-
-  // basic elements
-  .teaser-headline {
-    @include multi-line-cut($teaser-50-h3-line-height, 2);
-  }
-
-  .teaser-description {
-    @include multi-line-cut($teaser-50-p-line-height, 4);
-  }
-
-  // specials by teaser-size
-  .teaser-25 {
-    .teaser-headline {
-      @include multi-line-cut($teaser-25-h3-line-height, 2);
-    }
-
-    .teaser-description {
-      @include multi-line-cut($teaser-25-p-line-height, 4);
-    }
   }
 }

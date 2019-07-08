@@ -3,9 +3,6 @@
 [![Build Status][travis-image]][travis-url]
 [![Demo][demo-image]][demo-url]
 [![License][license-image]][license-url]
-
-[![Heroku production][heroku-production-image]][heroku-production-url]
-[![Heroku staging][heroku-staging-image]][heroku-staging-url]
 ***
 
 # FTI Portal Styleguide
@@ -41,7 +38,7 @@ Note: Some portals use an individual way to implement the Styleguide. Read their
 
 ### npm package
 
-If you want to use the npm package just install with [npm](https://www.npmjs.com/)
+If you want to use the npm package just install with [npm](https://www.npmjs.com/). It requires Node 8 or higher.
 
 ```sh
 $ npm install @tourstream/fti-portal-styleguide --save
@@ -115,8 +112,3 @@ Visit [Confluence](https://confluence.fti-group.com/display/PORTALS/Styleguide?s
 
 [license-image]: https://img.shields.io/github/license/tourstream/fti-portal-styleguide.svg?style=flat-square
 [license-url]: https://github.com/tourstream/fti-portal-styleguide/blob/master/LICENSE
-
-[heroku-production-image]: https://img.shields.io/badge/Heroku-production-79589F.svg?style=flat-square
-[heroku-production-url]: https://fti-portal-styleguide.herokuapp.com/
-[heroku-staging-image]: https://img.shields.io/badge/Heroku-staging-79589F.svg?style=flat-square
-[heroku-staging-url]: https://fti-portal-styleguide-staging.herokuapp.com/

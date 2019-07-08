@@ -20,24 +20,24 @@ var checkElement = function(element, callbackFunction) {
   if(globalVariables.debugMode === "1") {
     // Debug mode
     switch (element) {
-    case null:
-      console.error("This element does not exist");
-      return false;
-    case undefined:
-      console.error("The value is undefined");
-      break;
-    default:
-      callbackFunction();
+      case null:
+        console.error("This element does not exist");
+        return false;
+      case undefined:
+        console.error("The value is undefined");
+        break;
+      default:
+        callbackFunction();
     }
   } else {
     // Production
     switch (element) {
-    case null:
-      return false;
-    case undefined:
-      break;
-    default:
-      callbackFunction();
+      case null:
+        return false;
+      case undefined:
+        break;
+      default:
+        callbackFunction();
     }
   }
 };

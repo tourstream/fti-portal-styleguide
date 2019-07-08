@@ -73,6 +73,7 @@
 
   .multi-teaser-hotel-content {
     flex: 1 0 55%;
+
     @include media-breakpoint-up(md) {
       flex: 0 0 55%;
     }
@@ -91,6 +92,7 @@
   @extend %teaser-boxing;
   display: flex;
   flex-direction: column;
+  word-break: break-all;
 
   p {
     margin-bottom: 0;
@@ -102,12 +104,12 @@
   padding: $content-padding-15;
 
   h3 {
-    @include multi-line-cut($mo-teaser-h3-line-height, 2);
+    hyphens: auto;
     line-height: $mo-teaser-h3-line-height;
   }
 
   h4 {
-    @include multi-line-cut($h4-line-height, 1);
+    hyphens: auto;
     text-transform: none;
   }
 
@@ -142,8 +144,8 @@
   width: 100%;
 
   h5 {
-    @include multi-line-cut($h5-line-height, 1);
     flex: 1 0 100%;
+    hyphens: auto;
   }
 }
 
@@ -169,9 +171,9 @@
   }
 
   > div > .multi-teaser-info {
-
-    @include multi-line-cut($small-line-height, 1);
     flex: 1 1 auto;
+    height: $small-line-height;
+    overflow: hidden;
 
     p {
       @extend %small;
@@ -182,19 +184,16 @@
 .multi-teaser-hotel-content {
   display: flex;
   margin-right: $grid-gutter-width / 2;
-
-
 }
 
-
 %subline {
-  display: flex; // TODO flex stuff
+  display: flex;
   flex: 1 1 100%;
   flex-wrap: nowrap;
 
   p {
     @extend %small;
-    @include multi-line-cut($small-line-height, 1);
+    height: $small-line-height;
   }
 
   &:empty,
@@ -215,8 +214,14 @@
   }
 
   p {
-    margin-right: 5px;
-  } // Quick fix for Hotel stars ignoring white space in Hotel Name
+    $margin-right: 5px; // Quick fix for Hotel stars ignoring white space in Hotel Name
+    margin-right: $margin-right;
+
+    @media all and (-ms-high-contrast:none) {
+      white-space: nowrap;
+      width: calc(100% - 48px - #{$margin-right});
+    }
+  } 
 }
 
 /// Extra typography

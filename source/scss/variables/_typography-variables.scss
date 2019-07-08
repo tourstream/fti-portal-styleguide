@@ -1,5 +1,5 @@
 // Base
-$font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+$font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $font-size-base: 1rem; // Assumes the browser default, typically '16px'
 
 $font-weight-regular: 400;
@@ -15,8 +15,8 @@ $h5-font-size: $font-size-base * 1.12;
 $h1-line-height: $font-size-base * 3;
 $h2-line-height: $font-size-base * 2.6;
 $h3-line-height: $font-size-base * 2;
-$h4-line-height: $font-size-base * 1.85;
-$h5-line-height: $font-size-base * 1.85;
+$h4-line-height: $font-size-base * 1.875;
+$h5-line-height: $font-size-base * 1.875;
 
 // p-tag
 $p-font-size: $font-size-base;

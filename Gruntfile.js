@@ -7,6 +7,7 @@
 module.exports = function (grunt) {
 
   var path = require('path'),
+      sass = require('node-sass'),
       argv = require('minimist')(process.argv.slice(2));
 
   // load all grunt tasks
@@ -80,9 +81,7 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        // sourceMap: false,
-        // sourceComments: false,
-        // outputStyle: 'compressed',
+        implementation: sass,
         includePaths: ['node_modules/bootstrap/scss']
       },
       production: {
@@ -112,6 +111,7 @@ module.exports = function (grunt) {
       },
       target: {
         files: {
+          // TODO move thise to public and delete moving from source to public a few lines below
           './source/css/style.min.css': [path.resolve(paths().source.css + 'style.css')],
           './source/css/style-qs-isolated.min.css': [path.resolve(paths().source.css + 'style-qs-isolated.css')],
         }
@@ -187,7 +187,6 @@ module.exports = function (grunt) {
       all: {
         files: [
           path.resolve(paths().source.scss + '**/*.scss'),
-          path.resolve(paths().source.css + '**/*.css'),
           path.resolve(paths().source.styleguide + 'css/*.css'),
           path.resolve(paths().source.patterns + '**/*'),
           path.resolve(paths().source.fonts + '/*'),
