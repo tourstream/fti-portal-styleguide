@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.42.2
+- adds and uses the FTI-Brand colors
+
 ## 0.42.1
 - Changes back button hover color
 
