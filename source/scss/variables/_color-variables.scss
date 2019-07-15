@@ -5,28 +5,65 @@ $gray-400: #929497;
 $gray-600: #666666;
 $gray-800: #424242;
 
-$red: #fc1119;
+$dark-gray: $gray-800;
+$dark-gray-80: #676767;
+$dark-gray-60: #8c8c8c;
+$dark-gray-40: #b1b1b1;
+$dark-gray-20: #d6d6d6;
+
+$light-gray: $gray-100;
+$light-gray-80: #f1f1f1;
+$light-gray-60: #f3f3f3;
+$light-gray-40: #f6f6f6;
+$light-gray-20: #f8f8f8;
+
 $orange: #ff9933;
+$orange-80: #fead5b;
+$orange-60: #fdc083;
+$orange-40: #fcd4ab;
+$orange-20: #fbe7d3;
+
+$red: #fc1119;
+$red-80: #d63232;
+$red-60: #df6464;
+$red-40: #e89696;
+
 $yellow: #ffc700;
+$yellow-80: #fed232;
+$yellow-60: #fddc64;
+$yellow-40: #fce696;
+
 $green: #96c948;
+$green-80: #aad36c;
+$green-60: #bedd90;
+$green-40: #d2e7b3;
+
 $cyan: #0099cc;
+$cyan-80: #32add6;
+$cyan-60: #64c0df;
+$cyan-40: #96d3e8;
+
 $white: #ffffff;
 $black: #000000;
 
+$dark-orange: #ff8000;
+
+$purple: #aa165f;
+
 // Corporate Colors
 $primary: $orange;
-$primary-20: lighten($primary, 20%);
-$primary-40: lighten($primary, 40%);
-$primary-60: lighten($primary, 60%);
-$primary-80: lighten($primary, 80%);
+$primary-20: $orange-80;
+$primary-40: $orange-60;
+$primary-60: $orange-40;
+$primary-80: $orange-20;
 
-$secondary: $gray-600;
-$secondary-20: lighten($secondary, 20%);
-$secondary-40: lighten($secondary, 40%);
-$secondary-60: lighten($secondary, 60%);
-$secondary-80: lighten($secondary, 80%);
+$secondary: $dark-gray;
+$secondary-20: $dark-gray-80;
+$secondary-40: $dark-gray-60;
+$secondary-60: $dark-gray-40;
+$secondary-80: $dark-gray-20;
 
-$font-color: $gray-600;
+$font-color: $secondary-20;
 
 ///////// LIGHT/DARK CONTRAST
 
@@ -34,7 +71,7 @@ $font-color: $gray-600;
 //$yiq-contrasted-threshold: 200;
 
 // TEXT
-$text-muted: $gray-300;
+$text-muted: $dark-gray-60;
 
 // BOX-SHADOW
 $box-down-shadow: 0 3px 10px 0 transparentize($black, .9);
@@ -47,12 +84,12 @@ $input-btn-focus-color: transparentize($primary, .5);
 ///////// COMPONENTS
 
 // LINKS
-$link-color: $orange;
+$link-color: $primary;
 $link-hover-color: $link-color;
 
 // BUTTON
-$button-hover-color: #ff8000;
-$button-hover-border-color: #ff8000;
+$button-hover-color: $dark-orange;
+$button-hover-border-color: $dark-orange;
 
 // TAB
-$tab-background-color: transparentize($gray-100, .25);
+$tab-background-color: transparentize($light-gray, .25);

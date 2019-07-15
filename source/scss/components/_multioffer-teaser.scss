@@ -121,7 +121,7 @@
 .multi-teaser-offer-container {
   @extend %teaser-anker-text;
   align-items: center;
-  border-bottom: $gray-100 1px solid;
+  border-bottom: $light-gray 1px solid;
   display: flex;
   flex: 1 0 auto;
   padding: auto 0;
@@ -129,7 +129,7 @@
   &:hover,
   &:active {
     @extend %teaser-anker-text;
-    background-color: transparentize($gray-300, .9);
+    background-color: transparentize($dark-gray-60, .9);
   }
 
   &:last-child {

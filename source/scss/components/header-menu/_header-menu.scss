@@ -55,7 +55,7 @@
 }
 
 .header-menu-item-link.active {
-  background-color: $gray-100;
+  background-color: $light-gray;
 }
 
 @include media-breakpoint-down(md) {
@@ -85,7 +85,7 @@
   .header-menu-item-link,
   .header-sub-menu-item-link {
     align-items: center;
-    color: $gray-600;
+    color: $dark-gray-80;
     display: flex;
     font-size: 1rem;
     height: $header-navigation-item-height;
@@ -95,8 +95,8 @@
 
   .header-menu-item-link:hover,
   .header-sub-menu-item-link:hover {
-    background-color: $gray-100;
-    color: $gray-600;
+    background-color: $light-gray;
+    color: $dark-gray-80;
     text-decoration: none;
   }
 }
@@ -108,7 +108,7 @@
   }
 
   %anchor-styles {
-    color: $gray-600;
+    color: $dark-gray-80;
     display: inline;
     text-decoration: none;
     white-space: nowrap;
@@ -119,8 +119,8 @@
   }
 
   .header-menu {
-    background-color: $gray-100;
-    color: $gray-600;
+    background-color: $light-gray;
+    color: $dark-gray-80;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -149,6 +149,6 @@
 
   .header-menu-item-link:hover {
     @extend %underline;
-    color: $gray-600;
+    color: $dark-gray-80;
   }
 }
