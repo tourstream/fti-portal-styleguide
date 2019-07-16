@@ -10,8 +10,8 @@
 }
 
 .rating-star {
-  background-color: $dark-gray;
-  border: 1px solid $dark-gray;
+  background-color: $secondary;
+  border: 1px solid $secondary;
   display: inline-block;
   height: $p-font-size / 2;
   margin-left: 2px;
@@ -22,7 +22,7 @@
   }
 
   &.rating-star-half-empty {
-    background: linear-gradient(-45deg, transparent 50% , $dark-gray 50%);
+    background: linear-gradient(-45deg, transparent 50% , $secondary 50%);
     overflow: hidden;
   }
 }

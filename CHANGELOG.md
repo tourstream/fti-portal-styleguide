@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.42.2
+## 0.43.0
 - adds and uses the FTI-Brand colors
 
 ## 0.42.1

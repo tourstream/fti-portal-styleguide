@@ -1,4 +1,4 @@
 ---
 title: Brand-Colors
-state: completed
+state: complete
 ---

@@ -1,13 +1,13 @@
 .menu-open,
 .menu-close {
   align-items: center;
-  color: $dark-gray-80;
+  color: $secondary-80;
   cursor: pointer;
   display: none;
   font-size: .75rem;
 
   &:hover {
-    color: $dark-gray-80;
+    color: $secondary-80;
     text-decoration: none;
   }
 

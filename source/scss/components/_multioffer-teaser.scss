@@ -129,7 +129,7 @@
   &:hover,
   &:active {
     @extend %teaser-anker-text;
-    background-color: transparentize($dark-gray-60, .9);
+    background-color: transparentize($secondary-60, .9);
   }
 
   &:last-child {

@@ -85,7 +85,7 @@
   .header-menu-item-link,
   .header-sub-menu-item-link {
     align-items: center;
-    color: $dark-gray-80;
+    color: $secondary-80;
     display: flex;
     font-size: 1rem;
     height: $header-navigation-item-height;
@@ -96,7 +96,7 @@
   .header-menu-item-link:hover,
   .header-sub-menu-item-link:hover {
     background-color: $light-gray;
-    color: $dark-gray-80;
+    color: $secondary-80;
     text-decoration: none;
   }
 }
@@ -108,7 +108,7 @@
   }
 
   %anchor-styles {
-    color: $dark-gray-80;
+    color: $secondary-80;
     display: inline;
     text-decoration: none;
     white-space: nowrap;
@@ -120,7 +120,7 @@
 
   .header-menu {
     background-color: $light-gray;
-    color: $dark-gray-80;
+    color: $secondary-80;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -149,6 +149,6 @@
 
   .header-menu-item-link:hover {
     @extend %underline;
-    color: $dark-gray-80;
+    color: $secondary-80;
   }
 }

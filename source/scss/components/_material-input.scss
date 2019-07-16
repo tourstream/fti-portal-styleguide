@@ -1,21 +1,21 @@
 .material-input-wrapper {
-  border-bottom: 1px solid $dark-gray-60;
+  border-bottom: 1px solid $secondary-60;
 
   .material-input {
     border: 0;
     border-radius: 0;
-    color: $dark-gray-80;
+    color: $secondary-80;
     margin: 0;
     padding: 0;
 
     &:focus {
-      border-color: $dark-gray-60;
+      border-color: $secondary-60;
       box-shadow: none;
-      color: $dark-gray-80;
+      color: $secondary-80;
     }
 
     &::placeholder {
-      color: $dark-gray-60;
+      color: $secondary-60;
     }
   }
 }

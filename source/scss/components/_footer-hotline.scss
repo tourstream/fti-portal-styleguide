@@ -3,7 +3,7 @@
 // TODO font-size and padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 .footer-hotline {
   background-color: $light-gray;
-  color: $dark-gray-80;
+  color: $secondary-80;
 
   h5 {
     @extend %small;

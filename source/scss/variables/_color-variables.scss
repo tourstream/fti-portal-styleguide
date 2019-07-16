@@ -1,29 +1,11 @@
 // Base
-$gray-100: #eeeeee;
-$gray-300: #b3b3b3;
-$gray-400: #929497;
-$gray-600: #666666;
-$gray-800: #424242;
-
-$dark-gray: $gray-800;
-$dark-gray-80: #676767;
-$dark-gray-60: #8c8c8c;
-$dark-gray-40: #b1b1b1;
-$dark-gray-20: #d6d6d6;
-
-$light-gray: $gray-100;
+$light-gray: #eeeeee;
 $light-gray-80: #f1f1f1;
 $light-gray-60: #f3f3f3;
 $light-gray-40: #f6f6f6;
 $light-gray-20: #f8f8f8;
 
-$orange: #ff9933;
-$orange-80: #fead5b;
-$orange-60: #fdc083;
-$orange-40: #fcd4ab;
-$orange-20: #fbe7d3;
-
-$red: #fc1119;
+$red: #cc0000;
 $red-80: #d63232;
 $red-60: #df6464;
 $red-40: #e89696;
@@ -51,19 +33,19 @@ $dark-orange: #ff8000;
 $purple: #aa165f;
 
 // Corporate Colors
-$primary: $orange;
-$primary-20: $orange-80;
-$primary-40: $orange-60;
-$primary-60: $orange-40;
-$primary-80: $orange-20;
+$primary: #ff9933;
+$primary-80: #fead5b;
+$primary-60: #fdc083;
+$primary-40: #fcd4ab;
+$primary-20: #fbe7d3;
 
-$secondary: $dark-gray;
-$secondary-20: $dark-gray-80;
-$secondary-40: $dark-gray-60;
-$secondary-60: $dark-gray-40;
-$secondary-80: $dark-gray-20;
+$secondary: #424242;
+$secondary-80: #676767;
+$secondary-60: #8c8c8c;
+$secondary-40: #b1b1b1;
+$secondary-20: #d6d6d6;
 
-$font-color: $secondary-20;
+$font-color: $secondary-80;
 
 ///////// LIGHT/DARK CONTRAST
 
@@ -71,7 +53,7 @@ $font-color: $secondary-20;
 //$yiq-contrasted-threshold: 200;
 
 // TEXT
-$text-muted: $dark-gray-60;
+$text-muted: $secondary-60;
 
 // BOX-SHADOW
 $box-down-shadow: 0 3px 10px 0 transparentize($black, .9);
