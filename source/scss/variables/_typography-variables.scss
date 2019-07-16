@@ -77,8 +77,3 @@ $linked-price-info-line-height: $font-size-base * 1;
   Todo another definition of H1 which, for SEO reasons, shouldn't be here. We should prevent having an h1 title in the background element.
    Or semantic html division.
 */
-
-// headline over quicksearch background image
-$h1-font-size-qs: $font-size-base * 3;
-$h1-font-size-md-qs: $font-size-base * 2.3;
-$h1-font-size-sm-qs: $font-size-base * 1.8;
