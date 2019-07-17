@@ -1,0 +1,4 @@
+---
+title: Bed
+state: complete
+---
