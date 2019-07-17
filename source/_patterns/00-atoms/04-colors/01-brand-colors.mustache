@@ -1,0 +1,130 @@
+<hr>
+<h4>Colors - used Brand Colors</h4>
+<hr>
+
+<div class="container card-container">
+    <div class="card color-5-shades" style="width: 18rem;">
+        <div class="p-2 bg-primary text-light"><div>100%</div></div>
+        <div class="p-2 bg-primary-80 text-light"><div>80%</div></div>
+        <div class="p-2 bg-primary-60"><div>60%</div></div>
+        <div class="p-2 bg-primary-40"><div>40%</div></div>
+        <div class="p-2 bg-primary-20"><div>20%</div></div>
+        <div class="card-body">
+            <p class="card-text">Primary Color (Orange)</p>
+        </div>
+    </div>
+    <div class="card color-5-shades" style="width: 18rem;">
+        <div class="p-2 bg-secondary text-light"><div>100%</div></div>
+        <div class="p-2 bg-secondary-80 text-light"><div>80%</div></div>
+        <div class="p-2 bg-secondary-60 text-light"><div>60%</div></div>
+        <div class="p-2 bg-secondary-40"><div>40%</div></div>
+        <div class="p-2 bg-secondary-20"><div>20%</div></div>
+        <div class="card-body">
+            <p class="card-text">Secondary Color (Dark Gray)</p>
+        </div>
+    </div>
+    <div class="card color-5-shades" style="width: 18rem;">
+        <div class="p-2 bg-light-gray"><div>100%</div></div>
+        <div class="p-2 bg-light-gray-80"><div>80%</div></div>
+        <div class="p-2 bg-light-gray-60"><div>60%</div></div>
+        <div class="p-2 bg-light-gray-40"><div>40%</div></div>
+        <div class="p-2 bg-light-gray-20"><div>20%</div></div>
+        <div class="card-body">
+            <p class="card-text">Light Gray</p>
+        </div>
+    </div>
+    <div class="card color-no-shades" style="width: 18rem;">
+        <div class="p-2 bg-white"><div>100%</div></div>
+        <div class="card-body">
+            <p class="card-text">White</p>
+        </div>
+    </div>
+    <div class="card color-no-shades" style="width: 18rem;">
+        <div class="p-2 bg-black text-light"><div>100%</div></div>
+        <div class="card-body">
+            <p class="card-text">Black</p>
+        </div>
+    </div>
+</div>
+<div class="container card-container">
+    <div class="card color-4-shades" style="width: 18rem;">
+        <div class="p-2 bg-green"><div>100%</div></div>
+        <div class="p-2 bg-green-80"><div>80%</div></div>
+        <div class="p-2 bg-green-60"><div>60%</div></div>
+        <div class="p-2 bg-green-40"><div>40%</div></div>
+        <div class="card-body">
+            <p class="card-text">Green</p>
+        </div>
+    </div>
+    <div class="card color-4-shades" style="width: 18rem;">
+        <div class="p-2 bg-red text-light"><div>100%</div></div>
+        <div class="p-2 bg-red-80 text-light"><div>80%</div></div>
+        <div class="p-2 bg-red-60"><div>60%</div></div>
+        <div class="p-2 bg-red-40"><div>40%</div></div>
+        <div class="card-body">
+            <p class="card-text">Red</p>
+        </div>
+    </div>
+    <div class="card color-4-shades" style="width: 18rem;">
+        <div class="p-2 bg-yellow"><div>100%</div></div>
+        <div class="p-2 bg-yellow-80"><div>80%</div></div>
+        <div class="p-2 bg-yellow-60"><div>60%</div></div>
+        <div class="p-2 bg-yellow-40"><div>40%</div></div>
+        <div class="card-body">
+            <p class="card-text">Yellow</p>
+        </div>
+    </div>
+    <div class="card color-4-shades" style="width: 18rem;">
+        <div class="p-2 bg-cyan"><div>100%</div></div>
+        <div class="p-2 bg-cyan-80"><div>80%</div></div>
+        <div class="p-2 bg-cyan-60"><div>60%</div></div>
+        <div class="p-2 bg-cyan-40"><div>40%</div></div>
+        <div class="card-body">
+            <p class="card-text">Cyan</p>
+        </div>
+    </div>
+    <div class="card color-no-shades" style="width: 18rem;">
+        <div class="p-2 bg-purple text-light"><div>100%</div></div>
+        <div class="card-body">
+            <p class="card-text">Campaign Color (Purple)</p>
+        </div>
+    </div>
+    <div class="card color-no-shades" style="width: 18rem;">
+        <div class="p-2 bg-dark-orange text-light"><div>100%</div></div>
+        <div class="card-body">
+            <p class="card-text">Button Hover Color (Dark Orange)</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var rgbToHex = function (rgb) {
+      var hex = Number(rgb).toString(16);
+      if (hex.length < 2) {
+           hex = "0" + hex;
+      }
+      return hex;
+    };
+
+    var fullColorHex = function(r,g,b) {
+      var red = rgbToHex(r);
+      var green = rgbToHex(g);
+      var blue = rgbToHex(b);
+      return red+green+blue;
+    };
+
+    var colorFromRgb = function (rgb) {
+        var rgbValues = rgb.substring(4,rgb.length-1);
+        var rgbReturnValue = 'RGB (' + rgbValues + ')';
+        rgbValues = rgbValues.split(", ");
+        var hexReturnValue = "#" + fullColorHex(rgbValues[0], rgbValues[1], rgbValues[2]);
+
+        return '<div class="smaller">' + rgbReturnValue + " / " + hexReturnValue + '</div>';
+    }
+
+    var colorDivs = document.querySelectorAll(".card-container .card .p-2");
+    colorDivs.forEach(function(colorDiv) {
+        var colorRgb = window.getComputedStyle(colorDiv).backgroundColor;
+        colorDiv.insertAdjacentHTML('beforeend', colorFromRgb(colorRgb));
+    });
+</script>

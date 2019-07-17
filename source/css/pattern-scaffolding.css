@@ -32,3 +32,23 @@
   position: static;
   width: 200px;
 }
+
+.card-container {
+  display: flex;
+}
+
+.card-container > .card {
+  margin: 5px;
+}
+
+.card-container > .card.color-5-shades > div.p-2 {
+  height: 60px;
+}
+
+.card-container > .card.color-4-shades > div.p-2 {
+  height: 75px;
+}
+
+.card-container > .card.color-no-shades > div.p-2 {
+  height: 300px;
+}
