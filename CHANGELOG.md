@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.43.1
+## 0.43.2
 - added 2 icons into the atoms
 
 ## 0.43.0
