@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.43.1
+- added 2 icons into the atoms
+
 ## 0.43.0
 - adds and uses the FTI-Brand colors
 
