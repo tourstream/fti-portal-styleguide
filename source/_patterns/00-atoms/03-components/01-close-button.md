@@ -1,4 +1,4 @@
 ---
 title: Close button
-state: quicksearch
+state: complete
 ---

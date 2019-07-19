@@ -1,4 +1,4 @@
 ---
 title: Tag
-state: inprogress
+state: complete
 ---

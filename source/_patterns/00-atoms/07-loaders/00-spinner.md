@@ -1,4 +1,4 @@
 ---
 title: Spinner
-state: inreview
+state: complete
 ---

@@ -1,4 +1,4 @@
 ---
 title: Completed tab
-state: inreview
+state: complete
 ---
