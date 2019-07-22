@@ -92,7 +92,6 @@
   @extend %teaser-boxing;
   display: flex;
   flex-direction: column;
-  word-break: break-all;
 
   p {
     margin-bottom: 0;
@@ -104,12 +103,10 @@
   padding: $content-padding-15;
 
   h3 {
-    hyphens: auto;
     line-height: $mo-teaser-h3-line-height;
   }
 
   h4 {
-    hyphens: auto;
     text-transform: none;
   }
 
@@ -145,7 +142,6 @@
 
   h5 {
     flex: 1 0 100%;
-    hyphens: auto;
   }
 }
 
