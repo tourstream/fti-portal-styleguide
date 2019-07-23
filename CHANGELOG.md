@@ -6,7 +6,10 @@ All notable changes to this project will be documented in this file.
 - Deletes QS variables and QS related files
 - Removes isolated QS task.
 
-## 0.43.2
+## 0.43.4
+- Removes word-break and hyphen from teasers
+
+## 0.43.3
 - added 2 icons into the atoms
 
 ## 0.43.0
