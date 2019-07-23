@@ -1,4 +1,4 @@
 ---
 title: Active tab
-state: inreview
+state: complete
 ---

@@ -7,7 +7,7 @@
 
 # FTI Portal Styleguide
 
-> Styleguide based on Pattern Lab for FTI portal and Quicksearch
+> Styleguide based on Pattern Lab for FTI portal
 
 This [demo page][demo-url] will show all implemented parts of the latest version (master branch) of this package.
 It creates asset files, **style.css** and **bundle.js**, which will be implemented into our portals.
@@ -16,7 +16,6 @@ It creates asset files, **style.css** and **bundle.js**, which will be implement
 
 If you have a project that relies on this style guide, please add it here.
 - FTI Portal
-- Quicksearch
 
 ## Usage
 

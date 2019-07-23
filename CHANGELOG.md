@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.44.0
+- Deletes QS variables and QS related files
+- Removes isolated QS task.
+
 ## 0.43.4
 - Removes word-break and hyphen from teasers
 

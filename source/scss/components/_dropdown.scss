@@ -18,18 +18,4 @@
     padding: 0;
   }
 
-  // Special style for QS grid on IE, unfortunately box-shadow and outline-offset are not an option.
-  > button:focus {
-    outline: 0 !important;
-
-    ::after {
-      border: 3px solid $primary-80 !important;
-      bottom: 0;
-      content: "";
-      left: -1px;
-      position: absolute;
-      right: 0;
-      top: -1px;
-    }
-  }
 }

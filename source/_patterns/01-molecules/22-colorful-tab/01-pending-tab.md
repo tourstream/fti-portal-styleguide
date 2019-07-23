@@ -1,4 +1,4 @@
 ---
 title: Pending tab
-state: inreview
+state: complete
 ---
