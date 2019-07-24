@@ -19,6 +19,11 @@ main {
       display: none;
     }
   }
+
+  .main-content {
+    position: relative;
+  }
+
 }
 
 @include media-breakpoint-up(md) {
