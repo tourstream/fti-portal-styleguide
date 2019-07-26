@@ -85,13 +85,13 @@
 
 // Multi Teaser, both 50% and 100%
 .multi-teaser {
-  @extend %teaser-boxing;
+  @extend %component-boxing;
   display: flex;
   flex-direction: column;
 
   p {
+    @extend %p-tag-without-margin;
     line-height: $mo-teaser-p-line-height;
-    margin-bottom: 0;
   }
 }
 
@@ -114,7 +114,7 @@
 }
 
 .multi-teaser-offer-container {
-  @extend %teaser-anker-text;
+  @extend %body-text-look-keeper;
   align-items: center;
   border-bottom: $light-gray 1px solid;
   display: flex;
@@ -123,7 +123,6 @@
 
   &:hover,
   &:active {
-    @extend %teaser-anker-text;
     background-color: transparentize($secondary-60, .9);
   }
 

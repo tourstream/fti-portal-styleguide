@@ -1,12 +1,12 @@
 <div class="multi-teaser-hotel-content">
   <div class="multi-teaser-hotel-name">
     {{#hotel}}
-      {{#content}}
+      {{#pContent}}
         {{> atoms-simple-p-text}}
-      {{/content}}
-      {{^hotel.content}}
+      {{/pContent}}
+      {{^hotel.pContent}}
         <p></p>
-      {{/hotel.content}}
+      {{/hotel.pContent}}
     {{/hotel}}
     {{> molecules-hotel-category-images }}
   </div>

@@ -11,6 +11,7 @@ module.exports = function (grunt) {
       argv = require('minimist')(process.argv.slice(2));
 
   // load all grunt tasks
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
@@ -106,7 +107,6 @@ module.exports = function (grunt) {
       },
       target: {
         files: {
-          // TODO move thise to public and delete moving from source to public a few lines below
           './source/css/style.min.css': [path.resolve(paths().source.css + 'style.css')],
         }
       }
@@ -138,11 +138,13 @@ module.exports = function (grunt) {
     /******************************************************
      * COPY TASKS
     ******************************************************/
+    clean: [
+      path.resolve(paths().public.js),
+      path.resolve(paths().public.css)
+    ],
     copy: {
       main: {
         files: [
-          { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js', dest: path.resolve(paths().public.js) },
-          { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js.map', dest: path.resolve(paths().public.js) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css', dest: path.resolve(paths().public.css) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css.map', dest: path.resolve(paths().public.css) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css.gz', dest: path.resolve(paths().public.css) },
@@ -161,7 +163,7 @@ module.exports = function (grunt) {
      ******************************************************/
     browserify: {
       dist: {
-        files: { 'public/js/bundle.js' : ['public/js/main.js']}
+        files: { 'public/js/bundle.js' : ['source/js/main.js']}
       }
     },
     uglify: {
@@ -203,7 +205,7 @@ module.exports = function (grunt) {
                 next();
               }
             }
-           ],
+          ],
           server:  path.resolve(paths().public.root),
           watchTask: true,
           watchOptions: {
@@ -252,7 +254,7 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'css', 'copy:main', 'buildjs']);
+  grunt.registerTask('default', ['patternlab', 'clean', 'css', 'buildjs', 'copy:main']);
   grunt.registerTask('css', ['stylelint', 'sass', 'autoprefixer', 'cssmin', 'compress:css']);
   grunt.registerTask('buildjs', ['browserify', 'uglify', 'compress:js']);
   grunt.registerTask('patternlab:build', ['default']);

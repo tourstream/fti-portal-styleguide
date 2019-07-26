@@ -1,0 +1,183 @@
+/* 
+  @summary Creates commonly used space for cells inside the top-offer
+ */
+%top-offer-margin {
+  margin: $content-padding-15;
+}
+
+/* 
+  @summary Width for info width
+  @description: Also used to calculate complementary of info-width
+ */
+$info-width: 60%;
+
+/* 
+  @summary: Top Offer List
+ */
+.top-offer-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 
+  @summary: Top Offer
+ */
+.top-offer {
+  @extend %component-boxing;
+  @extend %body-text-look-keeper;
+  
+
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  margin-bottom: $content-padding-15 * 2;
+
+  @include media-breakpoint-up("md") {
+    flex-direction: row;
+  }
+
+  @include media-breakpoint-up("lg") {
+    $width: 960px;
+    flex: 0 0 $width;
+    max-width: $width;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* 
+  @summary: Top Offer Hotel Info
+  @description: The upper info part of the top offer
+ */
+.top-offer-hotel-info {
+  @extend %top-offer-margin;
+  width: 100%;
+
+  aside.top-offer-recommendation {
+    display: flex;
+
+    .div:nth-child(1) {
+      flex-basis: auto;
+    }
+  }
+
+  > p.top-offer-region {
+    @extend %small;
+    @extend %p-tag-without-margin;
+  }
+
+  > span {
+    @extend %small;
+
+    color: $primary;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a:empty {
+    display: none;
+  }
+
+  
+}
+
+/* 
+  @summary: Review Rate Info
+  @description: Contains Review rate and additional information
+ */
+// TODO Review Rate info can be empty
+.review-rate-info {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  margin-left: $font-size-base / 2;
+
+  span {
+    @extend %small;
+    font-style: italic;
+    line-height: $font-size-base;
+    width: 100%;
+  }
+
+  span:nth-child(2) {
+    color: $secondary-60;
+  }
+}
+
+/* 
+  @summary: Top Offer Title
+  @description: Contains H3 and Hotel Category 
+ */
+.top-offer-title {
+  display: flex;
+  margin-top: $content-padding-15;
+  word-wrap: none;
+
+  h3 {
+    display: inline;
+    flex: 0 0 auto;
+  }
+
+  .mot_stars {
+    top: .2rem;
+  }
+}
+
+/* 
+  @summary: Top Offer Info
+  @description: The bottom info part of the top offer
+ */
+.top-offer-info {
+  @extend %top-offer-margin;
+
+  display: flex;
+  flex: 0 1 100%;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $content-padding-15;
+  }
+
+  .linked-price {
+    align-self: flex-end;
+  }
+
+  button {
+    align-self: flex-end;
+  }
+}
+
+/* 
+  @summary: Top Offer Picture
+  @description: Image keeps 3:2, is centered in all directions, can be cropped
+  @description: Uses an img-tag
+ */
+.top-offer-image {
+  display: flex;
+  flex: 1 1 100%;
+
+  @include media-breakpoint-up("md") {
+    flex: 0 0 426px;
+  }
+}
+
+/* 
+  @summary: Top Offer Info Container
+  @description: Contains Top Offer Hotel Info and Top Offer Info
+ */
+.top-offer-info-container {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+
+  hr {
+    margin: 0;
+    width: 100%;
+  }
+}

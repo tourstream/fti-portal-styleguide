@@ -1,0 +1,32 @@
+/* 
+  @summary: Defines Image with 3:2 ratio
+  @description: Image keeps 3:2, is centered in all directions, can be cropped
+  @descroption: Uses an img-tag
+ */
+
+.ratio-3-2 {  
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  ::after {
+    content: "";
+    display: block;
+    padding-top: 66.66%;
+  }
+
+  img {
+    bottom: -9999px;
+    height: auto;
+    left: -9999px;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: -9999px;
+    top: -9999px;
+    width: auto;
+  }
+}

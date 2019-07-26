@@ -1,0 +1,33 @@
+// Global component typgraphy, that does not belong to normal flowing text
+
+/* @Summary: Remove extra margin from an element */
+%tag-without-margin {
+  margin-bottom: 0;
+}
+
+/* @Summary: Remove extra margin from p-tag inside a component */
+%p-tag-without-margin {
+  @extend %tag-without-margin;
+}
+
+/* @Summary: Prevents Anchors make normal text appear as Anchor-text 
+ * @Description: We have elements, that are themselves huge Anchors and contain text. This text needs to appear normal as the body defines it.
+*/
+%body-text-look-keeper {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* @Summary: Gives a component the appearance to stick out
+ * @Description: Usage for example in Top Offer, Multi teaser and Teasers
+*/
+%component-boxing {
+  background-color: $white;
+  box-shadow: $box-shadow;
+}

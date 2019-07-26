@@ -37,7 +37,7 @@
       flex-grow: 1;
     }
 
-    div:last-child {
+    div:last-child:not(.linked-price-value):not(.linked-price-info) {
       width: $linked-price-font-size;
     }
   }
