@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.45.0
+- Implements Review Rate
+
 ## 0.44.1
 - Removes js positioning of Skyscraper
 
