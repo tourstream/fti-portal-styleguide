@@ -44,7 +44,7 @@ $smaller-line-height: $font-size-base * 1.25;
   Not defined in design-guide - Typography, but in their components:
 */
 
-// teaser specials
+// Single Teaser specials
 $teaser-25-h3-font-size: $font-size-base * 1.125;
 $teaser-25-h3-line-height: $font-size-base * 1.5;
 $teaser-25-p-font-size: $font-size-base * .9375;
@@ -55,6 +55,12 @@ $teaser-50-p-line-height: $font-size-base * 1.5;
 
 // Multioffer teaser specials
 $mo-teaser-h3-line-height: $font-size-base * 1.5;
+$mo-teaser-h5-font-size-md: $font-size-base * 1.125;
+$mo-teaser-p-line-height: $font-size-base * 1.25;
+//Adjusting distances of p-tags and h-tags:
+$mo-teaser-h4-margin-bottom: .25rem;
+$mo-teaser-h5-margin-bottom: .25rem;
+$mo-teaser-info-margin-top: .5rem;
 
 
 // Header bookmark

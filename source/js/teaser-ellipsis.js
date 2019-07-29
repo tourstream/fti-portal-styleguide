@@ -16,6 +16,10 @@ var hasSpecificHeight = function(lineStyles) {
  * @return {Integer} width
  */
 var getWidth = function(textLine) {
+  if(textLine.innerText === "") {
+    return 0;
+  }
+ 
   var lineStyles = window.getComputedStyle(textLine);
 
   if(hasSpecificHeight(lineStyles)) {
@@ -29,7 +33,10 @@ var getWidth = function(textLine) {
  * @return {Integer} parent's width
  */
 var getParentsWidth = function(textLine) {
- 
+  if(textLine.innerText === "") {
+    return 0;
+  }
+  
   var lineStyles = window.getComputedStyle(textLine);
         
   if(hasSpecificHeight(lineStyles)) {
@@ -44,7 +51,6 @@ var getParentsWidth = function(textLine) {
     var hotelRatingWidth = window.getComputedStyle(hotelRating).width;
 
     return parseInt(parentStyles.width) - parseInt(hotelRatingWidth) - parseInt(lineStyles.marginRight);
-  
   }
 };
 

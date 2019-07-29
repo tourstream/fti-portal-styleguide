@@ -1,6 +1,8 @@
-
-
 All notable changes to this project will be documented in this file.
+
+## 0.45.1
+- Typography imporvements for Multi Offer Teaser
+- Multi Offer Teaser refactoring + related improvements
 
 ## 0.45.0
 - Implements Review Rate

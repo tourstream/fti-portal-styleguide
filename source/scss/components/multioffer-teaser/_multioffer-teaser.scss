@@ -1,0 +1,211 @@
+/// @summary Layouts the multi offer teaser body and its sublines for both 50% and 100%
+/// @access private
+/// @param {string} $breakpoint
+@mixin mo-teaser-subline-layout($breakpoint) {
+  $hotel-content-width: 55%;
+
+  .multi-teaser-offer-body > div:not(.linked-price) {
+    flex: 1 1 auto;
+
+    @include media-breakpoint-up($breakpoint) {
+      align-content: flex-end;
+      flex: 1 1 auto;
+    }
+  }
+
+  .multi-teaser-region {
+    @include media-breakpoint-up($breakpoint) {
+      flex: 1 1 100%;
+    }
+  }
+
+  .multi-teaser-info {
+    height: $small-line-height + $mo-teaser-info-margin-top;
+
+    @include media-breakpoint-up($breakpoint) {
+      flex: 1 1 complements($hotel-content-width);
+      height: $small-line-height;
+    }
+
+    p {
+      margin-top: $mo-teaser-info-margin-top;
+
+      @include media-breakpoint-up($breakpoint) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .multi-teaser-hotel-content {
+    flex: 0 0 100%;
+
+    @include media-breakpoint-up($breakpoint) {
+      //ie11  does not support calc in flex but in flex-basis.
+      flex-basis: calc(#{$hotel-content-width} - #{$grid-gutter-width / 2});
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  .multi-teaser-hotel-name {
+    @include media-breakpoint-up($breakpoint) {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+// Parent element
+.multi-teaser-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: ($grid-gutter-width / 2 * -1);
+  margin-right: ($grid-gutter-width / 2 * -1);
+}
+
+// Layout
+.multi-teaser-50 {
+  @include mo-teaser-subline-layout("xl");
+
+  flex: 0 1 100%;
+  margin-bottom: $grid-gutter-width;
+  margin-left: $grid-gutter-width / 2;
+  margin-right: $grid-gutter-width / 2;
+
+  @include media-breakpoint-up("md") {
+    flex: 0 1 calc(50% - #{$grid-gutter-width});
+    max-width: calc(50% - #{$grid-gutter-width});
+  }
+}
+
+.multi-teaser-100 {
+  @include mo-teaser-subline-layout("md");
+
+  flex: 0 1 100%;
+  margin-bottom: $grid-gutter-width;
+  margin-left: $grid-gutter-width / 2;
+  margin-right: $grid-gutter-width / 2; 
+}
+
+// Multi Teaser, both 50% and 100%
+.multi-teaser {
+  @extend %teaser-boxing;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    line-height: $mo-teaser-p-line-height;
+    margin-bottom: 0;
+  }
+}
+
+.multi-teaser-head {
+  flex: 0 0 auto;
+  padding: $content-padding-15 $content-padding-15 0 $content-padding-15;
+
+  h3 {
+    line-height: $mo-teaser-h3-line-height;
+  }
+
+  h4 {
+    margin-bottom: $mo-teaser-h4-margin-bottom;
+    text-transform: none;
+  }
+
+  h4:empty {
+    display: none;
+  }
+}
+
+.multi-teaser-offer-container {
+  @extend %teaser-anker-text;
+  align-items: center;
+  border-bottom: $light-gray 1px solid;
+  display: flex;
+  flex: 1 0 auto;
+  padding: auto 0;
+
+  &:hover,
+  &:active {
+    @extend %teaser-anker-text;
+    background-color: transparentize($secondary-60, .9);
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.multi-teaser-offer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px $content-padding-15;
+  width: 100%;
+
+  h5 {
+    flex: 1 0 100%;
+    font-size: $font-size-base;
+    margin-bottom: $mo-teaser-h5-margin-bottom;
+
+    @include media-breakpoint-up("md") {
+      font-size: $font-size-base * 1.125;
+    }
+  }
+}
+
+.multi-teaser-offer-body {
+  display: flex;
+  width: 100%;
+
+  .linked-price {
+    flex: 0 0 110px;
+    justify-content: flex-end;
+    margin-left: $grid-gutter-width / 2;
+  }
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+  }  
+}
+
+.multi-teaser-hotel-content {
+  display: flex;
+  margin-right: $grid-gutter-width / 2;
+}
+
+%subline {
+  display: flex;
+  flex-wrap: nowrap;
+
+  p {
+    @extend %small;
+    height: $small-line-height;
+  }
+
+  &:empty,
+  p:empty {
+    display: none;
+  }
+}
+
+.multi-teaser-region {
+  @extend %subline;
+}
+
+.multi-teaser-info {
+  @extend %subline;
+}
+
+.multi-teaser-hotel-name {
+  @extend %subline;
+
+  width: 100%;
+
+  .mot_stars {
+    top: .25rem;
+  }
+
+  p {
+    margin-right: 5px; // Quick fix for Hotel stars ignoring white space in Hotel Name
+  } 
+}

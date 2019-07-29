@@ -4,7 +4,7 @@
  * @param {Integer} characterPerLine: Characters per line. Set or calculate cpl.
  */
 var setEllipsis = function(textLine, characterPerLine) {
-  if (textLine.innerText.length > characterPerLine) {
+  if (characterPerLine > 0 && textLine.innerText.length > characterPerLine) {
     textLine.innerText = textLine.innerText.substring(0, characterPerLine - 3).trim() + "...";
   }
 };

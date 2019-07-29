@@ -47,7 +47,7 @@ var initFontConstant = function() {
  * @return {Integer} cpl: Characters per line
  */
 var calculate = function(fontSize, width) {
-  return Math.floor(width / (fontSize / FONTCONSTANT));
+  return (width == undefined ? 0 :  Math.floor(width / (fontSize / FONTCONSTANT)));
 };
 
 module.exports = {

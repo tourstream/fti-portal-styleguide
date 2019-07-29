@@ -18,6 +18,7 @@
 
 // Customized mixins:
 @import "abstracts/mixins";
+@import "abstracts/functions";
 
 // Customized Bootstrap import:
 // It includes custom utility imports:
@@ -50,7 +51,7 @@
 
 // Content section and its components:
 @import "components/teaser";
-@import "components/multioffer-teaser";
+@import "components/multioffer-teaser/multioffer-teaser";
 @import "components/btngrd";
 @import "components/linked-price";
 @import "components/button";

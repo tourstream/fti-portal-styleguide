@@ -17,6 +17,8 @@ var body,
   lastScrollPosition = 0,
   scrollTicking = false;
 
+var ieEvaluator = require("./ie-evaluator");
+
 /* START - Mobile Menu */
 var openNavigation = function() {
   addClassToElements(body, "unscrollable");
@@ -49,7 +51,7 @@ var updateNavigationDistance = function(position) {
   var headerHeight = parseInt(getComputedStyle(header).height);
 
   // iE11: Makes <header> sticky and positions it depending on scroll position
-  if (isIE) {
+  if (ieEvaluator.isIE) {
     if(isBreakPointLG && position > navigationDistance ) {
       header.style.position = "fixed";
       header.style.top = "0px";
@@ -182,15 +184,6 @@ var addAndRemoveClass = function(elements, classToAdd, classToRemove) {
   addClassToElements(elements, classToAdd);
 };
 
-var isIE = (function () {
-  return (
-    (navigator.appName === "Microsoft Internet Explorer") ||
-    (
-      (navigator.appName === "Netscape") &&
-      (new RegExp("Trident/.*rv:([0-9]+[0-9]*)").exec(navigator.userAgent) != null)
-    ));
-})();
-
 // Event Listeners:
 
 var addEventListenersToDesktopMenuItems = function(){
@@ -231,7 +224,7 @@ var addEventListenersForWindowResizing = function() {
 
 var addEventListenerForMobileScrolling = function() {
   window.addEventListener("scroll", function() {
-    lastScrollPosition = isIE ? window.pageYOffset : window.scrollY;
+    lastScrollPosition = ieEvaluator.isIE ? window.pageYOffset : window.scrollY;
 
     if (!scrollTicking) {
       window.requestAnimationFrame(function() {
