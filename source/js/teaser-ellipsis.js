@@ -1,4 +1,7 @@
-/* global characterPerLine:false textEllipsis:false errorHandling:false */
+var characterPerLine = require("./characters-per-line");
+var errorHandling = require("./error-handling");
+
+var ellipsis = require("html-ellipsis");
 
 var teasers = [];
 
@@ -70,7 +73,7 @@ var getFontSize = function(element) {
  */
 var TeaserObject = function(element, getStylesFunction, numberOfLines){
   this.element = element;
-  this.text = element.innerText;
+  this.html = this.element.innerHTML;
   this.fontSize = getFontSize(this.element);
   this.numberOfLines = numberOfLines;
   this.getWidth = getStylesFunction;
@@ -81,17 +84,15 @@ var TeaserObject = function(element, getStylesFunction, numberOfLines){
 /*** 
  * @summary Sets the ellipsis for every TeaserObject based on the characters per line that fit into the width.
  * @fires characterPerLine.calculate
- * @fires textEllipsis.setEllipsis
+ * @fires ellipsis by html-ellipsis
  */
 var setTeaserEllipsis = function() {
   teasers.forEach(function (teaser) {
-    teaser.element.innerText = teaser.text;
     var charactersPerLine = characterPerLine.calculate(
       teaser.fontSize,
       teaser.getWidth(teaser.element)
     );
-
-    textEllipsis.setEllipsis(teaser.element, charactersPerLine * teaser.numberOfLines);
+    teaser.element.innerHTML = ellipsis(teaser.html, charactersPerLine * teaser.numberOfLines, true);
   });
 };
 

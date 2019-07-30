@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.45.2
+- Prevents HTML element deletion on ellipsis
+
 ## 0.45.1
 - Typography imporvements for Multi Offer Teaser
 - Multi Offer Teaser refactoring + related improvements

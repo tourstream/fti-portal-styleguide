@@ -6,7 +6,6 @@ window.cookie = require("./cookie");
 window.errorHandling = require("./error-handling");
 window.ieEvaluator = require("./ie-evaluator");
 window.characterPerLine = require("./characters-per-line");
-window.textEllipsis = require("./text-ellipsis");
 
 // Components
 window.cookieAlert = require("./cookie-alert");
