@@ -1,0 +1,15 @@
+.styled-ibetype-icons {
+  align-items: center;
+  display: inline-flex;
+  line-height: 26px;
+  vertical-align: middle;
+
+  i {
+    font-size: 26px;
+  }
+
+  > span {
+    font-size: 16px;
+    margin: 0 4px;
+  }
+}
