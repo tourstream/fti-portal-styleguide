@@ -1,0 +1,15 @@
+.ibe-type-icons {
+  align-items: center;
+  display: inline-flex;
+  line-height: $span-line-height;
+  vertical-align: middle;
+
+  i {
+    font-size: $span-font-size * 1.625;
+  }
+
+  > span {
+    font-size: $span-font-size;
+    margin: 0 $span-font-size / 4;
+  }
+}
