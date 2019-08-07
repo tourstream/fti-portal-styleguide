@@ -10,6 +10,6 @@
 
   > span {
     font-size: $span-font-size;
-    margin: 0 4px;
+    margin: 0 $span-font-size / 4;
   }
 }
