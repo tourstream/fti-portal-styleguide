@@ -13,13 +13,8 @@
     }
   }
 
-  .multi-teaser-region {
-    @include media-breakpoint-up($breakpoint) {
-      flex: 1 1 100%;
-    }
-  }
-
   .multi-teaser-info {
+    flex: 1 1 100%;
     height: $small-line-height + $mo-teaser-info-margin-top;
 
     @include media-breakpoint-up($breakpoint) {
@@ -28,6 +23,7 @@
     }
 
     p {
+      flex: 1 1 100%;
       margin-top: $mo-teaser-info-margin-top;
 
       @include media-breakpoint-up($breakpoint) {
@@ -48,6 +44,7 @@
   }
 
   .multi-teaser-hotel-name {
+    overflow: hidden; // Quick fix for lines which are still breaking to the next line
     @include media-breakpoint-up($breakpoint) {
       flex: 1 1 100%;
     }
@@ -190,6 +187,11 @@
 
 .multi-teaser-region {
   @extend %subline;
+  flex: 1 1 100%;
+
+  p {
+    flex: 1 1 100%;
+  }
 }
 
 .multi-teaser-info {
@@ -199,6 +201,7 @@
 .multi-teaser-hotel-name {
   @extend %subline;
 
+  height: $small-line-height;
   width: 100%;
 
   .mot_stars {

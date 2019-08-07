@@ -41,7 +41,7 @@ var getParentsWidth = function(textLine) {
   }
   
   var lineStyles = window.getComputedStyle(textLine);
-        
+
   if(hasSpecificHeight(lineStyles)) {
     var parentElement = textLine.parentElement;
     var parentStyles = window.getComputedStyle(parentElement);
@@ -50,10 +50,7 @@ var getParentsWidth = function(textLine) {
       return parseInt(parentStyles.width);
     }
 
-    var hotelRating = parentElement.querySelector(".mot_stars");
-    var hotelRatingWidth = window.getComputedStyle(hotelRating).width;
-
-    return parseInt(parentStyles.width) - parseInt(hotelRatingWidth) - parseInt(lineStyles.marginRight);
+    return parseInt(parentStyles.width);
   }
 };
 
@@ -73,7 +70,7 @@ var getFontSize = function(element) {
  */
 var TeaserObject = function(element, getStylesFunction, numberOfLines){
   this.element = element;
-  this.html = this.element.innerHTML;
+  this.html = this.element.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
   this.fontSize = getFontSize(this.element);
   this.numberOfLines = numberOfLines;
   this.getWidth = getStylesFunction;
@@ -88,9 +85,14 @@ var TeaserObject = function(element, getStylesFunction, numberOfLines){
  */
 var setTeaserEllipsis = function() {
   teasers.forEach(function (teaser) {
+    var width = teaser.getWidth(teaser.element);
+    if (width === 0) {
+      return;
+    }
+
     var charactersPerLine = characterPerLine.calculate(
       teaser.fontSize,
-      teaser.getWidth(teaser.element)
+      width
     );
     teaser.element.innerHTML = ellipsis(teaser.html, charactersPerLine * teaser.numberOfLines, true);
   });
