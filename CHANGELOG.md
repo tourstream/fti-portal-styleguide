@@ -1,5 +1,13 @@
 All notable changes to this project will be documented in this file.
 
+## 0.45.3
+- Prevents empty tags from showing ellipsis
+- Improves use of horizontal space
+- Removes HTML comments from elements during ellipsation
+- Also removes HTML comments from the mustache files
+- Hotel category next to empty Hotel names now have enough height to go to the top
+- To decrease errors, we are hiding additional information in hotel name, when the content has a line-break
+
 ## 0.45.2
 - Prevents HTML element deletion on ellipsis
 

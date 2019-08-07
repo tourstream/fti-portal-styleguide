@@ -195,32 +195,23 @@
       ]
     },
     {
-      "h3Content": "What Really Is The Best #Headline Length?",
-      "h4Content": "What Really Is The Best #Headline Length?",
+      "h3Content": "What is the best Ellipsis?",
+      "h4Content": "How is Ellipsis behaving in a non-monospaced font? All characters have different character widths.",
       "multiOffer": [
         {
-          "h5Content": "Ramada Plaza Jumeirah Beach ",
-          "region": {"content": ""},
-          "hotel": {"content": ""},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+          "h5Content": "Ellipsis: Characters are wide",
+          "region": {"content": "LABRANDA REGION LABRANDA REGION"},
+          "hotel": {"content": "LABRANDA HOTEL LABRANDA HOTEL"},
+          "info": {"content": "LABRANDA INFO | LABRANDA INFO"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "2.352"
         },
         {
-          "h5Content": "Rhodos ",
-          "region": {"content": ""},
-          "hotel": {"content": ""},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
-          "linkedPriceCurrency": "€",
-          "linkedPriceInfo": "p.p vanaf",
-          "linkedPriceValue": "1.359"
-        },
-        {
-          "h5Content": "Rhodos ",
-          "region": {"content": ""},
-          "hotel": {"content": ""},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+          "h5Content": "Ellipsis: Characters are thin",
+          "region": {"content": ",,, / ' ` ,,, / ' ` ,,, / ' ` ,,, || || ,,, / ' ` ,,, / ' ` ,,, / ' ` ,,,"},
+          "hotel": {"content": ",,, / ' ` ,,, / ' ` ,,, / ' ` ,,, || || ,,, / ' ` ,,, / ' ` ,,, / ' ` ,,,"},
+          "info": {"content": ",,, / ' ` ,,, / ' ` ,,, / ' ` ,,, || || ,,, / ' ` ,,, / ' ` ,,, / ' ` ,,,"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "1.359"
