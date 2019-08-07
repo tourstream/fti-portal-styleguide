@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.45.4
+- Adds icons for the IBE Type field
+
 ## 0.45.2
 - Prevents HTML element deletion on ellipsis
 
