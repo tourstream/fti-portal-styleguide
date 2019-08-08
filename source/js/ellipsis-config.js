@@ -12,7 +12,8 @@ var ellipsisConfig = [
   { type: "multiteaser-headline", selector: ".multi-teaser-head h3", lines: 2 },
   { type: "multiteaser-subheadline", selector: ".multi-teaser-head h4", lines: 1 },
   { type: "multiteaser-offertitle", selector: ".multi-teaser-offer h5", lines: 1 },
-  { type: "multiteaser-textline", selector: ".multi-teaser-offer-body > div p", lines: 1 },
+  { type: "multiteaser-textline", selector: ".multi-teaser-offer-body > div .multi-teaser-region p", lines: 1 },
+  { type: "multiteaser-textline", selector: ".multi-teaser-offer-body > div .multi-teaser-hotel-content p", lines: 1 },
   { type: "top-offer-headline", selector: ".top-offer-title > h3", lines: 1 },
   { type: "top-offer-hotel-info-textline", selector: ".top-offer-hotel-info > p", lines: 1 },
 ];
@@ -39,7 +40,7 @@ var initializeEllipseableObjects = function(initialConfig) {
 
     elements.forEach(function (element) {
       var builtObject = isParendWidthNeeded(config.type)
-        ? new EllipseableObject(element, EllipsisUtil.getParentsWidth, config.lines) 
+        ? new EllipseableObject(element, EllipsisUtil.getParentsWidth, config.lines)
         : new EllipseableObject(element, EllipsisUtil.getWidth, config.lines);
 
       // subscribe to the resize event
