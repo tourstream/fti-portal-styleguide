@@ -57,6 +57,7 @@ $info-width: 60%;
 
   aside.top-offer-recommendation {
     display: flex;
+    min-height: 32px;
 
     .div:nth-child(1) {
       flex-basis: auto;
