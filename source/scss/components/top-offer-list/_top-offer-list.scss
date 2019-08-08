@@ -1,17 +1,17 @@
-/* 
+/*
   @summary Creates commonly used space for cells inside the top-offer
  */
 %top-offer-margin {
   margin: $content-padding-15;
 }
 
-/* 
+/*
   @summary Width for info width
   @description: Also used to calculate complementary of info-width
  */
 $info-width: 60%;
 
-/* 
+/*
   @summary: Top Offer List
  */
 .top-offer-list {
@@ -19,13 +19,13 @@ $info-width: 60%;
   flex-wrap: wrap;
 }
 
-/* 
+/*
   @summary: Top Offer
  */
 .top-offer {
   @extend %component-boxing;
   @extend %body-text-look-keeper;
-  
+
 
   display: flex;
   flex: 0 0 100%;
@@ -47,7 +47,7 @@ $info-width: 60%;
   }
 }
 
-/* 
+/*
   @summary: Top Offer Hotel Info
   @description: The upper info part of the top offer
  */
@@ -82,10 +82,10 @@ $info-width: 60%;
     display: none;
   }
 
-  
+
 }
 
-/* 
+/*
   @summary: Review Rate Info
   @description: Contains Review rate and additional information
  */
@@ -97,7 +97,7 @@ $info-width: 60%;
   margin-left: $font-size-base / 2;
 
   span {
-    @extend %small;
+    @extend %smaller;
     font-style: italic;
     line-height: $font-size-base;
     width: 100%;
@@ -108,9 +108,9 @@ $info-width: 60%;
   }
 }
 
-/* 
+/*
   @summary: Top Offer Title
-  @description: Contains H3 and Hotel Category 
+  @description: Contains H3 and Hotel Category
  */
 .top-offer-title {
   display: flex;
@@ -120,6 +120,7 @@ $info-width: 60%;
   h3 {
     display: inline;
     flex: 0 0 auto;
+    margin-bottom: 0;
   }
 
   .mot_stars {
@@ -127,7 +128,7 @@ $info-width: 60%;
   }
 }
 
-/* 
+/*
   @summary: Top Offer Info
   @description: The bottom info part of the top offer
  */
@@ -148,12 +149,16 @@ $info-width: 60%;
     align-self: flex-end;
   }
 
+  .multi-teaser-info p {
+    margin-bottom: 0;
+  }
+
   button {
     align-self: flex-end;
   }
 }
 
-/* 
+/*
   @summary: Top Offer Picture
   @description: Image keeps 3:2, is centered in all directions, can be cropped
   @description: Uses an img-tag
@@ -167,7 +172,7 @@ $info-width: 60%;
   }
 }
 
-/* 
+/*
   @summary: Top Offer Info Container
   @description: Contains Top Offer Hotel Info and Top Offer Info
  */
