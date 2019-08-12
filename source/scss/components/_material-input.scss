@@ -4,14 +4,14 @@
   .material-input {
     border: 0;
     border-radius: 0;
-    color: $secondary-80;
+    color: $font-color;
     margin: 0;
     padding: 0;
 
     &:focus {
       border-color: $secondary-60;
       box-shadow: none;
-      color: $secondary-80;
+      color: $font-color;
     }
 
     &::placeholder {

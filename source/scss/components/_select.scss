@@ -2,7 +2,7 @@
   padding: 0;
 
   >span {
-    color: $secondary-80;
+    color: $font-color;
     font-size: 12px;
     font-weight: bold;
     margin-left: 15px;
@@ -23,7 +23,7 @@
     background-color: transparent;
     border: 1px solid $light-gray;
     border-radius: unset;
-    color: $secondary-80;
+    color: $font-color;
     cursor: pointer;
     display: block;
     font-size: 16px;
