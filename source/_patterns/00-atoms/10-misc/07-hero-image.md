@@ -1,4 +1,4 @@
 ---
 title: Hero Image
-state: usable
+state: complete
 ---
