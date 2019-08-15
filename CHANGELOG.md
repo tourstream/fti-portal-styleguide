@@ -1,6 +1,6 @@
 All notable changes to this project will be documented in this file.
 
-## 0.46.0
+## 0.46.1 (0.46.0 skipped due to problem while versioning)
 - Adds new element: Top Offer List
 - Adds new element: Image with fixed 3:2 ratio
 - Adds new element: Linked Price without an arrow
