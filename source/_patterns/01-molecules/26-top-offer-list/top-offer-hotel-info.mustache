@@ -1,0 +1,41 @@
+<div class="top-offer-hotel-info">
+
+  <aside class="top-offer-recommendation">
+    {{#topOfferRecommendation}}
+      <div>
+        {{> atoms-review-rate }}
+      </div>
+      <div class="review-rate-info">
+        {{> atoms-simple-span-text(spanContent: 'empfehlen dieses Hotel weiter')}}
+        <span>
+          (75 Bewertungen)
+        </span>
+      </div>
+     {{/topOfferRecommendation}}
+  </aside>
+
+
+
+  <header class="top-offer-title">
+    {{> atoms-h3}}&nbsp;
+    {{> molecules-hotel-category-images}}
+  </header>
+
+
+  <p class="top-offer-region">
+    {{#region}}
+      {{region}}
+    {{/region}}
+    {{^region}}
+      Bahia Feliz - Tarajalillo in San Agustin, Gran Canaria
+    {{/region}}
+  </p>
+
+  {{#spanContent}}
+    {{> atoms-simple-span-text }}
+  {{/spanContent}}
+  {{^spanContent}}
+    <span class="top-offer-anchor">&nbsp;</span>
+  {{/spanContent}}
+
+</div>

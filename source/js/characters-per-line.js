@@ -31,23 +31,23 @@ var initFontConstant = function() {
       break;
     case "Verdana":
       FONTCONSTANT = 1.73;
-      break;                            
+      break;
     default:
-      FONTCONSTANT = 1.8;
+      FONTCONSTANT = 2.0;
       break;
   }
 };
 
-/***  
+/***
  * @summary Characters per line (CPL)
  * @description CPL = width / (font-size / font-constant)
- * 
+ *
  * @param {Object} fontSize: Text's font size
  * @param {Integer} width: Width of DOM element that concernce the text
  * @return {Integer} cpl: Characters per line
  */
 var calculate = function(fontSize, width) {
-  return (width == undefined ? 0 :  Math.floor(width / (fontSize / FONTCONSTANT)));
+  return (width === undefined ? 0 :  Math.floor(width / (fontSize / FONTCONSTANT)));
 };
 
 module.exports = {

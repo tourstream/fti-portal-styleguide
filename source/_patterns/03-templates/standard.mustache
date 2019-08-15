@@ -1,15 +1,22 @@
 {{> atoms-ad-leaderboard }}
 {{> atoms-ad-skyscraper }}
+{{> molecules-info-message }}
 {{> organisms-header }}
-{{> organisms-page-headline }}
+{{> organisms-page-headline(content: 'The standard template') }}
+
 <main role="main" class="container">
+
+	{{> organisms-tabs}}
+
 	<div class="teaser-list">
 		{{# teaserList }}
 			{{> organisms-content-teaser-50 }}
 		{{/ teaserList }}
 
 		{{> organisms-offer-teaser-50}}
+		{{> organisms-multioffer-teaser-50 }}
 		{{> organisms-content-teaser-50}}
+		{{> organisms-multioffer-teaser-50 }}
 		{{> organisms-content-teaser-25}}
 	</div>
 

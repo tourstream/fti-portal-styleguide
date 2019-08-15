@@ -1,9 +1,6 @@
 // TEASER.SCSS
 
-%teaser-boxing {
-  background-color: $white;
-  box-shadow: $box-shadow;
-}
+
 
 // TODO padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 // +-- teaser (optional variant classes) -----------------------------------+
@@ -53,16 +50,12 @@
 }
 
 .teaser-box {
-  @extend %teaser-boxing;
-  @extend %teaser-anker-text;
-  
+  @extend %component-boxing;
+  @extend %body-text-look-keeper;
+
   display: flex;
   flex-direction: column;
   height: 100%;
-
-  &:hover {
-    @extend %teaser-anker-text;
-  }
 }
 
 .teaser-images {
@@ -102,6 +95,7 @@
   margin-bottom: 1rem;
 }
 
+// TODO From old Teaser button. Should this be removed?
 .teaser-cta {
   a {
     align-self: flex-end;
@@ -110,28 +104,16 @@
   }
 }
 
-// specials by teaser-size
-.teaser-25 {
+// specials for teasers
+.teaser {
   .teaser-headline {
-    font-size: $teaser-25-h3-font-size;
-    line-height: $teaser-25-h3-line-height;
-  }
-
-  .teaser-description {
-    font-size: $teaser-25-p-font-size;
-    line-height: $teaser-25-p-line-height;
-  }
-}
-
-.teaser-50 {
-  .teaser-headline {
-    font-size: $teaser-50-h3-font-size;
-    line-height: $teaser-50-h3-line-height;
+    font-size: $h3-font-size;
+    line-height: $teaser-h3-line-height;
   }
 
   .teaser-description {
     font-size: $font-size-base;
-    line-height: $teaser-50-p-line-height;
+    line-height: $teaser-p-line-height;
   }
 }
 

@@ -1,0 +1,105 @@
+{
+  "pageHeadline": "Top Offer List",
+  "h2Content": "My Top Offer headline",
+  "topOffers": [
+    {
+      "h3Content": "Grand Palladium Palace Resort & Spa",
+      "region": "Playa Bavaro (Punta Cana), Dom. Republik - Osten (Punta Cana)",
+      "info": {
+        "pContent": "7 Tage Flug + Hotel + All inclusive plus"
+      },
+      "topOfferRecommendation": true,
+      "reviewRateContent": "86%",
+      "reviewRateColor": "review-rate-green",
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.P. ab",
+      "linkedPriceValue": "1.234",
+      "imgSrc": "../../images/3-2-image-placeholder.png",
+      "spanContent": "Hoteldetails"
+    },
+    {
+      "h3Content": "Bluebay Beach Club",
+      "region": "Bahia Feliz / Tarajalillo (San Agustin), Gran Canaria",
+      "info": {
+        "pContent": "10 Tage | AI+"
+      },
+      "topOfferRecommendation": false,
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.P. ab",
+      "linkedPriceValue": "1.234",
+      "imgSrc": "../../images/sample-21-9-1280-549.png",
+      "spanContent": "Hoteldetails"
+    },
+    {
+      "h3Content": "LABRANDA Ocean El Faro",
+      "region": "Playa Uvero Alto, Dom. Republik - Osten (Punta Cana)",
+      "info": {
+        "pContent": "7 Tage | Hotel"
+      },
+      "topOfferRecommendation": true,
+      "reviewRateContent": "33%",
+      "reviewRateColor": "review-rate-grey",
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.P. ab",
+      "linkedPriceValue": "499",
+      "imgSrc": "../../images/3-2-image-placeholder.png",
+      "spanContent": "Hoteldetails"
+    },
+    {
+      "h3Content": "Be Live Adults Only Los Cactus",
+      "region": "Varadero, Kuba - Havanna / Varadero / Mayabeque / Artemisa / P. del Rio",
+      "info": {
+        "pContent": "10 Tage | AI+"
+      },
+      "topOfferRecommendation": false,
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.P. ab",
+      "linkedPriceValue": "1.145",
+      "imgSrc": "../../images/sample-21-9-1280-549.png",
+      "spanContent": "Hoteldetails"
+    },
+    {
+      "h3Content": "Fun Holiday Beach Resort",
+      "region": "Negril, Jamaika",
+      "info": {
+        "pContent": "10 Tage | AI+"
+      },
+      "topOfferRecommendation": true,
+      "reviewRateContent": "51%",
+      "reviewRateColor": "review-rate-yellow",
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.P. ab",
+      "linkedPriceValue": "434",
+      "imgSrc": "../../images/3-2-image-placeholder.png",
+      "spanContent": ""
+    },
+    {
+      "h3Content": "Kunuku Aqua Resort",
+      "region": "Daniel - Tera Kora (Insel Curacao), Curacao",
+      "info": {
+        "pContent": "7 Tage nur Hotel"
+      },
+      "topOfferRecommendation": false,
+      "linkedPriceCurrency": "€",
+      "linkedPriceInfo": "p.p vanaf",
+      "linkedPriceValue": "4.859",
+      "imgSrc": "../../images/sample-21-9-1280-549.png",
+      "spanContent": ""
+    },
+    {
+      "h3Content": "Sunscape Curacao Resort",
+      "region": "Mambo Beach - Seaquarium Beach (Insel Curacao), Curacao",
+      "info": {
+        "pContent": "10 Tage | AI+"
+      },
+      "topOfferRecommendation": true,
+      "reviewRateContent": "100%",
+      "reviewRateColor": "review-rate-green",
+      "linkedPriceCurrency": "CHF",
+      "linkedPriceInfo": "p.P. ab € 3.824 /",
+      "linkedPriceValue": "4359",
+      "imgSrc": "../../images/3-2-image-placeholder.png",
+      "spanContent": "Hoteldetails"
+    }
+  ]
+}
