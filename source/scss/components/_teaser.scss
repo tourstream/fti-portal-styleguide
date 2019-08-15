@@ -52,9 +52,7 @@
 .teaser-box {
   @extend %component-boxing;
   @extend %body-text-look-keeper;
-  @extend %teaser-boxing;
-  @extend %teaser-anker-text;
-  
+
   display: flex;
   flex-direction: column;
   height: 100%;
