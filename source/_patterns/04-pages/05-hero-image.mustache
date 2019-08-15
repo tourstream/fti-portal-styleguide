@@ -1,0 +1,20 @@
+{{> organisms-header }}
+{{> atoms-hero-image(imgSrc: '../../images/panorama-img.jpg') }}
+{{> organisms-page-headline(content: 'Hero Image') }}
+
+<main role="main" class="container">
+
+  <p>Here comes some content, like Teasers </p>
+
+  <h2>Teaser content</h2>
+
+  <h3>Teaser content 25</h3>
+  <div class="teaser-list">
+    {{# teaserContent25List }}
+      {{> organisms-content-teaser-25 }}
+    {{/ teaserContent25List }}
+  </div>
+
+</main>
+{{> organisms-footer }}
+
