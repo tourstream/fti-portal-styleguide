@@ -13,6 +13,9 @@ All notable changes to this project will be documented in this file.
 - Fixed: debug mode not working
 - Debug mode accepts 1 and 0 as string and number
 
+## 0.45.5
+- Updates CSS rule values to improve design standardisation
+
 ## 0.45.4
 - Adds icons for the IBE Type field
 

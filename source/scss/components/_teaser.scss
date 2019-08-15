@@ -52,6 +52,8 @@
 .teaser-box {
   @extend %component-boxing;
   @extend %body-text-look-keeper;
+  @extend %teaser-boxing;
+  @extend %teaser-anker-text;
   
   display: flex;
   flex-direction: column;
@@ -104,28 +106,16 @@
   }
 }
 
-// specials by teaser-size
-.teaser-25 {
+// specials for teasers
+.teaser {
   .teaser-headline {
-    font-size: $teaser-25-h3-font-size;
-    line-height: $teaser-25-h3-line-height;
-  }
-
-  .teaser-description {
-    font-size: $teaser-25-p-font-size;
-    line-height: $teaser-25-p-line-height;
-  }
-}
-
-.teaser-50 {
-  .teaser-headline {
-    font-size: $teaser-50-h3-font-size;
-    line-height: $teaser-50-h3-line-height;
+    font-size: $h3-font-size;
+    line-height: $teaser-h3-line-height;
   }
 
   .teaser-description {
     font-size: $font-size-base;
-    line-height: $teaser-50-p-line-height;
+    line-height: $teaser-p-line-height;
   }
 }
 
