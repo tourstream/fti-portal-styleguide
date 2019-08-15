@@ -10,13 +10,11 @@ window.characterPerLine = require("./characters-per-line");
 // Components
 window.cookieAlert = require("./cookie-alert");
 window.headerNavigation = require("./header-navigation");
-window.teaserEllipsis = require("./teaser-ellipsis");
 
 // Init Utils
 window.globalVariables.initDebugMode();
-window.characterPerLine.initFontConstant();
 
 // Init Components
 window.cookieAlert.initAcceptCookies();
 window.headerNavigation.initHeaderNavigation();
-window.teaserEllipsis.initEllipsis();
+window.ellipsedObjects = require("./ellipsis-config").initEllipsis();

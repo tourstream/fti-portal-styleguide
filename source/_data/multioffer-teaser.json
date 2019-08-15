@@ -4,45 +4,45 @@
   "multiOffer": [
     {
       "h5Content": "Fuerteventura ",
-      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-      "hotel": {"content": "LABRANDA Blue Bay "},
-      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"pContent": "LABRANDA Blue Bay "},
+      "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
       "linkedPriceCurrency": "€",
       "linkedPriceInfo": "p.p vanaf",
       "linkedPriceValue": "2.352"
     },
     {
       "h5Content": "Ramada Plaza Jumeirah Beach ",
-      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-      "hotel": {"content": "LABRANDA Blue Bay "},
-      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"pContent": "LABRANDA Blue Bay "},
+      "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
       "linkedPriceCurrency": "€",
       "linkedPriceInfo": "p.p vanaf",
       "linkedPriceValue": "4.359"
     },
     {
       "h5Content": "Vakanties Turkije All-inclusive naar Turkije ",
-      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-      "hotel": {"content": "LABRANDA Blue Bay "},
-      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"pContent": "LABRANDA Blue Bay "},
+      "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
       "linkedPriceCurrency": "€",
       "linkedPriceInfo": "p.p vanaf",
       "linkedPriceValue": "2.352"
     },
     {
       "h5Content": "Griekenland vakanties Kies voor de Griekse eilanden ",
-      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-      "hotel": {"content": "LABRANDA Blue Bay "},
-      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"pContent": "LABRANDA Blue Bay "},
+      "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
       "linkedPriceCurrency": "€",
       "linkedPriceInfo": "p.p vanaf",
       "linkedPriceValue": "6.359"
     },
     {
       "h5Content": "Vakanties Marokko Naar het zonnige Marokko ",
-      "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-      "hotel": {"content": "LABRANDA Blue Bay "},
-      "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+      "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+      "hotel": {"pContent": "LABRANDA Blue Bay "},
+      "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
       "linkedPriceCurrency": "€",
       "linkedPriceInfo": "p.p vanaf",
       "linkedPriceValue": "3.379"

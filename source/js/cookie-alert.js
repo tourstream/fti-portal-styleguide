@@ -1,4 +1,5 @@
-/* global errorHandling:false cookie:false */
+var errorHandling = require("./error-handling");
+var cookie = require("./cookie");
 
 var initAcceptCookies = function() {
   var cookieAlert = document.querySelector(".cookie-alert");

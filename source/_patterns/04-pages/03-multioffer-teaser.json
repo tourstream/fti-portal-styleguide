@@ -7,27 +7,27 @@
       "multiOffer": [
         {
           "h5Content": "Fuerteventura ",
-          "region": {"content": "It has a region"},
-          "hotel": {"content": "It has a hotel name "},
-          "info": {"content": "10 Tage | ÜF | nur Hotel"},
+          "region": {"pContent": "It has a region"},
+          "hotel": {"pContent": "It has a hotel name "},
+          "info": {"pContent": "10 Tage | ÜF | nur Hotel"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.P. ab",
           "linkedPriceValue": "1.234"
         },
         {
           "h5Content": "Spanisches Festland ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-          "hotel": {"content": "It has a hotel name but a region name "},
-          "info": {"content": "10 Tage | ÜF | nur Hotel"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+          "hotel": {"pContent": "It has a hotel name but a region name "},
+          "info": {"pContent": "10 Tage | ÜF | nur Hotel"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.P. ab",
           "linkedPriceValue": "2.345"
         },
         {
           "h5Content": "Spanisches Festland ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-          "hotel": {"content": "It has a hotel name but a region name "},
-          "info": {"content": "10 Tage | ÜF | nur Hotel"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+          "hotel": {"pContent": "It has a hotel name but a region name "},
+          "info": {"pContent": "10 Tage | ÜF | nur Hotel"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.P. ab",
           "linkedPriceValue": "2.345"
@@ -40,27 +40,27 @@
       "multiOffer": [
         {
           "h5Content": "Fuerteventura ",
-          "region": {"content": ""},
-          "hotel": {"content": ""},
-          "info": {"content": "2 Wochen | AI+ | nur Hotel"},
+          "region": {"pContent": ""},
+          "hotel": {"pContent": ""},
+          "info": {"pContent": "2 Wochen | AI+ | nur Hotel"},
           "linkedPriceCurrency": "CHF",
           "linkedPriceInfo": "p.P. ab € 3.824 /",
           "linkedPriceValue": "4359"
         },
         {
           "h5Content": "Spanisches Festland ",
-          "region": {"content": ""},
-          "hotel": {"content": ""},
-          "info": {"content": "10 Tage | ÜF | nur Hotel"},
+          "region": {"pContent": ""},
+          "hotel": {"pContent": ""},
+          "info": {"pContent": "10 Tage | ÜF | nur Hotel"},
           "linkedPriceCurrency": "CHF",
           "linkedPriceInfo": "p.P. ab € 3.824 /",
           "linkedPriceValue": "4359"
         },
         {
           "h5Content": "Kroatien, Bulgarien, Osteuropa und so viel mehr ",
-          "region": {"content": ""},
-          "hotel": {"content": ""},
-          "info": {"content": "10 Tage | ÜF | nur Hotel"},
+          "region": {"pContent": ""},
+          "hotel": {"pContent": ""},
+          "info": {"pContent": "10 Tage | ÜF | nur Hotel"},
           "linkedPriceCurrency": "CHF",
           "linkedPriceInfo": "p.P. ab € 3.824 /",
           "linkedPriceValue": "4359"
@@ -73,36 +73,36 @@
       "multiOffer": [
         {
           "h5Content": "Calabrië ",
-          "region": {"content": ""},
-          "hotel": {"content": "LABRANDA Ephesus Premium "},
-          "info": {"content": "22 Wochen | AI+ | nur Hotel"},
+          "region": {"pContent": ""},
+          "hotel": {"pContent": "LABRANDA Ephesus Premium "},
+          "info": {"pContent": "2 Wochen | AI+ | nur Hotel"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "4.859"
         },
         {
           "h5Content": "Ramada Plaza Jumeirah Beach ",
-          "region": {"content": ""},
-          "hotel": {"content": "LABRANDA Blue Bay "},
-          "info": {"content": "222 Wochen | AI+ | nur Hotel"},
+          "region": {"pContent": ""},
+          "hotel": {"pContent": "LABRANDA Blue Bay "},
+          "info": {"pContent": "2 Wochen | AI+ | nur Hotel"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "559"
         },
         {
           "h5Content": "Turkije ",
-          "region": {"content": ""},
-          "hotel": {"content": "LABRANDA Blue Bay "},
-          "info": {"content": "2 Wochen | AI+ | nur Hotel"},
+          "region": {"pContent": ""},
+          "hotel": {"pContent": "LABRANDA Blue Bay "},
+          "info": {"pContent": "2 Wochen | AI+ | nur Hotel"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "3.359"
         },
         {
           "h5Content": "Lanzarote ",
-          "region": {"content": ""},
-          "hotel": {"content": "LABRANDA Blue Bay "},
-          "info": {"content": "2 Wochen | AI+ | nur Hotel"},
+          "region": {"pContent": ""},
+          "hotel": {"pContent": "LABRANDA Blue Bay "},
+          "info": {"pContent": "2 Wochen | AI+ | nur Hotel"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "3.3669"
@@ -116,27 +116,27 @@
       "multiOffer": [
         {
           "h5Content": "Ramada Plaza Jumeirah Beach ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-          "hotel": {"content": ""},
-          "info": {"content": "2 Wochen | AI+ | nur Hotel"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+          "hotel": {"pContent": ""},
+          "info": {"pContent": "2 Wochen | AI+ | nur Hotel"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "2.352"
         },
         {
           "h5Content": "Fuerteventura ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-          "hotel": {"content": ""},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+          "hotel": {"pContent": ""},
+          "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "1.359"
         },
         {
           "h5Content": "Fuerteventura ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-          "hotel": {"content": ""},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+          "hotel": {"pContent": ""},
+          "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "1.359"
@@ -149,45 +149,45 @@
       "multiOffer": [
         {
           "h5Content": "Fuerteventura ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-          "hotel": {"content": "LABRANDA Blue Bay "},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+          "hotel": {"pContent": "LABRANDA Blue Bay "},
+          "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "2.352"
         },
         {
           "h5Content": "Ramada Plaza Jumeirah Beach ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-          "hotel": {"content": "LABRANDA Blue Bay "},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+          "hotel": {"pContent": "LABRANDA Blue Bay "},
+          "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "4.359"
         },
         {
           "h5Content": "Vakanties Turkije All-inclusive naar Turkije ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-          "hotel": {"content": "LABRANDA Blue Bay "},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+          "hotel": {"pContent": "LABRANDA Blue Bay "},
+          "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "2.352"
         },
         {
           "h5Content": "Griekenland vakanties Kies voor de Griekse eilanden ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten"},
-          "hotel": {"content": "LABRANDA Blue Bay "},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten"},
+          "hotel": {"pContent": "LABRANDA Blue Bay "},
+          "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "6.359"
         },
         {
           "h5Content": "Vakanties Marokko Naar het zonnige Marokko ",
-          "region": {"content": "Russland - Sankt Petersburg & Nordwesten very very very long region name"},
-          "hotel": {"content": "LABRANDA Blue Bay very very very long hotel name "},
-          "info": {"content": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
+          "region": {"pContent": "Russland - Sankt Petersburg & Nordwesten very very very long region name"},
+          "hotel": {"pContent": "LABRANDA Blue Bay very very very long hotel name "},
+          "info": {"pContent": "27 dagen | All inclusive | Incl. vlucht & transfer!"},
           "linkedPriceCurrency": "€",
           "linkedPriceInfo": "p.p vanaf",
           "linkedPriceValue": "3.379"

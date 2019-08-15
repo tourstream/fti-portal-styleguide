@@ -1,5 +1,18 @@
 All notable changes to this project will be documented in this file.
 
+## 0.46.0
+- Adds new element: Top Offer List
+- Adds new element: Image with fixed 3:2 ratio
+- Adds new element: Linked Price without an arrow
+- Adds IE11 support for semantic HTML elements
+- Fixed: orange box-shadow on focus for ALL anchors
+
+### Technical improvements
+- Ellipsis refactoring: Includes a config, where you can add elliptable elements
+- Cleans up Gruntfile: Creates and exports only bundle.js, bundle.min.js and bundle.min.gz.js
+- Fixed: debug mode not working
+- Debug mode accepts 1 and 0 as string and number
+
 ## 0.45.5
 - Updates CSS rule values to improve design standardisation
 
