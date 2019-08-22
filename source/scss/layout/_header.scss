@@ -1,6 +1,12 @@
-// HEADER.SCSS
+////
+/// @author planetexpress@fti.de
+/// @access public
+/// @group Header
+/// @todo font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+/// @todo media-queries should go inside the definitions due to create similar code-style experience and for proper documentation
+////
 
-// TODO font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+/// Header Layout
 body > header {
   background-color: $white;
   display: block;

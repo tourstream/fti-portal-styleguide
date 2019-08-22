@@ -1,3 +1,19 @@
+////
+/// @author planetexpress@fti.de
+////
+
+/// Prevents elements to be scrolled.
+/// Build for html and body element, when mobile header menu is opened.
+/// @access public
+/// @group Abstracts
+/// @deprecated Use js/ellipsis-config.js for cross-browser multiline ellipsis.
+/// @since 0.42.0
+/// @parameter {number} lineHeight Restrics the max-height of the element.
+/// @parameter {number} lineCount Restrics the max-height of the element.
+/// @example
+///   .block-element {
+///     @include multi-line-cut(20, 3);
+///   }
 @mixin multi-line-cut($lineHeight, $lineCount) {
   /* stylelint-disable property-no-vendor-prefix */
   /* stylelint-disable value-no-vendor-prefix */

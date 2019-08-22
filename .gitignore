@@ -8,3 +8,4 @@ source/css/style*.*
 .idea/
 .vscode/
 .DS_Store
+scss_docs/

@@ -37,7 +37,7 @@ Note: Some portals use an individual way to implement the Styleguide. Read their
 
 ### npm package
 
-If you want to use the npm package just install with [npm](https://www.npmjs.com/). It requires Node 8 or higher.
+If you want to use the npm package just install with [npm](https://www.npmjs.com/). It requires Node 10 or higher.
 
 ```sh
 $ npm install @tourstream/fti-portal-styleguide --save
@@ -93,8 +93,14 @@ Use `./source/css/pattern-scaffolding.css` to customize Pattern Lab.
 3. ![#cc33ff](https://placehold.it/15/cc33ff/000000?text=+) `undefined:` Element is complete and usable, but element on Invision is not defined or isn't set as complete.
 4. ![#2ECC40](https://placehold.it/15/2ecc40/000000?text=+) `complete:` Element is set as complete in styleguide and in Invision.
 
-## About the Structure
-Visit [Confluence](https://confluence.fti-group.com/display/PORTALS/Styleguide?src=contextnavpagetreemode) to read more about the technical details of the styleguide.
+## Structure and Documentation
+
+```
+npm run docs
+```
+And look up the ./docs/ pages.
+
+Debrecated: Visit [Confluence](https://confluence.fti-group.com/display/PORTALS/Styleguide?src=contextnavpagetreemode) to read more about the technical details of the styleguide.
 
 ***
 

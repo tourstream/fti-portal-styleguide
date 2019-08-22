@@ -1,26 +1,36 @@
-/*
- * BODY.SCSS should be imported as the first component
- */
+////
+/// @author planetexpress@fti.de
+/// @access public
+/// @group Body
+////
 
+/// Body definition.
 body {
   min-width: 320px;
   overflow-y: scroll;
 }
 
-/*
- * @summary: Prevents window from being scrollable
- * @description: For example, when a modal is opened
- */
+/// Prevents elements to be scrolled.
+/// Build for html and body element, when mobile header menu is opened.
+/// @todo Should be a Placeholder.
+/// @todo It doesn't seem to be used at the moment.
+/// @todo Dublicated .no_scroll
+/// @group Layout
+/// @example
+///   html,
+///   body {
+///     height: 100%;
+///     overflow: hidden;
+///     position: relative;
+///   }
 .unscrollable {
   height: 100%;
   overflow-y: hidden;
   position: relative;
 }
 
-/*
- * @summary: Helps to display default value for semnatic elements
- * @description: As they usually have div-properties, we are adding them here for ie11
- */
+/// Helps to display default value for semnatic elements.
+/// As they usually have div-properties, we are adding them here for ie11.
 article,
 aside,
 details,

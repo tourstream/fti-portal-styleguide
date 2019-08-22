@@ -1,6 +1,13 @@
-// MAIN.SCSS
+////
+/// Main is a HTML DOM element that Typo3 uses to place content inside
+/// @author planetexpress@fti.de
+/// @access public
+/// @group Main
+/// @todo font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+/// @todo media-queries should go inside the definitions due to create similar code-style experience and for proper documentation
+////
 
-// TODO font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+/// Main on mobile view
 main {
   margin-bottom: 20px;
   margin-top: 20px;
@@ -53,7 +60,9 @@ main {
   }
 }
 
+/// Main on Desktop view
 @include media-breakpoint-up(md) {
+  /// Main on Desktop view
   main {
     margin-bottom: 30px;
     margin-top: 30px;
