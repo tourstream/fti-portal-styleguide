@@ -24,6 +24,16 @@ main {
     position: relative;
   }
 
+  .width-100 {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .width-25 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 @include media-breakpoint-up(md) {
@@ -33,6 +43,16 @@ main {
 
     &.ibe {
       margin-bottom: 50px;
+    }
+
+    .width-25 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  
+    .width-50 {
+      flex: 0 0 50%;
+      max-width: 50%;
     }
   }
 }

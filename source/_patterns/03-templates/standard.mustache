@@ -33,33 +33,38 @@
 		{{> organisms-content-teaser-50}}
 		{{> organisms-multioffer-teaser-50 }}
 	</div>
-
-	{{> atoms-divider }}
-
-	<div class="multi-teaser-list">
-		{{> organisms-multioffer-teaser-50 }}
-		{{> organisms-content-teaser-50}}
-	</div>
-
+	
 	{{> atoms-divider }}
 
 	<div class="teaser-list">
-		{{> organisms-content-teaser-25 }}
-		{{> organisms-content-teaser-25 }}
-		{{> organisms-content-teaser-25 }}
-		{{> organisms-content-teaser-25 }}
+		<div class="frame frame-default frame-type-text frame-layout-0 width-25">
+			<h2>Regular text (25% width)</h2>
+			<p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+		</div>
+		{{> organisms-content-teaser-25}}
+		{{> organisms-content-teaser-50}}
+	</div>
+	
+	{{> atoms-divider }}
+
+	<div class="teaser-list">
+		<div class="frame frame-default frame-type-text frame-layout-0 width-50">
+			<h2>Regular text (50% width)</h2>
+			<p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+		</div>
+		{{> organisms-content-teaser-25}}
+		{{> organisms-content-teaser-25}}
+	</div>
+	
+	{{> atoms-divider }}
+
+	<div class="frame frame-default frame-type-text frame-layout-0 width-100">
+		<h2>Regular text (full width)</h2>
+		<p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
 	</div>
 
 	{{> atoms-divider }}
-
-	<section class="top-offer-list">
-		{{> organisms-top-offer }}
-		{{> organisms-top-offer }}
-		{{> organisms-top-offer }}
-	</section>
-
-	{{> atoms-divider }}
-
+	
 	{{> organisms-linklist-25 }}
 
 	{{> organisms-linklist-single-title }}
