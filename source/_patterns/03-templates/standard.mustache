@@ -32,23 +32,31 @@
 	<div class="teaser-list">
 		{{> organisms-content-teaser-50}}
 		{{> organisms-multioffer-teaser-50 }}
-	</div>
-	
-	{{> atoms-divider }}
-
-	<div class="teaser-list">
-		<div class="frame frame-default frame-type-text frame-layout-0 width-25">
+		{{> organisms-content-teaser-25}}
+		<div class="standard-content width-25">
 			<h2>Regular text (25% width)</h2>
 			<p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
 		</div>
-		{{> organisms-content-teaser-25}}
 		{{> organisms-content-teaser-50}}
 	</div>
 	
 	{{> atoms-divider }}
 
 	<div class="teaser-list">
-		<div class="frame frame-default frame-type-text frame-layout-0 width-50">
+		<div class="standard-content width-25">
+			<h2>Regular Image (50% width)</h2>
+			{{> atoms-image-responsive}}
+		</div>
+		{{> organisms-content-teaser-25}}
+		<div class="standard-content width-50">
+		  {{> atoms-image-responsive}}
+		</div>
+	</div>
+	
+	{{> atoms-divider }}
+
+	<div class="teaser-list">
+		<div class="standard-content width-50">
 			<h2>Regular text (50% width)</h2>
 			<p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
 		</div>
@@ -58,10 +66,12 @@
 	
 	{{> atoms-divider }}
 
-	<div class="frame frame-default frame-type-text frame-layout-0 width-100">
-		<h2>Regular text (full width)</h2>
-		<p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-	</div>
+  <div class="teaser-list">
+    <div class="standard-content width-100">
+      <h2>Regular text (full width)</h2>
+      <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+    </div>
+  </div>
 
 	{{> atoms-divider }}
 	
