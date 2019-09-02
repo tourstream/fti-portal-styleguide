@@ -20,8 +20,10 @@
   @return 100 - $amount;
 }
 
-/// Gets a deeply nested value from a map
+/// Gets a deeply nested value from a map.
 /// @access public
+/// @author Birgit Pohl
+/// @group Abstracts
 /// @param {Map} $map - Map
 /// @param {Arglist} $keys - Key chain
 /// @return {any} - Desired value
@@ -38,9 +40,11 @@
   @return $map;
 }
 
-/// Maps z-index variables
-/// @description: https://confluence.fti-group.com/display/PORTALS/z-index+strategy
+/// Maps z-index variables.
+/// https://confluence.fti-group.com/display/PORTALS/z-index+strategy
 /// @access public
+/// @author Birgit Pohl
+/// @group Abstracts
 /// @param {base} First level
 /// @param {layer} Second level
 /// @return {any} - Desired value
