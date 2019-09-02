@@ -74,6 +74,14 @@
   display: flex;
   justify-content: flex-end;
   margin-top: auto;
+
+  &:hover {
+    .linked-price-currency,
+    .linked-price-value,
+    .linked-price-arrow {
+      color: $link-hover-color;
+    }
+  }
 }
 
 // teaser - basic elements
@@ -93,15 +101,6 @@
 
 .teaser-description {
   margin-bottom: 1rem;
-}
-
-// TODO From old Teaser button. Should this be removed?
-.teaser-cta {
-  a {
-    align-self: flex-end;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 }
 
 // specials for teasers

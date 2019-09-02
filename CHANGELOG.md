@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.48.4
+- Adds hover color to offer teaser > linked price
+
 ## 0.48.3
 - Defines Text-Image margin-top on mobile view
 
