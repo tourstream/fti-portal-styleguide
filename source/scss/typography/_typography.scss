@@ -21,6 +21,7 @@ h1,
   font-size: $h1-font-size;
   font-weight: $font-weight-regular;
   line-height: $h1-line-height;
+  margin-bottom: $headline-margin-bottom;
 }
 
 h2,
@@ -28,6 +29,7 @@ h2,
   font-size: $h2-font-size;
   font-weight: $font-weight-regular;
   line-height: $h2-line-height;
+  margin-bottom: $headline-margin-bottom;
 }
 
 h3,
@@ -35,6 +37,7 @@ h3,
   font-size: $h3-font-size;
   font-weight: $font-weight-bold;
   line-height: $h3-line-height;
+  margin-bottom: $headline-margin-bottom;
 }
 
 h4,
@@ -42,6 +45,7 @@ h4,
   font-size: $h4-font-size;
   font-weight: $font-weight-regular;
   line-height: $h4-line-height;
+  margin-bottom: $headline-margin-bottom;
   text-transform: uppercase;
 }
 
@@ -50,6 +54,13 @@ h5,
   font-size: $h5-font-size;
   font-weight: $font-weight-bold;
   line-height: $h5-line-height;
+  margin-bottom: $headline-margin-bottom;
+}
+
+// Not design-defined element
+h6,
+.h6 {
+  margin-bottom: $headline-margin-bottom;
 }
 
 // TEXT: P-TAG / SPAN-TAG

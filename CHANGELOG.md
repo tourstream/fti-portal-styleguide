@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.48.1
+- Adapts Headlines' margin-bottoms
+
 ## 0.48.0
 - Defines z-indexes and documents them
 - Fixes z-index for French Quicksearch
