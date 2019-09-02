@@ -1,4 +1,7 @@
 All notable changes to this project will be documented in this file.
+## 0.48.5
+- Adds atom divider (hr) and defines its global margins
+- Cleanup template Standard for better review
 
 ## 0.48.4
 - Adds hover color to offer teaser > linked price
