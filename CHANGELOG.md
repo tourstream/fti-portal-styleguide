@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.48.2
+- Adapts Headline line-heights for mobile view only
+
 ## 0.48.1
 - Adapts Headlines' margin-bottoms
 

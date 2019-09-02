@@ -20,41 +20,61 @@ h1,
 .h1 {
   font-size: $h1-font-size;
   font-weight: $font-weight-regular;
-  line-height: $h1-line-height;
+  line-height: $h1-mobile-line-height;
   margin-bottom: $headline-margin-bottom;
+
+  @include media-breakpoint-up("md") {
+    line-height: $h1-line-height;
+  }
 }
 
 h2,
 .h2 {
   font-size: $h2-font-size;
   font-weight: $font-weight-regular;
-  line-height: $h2-line-height;
+  line-height: $h2-mobile-line-height;
   margin-bottom: $headline-margin-bottom;
+
+  @include media-breakpoint-up("md") {
+    line-height: $h2-line-height;
+  }
 }
 
 h3,
 .h3 {
   font-size: $h3-font-size;
   font-weight: $font-weight-bold;
-  line-height: $h3-line-height;
+  line-height: $h3-mobile-line-height;
   margin-bottom: $headline-margin-bottom;
+
+  @include media-breakpoint-up("md") {
+    line-height: $h3-line-height;
+  }
 }
 
 h4,
 .h4 {
   font-size: $h4-font-size;
   font-weight: $font-weight-regular;
-  line-height: $h4-line-height;
+  line-height: $h4-mobile-line-height;
   margin-bottom: $headline-margin-bottom;
   text-transform: uppercase;
+
+  @include media-breakpoint-up("md") {
+    line-height: $h4-line-height;
+  }
 }
 
 h5,
 .h5 {
   font-size: $h5-font-size;
   font-weight: $font-weight-bold;
-  line-height: $h5-line-height;
+  line-height: $h5-mobile-line-height;
   margin-bottom: $headline-margin-bottom;
+
+  @include media-breakpoint-up("md") {
+    line-height: $h5-line-height;
+  }
 }
 
 // Not design-defined element
