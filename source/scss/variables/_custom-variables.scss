@@ -20,20 +20,14 @@
 /*
     TABLE OF CONTENT
 
-    Links
-    Text
-    Tab
-    Box-Shadow
     Z-Index Map
+    Grid breakpoints
+    Grid containers
+    Margins & Paddings
+
     Components (padding, border-radius and more)
     Header
     Navigation
-
-    Grid breakpoints
-    Grid containers
-
-    Margins & Paddings
-
     Logo
 */
 
@@ -58,23 +52,6 @@ $z-layers: (
     "cookie-alert": 3900
   ),
 );
-
-// COMPONENTS
-$border-radius: .125rem;
-$border-radius-lg: .125rem;
-$border-radius-sm: .125rem;
-
-// HEADER
-$navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{rgba($secondary-80, .9999)}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-
-// NAVIGATION
-$header-navigation-mobile-width: 90%;
-$header-navigation-mobile-min-width: 288px;
-$header-navigation-tablet-width: 335px;
-$header-navigation-item-height: 44px;
-$header-sub-navigation-desktop-padding: 70px;
-
-
 // GRID BREAKPOINTS
 $grid-breakpoints: (
   xs: 0,
@@ -96,5 +73,23 @@ $container-max-widths: (
   xl: 75.1875 + 2 * $content-padding-15
 );
 
+// COMPONENTS
+$border-radius: .125rem;
+$border-radius-lg: .125rem;
+$border-radius-sm: .125rem;
+
+// HEADER
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{rgba($secondary-80, .9999)}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
+// NAVIGATION
+$header-navigation-mobile-width: 90%;
+$header-navigation-mobile-min-width: 288px;
+$header-navigation-tablet-width: 335px;
+$header-navigation-item-height: 44px;
+$header-sub-navigation-desktop-padding: 70px;
+
 // LOGO
 $logo-width-mobile: 60px;
+
+// TEXT-IMAGES
+$ce-image-margin: $font-size-base * 1;
