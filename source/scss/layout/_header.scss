@@ -9,7 +9,7 @@ body > header {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: $header-z-index;
+  z-index: get-z-index("component", "header");
 
   > div {
     display: flex;

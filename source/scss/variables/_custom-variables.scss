@@ -24,7 +24,7 @@
     Text
     Tab
     Box-Shadow
-    Z-indexes
+    Z-Index Map
     Components (padding, border-radius and more)
     Header
     Navigation
@@ -37,15 +37,27 @@
     Logo
 */
 
-
-
-// Z-INDEXES
-$backdrop-z-index: 1;
-$header-logo-z-index: 2;
-$cookie-alert-z-index: 100;
-$header-z-index: 10;
-$header-sub-menu-desktop-z-index: 1;
-$select-z-index: -1;
+// Z-INDEX MAP
+// @description: https://confluence.fti-group.com/display/PORTALS/z-index+strategy
+$z-layers: (
+  "bottomless-pit": (
+    "select-tab": -1
+  ),
+  "component": (
+    "base": 0,
+    "backdrop": 1,
+    "header-logo": 1,
+    "header": 10,
+  ),
+  "navigation": (
+    "base": 2000,
+    "header-sub-menu-desktop": 2900,
+  ),
+  "notification": (
+    "base": 3000,
+    "cookie-alert": 3900
+  ),
+);
 
 // COMPONENTS
 $border-radius: .125rem;

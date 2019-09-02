@@ -2,6 +2,41 @@
 /// @access public
 /// @param {amount} $color - color to shade
 /// @return {number}
+
 @function complements($amount) {
   @return 100 - $amount;
 }
+
+/// Gets a deeply nested value from a map
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {any} - Desired value
+
+@function map-deep-get($map, $keys...) {
+  
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @error "No key found for `#{$keys}` in @function map-deep-get. Property omitted.";
+    }
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+/// Maps z-index variables
+/// @description: https://confluence.fti-group.com/display/PORTALS/z-index+strategy
+/// @access public
+/// @param {base} First level
+/// @param {layer} Second level
+/// @return {any} - Desired value
+
+@function get-z-index($base, $layer) {
+  @if not map-has-key($z-layers, $base) {
+    @error "No base found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+  @return map-deep-get($z-layers, $base, $layer);
+}
+
+

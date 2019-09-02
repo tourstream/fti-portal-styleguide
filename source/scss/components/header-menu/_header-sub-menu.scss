@@ -31,7 +31,7 @@
     padding: $content-padding-15 0;
     position: absolute;
     top: 100%;
-    z-index: $header-sub-menu-desktop-z-index;
+    z-index: get-z-index("navigation", "header-sub-menu-desktop");
   }
 
   .header-sub-menu-item {

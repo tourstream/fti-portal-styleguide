@@ -26,7 +26,7 @@
   .c-logo-link {
     height: 80px;
     position: relative;
-    z-index: $header-logo-z-index;
+    z-index: get-z-index("component", "header-logo");
 
     img {
       height: 100px;

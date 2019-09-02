@@ -7,5 +7,5 @@
   position: fixed;
   top: $logo-width-mobile;
   width: 100%;
-  z-index: $backdrop-z-index;
+  z-index: get-z-index("component", "backdrop");
 }

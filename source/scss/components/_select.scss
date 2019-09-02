@@ -8,7 +8,7 @@
     margin-left: 15px;
     position: absolute;
     top: 10px;
-    z-index: $select-z-index;
+    z-index: get-z-index("bottomless-pit", "select-tab");
 
     i {
       font-size: 22px;
