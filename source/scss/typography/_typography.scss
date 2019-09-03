@@ -1,12 +1,20 @@
-// TODO general Anchor definitions should go here.
+////
+/// @author planetexpress@fti.de
+/// @todo General Anchor definitions should go into typography.scss.
+////
 
-// GENERAL
+/// General Typography
+/// @access public
+/// @group Typography
 html {
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
 }
 
+/// General Typography
+/// @access public
+/// @group Typography
 body {
   color: $font-color;
   font-family: $font-family;
@@ -15,7 +23,9 @@ body {
   line-height: $p-line-height;
 }
 
-// HEADLINES
+/// Headline Typography
+/// @access public
+/// @group Typography
 h1,
 .h1 {
   font-size: $h1-font-size;
@@ -28,6 +38,9 @@ h1,
   }
 }
 
+/// Headline Typography
+/// @access public
+/// @group Typography
 h2,
 .h2 {
   font-size: $h2-font-size;
@@ -40,6 +53,9 @@ h2,
   }
 }
 
+/// Headline Typography
+/// @access public
+/// @group Typography
 h3,
 .h3 {
   font-size: $h3-font-size;
@@ -52,6 +68,9 @@ h3,
   }
 }
 
+/// Headline Typography
+/// @access public
+/// @group Typography
 h4,
 .h4 {
   font-size: $h4-font-size;
@@ -65,6 +84,9 @@ h4,
   }
 }
 
+/// Headline Typography
+/// @access public
+/// @group Typography
 h5,
 .h5 {
   font-size: $h5-font-size;
@@ -83,52 +105,92 @@ h6,
   margin-bottom: $headline-margin-bottom;
 }
 
-// TEXT: P-TAG / SPAN-TAG
+/// Paragraph Typography
+/// @access public
+/// @group Typography
 p {
   font-size: $p-font-size;
   line-height: $p-line-height;
 }
 
+/// Span Typography
+/// @access public
+/// @group Typography
 span {
   font-size: $span-font-size;
   line-height: $span-line-height;
 }
 
-strong {
+/// Bold Typography
+/// @access public
+/// @group Typography
+strong,
+b {
   display: inline;
   font-weight: $font-weight-bold;
 }
 
+/// List Typography
+/// @access public
+/// @group Typography
 ul {
   font-size: $ul-font-size;
   line-height: $ul-line-height;
 }
 
+/// List Typography
+/// @access public
+/// @group Typography
 ol {
   font-size: $ol-font-size;
   line-height: $ol-line-height;
 }
 
+/// .small, %small Typography
+/// @access public
+/// @group Typography
+/// @example
+///   .typography-element {
+///     @extend %small; 
+///   }
 %small {
   font-size: $small-font-size;
   line-height: $small-line-height;
 }
 
+/// .small, %small Typography
+/// @access public
+/// @group Typography
 .small {
   @extend %small;
 }
 
+/// .smaller, %smaller Typography
+/// @access public
+/// @group Typography
+/// @example
+///   .typography-element {
+///     @extend %smaller; 
+///   }
 %smaller {
   font-size: $smaller-font-size;
   line-height: $smaller-line-height;
 }
 
+/// .smaller, %smaller Typography
+/// @access public
+/// @group Typography
 .smaller {
   @extend %smaller;
 }
 
-// Special unordered list styles, not defined in design-guide
-
+/// List Typography
+/// @access public
+/// @todo Not defined in design-guide.
+/// @todo Values should be stured in variables.
+/// @require $primary
+/// @require $font-weight-bold
+/// @group Typography
 .list-styled-dots-primary {
   list-style: none;
 

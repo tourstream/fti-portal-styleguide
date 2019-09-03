@@ -1,9 +1,11 @@
-// FOOTER.SCSS
+////
+/// @author planetexpress@fti.de
+/// @access public
+/// @group Footer
+/// @todo font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+////
 
-// TODO font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
-
-//@import "../typography/typography";
-
+/// Footer
 footer {
   text-align: center;
 
@@ -12,6 +14,9 @@ footer {
   }
 }
 
+/// Footer
+/// @todo Create Placeholder
+/// @todo font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
 .footer-hotline,
 .footer-content,
 .footer-menu,
@@ -19,6 +24,7 @@ footer {
   margin-bottom: 1rem;
 }
 
+/// Footer
 .footer-hotline {
   padding-top: .75rem;
 }

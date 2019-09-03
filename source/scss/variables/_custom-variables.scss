@@ -1,38 +1,29 @@
-/*
-    CUSTOM VARIABLES
-
-    Bootstrap variables can be re-defined and customized:
-    Copy the variable you want to re-define and set the value without "!default".
-    We are doing it here to have an overview of the variables and definitons we are using for the portals.
-
-    NAMING RULES
-    Variables should follow the `$component-state-property-size` formula for
-    consistent naming. Example: $nav-link-disabled-color and $modal-content-box-shadow-xs.
-
-    We have the chance to make this repository a template for all portals:
-    By declaring a variable with !default, you can set a default color, that a specific portal can change in their own repository.
-*/
+////
+/// @author planetexpress@fti.de
+/// @access public
+/// @group Layout
+////
+//  Bootstrap variables can be re-defined and customized:
+//  Copy the variable you want to re-define and set the value without "!default".
+//  We are doing it here to have an overview of the variables and definitons we are using for the portals.
+//  
+//  NAMING RULES
+//  Variables should follow the `$component-state-property-size` formula for
+//  consistent naming. Example: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+//
+//  We have the chance to make this repository a template for all portals:
+//  By declaring a variable with !default, you can set a default color, that a specific portal can change in their own repository.
 
 // TODO split by theme and put it into own files
+
 @import "color-variables";
 @import "typography-variables";
 
-/*
-    TABLE OF CONTENT
-
-    Z-Index Map
-    Grid breakpoints
-    Grid containers
-    Margins & Paddings
-
-    Components (padding, border-radius and more)
-    Header
-    Navigation
-    Logo
-*/
-
-// Z-INDEX MAP
-// @description: https://confluence.fti-group.com/display/PORTALS/z-index+strategy
+/// Z-Index Map
+/// https://confluence.fti-group.com/display/PORTALS/z-index+strategy
+/// get-z-index("first-level", "second-level");
+/// Use get-z-index(), which contains some validation.
+/// @example: z-index: get-z-index("bottomless-pit", "select-tab");
 $z-layers: (
   "bottomless-pit": (
     "select-tab": -1
@@ -52,7 +43,88 @@ $z-layers: (
     "cookie-alert": 3900
   ),
 );
-// GRID BREAKPOINTS
+
+/// General Border Radius definition
+/// @todo Create a set of border-radius.
+$border-radius: .125rem;
+
+/// Large Screen Border Radius definition. 
+/// @todo Create a set of border-radius.
+/// @example 
+/// .class {
+///   @include media-breakpoint-up("lg") {
+///     border-radius: $border-radius-lg;
+///   }
+/// }
+$border-radius-lg: .125rem;
+
+/// Small Screen Border Radius definition. 
+/// @todo Create a set of border-radius.
+/// @example 
+/// .class {
+///    border-radius: $border-radius-sm;
+/// }
+$border-radius-sm: .125rem;
+
+/// Toggle Icon Dark for Navbar 
+/// Dependent on Bootstrap
+/// @group Navigation
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{rgba($secondary-80, .9999)}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
+/// Width for header navigation on mobile view.
+/// @group Navigation
+/// @example 
+/// .class {
+///   width: $header-navigation-mobile-width;
+/// }
+$header-navigation-mobile-width: 90%;
+
+/// Min-Width for header navigation on mobile view.
+/// Prevents layout breaks.
+/// @group Navigation
+/// @example 
+/// .class {
+///   min-width: $header-navigation-mobile-min-width;
+/// }
+$header-navigation-mobile-min-width: 288px;
+
+/// Width for header navigation on tablet view.
+/// @group Navigation
+/// @example
+/// .class {
+///   @include media-breakpoint-up("sm") {
+///     width: $header-navigation-tablet-width;
+///   }
+/// }
+$header-navigation-tablet-width: 335px;
+
+/// Item Height for header navigation.
+/// @group Navigation
+/// @example
+/// .class {
+///   height: $header-navigation-item-height;
+/// }
+$header-navigation-item-height: 44px;
+
+/// Padding for Sub-navigation set for desktop.
+/// @group Navigation
+/// @example
+/// .class {
+///   @include media-breakpoint-up("md") {
+///     padding: $header-sub-navigation-desktop-padding;
+///   }
+/// }
+$header-sub-navigation-desktop-padding: 70px;
+
+/// Grid breakpoints
+/// Dependent on Bootstrap
+/// @example
+/// .class {
+///   @include media-breakpoint-up("sm") {
+///    // ...
+///   }
+/// }
+
 $grid-breakpoints: (
   xs: 0,
   sm: 480px,
@@ -62,10 +134,21 @@ $grid-breakpoints: (
   ad: 1600px // advertisment AT
 );
 
-// MARGINS & PADDINGS
+/// General spacing.
+/// It is called padding, but used it for margin and other spacings.
+/// @example
+/// .class {
+///   margin-right: $content-padding-15 * 2; // Column Gab
+/// }
+/// @example
+/// .class {
+///   padding: $content-padding-15;
+/// }
 $content-padding-15: .9375rem;
 
-// GRID CONTAINERS
+/// Grid Containers Definitions
+/// Dependent on Bootstrap
+/// @require $content-padding-15
 $container-max-widths: (
   sm: 28.1875 + 2 * $content-padding-15,
   md: 45.125 + 2 * $content-padding-15,
@@ -73,22 +156,12 @@ $container-max-widths: (
   xl: 75.1875 + 2 * $content-padding-15
 );
 
-// COMPONENTS
-$border-radius: .125rem;
-$border-radius-lg: .125rem;
-$border-radius-sm: .125rem;
-
-// HEADER
-$navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{rgba($secondary-80, .9999)}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-
-// NAVIGATION
-$header-navigation-mobile-width: 90%;
-$header-navigation-mobile-min-width: 288px;
-$header-navigation-tablet-width: 335px;
-$header-navigation-item-height: 44px;
-$header-sub-navigation-desktop-padding: 70px;
-
-// LOGO
+/// Width for Logo in the Header.
+/// @group Logo
+/// @example
+/// .class {
+///   width: $logo-width-mobile;
+/// }
 $logo-width-mobile: 60px;
 
 // TEXT-IMAGES

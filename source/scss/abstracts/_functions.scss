@@ -1,14 +1,29 @@
-/// Calculates the rest of an amount based on 100%
+////
+/// @author planetexpress@fti.de
+////
+
+/// Calculates the rest of an amount based on 100%.
 /// @access public
-/// @param {amount} $color - color to shade
+/// @author Birgit Pohl
+/// @group Abstracts
+/// @example
+///   .flex-element-1 {
+///     flex-basis: 70%;
+///   }
+///   .flex-element-2 {
+///     flex-basis: complements(70); // 30
+///   } 
+/// @parameter {number} $amount - Amount from 0 to 100
 /// @return {number}
 
 @function complements($amount) {
   @return 100 - $amount;
 }
 
-/// Gets a deeply nested value from a map
+/// Gets a deeply nested value from a map.
 /// @access public
+/// @author Birgit Pohl
+/// @group Abstracts
 /// @param {Map} $map - Map
 /// @param {Arglist} $keys - Key chain
 /// @return {any} - Desired value
@@ -25,9 +40,11 @@
   @return $map;
 }
 
-/// Maps z-index variables
-/// @description: https://confluence.fti-group.com/display/PORTALS/z-index+strategy
+/// Maps z-index variables.
+/// https://confluence.fti-group.com/display/PORTALS/z-index+strategy
 /// @access public
+/// @author Birgit Pohl
+/// @group Abstracts
 /// @param {base} First level
 /// @param {layer} Second level
 /// @return {any} - Desired value

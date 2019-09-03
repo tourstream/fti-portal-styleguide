@@ -1,7 +1,13 @@
-// FOOTER-NAVIGATION.SCSS
+////
+/// @author planetexpress@fti.de
+/// @access public
+/// @group Footer
+/// @todo font-size and padding/margin variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
+////
 
-// TODO font-size and padding variables should go here, speak to your designer, to find out, if we use the sizes in a more global context
-
+/// Footer menu
+/// @require %smaller
+/// @require $link-color
 .footer-menu {
   .nav-item {
     @extend %smaller;

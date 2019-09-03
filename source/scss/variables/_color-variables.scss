@@ -1,77 +1,277 @@
-// Base
-$light-gray: #eeeeee;
-$light-gray-80: #f1f1f1;
-$light-gray-60: #f3f3f3;
-$light-gray-40: #f6f6f6;
-$light-gray-20: #f8f8f8;
+////
+/// @author planetexpress@fti.de
+/// @group Color
+/// @access public
+////
 
-$red: #cc0000;
-$red-80: #d63232;
-$red-60: #df6464;
-$red-40: #e89696;
-
-$yellow: #ffc700;
-$yellow-80: #fed232;
-$yellow-60: #fddc64;
-$yellow-40: #fce696;
-
-$green: #96c948;
-$green-80: #aad36c;
-$green-60: #bedd90;
-$green-40: #d2e7b3;
-
-$cyan: #0099cc;
-$cyan-80: #32add6;
-$cyan-60: #64c0df;
-$cyan-40: #96d3e8;
-
-$white: #ffffff;
-$black: #000000;
-
-$dark-orange: #ff8000;
-
-$purple: #aa165f;
-
-// Corporate Colors
+// Corporate Primary Color
+/// @todo create a set of primary colors.
+/// @example $variable: $primary;
+/// @example color: $primary;
+/// @example background-color: $primary;
 $primary: #ff9933;
+
+/// Corporate Primary Color
+/// @todo create a set of primary colors.
+/// @example $variable: $primary-80;
+/// @example color: $primary-80;
+/// @example background-color: $primary-80;
 $primary-80: #fead5b;
+
+/// Corporate Primary Color
+/// @todo create a set of primary colors.
+/// @example $variable: $primary-60;
+/// @example color: $primary-60;
+/// @example background-color: $primary-60;
 $primary-60: #fdc083;
+
+/// Corporate Primary Color
+/// @todo create a set of primary colors.
+/// @example $variable: $primary-40;
+/// @example color: $primary-40;
+/// @example background-color: $primary-40;
 $primary-40: #fcd4ab;
+
+/// Corporate Primary Color
+/// @todo create a set of primary colors.
+/// @example $variable: $primary-20;
+/// @example color: $primary-20;
+/// @example background-color: $primary-20;
 $primary-20: #fbe7d3;
 
+/// Based on $primary.
+/// Used for hover behaviours.
+/// @todo create a set of primary colors.
+/// @example $variable: $dark-orange;
+/// @example color: $dark-orange;
+/// @example background-color: $dark-orange;
+$dark-orange: #ff8000;
+
+/// Corporate Secondary Color
+/// @todo create a set of secondary colors.
+/// @example $variable: $secondary;
+/// @example color: $secondary;
+/// @example background-color: $secondary;
 $secondary: #424242;
+
+/// Corporate Secondary Color
+/// @todo create a set of secondary colors.
+/// @example $variable: $secondary-80;
+/// @example color: $secondary-80;
+/// @example background-color: $secondary-80;
 $secondary-80: #676767;
+
+/// Corporate Secondary Color
+/// @todo create a set of secondary colors.
+/// @example $variable: $secondary-60;
+/// @example color: $secondary-60;
+/// @example background-color: $secondary-60;
 $secondary-60: #8c8c8c;
+
+/// Corporate Secondary Color
+/// @todo create a set of secondary colors.
+/// @example $variable: $secondary-40;
+/// @example color: $secondary-40;
+/// @example background-color: $secondary-40;
 $secondary-40: #b1b1b1;
+
+/// Corporate Secondary Color
+/// @todo create a set of secondary colors.
+/// @example $variable: $secondary-20;
+/// @example color: $secondary-20;
+/// @example background-color: $secondary-20;
 $secondary-20: #d6d6d6;
 
+/// Corporate Campaign Color
+/// @example $variable: $purple;
+$purple: #aa165f;
+
+/// Base Color
+/// @todo create a set of light-gray colors.
+/// @example $variable: $light-gray;
+$light-gray: #eeeeee;
+
+/// Base Color
+/// @todo create a set of light-gray colors.
+/// @example $variable: $light-gray-80;
+$light-gray-80: #f1f1f1;
+
+/// Base Color
+/// @todo create a set of light-gray colors.
+/// @example $variable: $light-gray-60;
+$light-gray-60: #f3f3f3;
+
+/// Base Color
+/// @todo create a set of light-gray colors.
+/// @example $variable: $light-gray-40;
+$light-gray-40: #f6f6f6;
+
+/// Base Color
+/// @todo create a set of light-gray colors.
+/// @example $variable: $light-gray-20;
+$light-gray-20: #f8f8f8;
+
+/// Base Color
+/// @todo create a set of red colors.
+/// @example $variable: $red;
+$red: #cc0000;
+
+/// Base Color
+/// @todo create a set of red colors.
+/// @example $variable: $red-80;
+$red-80: #d63232;
+
+/// Base Color
+/// @todo create a set of red colors.
+/// @example $variable: $red-60;
+$red-60: #df6464;
+
+/// Base Color
+/// @todo create a set of red colors.
+/// @example $variable: $red-40;
+$red-40: #e89696;
+
+/// Base Color
+/// @todo create a set of yellow colors.
+/// @example $variable: $yellow;
+$yellow: #ffc700;
+
+/// Base Color
+/// @todo create a set of yellow colors.
+/// @example $variable: $yellow-80;
+$yellow-80: #fed232;
+
+/// Base Color
+/// @todo create a set of yellow colors.
+/// @example $variable: $yellow-60;
+$yellow-60: #fddc64;
+
+/// Base Color
+/// @todo create a set of yellow colors.
+/// @example $variable: $yellow-40;
+$yellow-40: #fce696;
+
+/// Base Color
+/// @todo create a set of green colors.
+/// @example $variable: $green;
+$green: #96c948;
+
+/// Base Color
+/// @todo create a set of green colors.
+/// @example $variable: $green-80;
+$green-80: #aad36c;
+
+/// Base Color
+/// @todo create a set of green colors.
+/// @example $variable: $green-60;
+$green-60: #bedd90;
+
+/// Base Color
+/// @todo create a set of green colors.
+/// @example $variable: $green-40;
+$green-40: #d2e7b3;
+
+/// Base Color
+/// @todo create a set of cyan colors.
+/// @example $variable: $cyan;
+$cyan: #0099cc;
+
+/// Base Color
+/// @todo create a set of cyan colors.
+/// @example $variable: $cyan-80;
+$cyan-80: #32add6;
+
+/// Base Color
+/// @todo create a set of cyan colors.
+/// @example $variable: $cyan-60;
+$cyan-60: #64c0df;
+
+/// Base Color
+/// @todo create a set of cyan colors.
+/// @example $variable: $cyan-60;
+$cyan-40: #96d3e8;
+
+/// Base Color
+/// @example $variable: $white;
+$white: #ffffff;
+
+/// Base Color
+/// @example $variable: $black;
+$black: #000000;
+
+/// General Font Color
+/// @require $secondary
+/// @example color: $font-color;
 $font-color: $secondary;
 
-///////// LIGHT/DARK CONTRAST
-
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-//$yiq-contrasted-threshold: 200;
-
-// TEXT
+/// Muted Text Font Color
+/// @require $secondary-60
+/// @example color: $text-muted;
 $text-muted: $secondary-60;
 
-// BOX-SHADOW
+/// Box Shadow Down
+/// @require $black
+/// @todo .9 should get a variable. Relates to $box-shadow, $dropdown-shadow.
+/// @see $box-shadow
+/// @see $dropdown-shadow
+/// @example box-shadow: $box-down-shadow;
 $box-down-shadow: 0 3px 10px 0 transparentize($black, .9);
+
+/// Box Shadow
+/// @require $black
+/// @todo .9 should get a variable. Relates to $box-down-shadow, $dropdown-shadow.
+/// @see $box-down-shadow
+/// @see $dropdown-shadow
+/// @example box-shadow: $box-shadow;
 $box-shadow: 0 0 1rem 0 transparentize($black, .9);
+
+/// Box Shadow
+/// @require $black
+/// @todo .9 should get a variable. Relates to $box-down-shadow, $box-shadow.
+/// @see $box-down-shadow
+/// @see $box-shadow
+/// @example box-shadow: $dropdown-shadow;
 $dropdown-shadow: 0 4px 5px 2px transparentize($black, .9);
 
-// FOCUS
+/// Button Fokus Color
+/// @require $primary
+/// @todo Check if it is used bz Bootstrap and here just to overwrite their variable
 $input-btn-focus-color: transparentize($primary, .5);
 
-///////// COMPONENTS
-
-// LINKS
+/// Link Font Color
+/// @access public
+/// @group Color
+/// @require $primary
+/// @example color: $link-color;
 $link-color: $primary;
+
+/// Link Hover Font Color
+/// @access public
+/// @group Color
+/// @require $dark-orange
+/// @example color: $link-hover-color;
 $link-hover-color: $dark-orange;
 
-// BUTTON
+/// Button Hover Font Color
+/// @access public
+/// @todo Should require $link-hover-color.
+/// @group Color
+/// @require $dark-orange
+/// @example color: $button-hover-color;
 $button-hover-color: $dark-orange;
+
+/// Button Hover Border Color
+/// @access public
+/// @todo Should require $link-hover-color.
+/// @group Color
+/// @require $dark-orange
+/// @example color: $button-hover-border-color;
 $button-hover-border-color: $dark-orange;
 
-// TAB
+/// Background color for Tab element
+/// @access public
+/// @todo Should not use transparentize, since it is creating transparent color and might have unwanted effects related to the underlying background color.
+/// @group Color
+/// @require $light-gray
+/// @example color: $tab-background-color;
 $tab-background-color: transparentize($light-gray, .25);

@@ -1,12 +1,38 @@
-// when adding this class, is prevents elements to be scrolled
-// build for html and body element, when mobile header menu is opened
+////
+/// @author planetexpress@fti.de
+/// @access public
+////
+
+/// Prevents elements to be scrolled.
+/// Build for html and body element, when mobile header menu is opened.
+/// @todo Should be a Placeholder.
+/// @todo It doesn't seem to be used at the moment.
+/// @todo Dublicated .unscrollable
+/// @example
+///   html,
+///   body {
+///     height: 100%;
+///     overflow: hidden;
+///     position: relative;
+///   }
 .no-scroll {
   height: 100%;
   overflow: hidden;
   position: relative;
 }
 
-// use this class to display elements, by adding this class via javascript.
+/// Class to overwrite display property using Javascript.
 .display-block {
   display: block !important;
+}
+
+/// Gives a component the appearance to stick out.
+/// Usage for example in Top Offer, Multi teaser and Teasers.
+/// @example
+/// .class {
+///  @extend %component-boxing;
+/// }
+%component-boxing {
+  background-color: $white;
+  box-shadow: $box-shadow;
 }
