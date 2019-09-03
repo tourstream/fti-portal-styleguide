@@ -1,4 +1,8 @@
 All notable changes to this project will be documented in this file.
+
+## 0.49.0
+- Adds new classes for the Width of Typo3-Standardcontent
+
 ## 0.48.5
 - Adds atom divider (hr) and defines its global margins
 - Cleanup template Standard for better review
