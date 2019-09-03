@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.50.0
+- Adds Sass Documentation to the repository. Run `npm run docs`.
+
 ## 0.49.0
 - Adds new classes for the Width of Typo3-Standardcontent
 
