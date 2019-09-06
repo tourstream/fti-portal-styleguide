@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.50.1
+- Makes Typo3-Standardcontent work also outside of the Teaserlist
+
 ## 0.50.0
 - Adds Sass Documentation to the repository. Run `npm run docs`.
 
