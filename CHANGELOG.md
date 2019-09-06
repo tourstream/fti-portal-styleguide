@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.50.2
+- Updates CSS for the Top Offer List on large screens.
+
 ## 0.50.0
 - Adds Sass Documentation to the repository. Run `npm run docs`.
 
