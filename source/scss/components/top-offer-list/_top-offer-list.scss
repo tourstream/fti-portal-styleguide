@@ -34,12 +34,8 @@ $info-width: 60%;
 
   @include media-breakpoint-up("md") {
     flex-direction: row;
-  }
-
-  @include media-breakpoint-up("lg") {
-    $width: 960px;
-    flex: 0 0 $width;
-    max-width: $width;
+    max-height: 11rem;
+    width: 100%;
   }
 
   &:last-child {
@@ -54,6 +50,13 @@ $info-width: 60%;
 .top-offer-hotel-info {
   @extend %top-offer-margin;
   width: 100%;
+
+  @include media-breakpoint-up("md") {
+    height: 100%;
+    margin: 0;
+    padding: $content-padding-15;
+    width: 100%;
+  }
 
   aside.top-offer-recommendation {
     display: flex;
@@ -82,8 +85,6 @@ $info-width: 60%;
   a:empty {
     display: none;
   }
-
-
 }
 
 /*
@@ -116,7 +117,6 @@ $info-width: 60%;
 .top-offer-title {
   display: flex;
   margin-top: $content-padding-15;
-  word-wrap: none;
 
   h3 {
     display: inline;
@@ -140,14 +140,44 @@ $info-width: 60%;
   flex: 0 1 100%;
   flex-direction: column;
 
+  @include media-breakpoint-up("md") {
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    height: 100%;
+    margin: 0;
+    max-width: 10.5rem;
+    padding: $content-padding-15;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up("lg") {
+    max-width: 13rem;
+  }
+
   > div {
     display: flex;
     justify-content: space-between;
     margin-bottom: $content-padding-15;
+
+    @include media-breakpoint-up("md") {
+      flex-wrap: wrap;
+      justify-content: none;
+
+      > div {
+        width: 100%;
+      }
+    }
   }
 
   .linked-price {
     align-self: flex-end;
+
+    @include media-breakpoint-up("md") {
+      align-self: flex-end;
+      width: 100%;
+    }
   }
 
   .multi-teaser-info p {
@@ -169,7 +199,7 @@ $info-width: 60%;
   flex: 1 1 100%;
 
   @include media-breakpoint-up("md") {
-    flex: 0 0 426px;
+    flex: 0 0 16.6875rem;
   }
 }
 
@@ -181,6 +211,15 @@ $info-width: 60%;
   display: flex;
   flex: 1 1 100%;
   flex-wrap: wrap;
+
+  @include media-breakpoint-up("md") {
+    align-items: center;
+    flex-wrap: nowrap;
+
+    hr {
+      display: none;
+    }
+  }
 
   hr {
     margin: 0;
