@@ -55,6 +55,10 @@ main {
 
   .standard-content {
     margin-bottom: $grid-gutter-width;
+  }
+
+  .teaser-list .standard-content {
+    margin-bottom: 0;
     padding-left: $grid-gutter-width / 2;
     padding-right: $grid-gutter-width / 2;
   }
