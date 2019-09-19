@@ -71,7 +71,7 @@ var EllipsisUtil = {
  * @param {Integer} numberOfLines One of the model's attributes.
  * @param {Function} getWidthClosure A self-made method to extract computed Styles.
  */
-var EllipseableObject = function(element, getWidthClosure, numberOfLines){
+var EllipseableObject = function(element, getWidthClosure, numberOfLines) {
   this.element = element;
   this.html = this.element.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
   this.fontSize = EllipsisUtil.getFontSize(this.element);
@@ -91,9 +91,16 @@ EllipseableObject.prototype.applyEllipse = function() {
     this.fontSize,
     width
   );
-  if (this.element.innerHTML !== "" || width > 0) {
-    this.element.innerHTML = ellipsis(this.html, charactersPerLine * this.numberOfLines, true);
+
+  var totalCharacters = charactersPerLine * this.numberOfLines;
+  if (this.element.parentElement.classList.contains('top-offer-title')) {
+    totalCharacters -= 3;
   }
+
+  if (this.element.innerHTML !== "" || width > 0) {
+    this.element.innerHTML = ellipsis(this.html, totalCharacters, true);
+  }
+
   return this;
 };
 
