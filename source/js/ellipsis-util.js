@@ -93,7 +93,7 @@ EllipseableObject.prototype.applyEllipse = function() {
   );
 
   var totalCharacters = charactersPerLine * this.numberOfLines;
-  if (this.element.parentElement.classList.contains('top-offer-title')) {
+  if (this.element.parentElement.classList.contains("top-offer-title")) {
     totalCharacters -= 3;
   }
 
