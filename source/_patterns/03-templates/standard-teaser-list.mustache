@@ -1,0 +1,92 @@
+{{> atoms-ad-leaderboard }}
+{{> atoms-ad-skyscraper }}
+{{> molecules-info-message }}
+{{> organisms-header }}
+{{> organisms-page-headline(content: 'The standard template') }}
+
+<main role="main" class="container">
+  <div class="main-content teaser-list">
+
+    {{> organisms-tabs}}
+
+    {{> atoms-divider }}
+
+    <div class="teaser-list">
+      {{> organisms-content-teaser-50 }}
+      {{> organisms-offer-teaser-50 }}
+    </div>
+
+    <div class="teaser-list">
+      {{> organisms-content-teaser-50 }}
+      {{> organisms-offer-teaser-50 }}
+    </div>
+
+    {{> atoms-divider }}
+
+    <div class="multi-teaser-list">
+      {{> organisms-multioffer-teaser-50 }}
+      {{> organisms-multioffer-teaser-50 }}
+    </div>
+
+    {{> atoms-divider }}
+
+    <div class="teaser-list">
+      {{> organisms-content-teaser-50}}
+      {{> organisms-multioffer-teaser-50 }}
+      {{> organisms-content-teaser-25}}
+      <div class="standard-content width-25">
+        <h2>Regular text (25% width)</h2>
+        <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+      </div>
+      {{> organisms-content-teaser-50}}
+    </div>
+
+    {{> atoms-divider }}
+
+    <div class="teaser-list">
+      <div class="standard-content width-25">
+        <h2>Regular Image 25%</h2>
+        {{> atoms-image-responsive}}
+      </div>
+      {{> organisms-content-teaser-25}}
+      <div class="standard-content width-50">
+      {{> atoms-image-responsive}}
+      </div>
+    </div>
+
+    {{> atoms-divider }}
+
+    <div class="teaser-list">
+      <div class="standard-content width-50">
+        <h2>Regular text (50% width)</h2>
+        <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+      </div>
+      {{> organisms-content-teaser-25}}
+      {{> organisms-content-teaser-25}}
+    </div>
+
+    {{> atoms-divider }}
+
+    <div class="standard-content width-100">
+      <h2>Regular text (full width) outside Teaser-Container</h2>
+      <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+    </div>
+
+    {{> atoms-divider }}
+
+    <div class="teaser-list">
+      <div class="standard-content width-100">
+      <h2>Regular text (full width) inside Teaser-Container</h2>
+      <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+      </div>
+    </div>
+
+    {{> atoms-divider }}
+
+    {{> organisms-linklist-25 }}
+
+    {{> organisms-linklist-single-title }}
+  </div>
+</main>
+
+{{> organisms-footer }}
