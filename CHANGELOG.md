@@ -1,5 +1,9 @@
 All notable changes to this project will be documented in this file.
 
+## 0.50.5
+- Teaser containers are not needed anymore.
+- Adds support for `.main-content.teaser-list`.
+
 ## 0.50.3
 - Improves the Ellipsis feature by decreasing the maximum length of the `.top-offer-title > h3` element.
 
