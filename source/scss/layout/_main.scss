@@ -62,6 +62,17 @@ main {
     padding-left: $grid-gutter-width / 2;
     padding-right: $grid-gutter-width / 2;
   }
+
+  .main-content.teaser-list {
+    .teaser-list .standard-content {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .standard-content {
+      padding: 0;
+    }
+  }
 }
 
 /// Main on Desktop view
