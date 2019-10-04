@@ -40,6 +40,27 @@
   padding: 10px; // TODO Check with your designer, what you can do, to change unit to rem
 }
 
+.link-list-100-anchor-link {
+  font-size: .75rem;
+  line-height: 1.25rem;
+}
+
+.link-list-100-separator {
+  margin: 0 .5rem;
+
+  &::before {
+    color: $secondary-20;
+    content: "|";
+    font-size: .75rem;
+  }
+}
+
+.link-list-100-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @include media-breakpoint-up("md") {
   .link-list {
     flex-wrap: nowrap;
