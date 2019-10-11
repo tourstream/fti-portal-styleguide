@@ -43,10 +43,16 @@
 .link-list-100-anchor-link {
   font-size: .75rem;
   line-height: 1.25rem;
+  margin-right: .5rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .link-list-100-separator {
-  margin: 0 .5rem;
+  margin-right: .5rem;
+  transform: translateY(-.125rem);
 
   &::before {
     color: $secondary-20;
