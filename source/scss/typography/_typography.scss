@@ -117,7 +117,7 @@ p {
 /// @access public
 /// @group Typography
 span {
-  font-size: $span-font-size;
+  font-size: inherit;
   line-height: $span-line-height;
 }
 

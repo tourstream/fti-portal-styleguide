@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 ## 0.51.0
 - Adds new element: LinkList 100%.
 
+## 0.50.4
+- Updates font-size value for general `<span>`'s.
+
 ## 0.50.3
 - Improves the Ellipsis feature by decreasing the maximum length of the `.top-offer-title > h3` element.
 
