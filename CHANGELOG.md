@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 ## 0.51.0
 - Adds new element: LinkList 100%.
 
+## 0.50.5
+- Teaser containers are not needed anymore.
+- Adds support for `.main-content.teaser-list`.
+
 ## 0.50.4
 - Updates font-size value for general `<span>`'s.
 

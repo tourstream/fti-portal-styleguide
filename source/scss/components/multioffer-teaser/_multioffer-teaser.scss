@@ -59,6 +59,10 @@
   margin-right: ($grid-gutter-width / 2 * -1);
 }
 
+.main-content.teaser-list .multi-teaser-list {
+  width: calc(100% + #{$grid-gutter-width}); // for IE11
+}
+
 // Layout
 .multi-teaser-50 {
   @include mo-teaser-subline-layout("xl");
