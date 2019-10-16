@@ -41,6 +41,7 @@
   margin-right: ($grid-gutter-width / 2 * -1);
 
   &.main-content {
+    justify-content: space-between;
     margin-left: 0;
     margin-right: 0;
 
@@ -48,6 +49,20 @@
       margin-left: ($grid-gutter-width / 2 * -1);
       margin-right: ($grid-gutter-width / 2 * -1);
       width: calc(100% + #{$grid-gutter-width}); // for IE11
+
+      .teaser {
+        padding-left: $grid-gutter-width / 2;
+        padding-right: $grid-gutter-width / 2;
+      }
+    }
+
+    .teaser {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    > header {
+      width: 100%;
     }
   }
 }
@@ -134,6 +149,10 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
+
+  .main-content.teaser-list .teaser-25 {
+    max-width: calc(50% - #{$grid-gutter-width / 2});
+  }
 }
 
 @include media-breakpoint-up("md") {
@@ -146,6 +165,16 @@
   .teaser-50 {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  .main-content.teaser-list {
+    > .teaser-25 {
+      max-width: calc(25% - #{$grid-gutter-width / 2});
+    }
+
+    > .teaser-50 {
+      max-width: calc(50% - #{$grid-gutter-width / 2});
+    }
   }
 
   //basic structure

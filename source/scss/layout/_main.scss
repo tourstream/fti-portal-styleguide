@@ -53,6 +53,23 @@ main {
     }
   }
 
+  .main-content.teaser-list {
+    > .width-25 {
+      @include media-breakpoint-up(sm) {
+        max-width: calc(50% - #{$grid-gutter-width / 2});
+      }
+      @include media-breakpoint-up(md) {
+        max-width: calc(25% - #{$grid-gutter-width / 2});
+      }
+    }
+
+    > .width-50 {
+      @include media-breakpoint-up(md) {
+        max-width: calc(50% - #{$grid-gutter-width / 2});
+      }
+    }
+  }
+
   .standard-content {
     margin-bottom: $grid-gutter-width;
   }
@@ -64,9 +81,9 @@ main {
   }
 
   .main-content.teaser-list {
-    .teaser-list .standard-content {
-      padding-left: 15px;
-      padding-right: 15px;
+    > .standard-content {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .standard-content {
