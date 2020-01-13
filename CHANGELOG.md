@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.51.1
+- Hides `<hr>` elements inside `.teaser-list`'s for testing.
+
 ## 0.51.0
 - Adds new element: LinkList 100%.
 
