@@ -13,17 +13,17 @@
 
 // Bootstrap imports
 
+// Customized Bootstrap import:
+// It includes custom utility imports:
+@import "fti-bootstrap/bootstrap";
+
+
 // Bootstrap custom variables
 @import "variables/custom-variables";
 
 // Customized mixins:
 @import "abstracts/mixins";
 @import "abstracts/functions";
-
-// Customized Bootstrap import:
-// It includes custom utility imports:
-@import "fti-bootstrap/bootstrap";
-
 
 // Helper Classes
 @import "abstracts/helper-classes";
