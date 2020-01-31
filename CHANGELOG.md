@@ -1,5 +1,8 @@
 All notable changes to this project will be documented in this file.
 
+## 0.51.3
+- Fixes order of imports on the `style.scss` file.
+
 ## 0.51.2
 - Fixes layout of TopOffer Lists on IE11.
 
